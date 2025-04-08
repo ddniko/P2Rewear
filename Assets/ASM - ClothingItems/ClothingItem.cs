@@ -1,6 +1,8 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class ClothingItem : MonoBehaviour
 {
@@ -12,6 +14,8 @@ public class ClothingItem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI sustainabilityText;
     [SerializeField] private RawImage clothingImageContainer;
     
+    private enum availabletags { Clothing, ClothingItem, ClothingItemClothing };
+    private List<availabletags> tags = new List<availabletags>();
     private string clothingItemName;
     private string clothingDescription;
     private int price = 0;
