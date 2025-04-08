@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a133a33-9148-4cc7-9491-835a8dd0fa88" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.P2Rewear/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.P2Rewear/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ASM Scroll.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ASM Scroll.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASM - ClothingItems/ASM - Clothing assets/Distance.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM - ClothingItems/ASM - Clothing assets/Distance.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +87,7 @@
       <updated>1744097641986</updated>
       <workItem from="1744097644575" duration="44000" />
       <workItem from="1744099865374" duration="2270000" />
-      <workItem from="1744102167476" duration="4573000" />
+      <workItem from="1744102167476" duration="5581000" />
     </task>
     <servers />
   </component>
