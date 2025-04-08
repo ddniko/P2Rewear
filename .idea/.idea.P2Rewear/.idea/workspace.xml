@@ -8,8 +8,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.P2Rewear/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.P2Rewear/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ASM - ClothingItems/ClothingItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM - ClothingItems/ClothingItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ASM - ClothingItems/ClothingItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM - ClothingItems/ClothingItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SortScrollScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SortScrollScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASM - ClothingItems/ClothingOverlay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM - ClothingItems/ClothingOverlay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OverlayMessage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OverlayMessage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +97,7 @@
       <workItem from="1744099865374" duration="2270000" />
       <workItem from="1744102167476" duration="6202000" />
       <workItem from="1744112546648" duration="2107000" />
+      <workItem from="1744126251964" duration="1539000" />
     </task>
     <servers />
   </component>

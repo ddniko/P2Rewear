@@ -9,6 +9,7 @@ public class OverlayMessage : MonoBehaviour
     {
         clothingOverlay = GameObject.Find("Overlay").GetComponent<Canvas>();
         overlayScript = GameObject.Find("Overlay").GetComponent<ClothingOverlay>();
+       // clothingOverlay.enabled = false;
     }
     
 

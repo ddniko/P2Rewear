@@ -12,7 +12,7 @@ public class ClothingItem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI conditionText;
     [SerializeField] private TextMeshProUGUI sizeText;
     [SerializeField] private TextMeshProUGUI sustainabilityText;
-    [SerializeField] private RawImage clothingImageContainer;
+    [SerializeField] private Image clothingImageContainer;
     
     private enum availabletags { Clothing, ClothingItem, ClothingItemClothing };
     private List<availabletags> tags = new List<availabletags>();
@@ -23,7 +23,7 @@ public class ClothingItem : MonoBehaviour
     private float sizeSmallChildren = 0;
     private int sustainabilityScore = 0;
     private int condition = 0;
-    private RawImage clothingImage; 
+    private Image clothingImage; 
 
     private enum sizeOlderChildren
     {
@@ -79,6 +79,26 @@ public class ClothingItem : MonoBehaviour
     public string GetClothingItemName()
     {
         return clothingItemName;
+    }
+
+    public int GetCondition()
+    {
+        return condition;
+    }
+
+    public int GetSustainabilityScore()
+    {
+        return sustainabilityScore;
+    }
+
+    public string GetClothingDescription()
+    {
+        return clothingDescription;
+    }
+
+    public Image GetClothingImage()
+    {
+        return clothingImage;
     }
     
     
