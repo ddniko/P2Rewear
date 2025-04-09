@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static DBManager;  
+using static DBManager;
 
 public class DBVisualizer : MonoBehaviour
 {
 
-    public Text outputText; 
+    public Text outputText;
 
     void Start()
     {
@@ -61,21 +61,21 @@ public class DBVisualizer : MonoBehaviour
     public void AddParent(string name, int? sustainabilityScore, int? reliabilityScore)
     {
         DBManager.AddParent(name, sustainabilityScore, reliabilityScore);
-        DisplayParents();  
+        DisplayParents();
     }
 
 
     public void AddChild(string name, int parentId, int? age, string size)
     {
         DBManager.AddChild(name, parentId, age, size);
-        DisplayChildren(parentId);  
+        DisplayChildren(parentId);
     }
 
 
     public void AddArticle(string name, string category, int childId, string sizeCategory, float condition, int? lifetime)
     {
         DBManager.AddArticle(name, childId, category, sizeCategory, condition, lifetime);
-        DisplayArticles(childId);  
+        DisplayArticles(childId);
     }
 
 
@@ -83,20 +83,20 @@ public class DBVisualizer : MonoBehaviour
     public void DeleteParent(int parentId)
     {
         DBManager.DeleteParent(parentId);
-        DisplayParents();  
+        DisplayParents();
     }
 
     public void DeleteChild(int childId)
     {
         DBManager.DeleteChild(childId);
-        DisplayChildren(childId); 
+        DisplayChildren(childId);
     }
 
 
     public void DeleteArticle(int articleId)
     {
         DBManager.DeleteArticle(articleId);
-        DisplayArticles(articleId);  
+        DisplayArticles(articleId);
     }
 
     void OnDestroy()
@@ -106,28 +106,22 @@ public class DBVisualizer : MonoBehaviour
 
 
     #region TestMethods
-    [Header("Test")]
-    public TestData td;
-    [System.Serializable]
-    public class TestData
-    {
-        public TMP_InputField nameInput;
-        public TMP_InputField sustainabilityInput;
-        public TMP_InputField reliabilityInput;
-    }
+    [Header("Testing")]
+    public TMP_InputField nameInput;
+    public TMP_InputField sustainabilityInput;
+    public TMP_InputField reliabilityInput;
+
     public void AddTestParent()
     {
         DBManager.AddParent("Test Parent", 80, 90);
         DisplayParents();
     }
 
-
-
     public void AddParentFromUI()
     {
-        string name = td.nameInput.text;
-        int? sustainability = int.TryParse(td.sustainabilityInput.text, out var s) ? s : (int?)null;
-        int? reliability = int.TryParse(td.reliabilityInput.text, out var r) ? r : (int?)null;
+        string name = nameInput.text;
+        int? sustainability = int.TryParse(sustainabilityInput.text, out var s) ? s : (int?)null;
+        int? reliability = int.TryParse(reliabilityInput.text, out var r) ? r : (int?)null;
 
         DBManager.AddParent(name, sustainability, reliability);
         DisplayParents();
