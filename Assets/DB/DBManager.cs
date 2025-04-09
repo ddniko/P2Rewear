@@ -24,7 +24,10 @@ public static class DBManager
         Debug.Log($"Database stored at: {dbPath}");
 
     }
-
+    public static void ForceConnection(SQLiteConnection conn)
+    {
+        connection = conn;
+    }
     // Denne metode opretter tabellerne i databasen, hvis de ikke allerede findes
     private static void CreateTables()
     {

@@ -27,7 +27,7 @@ public class DBVisualizer : MonoBehaviour
         outputText.text = "Parents:\n";
         foreach (var parent in parents)
         {
-            outputText.text += $"ID: {parent.Id}, Name: {parent.Name}\n";
+            outputText.text += $"ID: {parent.Id}, Name: {parent.Name}, S/R Score : {parent.SustainabilityScore}/{parent.ReliabilityScore} \n";
         }
     }
 
@@ -104,10 +104,32 @@ public class DBVisualizer : MonoBehaviour
         DBManager.Close();
     }
 
+
     #region TestMethods
+    [Header("Test")]
+    public TestData td;
+    [System.Serializable]
+    public class TestData
+    {
+        public TMP_InputField nameInput;
+        public TMP_InputField sustainabilityInput;
+        public TMP_InputField reliabilityInput;
+    }
     public void AddTestParent()
     {
         DBManager.AddParent("Test Parent", 80, 90);
+        DisplayParents();
+    }
+
+
+
+    public void AddParentFromUI()
+    {
+        string name = td.nameInput.text;
+        int? sustainability = int.TryParse(td.sustainabilityInput.text, out var s) ? s : (int?)null;
+        int? reliability = int.TryParse(td.reliabilityInput.text, out var r) ? r : (int?)null;
+
+        DBManager.AddParent(name, sustainability, reliability);
         DisplayParents();
     }
     #endregion
