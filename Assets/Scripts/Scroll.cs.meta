@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: fb2a24ce6f96b02409846e5d626d80b0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - MSStammePrefab: {fileID: 1149350459791396160, guid: cc547d1ff70aceb4cbd9e90ca246ca2b, type: 3}
+  - MSMindeBtn: {fileID: 8885456016411838443, guid: e8d68b0f3a634284bb6eab9866b8f6ea, type: 3}
+  - MSScrollContent: {fileID: 4155855397063759619, guid: c308dded8ac99674f880bb769f145459, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
