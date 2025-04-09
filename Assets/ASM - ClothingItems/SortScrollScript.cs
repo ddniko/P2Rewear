@@ -37,15 +37,15 @@ public class SortScrollScript : MonoBehaviour
     {
         CurrentArticles = new List<GameObject>();
         //praktisk talt at resette listen.
-        List<Article> articles = DBManager.GetAllArticles();
+        List<MArticle> articles = DBManager.GetAllArticles();
 
-        foreach (Article article in articles)
+        foreach (MArticle article in articles)
         {
             CurrentArticles.Add(CreateArticle(article));
         }
 
     }
-    public GameObject CreateArticle(Article article)
+    public GameObject CreateArticle(MArticle article)
     {
         GameObject newArticle = Instantiate(ClothingPrefab, ParentObject);
 

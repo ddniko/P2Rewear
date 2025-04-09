@@ -22,7 +22,7 @@ public class DBVisualizer : MonoBehaviour
     public void DisplayParents()
     {
 
-        List<Parent> parents = DBManager.GetAllParents();
+        List<MParent> parents = DBManager.GetAllParents();
 
         outputText.text = "Parents:\n";
         foreach (var parent in parents)
@@ -35,9 +35,9 @@ public class DBVisualizer : MonoBehaviour
     public void DisplayChildren(int parentId)
     {
 
-        List<Child> children = DBManager.GetChildrenByParentId(parentId);
+        List<MChild> children = DBManager.GetChildrenByParentId(parentId);
 
-        outputText.text = $"Children for Parent ID {parentId}:\n";
+        outputText.text = $"Children for MParent ID {parentId}:\n";
         foreach (var child in children)
         {
             outputText.text += $"ID: {child.Id}, Name: {child.Name}, Age: {child.Age}, Size: {child.Size}\n";
@@ -48,9 +48,9 @@ public class DBVisualizer : MonoBehaviour
     public void DisplayArticles(int childId)
     {
 
-        List<Article> articles = DBManager.GetArticlesByChildId(childId);
+        List<MArticle> articles = DBManager.GetArticlesByChildId(childId);
 
-        outputText.text = $"Articles for Child ID {childId}:\n";
+        outputText.text = $"Articles for MChild ID {childId}:\n";
         foreach (var article in articles)
         {
             outputText.text += $"ID: {article.Id}, Category: {article.Category}, Size: {article.SizeCategory}, Condition: {article.Condition}, Lifetime: {article.LifeTime}\n";
@@ -113,7 +113,7 @@ public class DBVisualizer : MonoBehaviour
 
     public void AddTestParent()
     {
-        DBManager.AddParent("Test Parent", 80, 90);
+        DBManager.AddParent("Test MParent", 80, 90);
         DisplayParents();
     }
 

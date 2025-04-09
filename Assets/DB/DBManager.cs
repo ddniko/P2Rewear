@@ -32,13 +32,13 @@ public static class DBManager
     private static void CreateTables()
     {
         // Opretter tabellen 'Parents' hvis den ikke eksisterer
-        connection.CreateTable<Parent>();
+        connection.CreateTable<MParent>();
 
         // Opretter tabellen 'Children' hvis den ikke eksisterer
-        connection.CreateTable<Child>();
+        connection.CreateTable<MChild>();
 
         // Opretter tabellen 'Clothing' hvis den ikke eksisterer
-        connection.CreateTable<Article>();
+        connection.CreateTable<MArticle>();
     }
 
     // Denne metode returnerer forbindelsen til databasen, så den kan bruges andre steder i koden
@@ -51,7 +51,7 @@ public static class DBManager
     // Tilføjer en ny forælder til databasen
     public static void AddParent(string name, int? sustainabilityScore, int? reliabilityScore)
     {
-        var parent = new Parent
+        var parent = new MParent
         {
             Name = name,  // Navn på forælder
             SustainabilityScore = sustainabilityScore, // Bæredygtighedsscore (kan være null)
@@ -61,19 +61,19 @@ public static class DBManager
     }
 
     // Henter en forælder ud fra dens ID
-    public static Parent GetParentById(int id)
+    public static MParent GetParentById(int id)
     {
-        return GetConnection().Table<Parent>().FirstOrDefault(p => p.Id == id);  // Finder den første forælder med dette ID
+        return GetConnection().Table<MParent>().FirstOrDefault(p => p.Id == id);  // Finder den første forælder med dette ID
     }
 
     // Henter alle forældre fra databasen
-    public static List<Parent> GetAllParents()
+    public static List<MParent> GetAllParents()
     {
-        return GetConnection().Table<Parent>().ToList();  // Henter alle forældre i en liste
+        return GetConnection().Table<MParent>().ToList();  // Henter alle forældre i en liste
     }
 
     // Opdaterer en eksisterende forælder i databasen
-    public static void UpdateParent(Parent parent)
+    public static void UpdateParent(MParent parent)
     {
         GetConnection().Update(parent);  // Opdaterer forælderen i databasen
     }
@@ -92,7 +92,7 @@ public static class DBManager
     // Tilføjer et nyt barn til databasen
     public static void AddChild(string name, int parentId, int? age, string size)
     {
-        var child = new Child
+        var child = new MChild
         {
             ParentId = parentId,  // Forælderens ID (tilknytter barnet til en forælder)
             Name = name,          // Barnets navn
@@ -103,25 +103,25 @@ public static class DBManager
     }
 
     // Henter et barn ud fra dens ID
-    public static Child GetChildById(int id)
+    public static MChild GetChildById(int id)
     {
-        return GetConnection().Table<Child>().FirstOrDefault(c => c.Id == id);  // Finder barnet med dette ID
+        return GetConnection().Table<MChild>().FirstOrDefault(c => c.Id == id);  // Finder barnet med dette ID
     }
 
     // Henter alle børn fra databasen
-    public static List<Child> GetAllChildren()
+    public static List<MChild> GetAllChildren()
     {
-        return GetConnection().Table<Child>().ToList();  // Henter alle børn i en liste
+        return GetConnection().Table<MChild>().ToList();  // Henter alle børn i en liste
     }
 
     // Henter alle børn, som hører til en bestemt forælder
-    public static List<Child> GetChildrenByParentId(int parentId)
+    public static List<MChild> GetChildrenByParentId(int parentId)
     {
-        return GetConnection().Table<Child>().Where(c => c.ParentId == parentId).ToList();  // Henter børn med et specifikt ParentId
+        return GetConnection().Table<MChild>().Where(c => c.ParentId == parentId).ToList();  // Henter børn med et specifikt ParentId
     }
 
     // Opdaterer et barns oplysninger i databasen
-    public static void UpdateChild(Child child)
+    public static void UpdateChild(MChild child)
     {
         GetConnection().Update(child);  // Opdaterer barnet i databasen
     }
@@ -140,7 +140,7 @@ public static class DBManager
     // Tilføjer et nyt stykke tøj til databasen
     public static void AddArticle(string name, int childId, string sizeCategory, string category, float condition, int? lifeTime)
     {
-        var article = new Article
+        var article = new MArticle
         {
             ChildId = childId,        // Hvilket barn tøjet hører til
             SizeCategory = sizeCategory,  // Kategori af størrelsen (f.eks. lille, medium, stor)
@@ -152,30 +152,30 @@ public static class DBManager
     }
 
     // Henter et stykke tøj ud fra dets ID
-    public static Article GetArticleById(int id)
+    public static MArticle GetArticleById(int id)
     {
-        return GetConnection().Table<Article>().FirstOrDefault(a => a.Id == id);  // Finder tøjet med dette ID
+        return GetConnection().Table<MArticle>().FirstOrDefault(a => a.Id == id);  // Finder tøjet med dette ID
     }
 
     // Henter alle stykker tøj fra databasen
-    public static List<Article> GetAllArticles()
+    public static List<MArticle> GetAllArticles()
     {
-        return GetConnection().Table<Article>().ToList();  // Henter alle stykker tøj i en liste
+        return GetConnection().Table<MArticle>().ToList();  // Henter alle stykker tøj i en liste
     }
 
     // Henter alle stykker tøj, der hører til et specifikt barn
-    public static List<Article> GetArticlesByChildId(int childId)
+    public static List<MArticle> GetArticlesByChildId(int childId)
     {
-        return GetConnection().Table<Article>().Where(a => a.ChildId == childId).ToList();  // Henter tøj baseret på ChildId
+        return GetConnection().Table<MArticle>().Where(a => a.ChildId == childId).ToList();  // Henter tøj baseret på ChildId
     }
 
     // Henter alt tøj, der hører til alle børn af en bestemt forælder
-    public static List<Article> GetArticlesByParentId(int parentId)
+    public static List<MArticle> GetArticlesByParentId(int parentId)
     {
         // Henter alle børn for forælderen
         var children = GetChildrenByParentId(parentId);
 
-        var allArticles = new List<Article>();
+        var allArticles = new List<MArticle>();
 
         // Gennemgår hvert barn og samler deres tøj
         foreach (var child in children)
@@ -188,7 +188,7 @@ public static class DBManager
     }
 
     // Opdaterer et stykke tøj i databasen
-    public static void UpdateArticle(Article article)
+    public static void UpdateArticle(MArticle article)
     {
         GetConnection().Update(article);  // Opdaterer tøjet i databasen
     }
@@ -207,7 +207,7 @@ public static class DBManager
     #region Models/Tables
     // Modellerne (tabellerne) i databasen defineres som C# klasser, fordi SQLite-Net er meget federe end SQLite
 
-    // 'Parent' klassen svarer til tabellen 'Parents' i databasen
+    // 'MParent' klassen svarer til tabellen 'Parents' i databasen
 
 
 #endregion
