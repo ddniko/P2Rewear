@@ -1,6 +1,7 @@
 using UnityEngine;
+using System;
 
-public class Mindeskov
+public class Mindeskov : BasePage
 {
-    
+    public override Enum MyPage() => PAGENAMES.MINDESKOV;
 }

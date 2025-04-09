@@ -12,9 +12,11 @@ public abstract class BasePage : MonoBehaviour
 
     public enum PAGENAMES
     {
-        RED,
-        GREEN,
-        YELLOW
+        MINDESKOV,
+        MARKEDSPLADS,
+        OPRET_TØJ,
+        PROFIL,
+        CHAT
     }
 
     public abstract Enum MyPage();
