@@ -54,9 +54,9 @@ public class ClothingItem : MonoBehaviour
         
     }
 
-    public void SetUpClothingItem()
+    public void SetUpClothingItem(string sizeT)
     {
-        
+        sizeText.text = sizeT;
     }
     
     
