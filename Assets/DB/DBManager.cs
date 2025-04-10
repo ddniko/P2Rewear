@@ -157,6 +157,18 @@ public static class DBManager
         return GetConnection().Table<MArticle>().FirstOrDefault(a => a.Id == id);  // Finder tøjet med dette ID
     }
 
+    public static byte[] TextureToBytes(Texture2D texture)
+    {
+        return texture.EncodeToPNG(); // or EncodeToJPG() if you prefer
+    }
+
+    public static Texture2D BytesToTexture(byte[] bytes)
+    {
+        Texture2D tex = new Texture2D(2, 2); // size will auto-adjust
+        tex.LoadImage(bytes);
+        return tex;
+    }
+
     // Henter alle stykker tøj fra databasen
     public static List<MArticle> GetAllArticles()
     {
