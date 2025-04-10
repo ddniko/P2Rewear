@@ -7,21 +7,22 @@ public class ChildDemands : MonoBehaviour
     
     public List<String> SizeCategory;
     public List<String> Category;
-    public List<float> Condition;
-    public List<int> maxPrize;
-    public List<String> Description;
+    public int maxPrize;
+    public int minCondition;
+    public float maxDistance;
     
-    
-  
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public enum ClothingTags
     {
         
     }
+    
+    public List<ClothingTags> tags;
 
-    // Update is called once per frame
-    void Update()
+    public void Start()
     {
+
         
+        
+
     }
 }
