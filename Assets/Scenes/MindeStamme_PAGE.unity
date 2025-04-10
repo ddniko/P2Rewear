@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb2a24ce6f96b02409846e5d626d80b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tidligereEjer: 29
+  tidligereEjer: 31
   MSStammePrefab: {fileID: 5883010869564731564, guid: cc547d1ff70aceb4cbd9e90ca246ca2b, type: 3}
   MSMindeBtn: {fileID: 8885456016411838443, guid: e8d68b0f3a634284bb6eab9866b8f6ea, type: 3}
   MSScrollContent: {fileID: 998950037}
@@ -902,6 +902,10 @@ PrefabInstance:
     - target: {fileID: 8391007487531742229, guid: c308dded8ac99674f880bb769f145459, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8551552594441179185, guid: c308dded8ac99674f880bb769f145459, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8648846585191313910, guid: c308dded8ac99674f880bb769f145459, type: 3}
       propertyPath: m_AnchoredPosition.x

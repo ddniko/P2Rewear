@@ -121,7 +121,7 @@ public class Scroll : MonoBehaviour
         else if (count == 1)
         {
             Crop(cropB = 0.20f, cropT = 0.40f);
-            HeightDifference -= MSStammePrefab.GetComponent<RectTransform>().sizeDelta.y * (1-cropT);
+            HeightDifference -= MSStammePrefab.GetComponent<RectTransform>().sizeDelta.y * (1 - cropT);
         }
         else if (count == 2)
         {
@@ -130,14 +130,14 @@ public class Scroll : MonoBehaviour
         }
         else if (count == 3)
         {
-            Crop(cropB = 0.60f, cropT = 0.80f);
+            Crop(cropB = 0.80f, cropT = 0.80f);
             HeightDifference -= MSStammePrefab.GetComponent<RectTransform>().sizeDelta.y * (1-cropT);
             //---Dependent on ejerCount---\\
             //CROP N.NN of branch and N.NN of Trunk!
             //ADD the rest of the Bottons!
         }
     }
-    void Crop(float a, float b)
+    void Crop(float b, float a)
     {
         treeTrunks.Last().GetComponent<Image>().fillAmount = a;
         treeTrunks.Last().transform.GetChild(0).GetComponent<Image>().fillAmount = b;
