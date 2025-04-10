@@ -138,17 +138,26 @@ public static class DBManager
     #endregion
     #region CRUD for Article (Tøj)
     // Tilføjer et nyt stykke tøj til databasen
-    public static void AddArticle(string name, int childId, string sizeCategory, string category, float condition, int? lifeTime)
+    public static void AddArticle(string name, int childId, string sizeCategory, string category, float condition, int? lifeTime, float prize, string description, byte[] imageData)
     {
         var article = new MArticle
         {
             ChildId = childId,        // Hvilket barn tøjet hører til
+            Name = name,
+            Prize = prize,
+            Description = description,
+            ImageData = imageData,
             SizeCategory = sizeCategory,  // Kategori af størrelsen (f.eks. lille, medium, stor)
             Category = category,      // Kategori af tøj (f.eks. skjorte, bukser)
             Condition = condition,    // Tøjets tilstand (f.eks. nyt, brugt)
             LifeTime = lifeTime       // Forventet levetid (kan være null)
         };
         GetConnection().Insert(article);  // Indsætter tøjet i databasen
+    }
+    //Overload til hvis man laver articlen udefra
+    public static void AddArticle(MArticle art)
+    {
+        GetConnection().Insert(art);  // Indsætter tøjet i databasen
     }
 
     // Henter et stykke tøj ud fra dets ID

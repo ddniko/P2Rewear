@@ -7,12 +7,12 @@ using static DBManager;
 public class DBVisualizer : MonoBehaviour
 {
 
-    public Text outputText;
+    public TextMeshProUGUI outputText;
 
     void Start()
     {
 
-        DBManager.Init();
+        
 
         DisplayParents();
 
@@ -30,7 +30,6 @@ public class DBVisualizer : MonoBehaviour
             outputText.text += $"ID: {parent.Id}, Name: {parent.Name}, S/R Score : {parent.SustainabilityScore}/{parent.ReliabilityScore} \n";
         }
     }
-
 
     public void DisplayChildren(int parentId)
     {
@@ -72,9 +71,9 @@ public class DBVisualizer : MonoBehaviour
     }
 
 
-    public void AddArticle(string name, string category, int childId, string sizeCategory, float condition, int? lifetime)
+    public void AddArticle(string name, int childId, string sizeCategory, string category, float condition, int? lifeTime, float prize, string description, byte[] imageData )
     {
-        DBManager.AddArticle(name, childId, category, sizeCategory, condition, lifetime);
+        DBManager.AddArticle(name, childId, category, sizeCategory, condition, lifeTime, prize, description, imageData);
         DisplayArticles(childId);
     }
 
@@ -106,25 +105,6 @@ public class DBVisualizer : MonoBehaviour
 
 
     #region TestMethods
-    [Header("Testing")]
-    public TMP_InputField nameInput;
-    public TMP_InputField sustainabilityInput;
-    public TMP_InputField reliabilityInput;
 
-    public void AddTestParent()
-    {
-        DBManager.AddParent("Test MParent", 80, 90);
-        DisplayParents();
-    }
-
-    public void AddParentFromUI()
-    {
-        string name = nameInput.text;
-        int? sustainability = int.TryParse(sustainabilityInput.text, out var s) ? s : (int?)null;
-        int? reliability = int.TryParse(reliabilityInput.text, out var r) ? r : (int?)null;
-
-        DBManager.AddParent(name, sustainability, reliability);
-        DisplayParents();
-    }
     #endregion
 }

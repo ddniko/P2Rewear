@@ -5,37 +5,40 @@ using UnityEngine.UI;
 public class CreateArticleManager : MonoBehaviour
 {
     public Toggle Forsale;
-    public TextMeshPro Name;
+    public TextMeshProUGUI Name;
     public GameObject prize;
+    public TextMeshProUGUI prizeText;
     public Slider Cond;
-    public Dropdown Size;
-    public Dropdown Cat;
-    public TextMeshPro Desc;
-
+    public TMP_Dropdown Size;
+    public TMP_Dropdown Cat;
+    public TextMeshProUGUI Desc;
+    public CameraHandler camhand;
+    public DBVisualizer DBV;
     MArticle art;
     private void Start()
     {
-        
+        DBManager.Init();
+        DBManager.AddChild("tom", 0, 4, "stor");
     }
     public void TogglePriceVisibility()
     {
         if (Forsale.isOn)
         {
             prize.SetActive(true);
-            prize.GetComponentInChildren<TextMeshPro>().text = string.Empty;
+            prizeText.text = string.Empty;
         }
         if (!Forsale.isOn)
             prize.SetActive(false);
     }
     private bool CheckArticle()
     {
-        if (Name.text.Length <= 0) { Debug.Log("Name Lacking"); return false; }       
-        if (Size.value == 0) { Debug.Log("Size Lacking"); return false; }        
-        if (Cat.value == 0) { Debug.Log("Value Lacking"); return false; }        
-        if (Forsale.isOn && prize.GetComponentInChildren<TextMeshPro>().text.Length <= 0) { Debug.Log("Prize Lacking"); return false; }
-        if (Forsale.isOn && prize.GetComponentInChildren<TextMeshPro>().text.Length <= 0)
+        if (Name.text.Length <= 0) { Debug.Log("Name Lacking"); return false; }
+        if (Size.value == 0) { Debug.Log("Size Lacking"); return false; }
+        if (Cat.value == 0) { Debug.Log("Value Lacking"); return false; }
+        if (Forsale.isOn && prizeText.text.Length <= 0) { Debug.Log("Prize Lacking"); return false; }
+        if (Forsale.isOn && prizeText.text.Length <= 0)
         {
-            bool succes = float.TryParse(prize.GetComponentInChildren<TextMeshPro>().text, out float value);
+            bool succes = float.TryParse(prizeText.text, out float value);
             if (!succes)
                 Debug.Log("Prize Invalid"); return false;
         }
@@ -50,12 +53,21 @@ public class CreateArticleManager : MonoBehaviour
         art.Name = Name.text;
         art.SizeCategory = Size.value.ToString();
         if (Forsale.isOn)
-                art.Prize = float.Parse(prize.GetComponentInChildren<TextMeshPro>().text);
+        {
+            float parsedPrize;
+            if (float.TryParse(prizeText.text.Replace(',', '.'), System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out parsedPrize))
+            {
+                art.Prize = parsedPrize;
+            }
+        }
+            
+
+        DBManager.AddArticle(art);
+        DBV.DisplayArticles(0);
     }
 
     public void TakePicture()
     {
 
     }
-
 }
