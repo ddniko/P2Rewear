@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 076f6740c7dfcf04292094b5f95a84d8
+guid: 080c80c5c5850de4b81a9e1aa9a1b6bb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8347946597288096633
-    second: Notifikation_0
+      213: 472199883151139190
+    second: "K\xF8b_0"
+  - first:
+      213: 6686687338644006634
+    second: "K\xF8b_1"
+  - first:
+      213: 4327747327351122469
+    second: "K\xF8b_2"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +102,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Notifikation_0
+      name: "K\xF8b_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 116
-        height: 118
+        x: 3
+        y: 21
+        width: 88
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 973b94f633dd9d370800000000000000
-      internalID: 8347946597288096633
+      spriteID: 671643aba479d8600800000000000000
+      internalID: 472199883151139190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xF8b_1"
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 5
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae66af7f4b2ebcc50800000000000000
+      internalID: 6686687338644006634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "K\xF8b_2"
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 5
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ae86cc34f3f0c30800000000000000
+      internalID: 4327747327351122469
       vertices: []
       indices: 
       edges: []
@@ -147,8 +184,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Notifikation_0: 8347946597288096633
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

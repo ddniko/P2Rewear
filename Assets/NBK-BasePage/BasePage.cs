@@ -8,13 +8,17 @@ public abstract class BasePage : MonoBehaviour
     private void Awake()
     {
         pages = FindObjectsByType<BasePage>(FindObjectsSortMode.None);
+        /*foreach (BasePage page in pages)
+        {
+            page.gameObject.SetActive(false);
+        }*/
     }
 
     public enum PAGENAMES
     {
         MINDESKOV,
         MARKEDSPLADS,
-        OPRET_TØJ,
+        OPRET_TÃ˜J,
         PROFIL,
         CHAT
     }
