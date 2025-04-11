@@ -10,6 +10,15 @@ public abstract class BasePage : MonoBehaviour
         pages = FindObjectsByType<BasePage>(FindObjectsSortMode.None);
     }
 
+    private void Start()
+    {
+        if (gameObject.GetComponent<BasePage>().MyPage().ToString() != PAGENAMES.MARKEDSPLADS.ToString())
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+
     public enum PAGENAMES
     {
         MINDESKOV,
