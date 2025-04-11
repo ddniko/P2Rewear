@@ -1,9 +1,12 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CreateArticleManager : MonoBehaviour
+public class CreateArticleManager : BasePage
 {
+    public override Enum MyPage() => PAGENAMES.OPRET_TØJ;
+
     public Toggle Forsale;
     public TextMeshProUGUI Name;
     public GameObject prize;
@@ -70,4 +73,6 @@ public class CreateArticleManager : MonoBehaviour
     {
 
     }
+
+
 }
