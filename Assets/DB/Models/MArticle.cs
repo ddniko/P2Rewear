@@ -12,12 +12,14 @@ public class MArticle
     public int Id { get; set; }
 
     public int ChildId { get; set; } // Barnets Id (refererer til MChild tabellen)
+
+    public string Name { get; set; }
     public string SizeCategory { get; set; } // Kategori for størrelsen (f.eks. lille, medium, stor)
     public string Tags { get; set; } // Tags, comma separated value ideally
     public string Category { get; set; } // Kategori af tøj (f.eks. skjorte, bukser)
     public float Condition { get; set; } // Tøjets tilstand (f.eks. nyt, brugt)
     public int? LifeTime { get; set; } // Forventet levetid for tøjet i år (kan være null)
-    public int Prize {  get; set; } // prisen artiklen er sat 
+    public float? Prize {  get; set; } // prisen artiklen er sat 
     public string Description { get; set; } //Beskrivelse af tøjet
     public byte[] ImageData { get; set; }
 
