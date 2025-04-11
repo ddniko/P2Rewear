@@ -17,7 +17,9 @@ public class CreateArticleManager : BasePage
     public TextMeshProUGUI Desc;
     public CameraHandler camhand;
     public DBVisualizer DBV;
+    public RawImage img;
     MArticle art;
+    public TextMeshProUGUI faillog;
     private void Start()
     {
         DBManager.Init();
@@ -35,17 +37,17 @@ public class CreateArticleManager : BasePage
     }
     private bool CheckArticle()
     {
-        if (Name.text.Length <= 0) { Debug.Log("Name Lacking"); return false; }
-        if (Size.value == 0) { Debug.Log("Size Lacking"); return false; }
-        if (Cat.value == 0) { Debug.Log("Value Lacking"); return false; }
-        if (Forsale.isOn && prizeText.text.Length <= 0) { Debug.Log("Prize Lacking"); return false; }
+        if (Name.text.Length <= 0) { faillog.text ="Name Lacking"; return false; }
+        if (Size.value == 0) { faillog.text = "Size Lacking"; return false; }
+        if (Cat.value == 0) { faillog.text = "Value Lacking"; return false; }
+        if (Forsale.isOn && prizeText.text.Length <= 0) { faillog.text = "Prize Lacking"; return false; }
         if (Forsale.isOn && prizeText.text.Length <= 0)
         {
             bool succes = float.TryParse(prizeText.text, out float value);
             if (!succes)
-                Debug.Log("Prize Invalid"); return false;
+                faillog.text = "Prize Invalid"; return false;
         }
-        Debug.Log("Article Viable");
+        faillog.text = "Article Viable";
         return true;
     }
     public void CreateArticle()
@@ -63,15 +65,43 @@ public class CreateArticleManager : BasePage
                 art.Prize = parsedPrize;
             }
         }
-            
+        art.ImageData = ConvertImageToByteArray(img);
 
         DBManager.AddArticle(art);
-        DBV.DisplayArticles(0);
+        faillog.text = $"{Application.persistentDataPath}/clothing.db";
+        
     }
 
     public void TakePicture()
     {
+        camhand.OpenCam();
+    }
 
+    public byte[] ConvertImageToByteArray(RawImage rawImage)
+    {
+
+        if (rawImage.texture != null)
+        {
+
+            Texture2D texture2D = rawImage.texture as Texture2D;
+
+            if (texture2D != null)
+            {
+                byte[] imageBytes = texture2D.EncodeToPNG(); 
+
+                return imageBytes;
+            }
+            else
+            {
+                Debug.LogError("texturen er ikke 2d");
+                return null;
+            }
+        }
+        else
+        {
+            Debug.LogError("mangler en texture.");
+            return null;
+        }
     }
 
 
