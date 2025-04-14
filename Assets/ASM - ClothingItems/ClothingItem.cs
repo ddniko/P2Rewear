@@ -6,24 +6,49 @@ using UnityEngine.UI;
 
 public class ClothingItem : MonoBehaviour
 {
-    [Header("Text Elements")]
-    [SerializeField] private TextMeshProUGUI priceText;
-    [SerializeField] private TextMeshProUGUI distanceText;
-    [SerializeField] private TextMeshProUGUI conditionText;
-    [SerializeField] private TextMeshProUGUI sizeText;
-    [SerializeField] private TextMeshProUGUI sustainabilityText;
-    [SerializeField] private Image clothingImageContainer;
-    
-    private enum availabletags { Clothing, ClothingItem, ClothingItemClothing };
-    private List<availabletags> tags = new List<availabletags>();
-    private string clothingItemName;
-    private string clothingDescription;
-    private int price = 0;
-    private float distance = 0;
-    private float sizeSmallChildren = 0;
-    private int sustainabilityScore = 0;
-    private int condition = 0;
-    private Image clothingImage; 
+
+    //[Header("Text Elements")]
+    //[SerializeField] private TextMeshProUGUI priceText;
+    //[SerializeField] private TextMeshProUGUI distanceText;
+    //[SerializeField] private TextMeshProUGUI conditionText;
+    //[SerializeField] private TextMeshProUGUI sizeText;
+    //[SerializeField] private TextMeshProUGUI sustainabilityText;
+    //[SerializeField] private Image clothingImageContainer;
+    //s
+    //private enum availabletags { Clothing, ClothingItem, ClothingItemClothing };
+    //private List<availabletags> tags = new List<availabletags>();
+    //private string clothingItemName;
+    //private string clothingDescription;
+    //private int price = 0;
+    //private float distance = 0;
+    //private float sizeSmallChildren = 0;
+    //private int sustainabilityScore = 0;
+    //private int condition = 0;
+    //private int primaryKey;
+    //private int childId;
+    //private Image clothingImage;
+    //
+    public TextMeshProUGUI priceText;
+    public TextMeshProUGUI nameText;
+    public TextMeshProUGUI describtionText;
+    public TextMeshProUGUI sizeText;
+    public TextMeshProUGUI conditionText;
+    public TextMeshProUGUI sustainabilityScore;
+
+    public Image clothingImage;
+    public Sprite placeholderSprite;
+
+    public int primaryKey;
+    public string ClothingName;
+    public int childId;
+    public string sizeCategory;
+    public string category;
+    public float condition;
+    public int? lifeTime;
+    public float? prize;
+    public string description;
+    public byte[] imageData;
+
 
     private enum sizeOlderChildren
     {
