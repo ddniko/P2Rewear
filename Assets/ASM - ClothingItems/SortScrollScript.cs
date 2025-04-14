@@ -54,7 +54,7 @@ public class SortScrollScript : MonoBehaviour
         {
             CurrentArticles.Add(CreateArticle(article));
         }
-        SortArticles();
+        OrderArticles();
     }
     public GameObject CreateArticle(MArticle article)
     {
@@ -65,7 +65,7 @@ public class SortScrollScript : MonoBehaviour
             article.Condition, article.LifeTime, article.Prize, article.Description, article.ImageData);
         return newArticle;
     }
-    public void SortArticles()
+    public void OrderArticles()
     {
         for (int i = 0; i < CurrentArticles.Count; i++)  //index for rækken
         {

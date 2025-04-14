@@ -13,9 +13,9 @@ public class OverlayMessage : MonoBehaviour
     }
     
 
-    public void SendMessage(ClothingItem clothingItem)
-    {
-        overlayScript.OpenOverlay(clothingItem);
-        clothingOverlay.gameObject.SetActive(true);
-    }
+    //public void SendMessage(ClothingItem clothingItem)
+    //{
+    //    overlayScript.OpenOverlay(clothingItem);
+    //    clothingOverlay.gameObject.SetActive(true);
+    //}
 }

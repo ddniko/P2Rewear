@@ -26,19 +26,19 @@ public class ClothingOverlay : MonoBehaviour
         
     }
 
-    public void OpenOverlay(ClothingItem clothingItem)
-    {
-        priceText.text = clothingItem.GetPrice().ToString();
-        nameText.text = clothingItem.GetClothingItemName();
-        describtionText.text = clothingItem.GetClothingDescription();
-        sizeText.text = clothingItem.GetSizeSmallChildren().ToString();
-        distanceText.text = clothingItem.GetDistance().ToString();
-        sustainabilityText.text = clothingItem.GetSustainabilityScore().ToString();
-        conditionText.text = clothingItem.GetCondition().ToString();
+    //public void OpenOverlay(ClothingItem clothingItem)
+    //{
+    //    priceText.text = clothingItem.GetPrice().ToString();
+    //    nameText.text = clothingItem.GetClothingItemName();
+    //    describtionText.text = clothingItem.GetDescription();
+    //    sizeText.text = clothingItem.GetSizeSmallChildren().ToString();
+    //    distanceText.text = clothingItem.GetDistance().ToString();
+    //    sustainabilityText.text = clothingItem.GetSustainabilityScore().ToString();
+    //    conditionText.text = clothingItem.GetCondition().ToString();
         
-        clothingImage.sprite = clothingItem.GetClothingImage().sprite;
+    //    clothingImage.sprite = clothingItem.GetClothingImage().sprite;
         
-    }
+    //}
     
     
 }
