@@ -15,7 +15,7 @@ public class SwapButt : MonoBehaviour
         }
         else
         {
-            clothesDisplay.SetActive(true);
+            clothesDisplay.SetActive(false);
             clothesInput.SetActive(true);
         }
         displayinginput = !displayinginput;

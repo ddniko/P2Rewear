@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Drawing;
-using Unity.Android.Gradle.Manifest;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.ParticleSystem;
 using static UnityEngine.Rendering.DebugUI.Table;
+
 
 public class SortScrollScript : MonoBehaviour
 {
@@ -37,8 +37,17 @@ public class SortScrollScript : MonoBehaviour
         startPosition = StartObjects[0].transform.position;
         horizontalSpacing = Mathf.Abs(StartObjects[0].transform.position.x) - Mathf.Abs(StartObjects[1].transform.position.x);
         verticalSpacing = Mathf.Abs(StartObjects[0].transform.position.y) - Mathf.Abs(StartObjects[2].transform.position.y);
+        currentColumn = 0;
+        currentRow = 0;
         //Mathf.abs gør at det er i positive tal, altså ikke -13, men bare 13 eks.
         InstantiateAllArticles();
+    }
+    private void OnDisable()
+    {
+        for (int i = 0; i < CurrentArticles.Count; i++)
+        {
+            Destroy(CurrentArticles[i].gameObject);
+        }
     }
 
     public void InstantiateAllArticles()
