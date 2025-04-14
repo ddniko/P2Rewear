@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using NativeCameraNamespace;
 using static NativeCamera;
 using System.IO;
+using UnityEngine.Windows;
 public class CameraHandler : MonoBehaviour
 {
     PreferredCamera pref = PreferredCamera.Front;
@@ -10,8 +11,12 @@ public class CameraHandler : MonoBehaviour
     string newPath;
     void Start()
     {
-        newPath = $"{Application.persistentDataPath}/Pictures";
-
+        newPath = $"{Application.persistentDataPath}/Pictures/picture.JPEG";
+        string directory = Path.GetDirectoryName(newPath);
+        if (!System.IO.Directory.Exists(directory))
+        {
+            System.IO.Directory.CreateDirectory(directory);
+        }
     }
 
     // Update is called once per frame
@@ -29,10 +34,16 @@ public class CameraHandler : MonoBehaviour
     {
         Debug.Log($"Photo saved at: {path}");
         Texture2D texture = LoadTextureFromPath(path);
-        File.Copy(path, newPath, true);
+        System.IO.File.Copy(path, newPath, true);
+        
+        float aspectRatio = (float)rawImage.texture.width / (float)rawImage.texture.height;
 
+        
         rawImage.texture = texture;
-        rawImage.rectTransform.sizeDelta = new Vector2(texture.width, texture.height);
+
+       
+
+        rawImage.rectTransform.sizeDelta = new Vector2(228.11f, 238.87f);
     }
 
     private Texture2D LoadTextureFromPath(string filePath)

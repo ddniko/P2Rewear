@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using static UnityEngine.ParticleSystem;
 using static UnityEngine.Rendering.DebugUI.Table;
 
+
 public class SortScrollScript : MonoBehaviour
 {
 
@@ -15,7 +16,7 @@ public class SortScrollScript : MonoBehaviour
     public Transform ParentObject;
     [Header("ItemPositions")]
     public int maxItemsPerRow = 5;
-    public float horizontalSpacing = 2f;// de her bestemmer hvor meget rum der skal være imellem dem. kunne gøres til public fields så man kunne ændre dem i inspectoren
+    public float horizontalSpacing = 2f;// de her bestemmer hvor meget rum der skal vï¿½re imellem dem. kunne gï¿½res til public fields sï¿½ man kunne ï¿½ndre dem i inspectoren
     public float verticalSpacing = 2f;
     public int currentRow = 0;
     public int currentColumn = 0;
@@ -32,6 +33,23 @@ public class SortScrollScript : MonoBehaviour
 
     }
 
+    private void OnEnable()
+    {
+        startPosition = StartObjects[0].transform.position;
+        horizontalSpacing = Mathf.Abs(StartObjects[0].transform.position.x) - Mathf.Abs(StartObjects[1].transform.position.x);
+        verticalSpacing = Mathf.Abs(StartObjects[0].transform.position.y) - Mathf.Abs(StartObjects[2].transform.position.y);
+        currentColumn = 0;
+        currentRow = 0;
+        //Mathf.abs gï¿½r at det er i positive tal, altsï¿½ ikke -13, men bare 13 eks.
+        InstantiateAllArticles();
+    }
+    private void OnDisable()
+    {
+        for (int i = 0; i < CurrentArticles.Count; i++)
+        {
+            Destroy(CurrentArticles[i].gameObject);
+        }
+    }
 
     public void InstantiateAllArticles()
     {
@@ -55,13 +73,13 @@ public class SortScrollScript : MonoBehaviour
     }
     public void SortArticles()
     {
-        for (int i = 0; i < CurrentArticles.Count ; i++)  //index for rækken
+        for (int i = 0; i < CurrentArticles.Count ; i++)  //index for rï¿½kken
         {
             CurrentArticles[i].gameObject.transform.position = startPosition + new Vector3(currentColumn * horizontalSpacing, -currentRow * verticalSpacing, 0);
             
             currentColumn++;
 
-            // hvis den her row er fyldt, så gå et hak ned
+            // hvis den her row er fyldt, sï¿½ gï¿½ et hak ned
             if (currentColumn >= maxItemsPerRow)
             {
                 currentColumn = 0;
