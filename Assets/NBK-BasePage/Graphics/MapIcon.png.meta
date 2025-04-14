@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: e6529ba7809c84846b85d2ce6c0a702c
+guid: c87629d303d95024d97f4e7ff9eacc48
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4429711962832352407
-    second: SalgBar_0
+      213: -3764558647745528456
+    second: MapIcon_0
+  - first:
+      213: 8137023920255244971
+    second: MapIcon_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SalgBar_0
+      name: MapIcon_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 420
-        height: 96
+        x: 15
+        y: 13
+        width: 48
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 794bbe18f8f797d30800000000000000
-      internalID: 4429711962832352407
+      spriteID: 87db009fad991cbc0800000000000000
+      internalID: -3764558647745528456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapIcon_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 4
+        width: 48
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baa9ba7c4248ce070800000000000000
+      internalID: 8137023920255244971
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SalgBar_0: 4429711962832352407
+      MapIcon_0: -3764558647745528456
+      MapIcon_1: 8137023920255244971
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
