@@ -35,13 +35,13 @@ public class SortScrollScript : MonoBehaviour
 
     private void OnEnable()
     {
-        startPosition = StartObjects[0].transform.position;
+        /*startPosition = StartObjects[0].transform.position;
         horizontalSpacing = Mathf.Abs(StartObjects[0].transform.position.x) - Mathf.Abs(StartObjects[1].transform.position.x);
         verticalSpacing = Mathf.Abs(StartObjects[0].transform.position.y) - Mathf.Abs(StartObjects[2].transform.position.y);
         currentColumn = 0;
         currentRow = 0;
         //Mathf.abs g�r at det er i positive tal, alts� ikke -13, men bare 13 eks.
-        InstantiateAllArticles();
+        InstantiateAllArticles();*/
     }
     private void OnDisable()
     {
