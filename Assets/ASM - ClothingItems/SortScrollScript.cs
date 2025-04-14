@@ -16,6 +16,7 @@ public class SortScrollScript : MonoBehaviour
     private Vector3 startPosition = new Vector3(0, 0, 0);
     public GameObject[] StartObjects;
 
+
     void Start()
     {
 
@@ -28,46 +29,71 @@ public class SortScrollScript : MonoBehaviour
     }
     private void OnEnable()
     {
+
         startPosition = StartObjects[0].transform.position;
         horizontalSpacing = Mathf.Abs(StartObjects[0].transform.position.x) - Mathf.Abs(StartObjects[1].transform.position.x);
         verticalSpacing = Mathf.Abs(StartObjects[0].transform.position.y) - Mathf.Abs(StartObjects[2].transform.position.y);
         currentColumn = 0;
         currentRow = 0;
         //Mathf.abs gør at det er i positive tal, altså ikke -13, men bare 13 eks.
-        InstantiateAllArticles();
+
     }
     private void OnDisable()
+    {
+        DestroyItems();
+    }
+    public void DestroyItems()
     {
         for (int i = 0; i < CurrentArticles.Count; i++)
         {
             Destroy(CurrentArticles[i].gameObject);
         }
+        startPosition = StartObjects[0].transform.position;
+        horizontalSpacing = Mathf.Abs(StartObjects[0].transform.position.x) - Mathf.Abs(StartObjects[1].transform.position.x);
+        verticalSpacing = Mathf.Abs(StartObjects[0].transform.position.y) - Mathf.Abs(StartObjects[2].transform.position.y);
+        currentColumn = 0;
+        currentRow = 0;
     }
-
     private void FilterArticles(ChildDemands demands)
     {
+        DestroyItems();
         List<MArticle> articles = DBManager.GetAllArticles();
         List<MArticle> sortedArticles = new List<MArticle>();
+
         foreach (MArticle article in articles)
         {
-            if (demands.SizeCategory.Contains(article.SizeCategory) &&
-                demands.Category.Contains(article.Category) &&
-                demands.maxPrize >= article.Prize &&
-                demands.minCondition <= article.Condition /*&&
-                demands.maxDistance >= article.distance*/)
+            bool matches = true;
+            if (demands.SizeCategory != null && demands.SizeCategory.Count > 0)
             {
+                if (!demands.SizeCategory.Contains(article.SizeCategory))
+                    matches = false;
+            }
+            if (demands.Category != null && demands.Category.Count > 0)
+            {
+                if (!demands.Category.Contains(article.Category))
+                    matches = false;
+            }
+            if (demands.maxPrize != -1)
+            {
+                if (!article.Prize.HasValue || article.Prize.Value > demands.maxPrize)
+                    matches = false;
+            }
+            if (demands.minCondition.HasValue)
+            {
+                if (article.Condition < demands.minCondition.Value)
+                    matches = false;
+            }
+            if (matches)
                 sortedArticles.Add(article);
-            }
-            else
-            {
-                Debug.Log("næ");
-            }
         }
-        InstantiateAllArticles();
+
+        // Do something with sortedArticles, like instantiate them
+        InstantiateAllArticles(sortedArticles);
     }
 
     public void InstantiateAllArticles()
     {
+        DestroyItems();
         CurrentArticles = new List<GameObject>();
         //praktisk talt at resette listen.
         List<MArticle> articles = DBManager.GetAllArticles();
@@ -81,6 +107,7 @@ public class SortScrollScript : MonoBehaviour
 
     public void InstantiateAllArticles(List<MArticle> art)
     {
+        DestroyItems();
         CurrentArticles = new List<GameObject>();
         //praktisk talt at resette listen.
         List<MArticle> articles = art;
@@ -95,6 +122,7 @@ public class SortScrollScript : MonoBehaviour
 
     public void InstantiateArticlesParent(int parentID)
     {
+        DestroyItems();
         CurrentArticles = new List<GameObject>();
 
         foreach (MArticle article in DBManager.GetArticlesByParentId(parentID))
@@ -106,6 +134,7 @@ public class SortScrollScript : MonoBehaviour
 
     public void InstantiateArticlesChild(int childID)
     {
+        DestroyItems();
         CurrentArticles = new List<GameObject>();
 
         foreach (MArticle article in DBManager.GetArticlesByParentId(childID))

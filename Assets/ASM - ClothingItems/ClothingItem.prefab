@@ -726,11 +726,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priceText: {fileID: 2302918612881064987}
-  distanceText: {fileID: 0}
-  conditionText: {fileID: 2680622146581604822}
+  nameText: {fileID: 0}
+  describtionText: {fileID: 0}
   sizeText: {fileID: 1503326316410465699}
-  sustainabilityText: {fileID: 3133476511203199277}
-  clothingImageContainer: {fileID: 6047924069530511718}
+  conditionText: {fileID: 2680622146581604822}
+  sustainabilityScore: {fileID: 3133476511203199277}
+  clothingImage: {fileID: 6047924069530511718}
+  placeholderSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  primaryKey: 0
+  ClothingName: 
+  childId: 0
+  sizeCategory: 
+  category: 
+  condition: 0
+  description: 
+  imageData: 
 --- !u!114 &5913831139930106730
 MonoBehaviour:
   m_ObjectHideFlags: 0

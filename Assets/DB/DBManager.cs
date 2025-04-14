@@ -1,11 +1,18 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using SQLite;
 using UnityEngine;
 
 public static class DBManager
 {
+    static System.Random rand = new System.Random();
+
+    static string[] names = { "Emma", "Oliver", "Liam", "Ava", "Sophia", "Noah", "Lucas", "Mia", "Elijah", "Amelia" };
+    static string[] tags = { "Winter", "Summer", "Casual", "Hardcore", "Formal", "Outdoor", "Sports", "School", "Party", "Ball-gag", "9mm Glock" };
+    static string[] sizes = { "XS", "S", "M", "L", "XL" };
+    static string[] categories = { "Shirt", "Pants", "Dress", "Jacket", "Shoes", "Hat" };
     #region CreateConnection
     // Sti (filepath) til SQLite-databasen, som gemmes i "persistentDataPath" (så det den samme sti uanset hva platform vi på)
     private static string dbPath = $"{Application.persistentDataPath}/clothing.db";
@@ -223,14 +230,73 @@ public static class DBManager
             GetConnection().Delete(article);  // Sletter tøjet fra databasen
         }
     }
-}
     #endregion
-    #region Models/Tables
-    // Modellerne (tabellerne) i databasen defineres som C# klasser, fordi SQLite-Net er meget federe end SQLite
-
-    // 'MParent' klassen svarer til tabellen 'Parents' i databasen
 
 
-#endregion
+
+    public static void GenerateTestData(int numberOfParents = 5)
+    {
+        GetConnection().CreateTable<MParent>();
+        GetConnection().CreateTable<MChild>();
+        GetConnection().CreateTable<MArticle>();
+
+        for (int i = 0; i < numberOfParents; i++)
+        {
+            var parent = new MParent
+            {
+                Name = GetRandomName(),
+                SustainabilityScore = rand.Next(1, 11),
+                ReliabilityScore = rand.Next(1, 11)
+            };
+            GetConnection().Insert(parent);
+
+            int numChildren = rand.Next(1, 4); // 1–3 children
+            for (int j = 0; j < numChildren; j++)
+            {
+                var child = new MChild
+                {
+                    ParentId = parent.Id,
+                    Name = GetRandomName(),
+                    Gender = (GENDER)rand.Next(0, 3),
+                    Tags = GetRandomTags(),
+                    Age = rand.Next(1, 13),
+                    Size = sizes[rand.Next(sizes.Length)]
+                };
+                GetConnection().Insert(child);
+
+                int numArticles = rand.Next(2, 6); // 2–5 clothing items
+                for (int k = 0; k < numArticles; k++)
+                {
+                    var article = new MArticle
+                    {
+                        ChildId = child.Id,
+                        Name = categories[rand.Next(categories.Length)] + " " + rand.Next(100),
+                        SizeCategory = sizes[rand.Next(sizes.Length)],
+                        Tags = GetRandomTags(),
+                        Category = categories[rand.Next(categories.Length)],
+                        Condition = (float)Math.Round(rand.NextDouble() * 5, 1),
+                        LifeTime = rand.Next(1, 6),
+                        Prize = (float)Math.Round(rand.NextDouble() * 500, 2),
+                        Description = "Description for " + categories[rand.Next(categories.Length)],
+                        ImageData = new byte[0] // tomt billede ligenu
+                    };
+                    GetConnection().Insert(article);
+                }
+            }
+        }
+    }
+
+    private static string GetRandomName()
+    {
+        return names[rand.Next(names.Length)];
+    }
+
+    private static string GetRandomTags()
+    {
+        var selectedTags = tags.OrderBy(x => rand.Next()).Take(rand.Next(1, 4));
+        return string.Join(",", selectedTags);
+    }
+}
+
 
 
