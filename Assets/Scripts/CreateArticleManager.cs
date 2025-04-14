@@ -23,7 +23,7 @@ public class CreateArticleManager : BasePage
     private void Start()
     {
         DBManager.Init();
-        
+        DBManager.AddChild("tom", 0, 4, "stor");
     }
     public void TogglePriceVisibility()
     {
