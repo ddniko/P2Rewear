@@ -44,6 +44,28 @@ public class SortScrollScript : MonoBehaviour
         }
     }
 
+    private void FilterArticles(ChildDemands demands)
+    {
+        List<MArticle> articles = DBManager.GetAllArticles();
+        List<MArticle> sortedArticles = new List<MArticle>();
+        foreach (MArticle article in articles)
+        {
+            if (demands.SizeCategory.Contains(article.SizeCategory) &&
+                demands.Category.Contains(article.Category) &&
+                demands.maxPrize >= article.Prize &&
+                demands.minCondition <= article.Condition /*&&
+                demands.maxDistance >= article.distance*/)
+            {
+                sortedArticles.Add(article);
+            }
+            else
+            {
+                Debug.Log("næ");
+            }
+        }
+        InstantiateAllArticles();
+    }
+
     public void InstantiateAllArticles()
     {
         CurrentArticles = new List<GameObject>();
@@ -51,6 +73,42 @@ public class SortScrollScript : MonoBehaviour
         List<MArticle> articles = DBManager.GetAllArticles();
 
         foreach (MArticle article in articles)
+        {
+            CurrentArticles.Add(CreateArticle(article));
+        }
+        OrderArticles();
+    }
+
+    public void InstantiateAllArticles(List<MArticle> art)
+    {
+        CurrentArticles = new List<GameObject>();
+        //praktisk talt at resette listen.
+        List<MArticle> articles = art;
+
+        foreach (MArticle article in articles)
+        {
+            CurrentArticles.Add(CreateArticle(article));
+        }
+        OrderArticles();
+    }
+
+
+    public void InstantiateArticlesParent(int parentID)
+    {
+        CurrentArticles = new List<GameObject>();
+
+        foreach (MArticle article in DBManager.GetArticlesByParentId(parentID))
+        {
+            CurrentArticles.Add(CreateArticle(article));
+        }
+        OrderArticles();
+    }
+
+    public void InstantiateArticlesChild(int childID)
+    {
+        CurrentArticles = new List<GameObject>();
+
+        foreach (MArticle article in DBManager.GetArticlesByParentId(childID))
         {
             CurrentArticles.Add(CreateArticle(article));
         }
@@ -65,6 +123,8 @@ public class SortScrollScript : MonoBehaviour
             article.Condition, article.LifeTime, article.Prize, article.Description, article.ImageData);
         return newArticle;
     }
+
+
     public void OrderArticles()
     {
         for (int i = 0; i < CurrentArticles.Count; i++)  //index for rækken
