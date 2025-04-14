@@ -9,6 +9,7 @@ public class CameraHandler : MonoBehaviour
     PreferredCamera pref = PreferredCamera.Front;
     public RawImage rawImage;
     string newPath;
+    //s
     void Start()
     {
         newPath = $"{Application.persistentDataPath}/Pictures/picture.JPEG";

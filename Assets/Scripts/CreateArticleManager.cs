@@ -20,6 +20,7 @@ public class CreateArticleManager : BasePage
     public RawImage img;
     MArticle art;
     public TextMeshProUGUI faillog;
+    //s
     private void Start()
     {
         DBManager.Init();

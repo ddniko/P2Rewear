@@ -21,6 +21,8 @@ public class SortScrollScript : MonoBehaviour
     public int currentRow = 0;
     public int currentColumn = 0;
     private Vector3 startPosition = new Vector3(0, 0, 0);
+    public GameObject[] StartObjects;
+    //s
 
     void Start()
     {
