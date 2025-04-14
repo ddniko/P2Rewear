@@ -14,7 +14,7 @@ public class ClothingItem : MonoBehaviour
     //[SerializeField] private TextMeshProUGUI sizeText;
     //[SerializeField] private TextMeshProUGUI sustainabilityText;
     //[SerializeField] private Image clothingImageContainer;
-
+    //s
     //private enum availabletags { Clothing, ClothingItem, ClothingItemClothing };
     //private List<availabletags> tags = new List<availabletags>();
     //private string clothingItemName;
