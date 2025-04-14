@@ -1,12 +1,13 @@
 using System.Collections.Generic;
+using System.Xml.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static System.Net.Mime.MediaTypeNames;
 
 
 public class ClothingItem : MonoBehaviour
 {
-
     //[Header("Text Elements")]
     //[SerializeField] private TextMeshProUGUI priceText;
     //[SerializeField] private TextMeshProUGUI distanceText;
@@ -14,7 +15,7 @@ public class ClothingItem : MonoBehaviour
     //[SerializeField] private TextMeshProUGUI sizeText;
     //[SerializeField] private TextMeshProUGUI sustainabilityText;
     //[SerializeField] private Image clothingImageContainer;
-    //s
+
     //private enum availabletags { Clothing, ClothingItem, ClothingItemClothing };
     //private List<availabletags> tags = new List<availabletags>();
     //private string clothingItemName;
@@ -35,7 +36,7 @@ public class ClothingItem : MonoBehaviour
     public TextMeshProUGUI conditionText;
     public TextMeshProUGUI sustainabilityScore;
 
-    public Image clothingImage;
+    public UnityEngine.UI.Image clothingImage;
     public Sprite placeholderSprite;
 
     public int primaryKey;
@@ -49,102 +50,180 @@ public class ClothingItem : MonoBehaviour
     public string description;
     public byte[] imageData;
 
-
     private enum sizeOlderChildren
     {
         small, medium, large, xl, xxl
     }
-    
+
     private enum clothingType
     {
         Pants, TShirt
     }
-    
-    
-    
-    
+
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        clothingImageContainer = clothingImage;
-        priceText.text = price.ToString();
-        sizeText.text = sizeSmallChildren.ToString();
-        sustainabilityText.text = sustainabilityScore.ToString();
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void SetUpClothingItem(string sizeT)
+    public void SetUpClothingItem(int primaryKey, string name, int childId, string sizeCategory, string category, float condition, int? lifeTime, float? prize, string description, byte[] imageData)
     {
-        sizeText.text = sizeT;
+        this.primaryKey = primaryKey;
+        this.childId = childId;
+        this.ClothingName = name;
+
+        this.sizeCategory = sizeCategory;
+        this.category = category;
+        this.condition = condition;
+        this.lifeTime = lifeTime;
+        this.prize = prize;
+        this.description = description;
+        this.imageData = imageData;
+        OpenOverlay();
     }
-    
-    
+
+    public void OpenOverlay()
+    {
+        if (prize == null)
+            priceText.text = "free";
+        else
+            priceText.text = $"${prize:F2}";
+        //nameText.text = this.name;
+        //describtionText.text = description;
+        sizeText.text = sizeCategory;
+        conditionText.text = $"{condition * 100:F0}%";
+
+
+        // Load image fra bytes stored. skal implementer en placeholder
+        Sprite itemSprite = CreateImage(imageData);
+        clothingImage.sprite = itemSprite != null ? itemSprite : placeholderSprite;
+    }
+    public Sprite CreateImage(byte[] imageBytes)
+    {
+
+        if (imageBytes != null && imageBytes.Length > 0)
+        {
+            Texture2D texture = new Texture2D(2, 2);
+            texture.LoadImage(imageBytes);
+            Sprite newSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+            return newSprite;
+        }
+        else
+            return null;
+    }
     //getters
-    public int GetPrice()
+    public int GetPrimaryKey()
     {
-        return price;
-    }
-
-    public float GetDistance()
-    {
-        return distance;
-    }
-
-    public float GetSizeSmallChildren()
-    {
-        return sizeSmallChildren;
+        return primaryKey;
     }
 
     public string GetClothingItemName()
     {
-        return clothingItemName;
+        return name;
     }
 
-    public int GetCondition()
+    public int GetChildId()
+    {
+        return childId;
+    }
+
+    public string GetSizeCategory()
+    {
+        return sizeCategory;
+    }
+
+    public string GetCategory()
+    {
+        return category;
+    }
+
+    public float GetCondition()
     {
         return condition;
     }
 
-    public int GetSustainabilityScore()
+    public int? GetLifeTime()
     {
-        return sustainabilityScore;
+        return lifeTime;
     }
 
-    public string GetClothingDescription()
+    public float? GetPrize()
     {
-        return clothingDescription;
+        return prize;
     }
 
-    public Image GetClothingImage()
+    public string GetDescription()
     {
-        return clothingImage;
+        return description;
     }
-    
-    
+
+    public byte[] GetImageData()
+    {
+        return imageData;
+    }
+
+
     // Setters
+
+    public void SetPrimaryKey(int newPrimaryKey)
+    {
+        primaryKey = newPrimaryKey;
+    }
 
     public void SetClothingItemName(string newName)
     {
-        clothingItemName = newName;
+        name = newName;
     }
 
-    public void SetClothingDescription(string newDescription)
+    public void SetChildId(int newChildId)
     {
-        clothingDescription = newDescription;
+        childId = newChildId;
     }
 
-    public void SetPrice(int newPrice)
+    public void SetSizeCategory(string newSizeCategory)
     {
-        price = newPrice;
+        sizeCategory = newSizeCategory;
     }
-    
-    
-    
-    
+
+    public void SetCategory(string newCategory)
+    {
+        category = newCategory;
+    }
+
+    public void SetCondition(float newCondition)
+    {
+        condition = newCondition;
+    }
+
+    public void SetLifeTime(int? newLifeTime)
+    {
+        lifeTime = newLifeTime;
+    }
+
+    public void SetPrize(float newPrize)
+    {
+        prize = newPrize;
+    }
+
+    public void SetDescription(string newDescription)
+    {
+        description = newDescription;
+    }
+
+    public void SetImageData(byte[] newImageData)
+    {
+        imageData = newImageData;
+    }
+
+
+
+
 }
