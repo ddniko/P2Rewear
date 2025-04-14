@@ -545,7 +545,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5913831139930106730}
         m_TargetAssemblyTypeName: OverlayMessage, Assembly-CSharp
         m_MethodName: SendMessage
         m_Mode: 2
@@ -682,6 +682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9011424253821717235}
   - component: {fileID: 513859132886548805}
+  - component: {fileID: 5913831139930106730}
   m_Layer: 5
   m_Name: ClothingItem
   m_TagString: Untagged
@@ -697,7 +698,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3530504798633981141}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 4.618}
   m_LocalScale: {x: 0.85858, y: 0.85858, z: 0.85858}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -709,7 +710,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -222.91, y: 93.755}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &513859132886548805
@@ -725,22 +726,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priceText: {fileID: 2302918612881064987}
-  nameText: {fileID: 0}
-  describtionText: {fileID: 0}
-  sizeText: {fileID: 1503326316410465699}
+  distanceText: {fileID: 0}
   conditionText: {fileID: 2680622146581604822}
-  sustainabilityScore: {fileID: 3133476511203199277}
-  clothingImage: {fileID: 6047924069530511718}
-  placeholderSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  primaryKey: 0
-  name: 
-  childId: 0
-  sizeCategory: 
-  category: 
-  condition: 0
-  prize: 0
-  description: 
-  imageData: 
+  sizeText: {fileID: 1503326316410465699}
+  sustainabilityText: {fileID: 3133476511203199277}
+  clothingImageContainer: {fileID: 6047924069530511718}
+--- !u!114 &5913831139930106730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3530504798633981141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164fe703d16e5e04c94073b694049fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clothingOverlay: {fileID: 0}
+  overlayScript: {fileID: 0}
 --- !u!1 &3865826855534515459
 GameObject:
   m_ObjectHideFlags: 0
