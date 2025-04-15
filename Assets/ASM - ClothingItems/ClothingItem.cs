@@ -66,6 +66,11 @@ public class ClothingItem : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //clothingImageContainer = clothingImage;
+        //priceText.text = price.ToString();
+       // sizeText.text = sizeSmallChildren.ToString();
+       // sustainabilityText.text = sustainabilityScore.ToString();
+        
     }
 
     // Update is called once per frame

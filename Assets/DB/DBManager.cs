@@ -1,18 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using SQLite;
 using UnityEngine;
 
 public static class DBManager
 {
-    static System.Random rand = new System.Random();
-
-    static string[] names = { "Emma", "Oliver", "Liam", "Ava", "Sophia", "Noah", "Lucas", "Mia", "Elijah", "Amelia" };
-    static string[] tags = { "Winter", "Summer", "Casual", "Hardcore", "Formal", "Outdoor", "Sports", "School", "Party", "Ball-gag", "9mm Glock" };
-    static string[] sizes = { "XS", "S", "M", "L", "XL" };
-    static string[] categories = { "Shirt", "Pants", "Dress", "Jacket", "Shoes", "Hat" };
     #region CreateConnection
     // Sti (filepath) til SQLite-databasen, som gemmes i "persistentDataPath" (så det den samme sti uanset hva platform vi på)
     private static string dbPath = $"{Application.persistentDataPath}/clothing.db";
@@ -230,73 +223,53 @@ public static class DBManager
             GetConnection().Delete(article);  // Sletter tøjet fra databasen
         }
     }
+
     #endregion
-
-
-
-    public static void GenerateTestData(int numberOfParents = 5)
+    #region CRUD for Memory (minde)
+    public static void AddMemory(MMemory memory) //tilføj memory
     {
-        GetConnection().CreateTable<MParent>();
-        GetConnection().CreateTable<MChild>();
-        GetConnection().CreateTable<MArticle>();
-
-        for (int i = 0; i < numberOfParents; i++)
+        GetConnection().Insert(memory);
+    }
+    public static void DeleteMemory(int id) //delete memory gennem id
+    {
+        var memory = GetMemoryById(id);
+        if (memory != null)
+            GetConnection().Delete(memory);
+    }
+    public static MMemory GetMemoryById(int id) //skaf memory gennem id
+    {
+        return GetConnection().Table<MMemory>().FirstOrDefault(a => a.Id == id);  // Finder mindet med dette ID
+    }
+    public static List<MMemory> GetAllMemories()
+    {
+        return GetConnection().Table<MMemory>().ToList();  // Henter alle stykker tøj i en liste
+    }
+    public static List<MMemory> GetMemoriesByArticle(int articleId) //henter de minder der er tilsat bestemte tøj
+    {
+        var memories = GetAllMemories();
+        var newMemories = new List<MMemory>();
+        foreach (var article in memories)
         {
-            var parent = new MParent
-            {
-                Name = GetRandomName(),
-                SustainabilityScore = rand.Next(1, 11),
-                ReliabilityScore = rand.Next(1, 11)
-            };
-            GetConnection().Insert(parent);
+            if (article.Id == articleId)
+                newMemories.Add(article);
 
-            int numChildren = rand.Next(1, 4); // 1–3 children
-            for (int j = 0; j < numChildren; j++)
-            {
-                var child = new MChild
-                {
-                    ParentId = parent.Id,
-                    Name = GetRandomName(),
-                    Gender = (GENDER)rand.Next(0, 3),
-                    Tags = GetRandomTags(),
-                    Age = rand.Next(1, 13),
-                    Size = sizes[rand.Next(sizes.Length)]
-                };
-                GetConnection().Insert(child);
-
-                int numArticles = rand.Next(2, 6); // 2–5 clothing items
-                for (int k = 0; k < numArticles; k++)
-                {
-                    var article = new MArticle
-                    {
-                        ChildId = child.Id,
-                        Name = categories[rand.Next(categories.Length)] + " " + rand.Next(100),
-                        SizeCategory = sizes[rand.Next(sizes.Length)],
-                        Tags = GetRandomTags(),
-                        Category = categories[rand.Next(categories.Length)],
-                        Condition = (float)Math.Round(rand.NextDouble() * 5, 1),
-                        LifeTime = rand.Next(1, 6),
-                        Prize = (float)Math.Round(rand.NextDouble() * 500, 2),
-                        Description = "Description for " + categories[rand.Next(categories.Length)],
-                        ImageData = new byte[0] // tomt billede ligenu
-                    };
-                    GetConnection().Insert(article);
-                }
-            }
         }
+        return newMemories;
     }
-
-    private static string GetRandomName()
+    public static void UpdateMemory(MArticle memory) //ændre minde
     {
-        return names[rand.Next(names.Length)];
-    }
-
-    private static string GetRandomTags()
-    {
-        var selectedTags = tags.OrderBy(x => rand.Next()).Take(rand.Next(1, 4));
-        return string.Join(",", selectedTags);
+        GetConnection().Update(memory);
     }
 }
 
+    #endregion
+
+#region Models/Tables
+// Modellerne (tabellerne) i databasen defineres som C# klasser, fordi SQLite-Net er meget federe end SQLite
+
+// 'MParent' klassen svarer til tabellen 'Parents' i databasen
+
+
+#endregion
 
 

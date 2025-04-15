@@ -1,0 +1,7215 @@
+fileFormatVersion: 2
+guid: aa96746d9dd24cd4bafed047c8b8082c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1635945420545939834
+    second: TroScoreInfo_0
+  - first:
+      213: -3286474253653678659
+    second: TroScoreInfo_1
+  - first:
+      213: 7248022131583869458
+    second: TroScoreInfo_2
+  - first:
+      213: 3049102127959485860
+    second: TroScoreInfo_3
+  - first:
+      213: -4004908157894355751
+    second: TroScoreInfo_4
+  - first:
+      213: 3853182333557637118
+    second: TroScoreInfo_5
+  - first:
+      213: 3209216092014342963
+    second: TroScoreInfo_6
+  - first:
+      213: 1123799426043610107
+    second: TroScoreInfo_7
+  - first:
+      213: -3483055165803160151
+    second: TroScoreInfo_8
+  - first:
+      213: 6112694613496256475
+    second: TroScoreInfo_9
+  - first:
+      213: 8507508967089997625
+    second: TroScoreInfo_10
+  - first:
+      213: -616691120421121053
+    second: TroScoreInfo_11
+  - first:
+      213: -849788707718153464
+    second: TroScoreInfo_12
+  - first:
+      213: -8568418838277338078
+    second: TroScoreInfo_13
+  - first:
+      213: 4234179769853720448
+    second: TroScoreInfo_14
+  - first:
+      213: -1047149880477535909
+    second: TroScoreInfo_15
+  - first:
+      213: 149901679228122098
+    second: TroScoreInfo_16
+  - first:
+      213: 1356129242985085359
+    second: TroScoreInfo_17
+  - first:
+      213: -2581094937815963510
+    second: TroScoreInfo_18
+  - first:
+      213: 5172780291404721790
+    second: TroScoreInfo_19
+  - first:
+      213: -8235799085132767524
+    second: TroScoreInfo_20
+  - first:
+      213: 6864998490131733957
+    second: TroScoreInfo_21
+  - first:
+      213: -3821074399297569160
+    second: TroScoreInfo_22
+  - first:
+      213: -7134171926579819718
+    second: TroScoreInfo_23
+  - first:
+      213: -707066384884175960
+    second: TroScoreInfo_24
+  - first:
+      213: -8605684162448537636
+    second: TroScoreInfo_25
+  - first:
+      213: 6234675226464834613
+    second: TroScoreInfo_26
+  - first:
+      213: -9140383179824718147
+    second: TroScoreInfo_27
+  - first:
+      213: -8090979672839642332
+    second: TroScoreInfo_28
+  - first:
+      213: -2359410749120186871
+    second: TroScoreInfo_29
+  - first:
+      213: 4383746835867102430
+    second: TroScoreInfo_30
+  - first:
+      213: 8341278537984833884
+    second: TroScoreInfo_31
+  - first:
+      213: 5138686410549509479
+    second: TroScoreInfo_32
+  - first:
+      213: -2183721648921665429
+    second: TroScoreInfo_33
+  - first:
+      213: 2472087504280085047
+    second: TroScoreInfo_34
+  - first:
+      213: 500434822649965450
+    second: TroScoreInfo_35
+  - first:
+      213: -6242463361992931990
+    second: TroScoreInfo_36
+  - first:
+      213: 1841535397269454296
+    second: TroScoreInfo_37
+  - first:
+      213: 4710228341006687159
+    second: TroScoreInfo_38
+  - first:
+      213: 1666403679965727456
+    second: TroScoreInfo_39
+  - first:
+      213: -584137045934638811
+    second: TroScoreInfo_40
+  - first:
+      213: 7508632213133527450
+    second: TroScoreInfo_41
+  - first:
+      213: 1766732214704118446
+    second: TroScoreInfo_42
+  - first:
+      213: -917800679131867379
+    second: TroScoreInfo_43
+  - first:
+      213: -3905135330774754799
+    second: TroScoreInfo_44
+  - first:
+      213: 3364533150858272344
+    second: TroScoreInfo_45
+  - first:
+      213: 2743992822416244923
+    second: TroScoreInfo_46
+  - first:
+      213: 6168459590966140163
+    second: TroScoreInfo_47
+  - first:
+      213: -4519252921903571804
+    second: TroScoreInfo_48
+  - first:
+      213: 1189702697424073512
+    second: TroScoreInfo_49
+  - first:
+      213: 8652929265813151556
+    second: TroScoreInfo_50
+  - first:
+      213: 7920517918652012664
+    second: TroScoreInfo_51
+  - first:
+      213: 1170778687844747360
+    second: TroScoreInfo_52
+  - first:
+      213: -4451183155602526164
+    second: TroScoreInfo_53
+  - first:
+      213: -5652056938200010463
+    second: TroScoreInfo_54
+  - first:
+      213: -2580970460128914015
+    second: TroScoreInfo_55
+  - first:
+      213: 8658269636691566005
+    second: TroScoreInfo_56
+  - first:
+      213: 3955622681811145660
+    second: TroScoreInfo_57
+  - first:
+      213: 3967597047897920909
+    second: TroScoreInfo_58
+  - first:
+      213: -3396892913960674546
+    second: TroScoreInfo_59
+  - first:
+      213: -2065994605386806394
+    second: TroScoreInfo_60
+  - first:
+      213: -3542110842844631565
+    second: TroScoreInfo_61
+  - first:
+      213: -4595131190353557838
+    second: TroScoreInfo_62
+  - first:
+      213: -4077250169053313556
+    second: TroScoreInfo_63
+  - first:
+      213: -948319578088837509
+    second: TroScoreInfo_64
+  - first:
+      213: -1378582680552179185
+    second: TroScoreInfo_65
+  - first:
+      213: -2350776522236266586
+    second: TroScoreInfo_66
+  - first:
+      213: 9050242546485007771
+    second: TroScoreInfo_67
+  - first:
+      213: -7655270889102661127
+    second: TroScoreInfo_68
+  - first:
+      213: 1667037105765808946
+    second: TroScoreInfo_69
+  - first:
+      213: -3819686511077581123
+    second: TroScoreInfo_70
+  - first:
+      213: 5723240421639607341
+    second: TroScoreInfo_71
+  - first:
+      213: 7173913370188484967
+    second: TroScoreInfo_72
+  - first:
+      213: 6196514128610121472
+    second: TroScoreInfo_73
+  - first:
+      213: 9121419635775097058
+    second: TroScoreInfo_74
+  - first:
+      213: 8073334368414726570
+    second: TroScoreInfo_75
+  - first:
+      213: 5958342887121676289
+    second: TroScoreInfo_76
+  - first:
+      213: -3174918932447630560
+    second: TroScoreInfo_77
+  - first:
+      213: -3583803327223809064
+    second: TroScoreInfo_78
+  - first:
+      213: -5563977466032702112
+    second: TroScoreInfo_79
+  - first:
+      213: -519778934441405506
+    second: TroScoreInfo_80
+  - first:
+      213: 3402902564089036920
+    second: TroScoreInfo_81
+  - first:
+      213: -7760470699101469781
+    second: TroScoreInfo_82
+  - first:
+      213: 710865847648088144
+    second: TroScoreInfo_83
+  - first:
+      213: 395826918972497943
+    second: TroScoreInfo_84
+  - first:
+      213: -7714463941542554480
+    second: TroScoreInfo_85
+  - first:
+      213: -278515322410723030
+    second: TroScoreInfo_86
+  - first:
+      213: 418548463855189265
+    second: TroScoreInfo_87
+  - first:
+      213: -5552655095374814037
+    second: TroScoreInfo_88
+  - first:
+      213: -2437425228991929280
+    second: TroScoreInfo_89
+  - first:
+      213: -5915117747735201164
+    second: TroScoreInfo_90
+  - first:
+      213: -6027920222276031963
+    second: TroScoreInfo_91
+  - first:
+      213: 3546922505311527817
+    second: TroScoreInfo_92
+  - first:
+      213: 8338893982392715933
+    second: TroScoreInfo_93
+  - first:
+      213: -615057500812413740
+    second: TroScoreInfo_94
+  - first:
+      213: -3215996677190585819
+    second: TroScoreInfo_95
+  - first:
+      213: 6354322501502881975
+    second: TroScoreInfo_96
+  - first:
+      213: 2130457361886384780
+    second: TroScoreInfo_97
+  - first:
+      213: 8973336923122950449
+    second: TroScoreInfo_98
+  - first:
+      213: -2334831275755486725
+    second: TroScoreInfo_99
+  - first:
+      213: -843304004522268533
+    second: TroScoreInfo_100
+  - first:
+      213: 6000310565591183035
+    second: TroScoreInfo_101
+  - first:
+      213: 7003013411041477477
+    second: TroScoreInfo_102
+  - first:
+      213: 8971229789997786487
+    second: TroScoreInfo_103
+  - first:
+      213: -4693162508568880312
+    second: TroScoreInfo_104
+  - first:
+      213: -804146440985544692
+    second: TroScoreInfo_105
+  - first:
+      213: -3984839122476932363
+    second: TroScoreInfo_106
+  - first:
+      213: -6119880110042477170
+    second: TroScoreInfo_107
+  - first:
+      213: -1305456289497969798
+    second: TroScoreInfo_108
+  - first:
+      213: 848637800812122349
+    second: TroScoreInfo_109
+  - first:
+      213: -2880886070605142050
+    second: TroScoreInfo_110
+  - first:
+      213: -1937009095713755625
+    second: TroScoreInfo_111
+  - first:
+      213: -3564483307449337437
+    second: TroScoreInfo_112
+  - first:
+      213: -2943672930072188015
+    second: TroScoreInfo_113
+  - first:
+      213: 8733395905138260828
+    second: TroScoreInfo_114
+  - first:
+      213: 1478751431036784425
+    second: TroScoreInfo_115
+  - first:
+      213: 1110982528115070972
+    second: TroScoreInfo_116
+  - first:
+      213: 619843429599784699
+    second: TroScoreInfo_117
+  - first:
+      213: 3809921260440724774
+    second: TroScoreInfo_118
+  - first:
+      213: 7382734139322427135
+    second: TroScoreInfo_119
+  - first:
+      213: 4120255965034015309
+    second: TroScoreInfo_120
+  - first:
+      213: -3321916826122219896
+    second: TroScoreInfo_121
+  - first:
+      213: 7031290007498569368
+    second: TroScoreInfo_122
+  - first:
+      213: -4692480747565525817
+    second: TroScoreInfo_123
+  - first:
+      213: 8220791681535655448
+    second: TroScoreInfo_124
+  - first:
+      213: -4775394111424088828
+    second: TroScoreInfo_125
+  - first:
+      213: 1756069847656862927
+    second: TroScoreInfo_126
+  - first:
+      213: -3095262029506644392
+    second: TroScoreInfo_127
+  - first:
+      213: -564748516769475218
+    second: TroScoreInfo_128
+  - first:
+      213: -5422285436069271085
+    second: TroScoreInfo_129
+  - first:
+      213: 7763481368055007070
+    second: TroScoreInfo_130
+  - first:
+      213: -1981304029109708862
+    second: TroScoreInfo_131
+  - first:
+      213: 4796317496553797853
+    second: TroScoreInfo_132
+  - first:
+      213: -6676676862853006518
+    second: TroScoreInfo_133
+  - first:
+      213: 2709924191310056307
+    second: TroScoreInfo_134
+  - first:
+      213: 7116132475971662433
+    second: TroScoreInfo_135
+  - first:
+      213: 1138383749414701331
+    second: TroScoreInfo_136
+  - first:
+      213: 6530308325231543562
+    second: TroScoreInfo_137
+  - first:
+      213: 3756095138962864915
+    second: TroScoreInfo_138
+  - first:
+      213: -7726530014991956126
+    second: TroScoreInfo_139
+  - first:
+      213: -1334739771717192730
+    second: TroScoreInfo_140
+  - first:
+      213: 1922866378161554862
+    second: TroScoreInfo_141
+  - first:
+      213: 22024279663156268
+    second: TroScoreInfo_142
+  - first:
+      213: -2548770995587679451
+    second: TroScoreInfo_143
+  - first:
+      213: -6417053430585976220
+    second: TroScoreInfo_144
+  - first:
+      213: 3752004755544683689
+    second: TroScoreInfo_145
+  - first:
+      213: 7494658042003281875
+    second: TroScoreInfo_146
+  - first:
+      213: -8846579674758545991
+    second: TroScoreInfo_147
+  - first:
+      213: 1757259518558612993
+    second: TroScoreInfo_148
+  - first:
+      213: 7349997105677328393
+    second: TroScoreInfo_149
+  - first:
+      213: -2947070643563447361
+    second: TroScoreInfo_150
+  - first:
+      213: 7073936995273834709
+    second: TroScoreInfo_151
+  - first:
+      213: 170758531381986934
+    second: TroScoreInfo_152
+  - first:
+      213: 7369797473584634236
+    second: TroScoreInfo_153
+  - first:
+      213: 8992325828770533303
+    second: TroScoreInfo_154
+  - first:
+      213: -62264812300417113
+    second: TroScoreInfo_155
+  - first:
+      213: 6280194659346060964
+    second: TroScoreInfo_156
+  - first:
+      213: -5542691299657570419
+    second: TroScoreInfo_157
+  - first:
+      213: 7869021436153717107
+    second: TroScoreInfo_158
+  - first:
+      213: 3830412016350546774
+    second: TroScoreInfo_159
+  - first:
+      213: 1888122782205686236
+    second: TroScoreInfo_160
+  - first:
+      213: -2844029641764632025
+    second: TroScoreInfo_161
+  - first:
+      213: 631973384137558546
+    second: TroScoreInfo_162
+  - first:
+      213: 7334933412547489432
+    second: TroScoreInfo_163
+  - first:
+      213: 2508597779244252512
+    second: TroScoreInfo_164
+  - first:
+      213: -7318156467843524735
+    second: TroScoreInfo_165
+  - first:
+      213: 7590877914849242785
+    second: TroScoreInfo_166
+  - first:
+      213: -5370690510863155469
+    second: TroScoreInfo_167
+  - first:
+      213: 515734779147340149
+    second: TroScoreInfo_168
+  - first:
+      213: 4867893448555358469
+    second: TroScoreInfo_169
+  - first:
+      213: 4389352024804218188
+    second: TroScoreInfo_170
+  - first:
+      213: 8817984459409655022
+    second: TroScoreInfo_171
+  - first:
+      213: -3930772500656474170
+    second: TroScoreInfo_172
+  - first:
+      213: -6824899951997052356
+    second: TroScoreInfo_173
+  - first:
+      213: 4074076614365358092
+    second: TroScoreInfo_174
+  - first:
+      213: 3056945711426486208
+    second: TroScoreInfo_175
+  - first:
+      213: 7249346368816962010
+    second: TroScoreInfo_176
+  - first:
+      213: -1013885992554305159
+    second: TroScoreInfo_177
+  - first:
+      213: -5576380813580833652
+    second: TroScoreInfo_178
+  - first:
+      213: -325909859254385068
+    second: TroScoreInfo_179
+  - first:
+      213: -4445559336710534551
+    second: TroScoreInfo_180
+  - first:
+      213: -1405692606082107875
+    second: TroScoreInfo_181
+  - first:
+      213: 6918529281963538925
+    second: TroScoreInfo_182
+  - first:
+      213: 7394134599483602723
+    second: TroScoreInfo_183
+  - first:
+      213: 8324020527403794510
+    second: TroScoreInfo_184
+  - first:
+      213: -6116146292985097719
+    second: TroScoreInfo_185
+  - first:
+      213: -964170040363626789
+    second: TroScoreInfo_186
+  - first:
+      213: 7495736265186083291
+    second: TroScoreInfo_187
+  - first:
+      213: -4190330306315131277
+    second: TroScoreInfo_188
+  - first:
+      213: -7885982031428525022
+    second: TroScoreInfo_189
+  - first:
+      213: -3865851109395732155
+    second: TroScoreInfo_190
+  - first:
+      213: -3766816503797859189
+    second: TroScoreInfo_191
+  - first:
+      213: 9186857837506891444
+    second: TroScoreInfo_192
+  - first:
+      213: 2048393523509390473
+    second: TroScoreInfo_193
+  - first:
+      213: 2073660505884248095
+    second: TroScoreInfo_194
+  - first:
+      213: -4187832259195773433
+    second: TroScoreInfo_195
+  - first:
+      213: -6542126200801221769
+    second: TroScoreInfo_196
+  - first:
+      213: -4317567141505967463
+    second: TroScoreInfo_197
+  - first:
+      213: 7227680231155705122
+    second: TroScoreInfo_198
+  - first:
+      213: 3184833909458855616
+    second: TroScoreInfo_199
+  - first:
+      213: 3741753799307584158
+    second: TroScoreInfo_200
+  - first:
+      213: -2577976338668962606
+    second: TroScoreInfo_201
+  - first:
+      213: -8310664505124901276
+    second: TroScoreInfo_202
+  - first:
+      213: 5598804910838164834
+    second: TroScoreInfo_203
+  - first:
+      213: -1246085021745716911
+    second: TroScoreInfo_204
+  - first:
+      213: 9026682410171436649
+    second: TroScoreInfo_205
+  - first:
+      213: -3905162502397816280
+    second: TroScoreInfo_206
+  - first:
+      213: -8696509080392648349
+    second: TroScoreInfo_207
+  - first:
+      213: 8299893250038675625
+    second: TroScoreInfo_208
+  - first:
+      213: -8927448213415119582
+    second: TroScoreInfo_209
+  - first:
+      213: -4448122524351267081
+    second: TroScoreInfo_210
+  - first:
+      213: 6425727629216923480
+    second: TroScoreInfo_211
+  - first:
+      213: -2060113501750429676
+    second: TroScoreInfo_212
+  - first:
+      213: 6940977592846254606
+    second: TroScoreInfo_213
+  - first:
+      213: -1187667389230077712
+    second: TroScoreInfo_214
+  - first:
+      213: 3965908045117734159
+    second: TroScoreInfo_215
+  - first:
+      213: 2044064430570174345
+    second: TroScoreInfo_216
+  - first:
+      213: -1231238210515223908
+    second: TroScoreInfo_217
+  - first:
+      213: 5699864788436065048
+    second: TroScoreInfo_218
+  - first:
+      213: 1606007336964961446
+    second: TroScoreInfo_219
+  - first:
+      213: 8820325110907331786
+    second: TroScoreInfo_220
+  - first:
+      213: 5942131605615412740
+    second: TroScoreInfo_221
+  - first:
+      213: -5836647515011098757
+    second: TroScoreInfo_222
+  - first:
+      213: -819736532316256091
+    second: TroScoreInfo_223
+  - first:
+      213: -7830612568120196702
+    second: TroScoreInfo_224
+  - first:
+      213: -3816094429305250073
+    second: TroScoreInfo_225
+  - first:
+      213: 8999785280057859662
+    second: TroScoreInfo_226
+  - first:
+      213: 5140890838936737664
+    second: TroScoreInfo_227
+  - first:
+      213: -4401802636136192850
+    second: TroScoreInfo_228
+  - first:
+      213: -2979352898884263804
+    second: TroScoreInfo_229
+  - first:
+      213: 5386345818161494026
+    second: TroScoreInfo_230
+  - first:
+      213: -7848449671886307375
+    second: TroScoreInfo_231
+  - first:
+      213: 5562455678035342971
+    second: TroScoreInfo_232
+  - first:
+      213: -1884618615563687933
+    second: TroScoreInfo_233
+  - first:
+      213: 1448497975252632823
+    second: TroScoreInfo_234
+  - first:
+      213: 179826656805977610
+    second: TroScoreInfo_235
+  - first:
+      213: 2060216751794570102
+    second: TroScoreInfo_236
+  - first:
+      213: -8232669420538117218
+    second: TroScoreInfo_237
+  - first:
+      213: -6235684799897224765
+    second: TroScoreInfo_238
+  - first:
+      213: -4805902374845101966
+    second: TroScoreInfo_239
+  - first:
+      213: 7217271428796305811
+    second: TroScoreInfo_240
+  - first:
+      213: -3332620040121177054
+    second: TroScoreInfo_241
+  - first:
+      213: 8531720584341859118
+    second: TroScoreInfo_242
+  - first:
+      213: 8358576293982451644
+    second: TroScoreInfo_243
+  - first:
+      213: -3427964532088301705
+    second: TroScoreInfo_244
+  - first:
+      213: -1768270700458183086
+    second: TroScoreInfo_245
+  - first:
+      213: -8473652653133976107
+    second: TroScoreInfo_246
+  - first:
+      213: -4329191126775704963
+    second: TroScoreInfo_247
+  - first:
+      213: -7849078722159429807
+    second: TroScoreInfo_248
+  - first:
+      213: -4056656280134052058
+    second: TroScoreInfo_249
+  - first:
+      213: -2194371146387555708
+    second: TroScoreInfo_250
+  - first:
+      213: -5766924185135037034
+    second: TroScoreInfo_251
+  - first:
+      213: 2412864248542427941
+    second: TroScoreInfo_252
+  - first:
+      213: -1689855127352551355
+    second: TroScoreInfo_253
+  - first:
+      213: 990079585136881612
+    second: TroScoreInfo_254
+  - first:
+      213: -641035975516344207
+    second: TroScoreInfo_255
+  - first:
+      213: -2249665234791739586
+    second: TroScoreInfo_256
+  - first:
+      213: -8653383293820011207
+    second: TroScoreInfo_257
+  - first:
+      213: 5667276785651660839
+    second: TroScoreInfo_258
+  - first:
+      213: -2732967271045581348
+    second: TroScoreInfo_259
+  - first:
+      213: -3982887575390207875
+    second: TroScoreInfo_260
+  - first:
+      213: 3223508723886074715
+    second: TroScoreInfo_261
+  - first:
+      213: 7774800311112894032
+    second: TroScoreInfo_262
+  - first:
+      213: -1210114926959810411
+    second: TroScoreInfo_263
+  - first:
+      213: -7018255130200208020
+    second: TroScoreInfo_264
+  - first:
+      213: -6558695077450676278
+    second: TroScoreInfo_265
+  - first:
+      213: 3541435568283285242
+    second: TroScoreInfo_266
+  - first:
+      213: 6370319373431719765
+    second: TroScoreInfo_267
+  - first:
+      213: 498678994902114050
+    second: TroScoreInfo_268
+  - first:
+      213: -5045710181553285294
+    second: TroScoreInfo_269
+  - first:
+      213: -8725231460511532955
+    second: TroScoreInfo_270
+  - first:
+      213: -1108075168227741199
+    second: TroScoreInfo_271
+  - first:
+      213: -2592388403395669724
+    second: TroScoreInfo_272
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TroScoreInfo_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 776
+        width: 44
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 686ae60ce44fb49e0800000000000000
+      internalID: -1635945420545939834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 775
+        width: 58
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db5618b24191462d0800000000000000
+      internalID: -3286474253653678659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_2
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 775
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 212e93d1ab5269460800000000000000
+      internalID: 7248022131583869458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_3
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 817
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ada9e40b36905a20800000000000000
+      internalID: 3049102127959485860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_4
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 776
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d494a2df35bb68c0800000000000000
+      internalID: -4004908157894355751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_5
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 775
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eff7386dae0497530800000000000000
+      internalID: 3853182333557637118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_6
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 775
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3337bf3580d698c20800000000000000
+      internalID: 3209216092014342963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_7
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 775
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf30e14bf99889f00800000000000000
+      internalID: 1123799426043610107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_8
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 775
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ad963dd7c3b9afc0800000000000000
+      internalID: -3483055165803160151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_9
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 775
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd753e15d57a4d450800000000000000
+      internalID: 6112694613496256475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_10
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 776
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93789d2b45eb01670800000000000000
+      internalID: 8507508967089997625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_11
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 759
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e3592f71b21177f0800000000000000
+      internalID: -616691120421121053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_12
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 776
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80b32563ca1f434f0800000000000000
+      internalID: -849788707718153464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_13
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 775
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22cc6b9c67cd61980800000000000000
+      internalID: -8568418838277338078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_14
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 685
+        width: 41
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 087b6492114d2ca30800000000000000
+      internalID: 4234179769853720448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_15
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 686
+        width: 31
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b513b835bb6c771f0800000000000000
+      internalID: -1047149880477535909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_16
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 685
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f370a578ce841200800000000000000
+      internalID: 149901679228122098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_17
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 685
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa935a58c50f1d210800000000000000
+      internalID: 1356129242985085359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_18
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 686
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88abeb44db1e2cd0800000000000000
+      internalID: -2581094937815963510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_19
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 524
+        width: 372
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7ee15ab44869c740800000000000000
+      internalID: 5172780291404721790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 440
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cde9c210e5094bd80800000000000000
+      internalID: -8235799085132767524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_21
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 439
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cd15e321cf554f50800000000000000
+      internalID: 6864998490131733957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_22
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 439
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e77892411d8fac0800000000000000
+      internalID: -3821074399297569160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_23
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 439
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3b45a56e645efc90800000000000000
+      internalID: -7134171926579819718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_24
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 439
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8abeb508edeff26f0800000000000000
+      internalID: -707066384884175960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_25
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 431
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd7cc0069d7729880800000000000000
+      internalID: -8605684162448537636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_26
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 465
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5345d53f514068650800000000000000
+      internalID: 6234675226464834613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_27
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 439
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe979ffce5d62180800000000000000
+      internalID: -9140383179824718147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_28
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 440
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 423ac7bfad017bf80800000000000000
+      internalID: -8090979672839642332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_29
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 439
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 906f373ac60b14fd0800000000000000
+      internalID: -2359410749120186871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_30
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 465
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edce919658236dc30800000000000000
+      internalID: 4383746835867102430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_31
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 431
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59fc25e2ac22c370800000000000000
+      internalID: 8341278537984833884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_32
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 439
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d3ee08018405740800000000000000
+      internalID: 5138686410549509479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_33
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 439
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b60a1bbeabcd1b1e0800000000000000
+      internalID: -2183721648921665429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_34
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 465
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 732eb4acc7e9e4220800000000000000
+      internalID: 2472087504280085047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_35
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 440
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8b694dd1d6e1f600800000000000000
+      internalID: 500434822649965450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_36
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 439
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a65450175a05e59a0800000000000000
+      internalID: -6242463361992931990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_37
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 439
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ddbd8bdfa27e8910800000000000000
+      internalID: 1841535397269454296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_38
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 440
+        width: 7
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb5ea468b71e5140800000000000000
+      internalID: 4710228341006687159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_39
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 465
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eac2c46151402710800000000000000
+      internalID: 1666403679965727456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_40
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 440
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5297bec937ab4e7f0800000000000000
+      internalID: -584137045934638811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_41
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 465
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9901e42735043860800000000000000
+      internalID: 7508632213133527450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_42
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 439
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaa9da6b691b48810800000000000000
+      internalID: 1766732214704118446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_43
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 440
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d079bb125215343f0800000000000000
+      internalID: -917800679131867379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_44
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 440
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ad7516b1c2ec9c0800000000000000
+      internalID: -3905135330774754799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_45
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 440
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85edeeb131931be20800000000000000
+      internalID: 3364533150858272344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_46
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 440
+        width: 6
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb087560fee941620800000000000000
+      internalID: 2743992822416244923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_47
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 440
+        width: 6
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d53eae055ca9550800000000000000
+      internalID: 6168459590966140163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_48
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 440
+        width: 6
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ac9acb59636841c0800000000000000
+      internalID: -4519252921903571804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_49
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 440
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 823394ccc4ca28010800000000000000
+      internalID: 1189702697424073512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 392
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44fdf537251651870800000000000000
+      internalID: 8652929265813151556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_51
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 391
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8789e5215155bed60800000000000000
+      internalID: 7920517918652012664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_52
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 392
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 068859773017f3010800000000000000
+      internalID: 1170778687844747360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_53
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 391
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c20fb1cd0883a32c0800000000000000
+      internalID: -4451183155602526164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_54
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 392
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1217e4c192cdf81b0800000000000000
+      internalID: -5652056938200010463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_55
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 391
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a55d348a0d8e2cd0800000000000000
+      internalID: -2580970460128914015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_56
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 391
+        width: 36
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd1d807c5a582870800000000000000
+      internalID: 8658269636691566005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_57
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 392
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb3d4de0fd135e630800000000000000
+      internalID: 3955622681811145660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_58
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 391
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8518db6e7cbf0730800000000000000
+      internalID: 3967597047897920909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_59
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 417
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b155b64efcbd0d0800000000000000
+      internalID: -3396892913960674546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_60
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 383
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68bcb0e3adc1453e0800000000000000
+      internalID: -2065994605386806394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_61
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 391
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fdaf2194f4e7dec0800000000000000
+      internalID: -3542110842844631565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_62
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 392
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b688a64780da30c0800000000000000
+      internalID: -4595131190353557838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_63
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 391
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce50d2dc292ba67c0800000000000000
+      internalID: -4077250169053313556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_64
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 391
+        width: 36
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e677e3e54e6d2f0800000000000000
+      internalID: -948319578088837509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_65
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 392
+        width: 7
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0a7e282b5a4edce0800000000000000
+      internalID: -1378582680552179185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_66
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 383
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a777cd353d506fd0800000000000000
+      internalID: -2350776522236266586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_67
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 391
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b959d5255abe89d70800000000000000
+      internalID: 9050242546485007771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_68
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 392
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f9a5ab8fa303c590800000000000000
+      internalID: -7655270889102661127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_69
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 391
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23bf0945a61822710800000000000000
+      internalID: 1667037105765808946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_70
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 392
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe9ed11b5fbdfac0800000000000000
+      internalID: -3819686511077581123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_71
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 392
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d245cf727d80d6f40800000000000000
+      internalID: 5723240421639607341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_72
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 392
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761928f733cde8360800000000000000
+      internalID: 7173913370188484967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_73
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 392
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 007de79f4c07ef550800000000000000
+      internalID: 6196514128610121472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_74
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 391
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e8c5a5d4dac59e70800000000000000
+      internalID: 9121419635775097058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 344
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9ff4e65de3a0070800000000000000
+      internalID: 8073334368414726570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_76
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 343
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 108ecd4894940b250800000000000000
+      internalID: 5958342887121676289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_77
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 344
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02bebc86d0c60f3d0800000000000000
+      internalID: -3174918932447630560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_78
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 344
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8db36f79cd5c34ec0800000000000000
+      internalID: -3583803327223809064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_79
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 343
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06db7de49f7c8c2b0800000000000000
+      internalID: -5563977466032702112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_80
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 344
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb393e220df59c8f0800000000000000
+      internalID: -519778934441405506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_81
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 369
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8700bc94ad9893f20800000000000000
+      internalID: 3402902564089036920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_82
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 344
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba3ca3214054d4490800000000000000
+      internalID: -7760470699101469781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_83
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 344
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 050750cd8b08dd900800000000000000
+      internalID: 710865847648088144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_84
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 343
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 710a4e15c724e7500800000000000000
+      internalID: 395826918972497943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_85
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 343
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 094dbcb0be7b0f490800000000000000
+      internalID: -7714463941542554480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_86
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 344
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2994373ac3822cf0800000000000000
+      internalID: -278515322410723030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_87
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 343
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11dbf5d3c9bfec500800000000000000
+      internalID: 418548463855189265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_88
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 343
+        width: 36
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba4ebe72c9101f2b0800000000000000
+      internalID: -5552655095374814037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_89
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 344
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0446c531ba68c2ed0800000000000000
+      internalID: -2437425228991929280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_90
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 343
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47a72a18fb749eda0800000000000000
+      internalID: -5915117747735201164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_91
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 369
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ae7d0ce76885ca0800000000000000
+      internalID: -6027920222276031963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_92
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 335
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 983aee6e933393130800000000000000
+      internalID: 3546922505311527817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_93
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 343
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9a092845e3b9b370800000000000000
+      internalID: 8338893982392715933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_94
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 335
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d4f2a33670e677f0800000000000000
+      internalID: -615057500812413740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_95
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 344
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 522f739af0c7e53d0800000000000000
+      internalID: -3215996677190585819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_96
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 344
+        width: 6
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b0d95206a61f2850800000000000000
+      internalID: 6354322501502881975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_97
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 344
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c829a58dea7e09d10800000000000000
+      internalID: 2130457361886384780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_98
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 344
+        width: 6
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 131e3a88362b78c70800000000000000
+      internalID: 8973336923122950449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_99
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 296
+        width: 13
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf14f1e3353099fd0800000000000000
+      internalID: -2334831275755486725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_100
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 295
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8829c4d97bfb44f0800000000000000
+      internalID: -843304004522268533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_101
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 295
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbee51c1ba2654350800000000000000
+      internalID: 6000310565591183035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_102
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 295
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5638c620893bf2160800000000000000
+      internalID: 7003013411041477477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_103
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 296
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 775683f56f5308c70800000000000000
+      internalID: 8971229789997786487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_104
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 296
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b129b50998edeb0800000000000000
+      internalID: -4693162508568880312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_105
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 295
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0879ad821917d4f0800000000000000
+      internalID: -804146440985544692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_106
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 287
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2eea14ee103b8c0800000000000000
+      internalID: -3984839122476932363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_107
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 295
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8d80f4e671d11ba0800000000000000
+      internalID: -6119880110042477170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_108
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 295
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7b8caadb6612ede0800000000000000
+      internalID: -1305456289497969798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_109
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 295
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de010646597f6cb00800000000000000
+      internalID: 848637800812122349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_110
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 296
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed7a533e1690508d0800000000000000
+      internalID: -2880886070605142050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_111
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 295
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71ee74b7d7c5e15e0800000000000000
+      internalID: -1937009095713755625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_112
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 295
+        width: 35
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a93cab3159688ec0800000000000000
+      internalID: -3564483307449337437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_113
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 296
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b2d1cf019f527d0800000000000000
+      internalID: -2943672930072188015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_114
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 295
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5bfd90ed41433970800000000000000
+      internalID: 8733395905138260828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_115
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 321
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92f4c0e7794958410800000000000000
+      internalID: 1478751431036784425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_116
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 287
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf7d6fb19b00b6f00800000000000000
+      internalID: 1110982528115070972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_117
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 296
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfea7ada0502a9800800000000000000
+      internalID: 619843429599784699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_118
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 296
+        width: 6
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62527c6533f8fd430800000000000000
+      internalID: 3809921260440724774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_119
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 295
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff66675959db47660800000000000000
+      internalID: 7382734139322427135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 247
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4a698b58f61e2930800000000000000
+      internalID: 4120255965034015309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_121
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 247
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88e87953f3e26e1d0800000000000000
+      internalID: -3321916826122219896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_122
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 248
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 896b4b92209249160800000000000000
+      internalID: 7031290007498569368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_123
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 248
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c45ff53f95f0eeb0800000000000000
+      internalID: -4692480747565525817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_124
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 247
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81e3b6e8a7e161270800000000000000
+      internalID: 8220791681535655448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_125
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 248
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40533165b546abdb0800000000000000
+      internalID: -4775394111424088828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_126
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 247
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc49c5ee830de5810800000000000000
+      internalID: 1756069847656862927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_127
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 247
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8567084659b6b05d0800000000000000
+      internalID: -3095262029506644392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_128
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 247
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e65d686573c9928f0800000000000000
+      internalID: -564748516769475218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_129
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 248
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d92158df1c20c4b0800000000000000
+      internalID: -5422285436069271085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_130
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 247
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e57484beb2d6dbb60800000000000000
+      internalID: 7763481368055007070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_131
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 247
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c79dd0ab7ef084e0800000000000000
+      internalID: -1981304029109708862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_132
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 247
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd87414e951ff8240800000000000000
+      internalID: 4796317496553797853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_133
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 247
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4bb39d84cda753a0800000000000000
+      internalID: -6676676862853006518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_134
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 247
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37b0647b1b59b9520800000000000000
+      internalID: 2709924191310056307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_135
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 248
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16279e4b8c491c260800000000000000
+      internalID: 7116132475971662433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_136
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 247
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 319c0f91df95ccf00800000000000000
+      internalID: 1138383749414701331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_137
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 247
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a05c33f92d050aa50800000000000000
+      internalID: 6530308325231543562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_138
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 273
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31bf374d0a4502430800000000000000
+      internalID: 3756095138962864915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_139
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 239
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 267c20663e9d5c490800000000000000
+      internalID: -7726530014991956126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_140
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 239
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e3f537df3d0a7de0800000000000000
+      internalID: -1334739771717192730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_141
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 247
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea58cdc78c46faa10800000000000000
+      internalID: 1922866378161554862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_142
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 272
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2c91c537fe3e4000800000000000000
+      internalID: 22024279663156268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_143
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 248
+        width: 6
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52b7d229842f0acd0800000000000000
+      internalID: -2548770995587679451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_144
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 194
+        width: 11
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46a983567eb02f6a0800000000000000
+      internalID: -6417053430585976220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_145
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 199
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a431d9327cc11430800000000000000
+      internalID: 3752004755544683689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_146
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 225
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d751a2e7cf520860800000000000000
+      internalID: 7494658042003281875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_147
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 199
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bd73d038a2aa3580800000000000000
+      internalID: -8846579674758545991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_148
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 199
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10e2cd5c83a036810800000000000000
+      internalID: 1757259518558612993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_149
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 199
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 900eb08fc6f600660800000000000000
+      internalID: 7349997105677328393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_150
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 200
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbb3b6a2dd6e917d0800000000000000
+      internalID: -2947070643563447361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_151
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 199
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d08ac6c73cab2260800000000000000
+      internalID: 7073936995273834709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_152
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 200
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6760465caf7ae5200800000000000000
+      internalID: 170758531381986934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_153
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 199
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c79559f51c7c64660800000000000000
+      internalID: 7369797473584634236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_154
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 200
+        width: 6
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bf0078a2b82bcc70800000000000000
+      internalID: 8992325828770533303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_155
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 225
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a7c3dcab7ac22ff0800000000000000
+      internalID: -62264812300417113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_156
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 200
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a690aec4cbb72750800000000000000
+      internalID: 6280194659346060964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_157
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 191
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d87234021a76413b0800000000000000
+      internalID: -5542691299657570419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_158
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 199
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37160e7ed41643d60800000000000000
+      internalID: 7869021436153717107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_159
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 200
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65b46f93f6b582530800000000000000
+      internalID: 3830412016350546774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_160
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 194
+        width: 11
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd131bdaaa5f33a10800000000000000
+      internalID: 1888122782205686236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_161
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 200
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a00ffeb1af788d0800000000000000
+      internalID: -2844029641764632025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_162
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 200
+        width: 6
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a450dc17835c800800000000000000
+      internalID: 631973384137558546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_163
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 199
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89e690a931beac560800000000000000
+      internalID: 7334933412547489432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_164
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 152
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06dff2c936450d220800000000000000
+      internalID: 2508597779244252512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_165
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 151
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 187957b377fa07a90800000000000000
+      internalID: -7318156467843524735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_166
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 151
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ae62ffce37385960800000000000000
+      internalID: 7590877914849242785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_167
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 151
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3feb07d7f697775b0800000000000000
+      internalID: -5370690510863155469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_168
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 151
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57944659c02482700800000000000000
+      internalID: 515734779147340149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_169
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 151
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 509e79ddc4b3e8340800000000000000
+      internalID: 4867893448555358469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_170
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 152
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c45d898296c1aec30800000000000000
+      internalID: 4389352024804218188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_171
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 152
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee4070a6526cf5a70800000000000000
+      internalID: 8817984459409655022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_172
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 152
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c73f7d9c371379c0800000000000000
+      internalID: -3930772500656474170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_173
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 151
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3a92ad47a51941a0800000000000000
+      internalID: -6824899951997052356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_174
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 177
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0829fa68170a8830800000000000000
+      internalID: 4074076614365358092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_175
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 152
+        width: 6
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cfba3b9de37c6a20800000000000000
+      internalID: 3056945711426486208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_176
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 151
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad95a1f1d1ada9460800000000000000
+      internalID: 7249346368816962010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_177
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 151
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9796e03cf04fde1f0800000000000000
+      internalID: -1013885992554305159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_178
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 152
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8ce53ae137bc92b0800000000000000
+      internalID: -5576380813580833652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_179
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 151
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4564852b5b22a7bf0800000000000000
+      internalID: -325909859254385068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_180
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 177
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96a827b36533e42c0800000000000000
+      internalID: -4445559336710534551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_181
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 143
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d16351fb50afd7ce0800000000000000
+      internalID: -1405692606082107875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_182
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 151
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de9339bd9bd830060800000000000000
+      internalID: 6918529281963538925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_183
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 177
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32735af0e3e3d9660800000000000000
+      internalID: 7394134599483602723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_184
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 152
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4086fe219cd48370800000000000000
+      internalID: 8324020527403794510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_185
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 151
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9021d4ce9551f1ba0800000000000000
+      internalID: -6116146292985097719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_186
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 151
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bde4d09e4749e92f0800000000000000
+      internalID: -964170040363626789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_187
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 152
+        width: 6
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd10e684b64360860800000000000000
+      internalID: 7495736265186083291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_188
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 177
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3766888a9c4f8d5c0800000000000000
+      internalID: -4190330306315131277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_189
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 152
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 224e697cf1d5f8290800000000000000
+      internalID: -7885982031428525022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_190
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 151
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 549eaede5ecb95ac0800000000000000
+      internalID: -3865851109395732155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_191
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 152
+        width: 6
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8cbc05e85499bbc0800000000000000
+      internalID: -3766816503797859189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_192
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 151
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4be8c9677864e7f70800000000000000
+      internalID: 9186857837506891444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_193
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 152
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98cecf88e0b5d6c10800000000000000
+      internalID: 2048393523509390473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_194
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 152
+        width: 6
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f18ccfd4e3f17cc10800000000000000
+      internalID: 2073660505884248095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_195
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 152
+        width: 6
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70ed6b39fb4d1e5c0800000000000000
+      internalID: -4187832259195773433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_196
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 103
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 773a77dc1e2b535a0800000000000000
+      internalID: -6542126200801221769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_197
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 95
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99a53ac6f8be414c0800000000000000
+      internalID: -4317567141505967463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_198
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 104
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 225262850e0ed4460800000000000000
+      internalID: 7227680231155705122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_199
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 103
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c6e9e1119dc23c20800000000000000
+      internalID: 3184833909458855616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_200
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 104
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9262bc71416de330800000000000000
+      internalID: 3741753799307584158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_201
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 104
+        width: 6
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc364ebd20393cd0800000000000000
+      internalID: -2577976338668962606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_202
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 103
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46e25941aa69aac80800000000000000
+      internalID: -8310664505124901276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_203
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 104
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26da8351763f2bd40800000000000000
+      internalID: 5598804910838164834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_204
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 103
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15169e6564405bee0800000000000000
+      internalID: -1246085021745716911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_205
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 103
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96e098e93d7354d70800000000000000
+      internalID: 9026682410171436649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_206
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 104
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 822176ef4631ec9c0800000000000000
+      internalID: -3905162502397816280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_207
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 103
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 369bc35411bcf4780800000000000000
+      internalID: -8696509080392648349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_208
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 104
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a8b73aafe42f2370800000000000000
+      internalID: 8299893250038675625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_209
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 95
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22532b846255b1480800000000000000
+      internalID: -8927448213415119582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_210
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 104
+        width: 7
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fef0aa91281542c0800000000000000
+      internalID: -4448122524351267081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_211
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 129
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f33eadb35cc2950800000000000000
+      internalID: 6425727629216923480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_212
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 95
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 418fd236fa10963e0800000000000000
+      internalID: -2060113501750429676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_213
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 104
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e020c87885e435060800000000000000
+      internalID: 6940977592846254606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_214
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 129
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f820a15dce848fe0800000000000000
+      internalID: -1187667389230077712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_215
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 103
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0d3b11da5cb90730800000000000000
+      internalID: 3965908045117734159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_216
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 129
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987752a05c9fd5c10800000000000000
+      internalID: 2044064430570174345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_217
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 104
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a3a54fe53c9eee0800000000000000
+      internalID: -1231238210515223908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_218
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 104
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81b1d7e63dcf91f40800000000000000
+      internalID: 5699864788436065048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_219
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 103
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a4b77af92fa94610800000000000000
+      internalID: 1606007336964961446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_220
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 103
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac4e61fc4f6186a70800000000000000
+      internalID: 8820325110907331786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_221
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 104
+        width: 6
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40604596631b67250800000000000000
+      internalID: 5942131605615412740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_222
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 104
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b77d89c4200100fa0800000000000000
+      internalID: -5836647515011098757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_223
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 104
+        width: 6
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a801ed87f5bf94f0800000000000000
+      internalID: -819736532316256091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_224
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 104
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a18c7f8b53145390800000000000000
+      internalID: -7830612568120196702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_225
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 56
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eed9e7c5528a0bc0800000000000000
+      internalID: -3816094429305250073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_226
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 55
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4e53a08709a5ec70800000000000000
+      internalID: 8999785280057859662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_227
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 56
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08752ebfafc185740800000000000000
+      internalID: 5140890838936737664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_228
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 55
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea469bdf2d7a9e2c0800000000000000
+      internalID: -4401802636136192850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_229
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 56
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4802971e25637a6d0800000000000000
+      internalID: -2979352898884263804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_230
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 55
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a083de8cbf420ca40800000000000000
+      internalID: 5386345818161494026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_231
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 55
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df7fa53b94b41390800000000000000
+      internalID: -7848449671886307375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_232
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 56
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b76b620d7ffc13d40800000000000000
+      internalID: 5562455678035342971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_233
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 55
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 308ec32ba5d78d5e0800000000000000
+      internalID: -1884618615563687933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_234
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 56
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f44ec8eb391a1410800000000000000
+      internalID: 1448497975252632823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_235
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 55
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0ef010446fde7200800000000000000
+      internalID: 179826656805977610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_236
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 56
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6734603683c579c10800000000000000
+      internalID: 2060216751794570102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_237
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 55
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93ca93d7ceafbd80800000000000000
+      internalID: -8232669420538117218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_238
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 55
+        width: 36
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c9b2da66b56679a0800000000000000
+      internalID: -6235684799897224765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_239
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 56
+        width: 6
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 278c62ab0410e4db0800000000000000
+      internalID: -4805902374845101966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_240
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 47
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 391daf03026e82460800000000000000
+      internalID: 7217271428796305811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_241
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 55
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22caa310bb720c1d0800000000000000
+      internalID: -3332620040121177054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_242
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 56
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2ba5902ba2c66670800000000000000
+      internalID: 8531720584341859118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_243
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 55
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb733de8ad0aff370800000000000000
+      internalID: 8358576293982451644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_244
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 56
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7771d329b6c6d60d0800000000000000
+      internalID: -3427964532088301705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_245
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 81
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2567578aa27d577e0800000000000000
+      internalID: -1768270700458183086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_246
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 56
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd27ebaec9876a80800000000000000
+      internalID: -8473652653133976107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_247
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 55
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72d2c37b9f9be3c0800000000000000
+      internalID: -4329191126775704963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_248
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 56
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1573c970d78721390800000000000000
+      internalID: -7849078722159429807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_249
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 48
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62790c63b9cd3b7c0800000000000000
+      internalID: -4056656280134052058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_250
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 56
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48af33291170c81e0800000000000000
+      internalID: -2194371146387555708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_251
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 56
+        width: 6
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 695ca621205c7ffa0800000000000000
+      internalID: -5766924185135037034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_252
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 33
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52b7c9900473c7120800000000000000
+      internalID: 2412864248542427941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_253
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 8
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 548574407bd6c88e0800000000000000
+      internalID: -1689855127352551355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_254
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 8
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccf237313287dbd00800000000000000
+      internalID: 990079585136881612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_255
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 7
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1703a173d259a17f0800000000000000
+      internalID: -641035975516344207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_256
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 7
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f41b0636597c0e0800000000000000
+      internalID: -2249665234791739586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_257
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 7
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93dfe8aedb109e780800000000000000
+      internalID: -8653383293820011207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_258
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 0
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 728b594c53636ae40800000000000000
+      internalID: 5667276785651660839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_259
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 7
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd53f823fbc821ad0800000000000000
+      internalID: -2732967271045581348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_260
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 7
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d70cc883ad0f9b8c0800000000000000
+      internalID: -3982887575390207875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_261
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 8
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b2a910b143cbc20800000000000000
+      internalID: 3223508723886074715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_262
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 8
+        width: 6
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0560b77b0b3a5eb60800000000000000
+      internalID: 7774800311112894032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_263
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 7
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 598a929a2eec43fe0800000000000000
+      internalID: -1210114926959810411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_264
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 8
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6d8a55b4262a9e90800000000000000
+      internalID: -7018255130200208020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_265
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 7
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac703769395daf4a0800000000000000
+      internalID: -6558695077450676278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_266
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 8
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af67572d2e4b52130800000000000000
+      internalID: 3541435568283285242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_267
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 6
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 557cf2ff7bbe76850800000000000000
+      internalID: 6370319373431719765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_268
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 0
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20fd61c57e9abe600800000000000000
+      internalID: 498678994902114050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_269
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 7
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 257d1fcb2590af9b0800000000000000
+      internalID: -5045710181553285294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_270
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 7
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 568b5250730c9e680800000000000000
+      internalID: -8725231460511532955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_271
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 7
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f1ba5d51835f90f0800000000000000
+      internalID: -1108075168227741199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TroScoreInfo_272
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 7
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42152cf6b7cf50cd0800000000000000
+      internalID: -2592388403395669724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TroScoreInfo_0: -1635945420545939834
+      TroScoreInfo_1: -3286474253653678659
+      TroScoreInfo_10: 8507508967089997625
+      TroScoreInfo_100: -843304004522268533
+      TroScoreInfo_101: 6000310565591183035
+      TroScoreInfo_102: 7003013411041477477
+      TroScoreInfo_103: 8971229789997786487
+      TroScoreInfo_104: -4693162508568880312
+      TroScoreInfo_105: -804146440985544692
+      TroScoreInfo_106: -3984839122476932363
+      TroScoreInfo_107: -6119880110042477170
+      TroScoreInfo_108: -1305456289497969798
+      TroScoreInfo_109: 848637800812122349
+      TroScoreInfo_11: -616691120421121053
+      TroScoreInfo_110: -2880886070605142050
+      TroScoreInfo_111: -1937009095713755625
+      TroScoreInfo_112: -3564483307449337437
+      TroScoreInfo_113: -2943672930072188015
+      TroScoreInfo_114: 8733395905138260828
+      TroScoreInfo_115: 1478751431036784425
+      TroScoreInfo_116: 1110982528115070972
+      TroScoreInfo_117: 619843429599784699
+      TroScoreInfo_118: 3809921260440724774
+      TroScoreInfo_119: 7382734139322427135
+      TroScoreInfo_12: -849788707718153464
+      TroScoreInfo_120: 4120255965034015309
+      TroScoreInfo_121: -3321916826122219896
+      TroScoreInfo_122: 7031290007498569368
+      TroScoreInfo_123: -4692480747565525817
+      TroScoreInfo_124: 8220791681535655448
+      TroScoreInfo_125: -4775394111424088828
+      TroScoreInfo_126: 1756069847656862927
+      TroScoreInfo_127: -3095262029506644392
+      TroScoreInfo_128: -564748516769475218
+      TroScoreInfo_129: -5422285436069271085
+      TroScoreInfo_13: -8568418838277338078
+      TroScoreInfo_130: 7763481368055007070
+      TroScoreInfo_131: -1981304029109708862
+      TroScoreInfo_132: 4796317496553797853
+      TroScoreInfo_133: -6676676862853006518
+      TroScoreInfo_134: 2709924191310056307
+      TroScoreInfo_135: 7116132475971662433
+      TroScoreInfo_136: 1138383749414701331
+      TroScoreInfo_137: 6530308325231543562
+      TroScoreInfo_138: 3756095138962864915
+      TroScoreInfo_139: -7726530014991956126
+      TroScoreInfo_14: 4234179769853720448
+      TroScoreInfo_140: -1334739771717192730
+      TroScoreInfo_141: 1922866378161554862
+      TroScoreInfo_142: 22024279663156268
+      TroScoreInfo_143: -2548770995587679451
+      TroScoreInfo_144: -6417053430585976220
+      TroScoreInfo_145: 3752004755544683689
+      TroScoreInfo_146: 7494658042003281875
+      TroScoreInfo_147: -8846579674758545991
+      TroScoreInfo_148: 1757259518558612993
+      TroScoreInfo_149: 7349997105677328393
+      TroScoreInfo_15: -1047149880477535909
+      TroScoreInfo_150: -2947070643563447361
+      TroScoreInfo_151: 7073936995273834709
+      TroScoreInfo_152: 170758531381986934
+      TroScoreInfo_153: 7369797473584634236
+      TroScoreInfo_154: 8992325828770533303
+      TroScoreInfo_155: -62264812300417113
+      TroScoreInfo_156: 6280194659346060964
+      TroScoreInfo_157: -5542691299657570419
+      TroScoreInfo_158: 7869021436153717107
+      TroScoreInfo_159: 3830412016350546774
+      TroScoreInfo_16: 149901679228122098
+      TroScoreInfo_160: 1888122782205686236
+      TroScoreInfo_161: -2844029641764632025
+      TroScoreInfo_162: 631973384137558546
+      TroScoreInfo_163: 7334933412547489432
+      TroScoreInfo_164: 2508597779244252512
+      TroScoreInfo_165: -7318156467843524735
+      TroScoreInfo_166: 7590877914849242785
+      TroScoreInfo_167: -5370690510863155469
+      TroScoreInfo_168: 515734779147340149
+      TroScoreInfo_169: 4867893448555358469
+      TroScoreInfo_17: 1356129242985085359
+      TroScoreInfo_170: 4389352024804218188
+      TroScoreInfo_171: 8817984459409655022
+      TroScoreInfo_172: -3930772500656474170
+      TroScoreInfo_173: -6824899951997052356
+      TroScoreInfo_174: 4074076614365358092
+      TroScoreInfo_175: 3056945711426486208
+      TroScoreInfo_176: 7249346368816962010
+      TroScoreInfo_177: -1013885992554305159
+      TroScoreInfo_178: -5576380813580833652
+      TroScoreInfo_179: -325909859254385068
+      TroScoreInfo_18: -2581094937815963510
+      TroScoreInfo_180: -4445559336710534551
+      TroScoreInfo_181: -1405692606082107875
+      TroScoreInfo_182: 6918529281963538925
+      TroScoreInfo_183: 7394134599483602723
+      TroScoreInfo_184: 8324020527403794510
+      TroScoreInfo_185: -6116146292985097719
+      TroScoreInfo_186: -964170040363626789
+      TroScoreInfo_187: 7495736265186083291
+      TroScoreInfo_188: -4190330306315131277
+      TroScoreInfo_189: -7885982031428525022
+      TroScoreInfo_19: 5172780291404721790
+      TroScoreInfo_190: -3865851109395732155
+      TroScoreInfo_191: -3766816503797859189
+      TroScoreInfo_192: 9186857837506891444
+      TroScoreInfo_193: 2048393523509390473
+      TroScoreInfo_194: 2073660505884248095
+      TroScoreInfo_195: -4187832259195773433
+      TroScoreInfo_196: -6542126200801221769
+      TroScoreInfo_197: -4317567141505967463
+      TroScoreInfo_198: 7227680231155705122
+      TroScoreInfo_199: 3184833909458855616
+      TroScoreInfo_2: 7248022131583869458
+      TroScoreInfo_20: -8235799085132767524
+      TroScoreInfo_200: 3741753799307584158
+      TroScoreInfo_201: -2577976338668962606
+      TroScoreInfo_202: -8310664505124901276
+      TroScoreInfo_203: 5598804910838164834
+      TroScoreInfo_204: -1246085021745716911
+      TroScoreInfo_205: 9026682410171436649
+      TroScoreInfo_206: -3905162502397816280
+      TroScoreInfo_207: -8696509080392648349
+      TroScoreInfo_208: 8299893250038675625
+      TroScoreInfo_209: -8927448213415119582
+      TroScoreInfo_21: 6864998490131733957
+      TroScoreInfo_210: -4448122524351267081
+      TroScoreInfo_211: 6425727629216923480
+      TroScoreInfo_212: -2060113501750429676
+      TroScoreInfo_213: 6940977592846254606
+      TroScoreInfo_214: -1187667389230077712
+      TroScoreInfo_215: 3965908045117734159
+      TroScoreInfo_216: 2044064430570174345
+      TroScoreInfo_217: -1231238210515223908
+      TroScoreInfo_218: 5699864788436065048
+      TroScoreInfo_219: 1606007336964961446
+      TroScoreInfo_22: -3821074399297569160
+      TroScoreInfo_220: 8820325110907331786
+      TroScoreInfo_221: 5942131605615412740
+      TroScoreInfo_222: -5836647515011098757
+      TroScoreInfo_223: -819736532316256091
+      TroScoreInfo_224: -7830612568120196702
+      TroScoreInfo_225: -3816094429305250073
+      TroScoreInfo_226: 8999785280057859662
+      TroScoreInfo_227: 5140890838936737664
+      TroScoreInfo_228: -4401802636136192850
+      TroScoreInfo_229: -2979352898884263804
+      TroScoreInfo_23: -7134171926579819718
+      TroScoreInfo_230: 5386345818161494026
+      TroScoreInfo_231: -7848449671886307375
+      TroScoreInfo_232: 5562455678035342971
+      TroScoreInfo_233: -1884618615563687933
+      TroScoreInfo_234: 1448497975252632823
+      TroScoreInfo_235: 179826656805977610
+      TroScoreInfo_236: 2060216751794570102
+      TroScoreInfo_237: -8232669420538117218
+      TroScoreInfo_238: -6235684799897224765
+      TroScoreInfo_239: -4805902374845101966
+      TroScoreInfo_24: -707066384884175960
+      TroScoreInfo_240: 7217271428796305811
+      TroScoreInfo_241: -3332620040121177054
+      TroScoreInfo_242: 8531720584341859118
+      TroScoreInfo_243: 8358576293982451644
+      TroScoreInfo_244: -3427964532088301705
+      TroScoreInfo_245: -1768270700458183086
+      TroScoreInfo_246: -8473652653133976107
+      TroScoreInfo_247: -4329191126775704963
+      TroScoreInfo_248: -7849078722159429807
+      TroScoreInfo_249: -4056656280134052058
+      TroScoreInfo_25: -8605684162448537636
+      TroScoreInfo_250: -2194371146387555708
+      TroScoreInfo_251: -5766924185135037034
+      TroScoreInfo_252: 2412864248542427941
+      TroScoreInfo_253: -1689855127352551355
+      TroScoreInfo_254: 990079585136881612
+      TroScoreInfo_255: -641035975516344207
+      TroScoreInfo_256: -2249665234791739586
+      TroScoreInfo_257: -8653383293820011207
+      TroScoreInfo_258: 5667276785651660839
+      TroScoreInfo_259: -2732967271045581348
+      TroScoreInfo_26: 6234675226464834613
+      TroScoreInfo_260: -3982887575390207875
+      TroScoreInfo_261: 3223508723886074715
+      TroScoreInfo_262: 7774800311112894032
+      TroScoreInfo_263: -1210114926959810411
+      TroScoreInfo_264: -7018255130200208020
+      TroScoreInfo_265: -6558695077450676278
+      TroScoreInfo_266: 3541435568283285242
+      TroScoreInfo_267: 6370319373431719765
+      TroScoreInfo_268: 498678994902114050
+      TroScoreInfo_269: -5045710181553285294
+      TroScoreInfo_27: -9140383179824718147
+      TroScoreInfo_270: -8725231460511532955
+      TroScoreInfo_271: -1108075168227741199
+      TroScoreInfo_272: -2592388403395669724
+      TroScoreInfo_28: -8090979672839642332
+      TroScoreInfo_29: -2359410749120186871
+      TroScoreInfo_3: 3049102127959485860
+      TroScoreInfo_30: 4383746835867102430
+      TroScoreInfo_31: 8341278537984833884
+      TroScoreInfo_32: 5138686410549509479
+      TroScoreInfo_33: -2183721648921665429
+      TroScoreInfo_34: 2472087504280085047
+      TroScoreInfo_35: 500434822649965450
+      TroScoreInfo_36: -6242463361992931990
+      TroScoreInfo_37: 1841535397269454296
+      TroScoreInfo_38: 4710228341006687159
+      TroScoreInfo_39: 1666403679965727456
+      TroScoreInfo_4: -4004908157894355751
+      TroScoreInfo_40: -584137045934638811
+      TroScoreInfo_41: 7508632213133527450
+      TroScoreInfo_42: 1766732214704118446
+      TroScoreInfo_43: -917800679131867379
+      TroScoreInfo_44: -3905135330774754799
+      TroScoreInfo_45: 3364533150858272344
+      TroScoreInfo_46: 2743992822416244923
+      TroScoreInfo_47: 6168459590966140163
+      TroScoreInfo_48: -4519252921903571804
+      TroScoreInfo_49: 1189702697424073512
+      TroScoreInfo_5: 3853182333557637118
+      TroScoreInfo_50: 8652929265813151556
+      TroScoreInfo_51: 7920517918652012664
+      TroScoreInfo_52: 1170778687844747360
+      TroScoreInfo_53: -4451183155602526164
+      TroScoreInfo_54: -5652056938200010463
+      TroScoreInfo_55: -2580970460128914015
+      TroScoreInfo_56: 8658269636691566005
+      TroScoreInfo_57: 3955622681811145660
+      TroScoreInfo_58: 3967597047897920909
+      TroScoreInfo_59: -3396892913960674546
+      TroScoreInfo_6: 3209216092014342963
+      TroScoreInfo_60: -2065994605386806394
+      TroScoreInfo_61: -3542110842844631565
+      TroScoreInfo_62: -4595131190353557838
+      TroScoreInfo_63: -4077250169053313556
+      TroScoreInfo_64: -948319578088837509
+      TroScoreInfo_65: -1378582680552179185
+      TroScoreInfo_66: -2350776522236266586
+      TroScoreInfo_67: 9050242546485007771
+      TroScoreInfo_68: -7655270889102661127
+      TroScoreInfo_69: 1667037105765808946
+      TroScoreInfo_7: 1123799426043610107
+      TroScoreInfo_70: -3819686511077581123
+      TroScoreInfo_71: 5723240421639607341
+      TroScoreInfo_72: 7173913370188484967
+      TroScoreInfo_73: 6196514128610121472
+      TroScoreInfo_74: 9121419635775097058
+      TroScoreInfo_75: 8073334368414726570
+      TroScoreInfo_76: 5958342887121676289
+      TroScoreInfo_77: -3174918932447630560
+      TroScoreInfo_78: -3583803327223809064
+      TroScoreInfo_79: -5563977466032702112
+      TroScoreInfo_8: -3483055165803160151
+      TroScoreInfo_80: -519778934441405506
+      TroScoreInfo_81: 3402902564089036920
+      TroScoreInfo_82: -7760470699101469781
+      TroScoreInfo_83: 710865847648088144
+      TroScoreInfo_84: 395826918972497943
+      TroScoreInfo_85: -7714463941542554480
+      TroScoreInfo_86: -278515322410723030
+      TroScoreInfo_87: 418548463855189265
+      TroScoreInfo_88: -5552655095374814037
+      TroScoreInfo_89: -2437425228991929280
+      TroScoreInfo_9: 6112694613496256475
+      TroScoreInfo_90: -5915117747735201164
+      TroScoreInfo_91: -6027920222276031963
+      TroScoreInfo_92: 3546922505311527817
+      TroScoreInfo_93: 8338893982392715933
+      TroScoreInfo_94: -615057500812413740
+      TroScoreInfo_95: -3215996677190585819
+      TroScoreInfo_96: 6354322501502881975
+      TroScoreInfo_97: 2130457361886384780
+      TroScoreInfo_98: 8973336923122950449
+      TroScoreInfo_99: -2334831275755486725
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
