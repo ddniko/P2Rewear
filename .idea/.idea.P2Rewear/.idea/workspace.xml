@@ -6,16 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6a133a33-9148-4cc7-9491-835a8dd0fa88" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.P2Rewear/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.P2Rewear/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NBK-BasePage/Graphics/Chat.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-BasePage/Graphics/Chat.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NBK-BasePage/Graphics/Chat2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-BasePage/Graphics/Chat2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NBK-BasePage/Graphics/Markedsplads.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-BasePage/Graphics/Markedsplads.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NBK-BasePage/Graphics/Marketplace.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-BasePage/Graphics/Marketplace.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NBK-BasePage/Graphics/Minde.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-BasePage/Graphics/Minde.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NBK-BasePage/Graphics/Minde2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-BasePage/Graphics/Minde2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NBK-BasePage/Graphics/Opret.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-BasePage/Graphics/Opret.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NBK-BasePage/Graphics/Profil.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-BasePage/Graphics/Profil.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NBK-BasePage/Graphics/Profile2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-BasePage/Graphics/Profile2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NBK-BasePage/NBK-BasePage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-BasePage/NBK-BasePage.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +16,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/ChatManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OverlayScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SetupClothingArticle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SetupMessage.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -37,18 +29,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ASM-PageSetup&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "ASM-Maps",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.45f1\Editor\Unity.exe" />
@@ -101,6 +93,7 @@
       <workItem from="1744112546648" duration="2107000" />
       <workItem from="1744126251964" duration="2889000" />
       <workItem from="1744199339161" duration="9000" />
+      <workItem from="1744708735437" duration="9016000" />
     </task>
     <servers />
   </component>
