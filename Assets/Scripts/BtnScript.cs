@@ -31,7 +31,7 @@ public class BtnScript : MonoBehaviour
         Console.WriteLine($"Index of {index} and ID {memID}");
         
         //treeTrunks.LastOrDefault().transform.GetChild(0).GetComponent<Image>().fillAmount = b;
-        OnClick();
+        
     }
 
     public void OnClick()
@@ -39,7 +39,8 @@ public class BtnScript : MonoBehaviour
 
         scrollSc = mindeStamme.GetComponentInChildren<Scroll>();
         Memory mem = scrollSc.memDBPublic[$"{MemIDbtn}"];
-        Console.WriteLine(mem.ToString());
+        //Console.Write(mem.ToString());
+        Debug.Log($"{mem.ToString()}");
     }
 
     

@@ -243,8 +243,6 @@ public class Scroll : MonoBehaviour
 }
 
 // en struct for memories, den har også verreided to string method
-// MemoryID = Title, DateAdded, Description, optionally en ImageFile
-// og på tøj databasen en liste eller længere string med alle memoryID'erne der er 
 public class Memory
 {
     public string Id { get; set; }
