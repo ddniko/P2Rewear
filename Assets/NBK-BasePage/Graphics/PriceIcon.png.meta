@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 61b089447d5662140bed69cc279bc063
+guid: 609d8808d8deea64685ae30d04e06b73
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7880565551087796014
-    second: Sustainablity_0
+      213: -4779620404343635305
+    second: PriceIcon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sustainablity_0
+      name: PriceIcon_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 0
-        width: 114
-        height: 52
+        x: 2
+        y: 2
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2d04b32626b92a290800000000000000
-      internalID: -7880565551087796014
+      spriteID: 79283e5d0906badb0800000000000000
+      internalID: -4779620404343635305
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sustainablity_0: -7880565551087796014
+      PriceIcon_0: -4779620404343635305
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
