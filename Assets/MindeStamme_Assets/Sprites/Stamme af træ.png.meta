@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Stamme af tr\xE6_0": 9001314036226473466
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
