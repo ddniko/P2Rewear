@@ -20,11 +20,12 @@ public class CreateArticleManager : BasePage
     public RawImage img;
     MArticle art;
     public TextMeshProUGUI faillog;
-    //s
+    public bool GenerateData;
     private void Start()
     {
         DBManager.Init();
-        DBManager.AddChild("tom", 0, 4, "stor");
+        //if (GenerateData)
+            //DBManager.GenerateTestData(5);
     }
     public void TogglePriceVisibility()
     {
