@@ -24,8 +24,8 @@ public class CreateArticleManager : BasePage
     private void Start()
     {
         DBManager.Init();
-        if (GenerateData)
-            DBManager.GenerateTestData(5);
+        //if (GenerateData)
+            //DBManager.GenerateTestData(5);
     }
     public void TogglePriceVisibility()
     {

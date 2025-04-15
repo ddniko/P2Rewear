@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
+public enum SORTTYPE { PRICEASC, PRICEDESC, CONDITIONASC, CONDITIONDESC }
 public class SortScrollScript : MonoBehaviour
 {
     public List<GameObject> CurrentArticles;
@@ -58,7 +60,7 @@ public class SortScrollScript : MonoBehaviour
     {
         DestroyItems();
         List<MArticle> articles = DBManager.GetAllArticles();
-        List<MArticle> sortedArticles = new List<MArticle>();
+        List<MArticle> filteredArticles = new List<MArticle>();
 
         foreach (MArticle article in articles)
         {
@@ -84,11 +86,11 @@ public class SortScrollScript : MonoBehaviour
                     matches = false;
             }
             if (matches)
-                sortedArticles.Add(article);
+                filteredArticles.Add(article);
         }
 
-        // Do something with sortedArticles, like instantiate them
-        InstantiateAllArticles(sortedArticles);
+
+        InstantiateAllArticles(filteredArticles);
     }
 
     public void InstantiateAllArticles()
@@ -169,6 +171,34 @@ public class SortScrollScript : MonoBehaviour
                 currentRow++;
             }
         }
+    }
+
+
+    public void SortAndDisplayArticles(SORTTYPE? sortType = null)
+    {
+        
+        List<GameObject> newOrder = new List<GameObject>();
+        if (sortType.HasValue)
+            switch (sortType)
+            {
+                case SORTTYPE.PRICEASC:
+                    newOrder = CurrentArticles.OrderBy(a => a.GetComponent<ClothingItem>().prize ?? float.MaxValue).ToList();
+                    break;
+                case SORTTYPE.PRICEDESC:
+                    newOrder = CurrentArticles.OrderByDescending(a => a.GetComponent<ClothingItem>().prize ?? float.MinValue).ToList();
+                    break;
+                case SORTTYPE.CONDITIONASC:
+                    newOrder = CurrentArticles.OrderBy(a => a.GetComponent<ClothingItem>().condition).ToList();
+                    break;
+                case SORTTYPE.CONDITIONDESC:
+                    newOrder = CurrentArticles.OrderByDescending(a => a.GetComponent<ClothingItem>().condition).ToList();
+                    break;
+            }
+
+        DestroyItems();
+        CurrentArticles = new List<GameObject>();
+        CurrentArticles.AddRange(newOrder);
+        OrderArticles();
     }
 
 }
