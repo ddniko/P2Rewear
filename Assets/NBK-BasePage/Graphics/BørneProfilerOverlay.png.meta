@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "B\xF8rneProfilerOverlay_0": 8298842334336382677
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
