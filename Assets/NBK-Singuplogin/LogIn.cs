@@ -13,11 +13,6 @@ public class LogIn : MonoBehaviour
     private List<MParent> mParents;
 
 
-    private void Awake()
-    {
-        DBManager.Init();
-        //mParents = DBManager.GetAllParents();
-    }
     
 
     public void Login()

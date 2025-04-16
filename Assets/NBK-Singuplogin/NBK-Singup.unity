@@ -11367,7 +11367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1358803310
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11406,7 +11406,7 @@ MonoBehaviour:
   Email: {fileID: 777669607}
   Brugernavn: {fileID: 62464810}
   Gentag: {fileID: 341491126}
-  Bottombar: {fileID: 5391360701010777791}
+  Login: {fileID: 2041614167}
 --- !u!1 &1363368222
 GameObject:
   m_ObjectHideFlags: 0
@@ -18051,7 +18051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2041614168
 RectTransform:
   m_ObjectHideFlags: 0
