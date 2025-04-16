@@ -63,6 +63,11 @@ public static class DBManager
         GetConnection().Insert(parent);  // Indsætter den nye forælder i databasen
     }
 
+    public static void AddParent(MParent parent)
+    {
+        GetConnection().Insert(parent);  // Indsætter tøjet i databasen
+    }
+
     // Henter en forælder ud fra dens ID
     public static MParent GetParentById(int id)
     {
@@ -93,7 +98,7 @@ public static class DBManager
     #endregion
     #region CRUD for Child (Barn)
     // Tilføjer et nyt barn til databasen
-    public static void AddChild(string name, int parentId, int? age, string size)
+    public static void AddChild(string name, int parentId, string age, string size)
     {
         var child = new MChild
         {
