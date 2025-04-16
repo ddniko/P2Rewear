@@ -10,8 +10,9 @@ public class SetupMessage : MonoBehaviour
     
     public void SetupMsg(string message)
     {
-        TextMeshPro text = messageText.GetComponent<TextMeshPro>();
+        TextMeshProUGUI text = messageText.GetComponent<TextMeshProUGUI>();
         text.text = message;
+        
     }
     
 }

@@ -6,8 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="6a133a33-9148-4cc7-9491-835a8dd0fa88" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.P2Rewear/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.P2Rewear/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASM - ClothingItems/ClothingItemOverlays.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM - ClothingItems/ClothingItemOverlays.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASM-Maps/ASM - Chat.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM-Maps/ASM - Chat.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ASM-Maps/BuyerMessage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM-Maps/BuyerMessage.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ASM-Maps/UserMessage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM-Maps/UserMessage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SetupMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SetupMessage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +25,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/ChatManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ContactButtonScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OverlayScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SetupClothingArticle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SetupMessage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@f3fac7af1578/Runtime/TMP/TMP_FontAsset.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -97,6 +105,8 @@
       <workItem from="1744199339161" duration="9000" />
       <workItem from="1744708735437" duration="9452000" />
       <workItem from="1744789414301" duration="6173000" />
+      <workItem from="1744801310204" duration="753000" />
+      <workItem from="1744841055055" duration="3279000" />
     </task>
     <servers />
   </component>
