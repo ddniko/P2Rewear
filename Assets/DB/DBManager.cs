@@ -49,13 +49,16 @@ public static class DBManager
     #endregion
     #region CRUD for Parent (Forælder)
     // Tilføjer en ny forælder til databasen
-    public static void AddParent(string name, int? sustainabilityScore, int? reliabilityScore)
+    public static void AddParent(string name, int? sustainabilityScore, int? reliabilityScore, string password, string email, float distance)
     {
         var parent = new MParent
         {
             Name = name,  // Navn på forælder
             SustainabilityScore = sustainabilityScore, // Bæredygtighedsscore (kan være null)
-            ReliabilityScore = reliabilityScore // Pålidelighedsscore (kan være null)
+            ReliabilityScore = reliabilityScore, // Pålidelighedsscore (kan være null)
+            Password = password,
+            Email = email,
+            Distance = distance
         };
         GetConnection().Insert(parent);  // Indsætter den nye forælder i databasen
     }
