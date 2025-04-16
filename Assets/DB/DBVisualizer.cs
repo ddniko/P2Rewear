@@ -57,14 +57,14 @@ public class DBVisualizer : MonoBehaviour
     }
 
 
-    public void AddParent(string name, int? sustainabilityScore, int? reliabilityScore)
+    public void AddParent(string name, int? sustainabilityScore, int? reliabilityScore, string password, string email, float distance)
     {
-        DBManager.AddParent(name, sustainabilityScore, reliabilityScore);
+        DBManager.AddParent(name, sustainabilityScore, reliabilityScore, password, email, distance);
         DisplayParents();
     }
 
 
-    public void AddChild(string name, int parentId, int? age, string size)
+    public void AddChild(string name, int parentId, string age, string size)
     {
         DBManager.AddChild(name, parentId, age, size);
         DisplayChildren(parentId);

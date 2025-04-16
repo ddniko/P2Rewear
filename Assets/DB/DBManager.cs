@@ -49,15 +49,23 @@ public static class DBManager
     #endregion
     #region CRUD for Parent (Forælder)
     // Tilføjer en ny forælder til databasen
-    public static void AddParent(string name, int? sustainabilityScore, int? reliabilityScore)
+    public static void AddParent(string name, int? sustainabilityScore, int? reliabilityScore, string password, string email, float distance)
     {
         var parent = new MParent
         {
             Name = name,  // Navn på forælder
             SustainabilityScore = sustainabilityScore, // Bæredygtighedsscore (kan være null)
-            ReliabilityScore = reliabilityScore // Pålidelighedsscore (kan være null)
+            ReliabilityScore = reliabilityScore, // Pålidelighedsscore (kan være null)
+            Password = password,
+            Email = email,
+            Distance = distance
         };
         GetConnection().Insert(parent);  // Indsætter den nye forælder i databasen
+    }
+
+    public static void AddParent(MParent parent)
+    {
+        GetConnection().Insert(parent);  // Indsætter tøjet i databasen
     }
 
     // Henter en forælder ud fra dens ID
@@ -90,7 +98,7 @@ public static class DBManager
     #endregion
     #region CRUD for Child (Barn)
     // Tilføjer et nyt barn til databasen
-    public static void AddChild(string name, int parentId, int? age, string size)
+    public static void AddChild(string name, int parentId, string age, string size)
     {
         var child = new MChild
         {
@@ -223,12 +231,51 @@ public static class DBManager
             GetConnection().Delete(article);  // Sletter tøjet fra databasen
         }
     }
-}
-    #endregion
-    #region Models/Tables
-    // Modellerne (tabellerne) i databasen defineres som C# klasser, fordi SQLite-Net er meget federe end SQLite
 
-    // 'MParent' klassen svarer til tabellen 'Parents' i databasen
+    #endregion
+    #region CRUD for Memory (minde)
+    public static void AddMemory(MMemory memory) //tilføj memory
+    {
+        GetConnection().Insert(memory);
+    }
+    public static void DeleteMemory(int id) //delete memory gennem id
+    {
+        var memory = GetMemoryById(id);
+        if (memory != null)
+            GetConnection().Delete(memory);
+    }
+    public static MMemory GetMemoryById(int id) //skaf memory gennem id
+    {
+        return GetConnection().Table<MMemory>().FirstOrDefault(a => a.Id == id);  // Finder mindet med dette ID
+    }
+    public static List<MMemory> GetAllMemories()
+    {
+        return GetConnection().Table<MMemory>().ToList();  // Henter alle stykker tøj i en liste
+    }
+    public static List<MMemory> GetMemoriesByArticle(int articleId) //henter de minder der er tilsat bestemte tøj
+    {
+        var memories = GetAllMemories();
+        var newMemories = new List<MMemory>();
+        foreach (var article in memories)
+        {
+            if (article.Id == articleId)
+                newMemories.Add(article);
+
+        }
+        return newMemories;
+    }
+    public static void UpdateMemory(MArticle memory) //ændre minde
+    {
+        GetConnection().Update(memory);
+    }
+}
+
+    #endregion
+
+#region Models/Tables
+// Modellerne (tabellerne) i databasen defineres som C# klasser, fordi SQLite-Net er meget federe end SQLite
+
+// 'MParent' klassen svarer til tabellen 'Parents' i databasen
 
 
 #endregion
