@@ -199,6 +199,8 @@ public class SortScrollScript : MonoBehaviour
         CurrentArticles = new List<GameObject>();
         CurrentArticles.AddRange(newOrder);
         OrderArticles();
+
+
     }
 
 }

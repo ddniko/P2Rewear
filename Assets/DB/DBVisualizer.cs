@@ -64,7 +64,7 @@ public class DBVisualizer : MonoBehaviour
     }
 
 
-    public void AddChild(string name, int parentId, int? age, string size)
+    public void AddChild(string name, int parentId, string age, string size)
     {
         DBManager.AddChild(name, parentId, age, size);
         DisplayChildren(parentId);
