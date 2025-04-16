@@ -7,10 +7,7 @@
     <list default="true" id="6a133a33-9148-4cc7-9491-835a8dd0fa88" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.P2Rewear/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.P2Rewear/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ASM-Maps/BuyerMessage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM-Maps/BuyerMessage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ASM-Maps/Maps.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM-Maps/Maps.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ASM-Maps/Radius.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM-Maps/Radius.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ASM-Maps/UserMessage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM-Maps/UserMessage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ChatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChatManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +96,7 @@
       <workItem from="1744126251964" duration="2889000" />
       <workItem from="1744199339161" duration="9000" />
       <workItem from="1744708735437" duration="9452000" />
-      <workItem from="1744789414301" duration="4557000" />
+      <workItem from="1744789414301" duration="6173000" />
     </task>
     <servers />
   </component>
