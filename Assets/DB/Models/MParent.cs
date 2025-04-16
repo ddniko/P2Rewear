@@ -9,5 +9,6 @@ public class MParent
     public string Email { get; set; }
     public int? SustainabilityScore { get; set; } // Bæredygtighedsscore (kan være null)
     public int? ReliabilityScore { get; set; } // Pålidelighedsscore (kan være null)
+    public float Distance { get; set; }
 }
 
