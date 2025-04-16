@@ -12,8 +12,7 @@ public class LogIn : MonoBehaviour
 
     private List<MParent> mParents;
 
-
-    
+    public static MParent LoggedIn;
 
     public void Login()
     {
@@ -23,7 +22,7 @@ public class LogIn : MonoBehaviour
         {
             Bottombar.SetActive(true);
             gameObject.SetActive(false);
+            LoggedIn = loggedInParent;
         }
-
     }
 }
