@@ -708,9 +708,9 @@ RectTransform:
   - {fileID: 8186714502397884226}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -222.91, y: 93.755}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &513859132886548805
@@ -731,6 +731,8 @@ MonoBehaviour:
   sizeText: {fileID: 1503326316410465699}
   conditionText: {fileID: 2680622146581604822}
   sustainabilityScore: {fileID: 3133476511203199277}
+  name: 
+  describtion: 
   clothingImage: {fileID: 6047924069530511718}
   placeholderSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   primaryKey: 0
@@ -753,8 +755,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 164fe703d16e5e04c94073b694049fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clothingOverlay: {fileID: 0}
-  overlayScript: {fileID: 0}
 --- !u!1 &3865826855534515459
 GameObject:
   m_ObjectHideFlags: 0

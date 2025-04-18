@@ -36,6 +36,9 @@ public class ClothingItem : MonoBehaviour
     public TextMeshProUGUI conditionText;
     public TextMeshProUGUI sustainabilityScore;
 
+    public string name;
+    public string describtion;
+
     public UnityEngine.UI.Image clothingImage;
     public Sprite placeholderSprite;
 
@@ -104,7 +107,8 @@ public class ClothingItem : MonoBehaviour
         //nameText.text = this.name;
         //describtionText.text = description;
         sizeText.text = sizeCategory;
-        conditionText.text = $"{condition * 100:F0}%";
+        conditionText.text = $"{condition:F0}/5";
+        sustainabilityScore.text = lifeTime.ToString();
 
 
         // Load image fra bytes stored. skal implementer en placeholder
