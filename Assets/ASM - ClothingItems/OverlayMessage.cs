@@ -1,21 +1,49 @@
+using TMPro;
 using UnityEngine;
 
 public class OverlayMessage : MonoBehaviour
 {
-//    Start is called once before the first execution of Update after the MonoBehaviour is created
-//   [SerializeField] private Canvas clothingOverlay;
-//    [SerializeField] private ClothingOverlay overlayScript;
-//    void Start()
-//    {
-//        clothingOverlay = GameObject.Find("Overlay").GetComponent<Canvas>();
-//        overlayScript = GameObject.Find("Overlay").GetComponent<ClothingOverlay>();
-//        // clothingOverlay.enabled = false;
-//    }
+    // start is called once before the first execution of update after the monobehaviour is created
+    //[serializefield] private canvas clothingoverlay;
+    // [serializefield] private clothingoverlay overlayscript;
+    // void start()
+    // {
+    //     clothingoverlay = gameobject.find("overlay").getcomponent<canvas>();
+    //     overlayscript = gameobject.find("overlay").getcomponent<clothingoverlay>();
+    //     // clothingoverlay.enabled = false;
+    // }
 
 
-//    public void SendMessage(ClothingItem clothingItem)
-//    {
-//        overlayScript.OpenOverlay(clothingItem);
-//        clothingOverlay.gameObject.SetActive(true);
-//    }
+    // public void sendmessage(clothingitem clothingitem)
+    // {
+    //     overlayscript.openoverlay(clothingitem);
+    //     clothingoverlay.gameobject.setactive(true);
+    // }
+
+    public GameObject OverlayMarket;
+    public GameObject OverlayProfile;
+    public GameObject canvas;
+
+    private ClothingItem CurrentArticle;
+
+
+    public void OpenOverlay()
+    {
+        GameObject newOverlay;
+        canvas = GameObject.Find("CanvasOverlays");
+        CurrentArticle = gameObject.GetComponent<ClothingItem>();
+
+        if (LogIn.LoggedIn.Id == DBManager.GetParentByArticleId(CurrentArticle.primaryKey).Id)
+        {
+            newOverlay = Instantiate(OverlayProfile, canvas.transform);
+        }
+        else
+        {
+            newOverlay = Instantiate(OverlayMarket, canvas.transform);
+        }
+
+        //newOverlay.GetComponent<SetupOverlay>().setupOverlay(CurrentArticle.primaryKey, CurrentArticle.ClothingName, CurrentArticle.childId, CurrentArticle.sizeCategory,
+        //    CurrentArticle.category, CurrentArticle.condition, CurrentArticle.lifeTime, CurrentArticle.prize, CurrentArticle.description, CurrentArticle.imageData);
+        newOverlay.GetComponent<SetupOverlay>().setupOverlay(CurrentArticle.primaryKey);
+    }
 }

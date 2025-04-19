@@ -10,12 +10,12 @@ public class SortScrollScript : MonoBehaviour
     public GameObject ClothingPrefab;
     public Transform ParentObject;
     [Header("ItemPositions")]
-    public int maxItemsPerRow = 5;
-    public float horizontalSpacing = 2f;// de her bestemmer hvor meget rum der skal være imellem dem. kunne gøres til public fields så man kunne ændre dem i inspectoren
-    public float verticalSpacing = 2f;
+    public int maxItemsPerRow = 2;
+    public float horizontalSpacing = 140f;// de her bestemmer hvor meget rum der skal være imellem dem. kunne gøres til public fields så man kunne ændre dem i inspectoren
+    public float verticalSpacing = 100f;
     public int currentRow = 0;
     public int currentColumn = 0;
-    private Vector3 startPosition = new Vector3(0, 0, 0);
+    private Vector3 startPosition = Vector3.zero;
     public GameObject[] StartObjects;
 
 
@@ -46,15 +46,21 @@ public class SortScrollScript : MonoBehaviour
     }
     public void DestroyItems()
     {
-        for (int i = 0; i < CurrentArticles.Count; i++)
+        if (CurrentArticles != null)
         {
-            Destroy(CurrentArticles[i].gameObject);
+            for (int i = 0; i < CurrentArticles.Count; i++)
+            {
+                Destroy(CurrentArticles[i].gameObject);
+            }
+            if (StartObjects != null)
+            {
+                startPosition = StartObjects[0].transform.position;
+                horizontalSpacing = Mathf.Abs(StartObjects[0].transform.position.x) - Mathf.Abs(StartObjects[1].transform.position.x);
+                verticalSpacing = Mathf.Abs(StartObjects[0].transform.position.y) - Mathf.Abs(StartObjects[2].transform.position.y);
+                currentColumn = 0;
+                currentRow = 0;
+            }
         }
-        startPosition = StartObjects[0].transform.position;
-        horizontalSpacing = Mathf.Abs(StartObjects[0].transform.position.x) - Mathf.Abs(StartObjects[1].transform.position.x);
-        verticalSpacing = Mathf.Abs(StartObjects[0].transform.position.y) - Mathf.Abs(StartObjects[2].transform.position.y);
-        currentColumn = 0;
-        currentRow = 0;
     }
     private void FilterArticles(ChildDemands demands)
     {
@@ -160,7 +166,7 @@ public class SortScrollScript : MonoBehaviour
     {
         for (int i = 0; i < CurrentArticles.Count; i++)  //index for rækken
         {
-            CurrentArticles[i].gameObject.transform.position = startPosition + new Vector3(currentColumn * horizontalSpacing, -currentRow * verticalSpacing, 0);
+            CurrentArticles[i].gameObject.transform.localPosition = startPosition + new Vector3(currentColumn * horizontalSpacing + 50, -currentRow * verticalSpacing - 45, 0);
 
             currentColumn++;
 

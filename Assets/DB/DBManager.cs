@@ -74,6 +74,16 @@ public static class DBManager
         return GetConnection().Table<MParent>().FirstOrDefault(p => p.Id == id);  // Finder den første forælder med dette ID
     }
 
+    public static MParent GetParentByChildId(int id)
+    {
+        return GetParentById(GetChildById(id).ParentId);
+    }
+
+    public static MParent GetParentByArticleId(int id)
+    {
+        return GetParentById(GetChildById(GetArticleById(id).ChildId).ParentId);
+    }
+
     // Henter alle forældre fra databasen
     public static List<MParent> GetAllParents()
     {

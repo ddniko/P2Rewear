@@ -8,6 +8,7 @@ public abstract class BasePage : MonoBehaviour
     private void Awake()
     {
         pages = FindObjectsByType<BasePage>(FindObjectsSortMode.None);
+        //gameObject.SetActive(false);
         /*foreach (BasePage page in pages)
         {
             page.gameObject.SetActive(false);

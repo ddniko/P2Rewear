@@ -12,29 +12,35 @@ public class Markedsplads : BasePage
 
     private List<MArticle> AllClothes;
 
-    private GameObject[] Prefabs;
+    private SortScrollScript SortScript;
 
-    private void Start()
+
+    private void OnEnable()
     {
-        DBManager.Init();
+        //DBManager.Init();
         AllClothes = DBManager.GetAllArticles();
+        List<MArticle> AllOtherClothes = new List<MArticle>();
 
-
-        foreach (MArticle Current in AllClothes)
+        for (int i = 0; i < AllClothes.Count; i++)
         {
-            GameObject Spawn = Instantiate(ClothingPrefab, ViewPort.transform);
-            if (Current.Id % 2 == 0)
+            if (DBManager.GetParentByArticleId(AllClothes[i].Id).Id != LogIn.LoggedIn.Id)
             {
-                Spawn.transform.position = new Vector2(1, -Mathf.Floor((Current.Id - 1) / 2) * 4 - 1);
+                AllOtherClothes.Add(AllClothes[i]);
+                //AllClothes.RemoveAt(i);
+                //Debug.Log("remove");
             }
-            else
-            {
-                Spawn.transform.position = new Vector2(-1, -Mathf.Floor((Current.Id - 1) / 2) * 4 - 1);
-            }
-
-            ClothingItem ThisItem = Spawn.GetComponent<ClothingItem>();
-            ThisItem.SetUpClothingItem(Current.Id, Current.Name, Current.ChildId, Current.SizeCategory, Current.Category,
-                Current.Condition, Current.LifeTime, Current.Prize, Current.Description, Current.ImageData);
         }
+
+
+        SortScript = new SortScrollScript();
+        SortScript.ParentObject = ViewPort.transform;
+        SortScript.ClothingPrefab = ClothingPrefab;
+
+        SortScript.InstantiateAllArticles(AllOtherClothes);
+    }
+
+    private void OnDisable()
+    {
+        SortScript.DestroyItems();
     }
 }

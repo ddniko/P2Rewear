@@ -9,10 +9,17 @@ public class LogIn : MonoBehaviour
     public TMP_InputField Brugernavn;
     public TMP_InputField Password;
     public GameObject Bottombar;
+    public GameObject loginPage;
 
     private List<MParent> mParents;
 
     public static MParent LoggedIn;
+    public static int UserId;
+
+    private void Awake()
+    {
+        DBManager.Init();
+    }
 
     public void Login()
     {
@@ -20,9 +27,10 @@ public class LogIn : MonoBehaviour
         MParent loggedInParent = mParents.Find(p => p.Name == Brugernavn.text && p.Password == Password.text);
         if (loggedInParent != null)
         {
-            Bottombar.SetActive(true);
-            gameObject.SetActive(false);
             LoggedIn = loggedInParent;
+            Bottombar.SetActive(true);
+            loginPage.SetActive(false);
+            //gameObject.SetActive(false);
         }
     }
 }
