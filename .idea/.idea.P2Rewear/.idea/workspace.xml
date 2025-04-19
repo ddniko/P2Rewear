@@ -6,18 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6a133a33-9148-4cc7-9491-835a8dd0fa88" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.P2Rewear/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.P2Rewear/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ASM-Maps/ASM - Chat.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM-Maps/ASM - Chat.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ASM-Maps/ContactDescription 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM-Maps/ContactDescription 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ChatManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ChatManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactButtonScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactButtonScript.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactPageManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactPageManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapDistance.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapDistance.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SetupMessage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SetupMessage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASM-Maps/ChatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM-Maps/ChatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASM-Maps/ContactPageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM-Maps/ContactPageManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +102,7 @@
       <workItem from="1744801310204" duration="753000" />
       <workItem from="1744841055055" duration="3279000" />
       <workItem from="1744906498147" duration="5145000" />
+      <workItem from="1745095251377" duration="2751000" />
     </task>
     <servers />
   </component>

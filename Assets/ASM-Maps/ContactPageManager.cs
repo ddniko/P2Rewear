@@ -16,6 +16,14 @@ public class ContactPageManager : MonoBehaviour
     
     [SerializeField] private GameObject buyerContactPrefab;
     [SerializeField] private GameObject sellerContactPrefab;
+    
+    RectTransform rectTransform;
+    public float contentHeight = 0f;
+
+    public void Start()
+    {
+        rectTransform = content.GetComponent<RectTransform>();
+    }
 
     public void AddSellerItem(ClothingItem item)
     {
@@ -50,6 +58,8 @@ public class ContactPageManager : MonoBehaviour
             visibleContacts.Add(contactPage);
             offset += setOffset;
         }
+        
+        rectTransform.sizeDelta = rectTransform.sizeDelta + new Vector2(0,contentHeight * contacts.Count);
     }
 
     private void ClearContacts()

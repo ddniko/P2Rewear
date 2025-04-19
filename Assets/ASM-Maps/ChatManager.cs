@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChatManager : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class ChatManager : MonoBehaviour
     
     private List<GameObject> sendMessages = new List<GameObject>();
     public GameObject content;
+    RectTransform contentRect;
+    public float contentHeight;
 
     private Transform contentOrigin;
     
@@ -33,6 +36,7 @@ public class ChatManager : MonoBehaviour
     [SerializeField] SetupMessage setupMessage;
     private int currentMessage = 0;
 
+    public GameObject moveableObjects;
 
     public TextMeshProUGUI confirmText;
    
@@ -41,7 +45,18 @@ public class ChatManager : MonoBehaviour
     public TextMeshProUGUI[] recommendedMessages;
     void Start()
     {
+        contentRect = content.GetComponent<RectTransform>();
         contentOrigin = content.transform;
+    }
+
+    public void MoveObjects()
+    {
+        moveableObjects.transform.position = moveableObjects.transform.position + new Vector3(0f, 3f,0f);
+    }
+
+    public void MoveObjectsBack()
+    {
+        moveableObjects.transform.position = moveableObjects.transform.position + new Vector3(0f, -3f,0f);
     }
 
     public void SetupChat(ClothingItem clothingItem)
@@ -69,6 +84,7 @@ public class ChatManager : MonoBehaviour
         GameObject messageSent = Instantiate(userMessagePrefab, userMessageOrigin.position, userMessagePrefab.transform.rotation, contentOrigin);
         setupMessage = messageSent.GetComponent<SetupMessage>();
         setupMessage.SetupMsg(text.text);
+        text.text = "";
         sendMessages.Add(messageSent);
         SendReplyMessage(); 
         
@@ -76,9 +92,9 @@ public class ChatManager : MonoBehaviour
 
     private void moveMessages()
     {
+        contentRect.sizeDelta = contentRect.sizeDelta + new Vector2(0,contentHeight);
         foreach (GameObject msg in sendMessages)
         {
-            Debug.Log("MessageMoved");
             msg.transform.position = msg.transform.position + new Vector3(0f, offset, 0f);
         }
     }
