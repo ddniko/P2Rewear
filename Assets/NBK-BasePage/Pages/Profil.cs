@@ -11,21 +11,12 @@ public class Profil : BasePage
     public TMP_Text Name;
 
     public GameObject ViewPort;
-
     public GameObject ClothingPrefab;
 
     private List<MArticle> OwnClothes;
-
     private SortScrollScript SortScript;
 
     private int UserId;
-
-    //private void Start() //sets scores and name on profile page to the current parent's scores and name
-    //{
-    //}
-
-
-
 
     private void OnEnable()
     {
