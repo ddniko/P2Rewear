@@ -41,6 +41,9 @@ public class Profil : BasePage
         SortScript.ParentObject = ViewPort.transform;
         SortScript.ClothingPrefab = ClothingPrefab;
 
+        RectTransform rt = ViewPort.GetComponent<RectTransform>();
+        rt.sizeDelta = new Vector2(rt.sizeDelta.x, MathF.Round(OwnClothes.Count / 2f + 0.4f) * 105);
+
         SortScript.InstantiateAllArticles(OwnClothes);
     }
 

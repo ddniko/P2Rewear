@@ -1,3 +1,6 @@
+using NUnit.Framework;
+using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -17,25 +20,6 @@ public class SetupOverlay : MonoBehaviour
     public Sprite placeholderSprite;
 
     private MArticle open;
-
-    //public void setupOverlay(int primaryKey, string name, int childId, string sizeCategory, string category, float condition, int? lifeTime, float? prize, string description, byte[] imageData)
-    //{
-    //    priceText.text = prize.ToString();
-    //    nameText.text = name;
-    //    describtionText.text = description;
-    //    sizeText.text = sizeCategory;
-    //    //category something here
-    //    conditionText.text = condition.ToString() + "/5";
-    //    sustainabilityScore.text = lifeTime.ToString();
-    //    //Distance.text = Distance.ToString(); Mangler udregning til distance
-    //    SellerId.text = DBManager.GetParentByArticleId(primaryKey).Name.ToString();
-
-    //    Sprite itemSprite = CreateImage(imageData);
-    //    clothingImage.sprite = itemSprite != null ? itemSprite : placeholderSprite;
-
-    //    //something to set parent profile picture down here :)
-
-    //}
 
     public void setupOverlay(int id)
     {
@@ -64,16 +48,52 @@ public class SetupOverlay : MonoBehaviour
 
     public void Next()
     {
-        if (DBManager.GetAllArticles().Count > open.Id)
+        if (DBManager.GetParentByArticleId(open.Id).Id == LogIn.LoggedIn.Id)
         {
-            setupOverlay(open.Id + 1);
+            List<MArticle> Display = DBManager.GetArticlesByParentId(LogIn.LoggedIn.Id);
+
+            int Open = Display.IndexOf(Display.FirstOrDefault(z => z.Id == open.Id));
+
+            if (Open + 1 < Display.Count)
+            {
+                setupOverlay(Display[Open + 1].Id);
+            }
+        }
+        else
+        {
+            List<MArticle> Display = Markedsplads.AllOtherClothes;
+
+            int Open = Display.IndexOf(Display.FirstOrDefault(z => z.Id == open.Id));
+
+            if (Open + 1 < Display.Count)
+            {
+                setupOverlay(Display[Open + 1].Id);
+            }
         }
     }
     public void Previous()
     {
-        if (open.Id != 1)
+        if (DBManager.GetParentByArticleId(open.Id).Id == LogIn.LoggedIn.Id)
         {
-            setupOverlay(open.Id - 1);
+            List<MArticle> OwnClothes = DBManager.GetArticlesByParentId(LogIn.LoggedIn.Id);
+
+            int Open = OwnClothes.IndexOf(OwnClothes.FirstOrDefault(z => z.Id == open.Id));
+
+            if (Open - 1 >= 0)
+            {
+                setupOverlay(OwnClothes[Open - 1].Id);
+            }
+        }
+        else
+        {
+            List<MArticle> Display = Markedsplads.AllOtherClothes;
+
+            int Open = Display.IndexOf(Display.FirstOrDefault(z => z.Id == open.Id));
+
+            if (Open - 1 >= 0)
+            {
+                setupOverlay(Display[Open - 1].Id);
+            }
         }
     }
 

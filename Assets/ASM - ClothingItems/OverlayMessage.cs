@@ -42,8 +42,6 @@ public class OverlayMessage : MonoBehaviour
             newOverlay = Instantiate(OverlayMarket, canvas.transform);
         }
 
-        //newOverlay.GetComponent<SetupOverlay>().setupOverlay(CurrentArticle.primaryKey, CurrentArticle.ClothingName, CurrentArticle.childId, CurrentArticle.sizeCategory,
-        //    CurrentArticle.category, CurrentArticle.condition, CurrentArticle.lifeTime, CurrentArticle.prize, CurrentArticle.description, CurrentArticle.imageData);
         newOverlay.GetComponent<SetupOverlay>().setupOverlay(CurrentArticle.primaryKey);
     }
 }
