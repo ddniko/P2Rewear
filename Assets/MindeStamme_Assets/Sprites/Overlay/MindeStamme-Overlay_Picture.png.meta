@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MindeStamme-Overlay_Picture_0: -8275866767555022103
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

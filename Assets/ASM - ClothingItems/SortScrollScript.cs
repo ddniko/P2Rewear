@@ -62,10 +62,10 @@ public class SortScrollScript : MonoBehaviour
             }
         }
     }
-    private void FilterArticles(ChildDemands demands)
+    private List<MArticle> FilterArticles(ChildDemands demands, List<MArticle> articles)
     {
         DestroyItems();
-        List<MArticle> articles = DBManager.GetAllArticles();
+
         List<MArticle> filteredArticles = new List<MArticle>();
 
         foreach (MArticle article in articles)
@@ -95,8 +95,44 @@ public class SortScrollScript : MonoBehaviour
                 filteredArticles.Add(article);
         }
 
+        return filteredArticles;
 
-        InstantiateAllArticles(filteredArticles);
+    }
+    private bool ArticleValidByFilter(ChildDemands demands, MArticle art)
+    {
+        DestroyItems();
+
+        List<MArticle> filteredArticles = new List<MArticle>();
+
+
+
+        bool matches = true;
+        if (demands.SizeCategory != null && demands.SizeCategory.Count > 0)
+        {
+            if (!demands.SizeCategory.Contains(art.SizeCategory))
+                matches = false;
+        }
+        if (demands.Category != null && demands.Category.Count > 0)
+        {
+            if (!demands.Category.Contains(art.Category))
+                matches = false;
+        }
+        if (demands.maxPrize != -1)
+        {
+            if (!art.Prize.HasValue || art.Prize.Value > demands.maxPrize)
+                matches = false;
+        }
+        if (demands.minCondition.HasValue)
+        {
+            if (art.Condition < demands.minCondition.Value)
+                matches = false;
+        }
+        if (matches)
+            filteredArticles.Add(art);
+
+
+        return matches;
+
     }
 
     public void InstantiateAllArticles()
@@ -113,43 +149,41 @@ public class SortScrollScript : MonoBehaviour
         OrderArticles();
     }
 
-    public void InstantiateAllArticles(List<MArticle> art)
+    public void InstantiateAllArticles(List<MArticle> art, SORTTYPE? sortType = null, ChildDemands childDemands = null)
     {
         DestroyItems();
         CurrentArticles = new List<GameObject>();
         //praktisk talt at resette listen.
         List<MArticle> articles = art;
-
+        
         foreach (MArticle article in articles)
         {
-            CurrentArticles.Add(CreateArticle(article));
+            if (childDemands != null)
+            {
+                if (ArticleValidByFilter(childDemands, article))
+                {
+                    CurrentArticles.Add(CreateArticle(article));
+                }
+                else continue;
+            }
+            else
+                CurrentArticles.Add(CreateArticle(article));
         }
-        OrderArticles();
+        if (sortType != null)
+            SortAndDisplayArticles(sortType);
+        else
+            OrderArticles();
+    }
+    public void InstantiateArticlesParent(int parentID, SORTTYPE? sortType = null, ChildDemands childDemands = null)
+    {
+        List<MArticle> parentArticles = DBManager.GetArticlesByParentId(parentID);
+        InstantiateAllArticles(parentArticles, sortType, childDemands);
     }
 
-
-    public void InstantiateArticlesParent(int parentID)
+    public void InstantiateArticlesChild(int childID, SORTTYPE? sortType = null, ChildDemands childDemands = null)
     {
-        DestroyItems();
-        CurrentArticles = new List<GameObject>();
-
-        foreach (MArticle article in DBManager.GetArticlesByParentId(parentID))
-        {
-            CurrentArticles.Add(CreateArticle(article));
-        }
-        OrderArticles();
-    }
-
-    public void InstantiateArticlesChild(int childID)
-    {
-        DestroyItems();
-        CurrentArticles = new List<GameObject>();
-
-        foreach (MArticle article in DBManager.GetArticlesByParentId(childID))
-        {
-            CurrentArticles.Add(CreateArticle(article));
-        }
-        OrderArticles();
+        List<MArticle> childArticles = DBManager.GetArticlesByChildId(childID);
+        InstantiateAllArticles(childArticles, sortType, childDemands);
     }
     public GameObject CreateArticle(MArticle article)
     {
@@ -182,7 +216,7 @@ public class SortScrollScript : MonoBehaviour
 
     public void SortAndDisplayArticles(SORTTYPE? sortType = null)
     {
-        
+
         List<GameObject> newOrder = new List<GameObject>();
         if (sortType.HasValue)
             switch (sortType)
