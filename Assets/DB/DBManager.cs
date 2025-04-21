@@ -204,6 +204,20 @@ public static class DBManager
     {
         return GetConnection().Table<MArticle>().ToList();  // Henter alle stykker tøj i en liste
     }
+    public static List<MArticle> GetAllArticlesExceptParent(int parentID)
+    {
+        List<MArticle > AllClothes = GetConnection().Table<MArticle>().ToList();
+        List<MArticle> AllOtherClothes = new List<MArticle>();
+        for (int i = 0; i < AllClothes.Count; i++)
+        {
+            if (DBManager.GetParentByArticleId(AllClothes[i].Id).Id != parentID)
+            {
+                AllOtherClothes.Add(AllClothes[i]);
+            }
+        }
+        return AllOtherClothes;
+    }
+
 
     // Henter alle stykker tøj, der hører til et specifikt barn
     public static List<MArticle> GetArticlesByChildId(int childId)
