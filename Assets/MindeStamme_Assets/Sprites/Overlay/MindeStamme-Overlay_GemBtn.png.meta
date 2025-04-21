@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MindeStamme-Overlay_GemBtn_0: 3867401483616251954
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

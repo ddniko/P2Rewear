@@ -21,7 +21,6 @@ public class ChildSizeSelect : MonoBehaviour
         Size.onValueChanged.AddListener((isOn) => {
             if (isOn) SetSizeType(SIZETYPE.SIZE);
         });
-
     }
 
     private void SetSizeType(SIZETYPE selected)
