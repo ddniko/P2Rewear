@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a133a33-9148-4cc7-9491-835a8dd0fa88" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/ASM-Maps/ASM - Chat.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM-Maps/ASM - Chat.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.P2Rewear/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.P2Rewear/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASM-Maps/Chat.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM-Maps/Chat.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASM-Maps/Chat2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM-Maps/Chat2.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +103,7 @@
       <workItem from="1744841055055" duration="3279000" />
       <workItem from="1744906498147" duration="5145000" />
       <workItem from="1745095251377" duration="3285000" />
+      <workItem from="1745223244476" duration="75000" />
     </task>
     <servers />
   </component>
