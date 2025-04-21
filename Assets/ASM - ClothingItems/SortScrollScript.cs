@@ -149,7 +149,7 @@ public class SortScrollScript : MonoBehaviour
         OrderArticles();
     }
 
-    public void InstantiateArticles(List<MArticle> art, SORTTYPE? sortType = null, ChildDemands childDemands = null)
+    public void InstantiateArticles(List<MArticle> art, float? maxDistance = null, float? maxPrice = null, SORTTYPE? sortType = null, ChildDemands childDemands = null)
     {
         DestroyItems();
         CurrentArticles = new List<GameObject>();
@@ -177,17 +177,18 @@ public class SortScrollScript : MonoBehaviour
     public void InstantiateArticlesParent(int parentID, SORTTYPE? sortType = null, ChildDemands childDemands = null)
     {
         List<MArticle> parentArticles = DBManager.GetArticlesByParentId(parentID);
-        InstantiateArticles(parentArticles, sortType, childDemands);
+        InstantiateArticles(parentArticles,null,null, sortType, childDemands);
     }
     public void InstantiateArticlesOtherParent(int parentID, SORTTYPE? sortType = null, ChildDemands childDemands = null)
     {
         List<MArticle> parentArticles = DBManager.GetAllArticlesExceptParent(LogIn.LoggedIn.Id);
-        InstantiateArticles(parentArticles, sortType, childDemands);
+        InstantiateArticles(parentArticles, null,null,sortType, childDemands);
     }
+    
     public void InstantiateArticlesChild(int childID, SORTTYPE? sortType = null, ChildDemands childDemands = null)
     {
         List<MArticle> childArticles = DBManager.GetArticlesByChildId(childID);
-        InstantiateArticles(childArticles, sortType, childDemands);
+        InstantiateArticles(childArticles,null,null, sortType, childDemands);
     }
     public GameObject CreateArticle(MArticle article)
     {
