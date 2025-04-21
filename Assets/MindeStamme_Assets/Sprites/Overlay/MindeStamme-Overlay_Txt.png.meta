@@ -1,0 +1,225 @@
+fileFormatVersion: 2
+guid: 612977ca803e8dc448ade94fab9ee50a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8469590870880234828
+    second: MindeStamme-Overlay_Txt_0
+  - first:
+      213: 7030550063680582694
+    second: MindeStamme-Overlay_Txt_1
+  - first:
+      213: -4809645337890030894
+    second: MindeStamme-Overlay_Txt_2
+  - first:
+      213: -1104299049074176479
+    second: MindeStamme-Overlay_Txt_3
+  - first:
+      213: 109150118928677024
+    second: MindeStamme-Overlay_Txt_4
+  - first:
+      213: -1755440047400435729
+    second: MindeStamme-Overlay_Txt_5
+  - first:
+      213: -3013053332887093833
+    second: MindeStamme-Overlay_Txt_6
+  - first:
+      213: 4449510810637887007
+    second: MindeStamme-Overlay_Txt_7
+  - first:
+      213: 7918403380550118981
+    second: MindeStamme-Overlay_Txt_8
+  - first:
+      213: 5632044503765243156
+    second: MindeStamme-Overlay_Txt_9
+  - first:
+      213: 258157398326097562
+    second: MindeStamme-Overlay_Txt_10
+  - first:
+      213: -1847684274504475316
+    second: MindeStamme-Overlay_Txt_11
+  - first:
+      213: -3765507606348130998
+    second: MindeStamme-Overlay_Txt_12
+  - first:
+      213: 434918599601024364
+    second: MindeStamme-Overlay_Txt_13
+  - first:
+      213: -509024800138655981
+    second: MindeStamme-Overlay_Txt_14
+  - first:
+      213: 6076054692500165926
+    second: MindeStamme-Overlay_Txt_15
+  - first:
+      213: 1865528090600987606
+    second: MindeStamme-Overlay_Txt_16
+  - first:
+      213: 5785130118933825503
+    second: MindeStamme-Overlay_Txt_17
+  - first:
+      213: 4606243977036899656
+    second: MindeStamme-Overlay_Txt_18
+  - first:
+      213: 2447276240998564313
+    second: MindeStamme-Overlay_Txt_19
+  - first:
+      213: -8438866546670978756
+    second: MindeStamme-Overlay_Txt_20
+  - first:
+      213: -2822241832690005142
+    second: MindeStamme-Overlay_Txt_21
+  - first:
+      213: 8415284220020542116
+    second: MindeStamme-Overlay_Txt_22
+  - first:
+      213: -224807815753048748
+    second: MindeStamme-Overlay_Txt_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MindeStamme-Overlay_Txt_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 179
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e8c01aa00466241b09932de5e3b079
+      internalID: 602827385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3d7b29921fb6a8046933e2f144c82eca
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MindeStamme-Overlay_Txt_0: 602827385
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

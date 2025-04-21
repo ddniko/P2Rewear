@@ -39,6 +39,9 @@ public static class DBManager
 
         // Opretter tabellen 'Clothing' hvis den ikke eksisterer
         connection.CreateTable<MArticle>();
+
+        // Opretter tabellen 'Memory' hvis den ikke eksisterer
+        connection.CreateTable<MMemory>();
     }
 
     // Denne metode returnerer forbindelsen til databasen, så den kan bruges andre steder i koden
@@ -274,7 +277,7 @@ public static class DBManager
         }
         return newMemories;
     }
-    public static void UpdateMemory(MArticle memory) //ændre minde
+    public static void UpdateMemory(MMemory memory) //ændre minde
     {
         GetConnection().Update(memory);
     }
