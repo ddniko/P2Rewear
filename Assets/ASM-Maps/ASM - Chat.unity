@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 182, y: 287.62}
+  m_AnchoredPosition: {x: 0, y: 0.00012207031}
+  m_SizeDelta: {x: 182, y: 92.88}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &28180037
 GameObject:
@@ -4037,13 +4037,15 @@ MonoBehaviour:
   distanceText: {fileID: 0}
   confirmationPanel: {fileID: 1261916299}
   content: {fileID: 6117659}
+  contentHeight: 35
   text: {fileID: 1831615247}
   userMessagePrefab: {fileID: 4552140957025300035, guid: 6ee9f8a781b785342a596482281466d2, type: 3}
   userMessageOrigin: {fileID: 1162251074}
   buyerMessagePrefab: {fileID: 7789092842274493520, guid: ade05da2d366398488f464ecb79b8cb6, type: 3}
   buyerMessageOrigin: {fileID: 1831745078}
-  offset: 1
+  offset: 0.5
   setupMessage: {fileID: 0}
+  moveableObjects: {fileID: 376391084}
   confirmText: {fileID: 754349917}
   replyMessages:
   - Hello, That sound awesome
@@ -4098,11 +4100,11 @@ RectTransform:
   - {fileID: 1985215082}
   m_Father: {fileID: 1084349386}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 473.98}
-  m_Pivot: {x: 0, y: 1}
+  m_SizeDelta: {x: 200, y: 106.7}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1140244386
 GameObject:
   m_ObjectHideFlags: 0
@@ -4254,11 +4256,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6117660}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31.599998, y: -232}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 31.599998, y: 35}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &1171441556
 GameObject:
   m_ObjectHideFlags: 0
@@ -5244,6 +5246,7 @@ MonoBehaviour:
   content: {fileID: 1137842145}
   buyerContactPrefab: {fileID: 2438147172848790441, guid: 92ef731320508a64fba0ae1ecf5d23dd, type: 3}
   sellerContactPrefab: {fileID: 2438147172848790441, guid: 92ef731320508a64fba0ae1ecf5d23dd, type: 3}
+  contentHeight: 0
 --- !u!4 &1650277107
 Transform:
   m_ObjectHideFlags: 0
@@ -5966,11 +5969,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6117660}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23.400002, y: -231}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -23.400002, y: 35.99991}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &1847826594
 GameObject:
   m_ObjectHideFlags: 0
@@ -6373,10 +6376,34 @@ MonoBehaviour:
       m_Calls: []
   m_OnSelect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1131476013}
+        m_TargetAssemblyTypeName: ChatManager, Assembly-CSharp
+        m_MethodName: MoveObjects
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnDeselect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1131476013}
+        m_TargetAssemblyTypeName: ChatManager, Assembly-CSharp
+        m_MethodName: MoveObjectsBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTextSelection:
     m_PersistentCalls:
       m_Calls: []
