@@ -1,11 +1,11 @@
 using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ContactButtonScript : MonoBehaviour
 {
-    private ClothingItem clothingItem;
-    public ChatManager chatManager;
+    private MArticle clothingItem;
 
 
     
@@ -17,35 +17,26 @@ public class ContactButtonScript : MonoBehaviour
     [SerializeField] private TextMeshProUGUI conditionText;
     [SerializeField] private TextMeshProUGUI lastMessageText;
     [SerializeField] private Image image;
-    
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        chatManager = GameObject.Find("ChatManager").GetComponent<ChatManager>();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public MArticle Article;
+    
 
-    public void SetupClothingItem(ClothingItem clothingItem)
+    public void SetupClothingItem(MArticle clothingItem)
     {
         this.clothingItem = clothingItem;
         //name.text = clothingItem.paren;
-        priceText.text = clothingItem.prize.ToString();
+        priceText.text = clothingItem.Prize.ToString();
         //Distance
-        sizeText.text = clothingItem.sizeCategory;
-        scoreText.text = clothingItem.sustainabilityScore.ToString();
-        conditionText.text = clothingItem.condition.ToString();
+        sizeText.text = clothingItem.SizeCategory;
+        scoreText.text = clothingItem.LifeTime.ToString();
+        conditionText.text = clothingItem.Condition.ToString();
         //Last message
     }
 
     public void ActivateOverlay()
     {
-        chatManager.SetupChat(clothingItem);
+        ChatManager.instance.SetupChat(Article);
+
     }
     
 }

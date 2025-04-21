@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,8 @@ public class ChatManager : MonoBehaviour
     public TextMeshProUGUI distanceText;
     
     public GameObject confirmationPanel;
+
+    public GameObject ChatOverlay;
     
     
     private List<GameObject> sendMessages = new List<GameObject>();
@@ -20,11 +23,11 @@ public class ChatManager : MonoBehaviour
     public float contentHeight;
 
     private Transform contentOrigin;
-    
+
+    public static ChatManager instance;
     
     public TextMeshProUGUI text;
-    
-    
+
     public GameObject userMessagePrefab;
     public Transform userMessageOrigin;
     public GameObject buyerMessagePrefab;
@@ -43,6 +46,19 @@ public class ChatManager : MonoBehaviour
   
     public string[] replyMessages;
     public TextMeshProUGUI[] recommendedMessages;
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(instance);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+
     void Start()
     {
         contentRect = content.GetComponent<RectTransform>();
@@ -59,10 +75,14 @@ public class ChatManager : MonoBehaviour
         moveableObjects.transform.position = moveableObjects.transform.position + new Vector3(0f, -3f,0f);
     }
 
-    public void SetupChat(ClothingItem clothingItem)
+    public void SetupChat(MArticle clothingItem)
     {
-        itemName.text = clothingItem.name;
-        priceText.text = clothingItem.prize.ToString();
+
+        ChatOverlay.SetActive(true);
+        itemName.text = clothingItem.Name.ToString();
+        priceText.text = clothingItem.Prize.ToString();
+        sellerName.text = DBManager.GetParentByArticleId(clothingItem.Id).Name.ToString();
+
         //distanceText.text = clothingItem.distance.ToString();   Skal have distancen
     }
     
