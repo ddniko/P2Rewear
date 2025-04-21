@@ -16,10 +16,16 @@ public class SetupOverlay : MonoBehaviour
     public TextMeshProUGUI Distance;
     public TextMeshProUGUI SellerId;
 
+    public GameObject Chat;
+    public GameObject BottomBar;
+
     public UnityEngine.UI.Image clothingImage;
     public Sprite placeholderSprite;
 
     private MArticle open;
+
+    private ChatManager chatManager;
+
 
     public void setupOverlay(int id)
     {
@@ -95,6 +101,16 @@ public class SetupOverlay : MonoBehaviour
                 setupOverlay(Display[Open - 1].Id);
             }
         }
+    }
+
+    public void StartChat()
+    {
+        ContactPageManager.AddSellerItem(open);
+        ChatManager.instance.SetupChat(open);
+        //Chat.SetActive(true);
+
+        gameObject.SetActive(false);
+
     }
 
     public Sprite CreateImage(byte[] imageBytes)
