@@ -35,7 +35,7 @@ public class Profil : BasePage
         RectTransform rt = ViewPort.GetComponent<RectTransform>();
         rt.sizeDelta = new Vector2(rt.sizeDelta.x, MathF.Round(OwnClothes.Count / 2f + 0.4f) * 105);
 
-        SortScript.InstantiateAllArticles(OwnClothes);
+        SortScript.InstantiateArticles(OwnClothes);
     }
 
     private void OnDisable()
