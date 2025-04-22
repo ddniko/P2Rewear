@@ -6,6 +6,7 @@ public class MSBttnOverlayManager : MonoBehaviour
     [SerializeField] private GameObject mindestammeOverlayUserMems;
 
     private SetupMemoryArticle setup; // we set-up / format the overlays with information when the overlay is being activated
+    private CreateMemory create;
 
     public void OpenUserMemOverlay(MMemory memory) // this is the on click enter method for the memory overlay
     {
@@ -20,6 +21,12 @@ public class MSBttnOverlayManager : MonoBehaviour
     }
 
 
+    public void CreateMemOverlay(MArticle article)
+    {
+        mindestammeOverlayEditOrCreateOwnMem.SetActive(true);
+        create = mindestammeOverlayEditOrCreateOwnMem.GetComponent<CreateMemory>();
+        create.createMemory(article);
+    }
     public void OpenOwnEditOrCreateMemOverlay(MMemory memory)
     {
         mindestammeOverlayEditOrCreateOwnMem.SetActive(true);
