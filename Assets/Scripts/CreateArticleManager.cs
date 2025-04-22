@@ -23,7 +23,7 @@ public class CreateArticleManager : BasePage
     public bool GenerateData;
     private void Start()
     {
-        DBManager.Init();
+        
         //if (GenerateData)
             //DBManager.GenerateTestData(5);
     }
@@ -39,17 +39,17 @@ public class CreateArticleManager : BasePage
     }
     private bool CheckArticle()
     {
-        if (Name.text.Length <= 0) { faillog.text ="Name Lacking"; return false; }
-        if (Size.value == 0) { faillog.text = "Size Lacking"; return false; }
-        if (Cat.value == 0) { faillog.text = "Value Lacking"; return false; }
-        if (Forsale.isOn && prizeText.text.Length <= 0) { faillog.text = "Prize Lacking"; return false; }
+        if (Name.text.Length <= 0) { Debug.Log("Name Lacking"); return false; }
+        if (Size.value == 0) { Debug.Log("Size Lacking"); return false; }
+        if (Cat.value == 0) { Debug.Log("Value Lacking"); return false; }
+        if (Forsale.isOn && prizeText.text.Length <= 0) { Debug.Log("Prize Lacking"); return false; }
         if (Forsale.isOn && prizeText.text.Length <= 0)
         {
             bool succes = float.TryParse(prizeText.text, out float value);
             if (!succes)
-                faillog.text = "Prize Invalid"; return false;
+                Debug.Log("Prize Invalid"); return false;
         }
-        faillog.text = "Article Viable";
+        Debug.Log("Article Viable");
         return true;
     }
     public void CreateArticle()
@@ -70,7 +70,7 @@ public class CreateArticleManager : BasePage
         art.ImageData = ConvertImageToByteArray(img);
 
         DBManager.AddArticle(art);
-        faillog.text = $"{Application.persistentDataPath}/clothing.db";
+        //faillog.text = $"{Application.persistentDataPath}/clothing.db";
         
     }
 

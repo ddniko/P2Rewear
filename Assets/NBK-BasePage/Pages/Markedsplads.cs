@@ -16,30 +16,25 @@ public class Markedsplads : BasePage
     private SortScrollScript SortScript;
 
     public static List<MArticle> AllOtherClothes;
-    
+
     private float setMaxDistance;
-    
+
     private float setMaxPrice;
-    
+    private Filter filter;
+
     public TextMeshProUGUI SetMaxPriceText;
     public TextMeshProUGUI maxPriceText;
 
     private void OnEnable()
     {
-        //DBManager.Init();
-        AllClothes = DBManager.GetAllArticles();
-        AllOtherClothes = new List<MArticle>();
+        //  TestDataGenerator.GenerateRandomTestData();
+        filter = new Filter();
+        if (LogIn.LoggedIn != null)
+            AllOtherClothes = DBManager.GetAllArticlesExceptParent(LogIn.LoggedIn.Id);
+        else
+            AllOtherClothes = DBManager.GetAllArticlesExceptParent(1);
 
-        for (int i = 0; i < AllClothes.Count; i++)
-        {
-            if (DBManager.GetParentByArticleId(AllClothes[i].Id).Id != LogIn.LoggedIn.Id)
-            {
-                AllOtherClothes.Add(AllClothes[i]);
-            }
-        }
-        
-
-        SortScript = new SortScrollScript();
+        SortScript = GetComponent<SortScrollScript>();
         SortScript.ParentObject = ViewPort.transform;
         SortScript.ClothingPrefab = ClothingPrefab;
 
@@ -49,19 +44,26 @@ public class Markedsplads : BasePage
         SortScript.InstantiateArticles(AllOtherClothes, setMaxDistance, setMaxPrice);
     }
 
+    public void SortViaChild(MChild child)
+    {
+        filter = new Filter();
+        filter.SizeCategory[0] = child.Size;
+        filter.
+
+    }
     public float SetMaxDistance(TextMeshProUGUI inputText)
     {
         setMaxDistance = float.Parse(inputText.text);
         return setMaxDistance;
     }
-    
+
     public void SetMaxPrice()
     {
         maxPriceText.text = SetMaxPriceText.text + " kr";
         setMaxPrice = float.Parse(SetMaxPriceText.text);
     }
-    
-    
+
+
 
     private void OnDisable()
     {

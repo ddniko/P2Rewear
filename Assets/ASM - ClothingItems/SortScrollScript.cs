@@ -33,8 +33,8 @@ public class SortScrollScript : MonoBehaviour
     {
 
         startPosition = StartObjects[0].transform.position;
-        horizontalSpacing = Mathf.Abs(StartObjects[0].transform.position.x) - Mathf.Abs(StartObjects[1].transform.position.x);
-        verticalSpacing = Mathf.Abs(StartObjects[0].transform.position.y) - Mathf.Abs(StartObjects[2].transform.position.y);
+        horizontalSpacing = Mathf.Abs(StartObjects[0].transform.localPosition.x - StartObjects[1].transform.localPosition.x);
+        verticalSpacing = Mathf.Abs(StartObjects[0].transform.localPosition.y - StartObjects[2].transform.localPosition.y);
         currentColumn = 0;
         currentRow = 0;
         //Mathf.abs gør at det er i positive tal, altså ikke -13, men bare 13 eks.
@@ -55,14 +55,14 @@ public class SortScrollScript : MonoBehaviour
             if (StartObjects != null)
             {
                 startPosition = StartObjects[0].transform.position;
-                horizontalSpacing = Mathf.Abs(StartObjects[0].transform.position.x) - Mathf.Abs(StartObjects[1].transform.position.x);
-                verticalSpacing = Mathf.Abs(StartObjects[0].transform.position.y) - Mathf.Abs(StartObjects[2].transform.position.y);
+                horizontalSpacing = Mathf.Abs(StartObjects[0].transform.localPosition.x - StartObjects[1].transform.localPosition.x);
+                verticalSpacing = Mathf.Abs(StartObjects[0].transform.localPosition.y - StartObjects[2].transform.localPosition.y);
                 currentColumn = 0;
                 currentRow = 0;
             }
         }
     }
-    private List<MArticle> FilterArticles(ChildDemands demands, List<MArticle> articles)
+    private List<MArticle> FilterArticles(Filter demands, List<MArticle> articles)
     {
         DestroyItems();
 
@@ -98,7 +98,7 @@ public class SortScrollScript : MonoBehaviour
         return filteredArticles;
 
     }
-    private bool ArticleValidByFilter(ChildDemands demands, MArticle art)
+    private bool ArticleValidByFilter(Filter demands, MArticle art)
     {
         DestroyItems();
 
@@ -149,7 +149,7 @@ public class SortScrollScript : MonoBehaviour
         OrderArticles();
     }
 
-    public void InstantiateArticles(List<MArticle> art, float? maxDistance = null, float? maxPrice = null, SORTTYPE? sortType = null, ChildDemands childDemands = null)
+    public void InstantiateArticles(List<MArticle> art, float? maxDistance = null, float? maxPrice = null, SORTTYPE? sortType = null, Filter childDemands = null)
     {
         DestroyItems();
         CurrentArticles = new List<GameObject>();
@@ -174,18 +174,18 @@ public class SortScrollScript : MonoBehaviour
         else
             OrderArticles();
     }
-    public void InstantiateArticlesParent(int parentID, SORTTYPE? sortType = null, ChildDemands childDemands = null)
+    public void InstantiateArticlesParent(int parentID, SORTTYPE? sortType = null, Filter childDemands = null)
     {
         List<MArticle> parentArticles = DBManager.GetArticlesByParentId(parentID);
         InstantiateArticles(parentArticles,null,null, sortType, childDemands);
     }
-    public void InstantiateArticlesOtherParent(int parentID, SORTTYPE? sortType = null, ChildDemands childDemands = null)
+    public void InstantiateArticlesOtherParent(int parentID, SORTTYPE? sortType = null, Filter childDemands = null)
     {
         List<MArticle> parentArticles = DBManager.GetAllArticlesExceptParent(LogIn.LoggedIn.Id);
         InstantiateArticles(parentArticles, null,null,sortType, childDemands);
     }
     
-    public void InstantiateArticlesChild(int childID, SORTTYPE? sortType = null, ChildDemands childDemands = null)
+    public void InstantiateArticlesChild(int childID, SORTTYPE? sortType = null, Filter childDemands = null)
     {
         List<MArticle> childArticles = DBManager.GetArticlesByChildId(childID);
         InstantiateArticles(childArticles,null,null, sortType, childDemands);

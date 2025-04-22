@@ -16,9 +16,5 @@ public class MMemory
     public string Description { get; set; } //Beskrivelse af mindet
     public byte[] ImageData { get; set; }
 
-    //public override string ToString()
-    //{
-    //    return $" This is information of memory ({Id}) connected to this article ({ArticleID}) : \n{Title} ({DateAdded})\n{Description}\nImage: {ImageData}\n";
-    //}
 }
 

@@ -5,7 +5,7 @@ public enum ClothingTags
 {
 
 }
-public class ChildDemands : MonoBehaviour
+public class Filter
 {
     
     public List<String> SizeCategory;

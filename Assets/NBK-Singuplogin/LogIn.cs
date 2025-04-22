@@ -19,6 +19,7 @@ public class LogIn : MonoBehaviour
     private void Awake()
     {
         DBManager.Init();
+
     }
 
     public void Login()
