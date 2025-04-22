@@ -285,7 +285,7 @@ public static class DBManager
         var newMemories = new List<MMemory>();
         foreach (var article in memories)
         {
-            if (article.Id == articleId)
+            if (article.ArticleID == articleId)
                 newMemories.Add(article);
 
         }

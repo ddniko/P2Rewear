@@ -19,6 +19,14 @@ public class BtnScript : MonoBehaviour
 
     private Scroll scrollSc;
     private ReloadMS reloadMSSc;
+    
+    //[Header("PAGES")]
+    //[SerializeField] private GameObject mindestamme_Main_PAGE;
+    //[SerializeField] private GameObject mindeskov_Main_PAGE;
+
+
+
+
 
     private void OnEnable() 
     {
@@ -72,7 +80,7 @@ public class BtnScript : MonoBehaviour
     {
 
 
-        if (haveCreatedbtn = true) // edit memory
+        if (haveCreatedbtn == true) // edit memory
         {
             MMemory tempUserMem = new MMemory();
 

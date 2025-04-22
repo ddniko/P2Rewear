@@ -19,7 +19,8 @@ public class Scroll : MonoBehaviour
     [Header ("Is it an internal test environment?")]
     public bool IsTest = false;
 
-    [Header ("Gameobjects")]
+    [Header("Gameobjects")]
+    public GameObject MSTidligereEjere;
     public GameObject MSStammePrefab;
     public GameObject MSMindeBtn;
     public GameObject MSScrollContent;
@@ -29,9 +30,11 @@ public class Scroll : MonoBehaviour
     [Header ("Other Variables")]
     public int tidligereEjer;
     public bool erEjer = false; // after testing this should be made false.
+    public List<MMemory> memDBPublic;
+    public List<MMemory> userCreatedMem;
+    public bool haveCreated = false;
 
     private int ejerPerScroll = 4; // there is min 4 required to have the big tree we see here.
-
     private List<GameObject> treeTrunks = new List<GameObject>();
     private List<GameObject> Btns = new List<GameObject>();
     private float HeightDifference;
@@ -39,6 +42,7 @@ public class Scroll : MonoBehaviour
     private float cropT;
     MMemory tempMemory;
     public int clothingArticleID = 0;
+
     private int memMatchingID = 0;
     //[SerializeField]
     //private int MemIDCount;
@@ -49,11 +53,9 @@ public class Scroll : MonoBehaviour
     // Declare the dictionaries that will be passed by reference, these are semi temp for DB
     Dictionary<int, List<int>> clothingDB;
     List< MMemory> memDBList;
-    public List< MMemory> memDBPublic;
-    public List<MMemory> userCreatedMem;
-    public bool haveCreated = false;
+
     BtnScript btnSc;
-    TextMeshProUGUI txtObj;
+    //TextMeshProUGUI txtObj;
 
     List<MMemory> memSortedByDate;
 
@@ -67,10 +69,15 @@ public class Scroll : MonoBehaviour
     {
         if (IsTest == true)
         {
-            for (int i = 1; i < memDBList.Count; i++)
+            memDBList = DBManager.GetAllMemories();
+            foreach (MMemory mem in memDBList)
             {
-                DBManager.DeleteMemory(i);
+                DBManager.DeleteMemory(mem.Id);
             }
+            //for (int i = 1; i < memDBList.Count; i++)
+            //{
+            //    DBManager.DeleteMemory(i);
+            //}
         }
     }
     private void OnEnable()
@@ -122,12 +129,15 @@ public class Scroll : MonoBehaviour
         
         // we sort the Outputted list by decending date (Old -> New)
         memSortedByDate = memDBList.OrderBy(tempMemory => DateTime.Parse(tempMemory.DateAdded)).ToList();
-
-        if (memDBList.Any(memA => userCreatedMem.Any(memB => { if (memA == memB) { memMatchingID = memA.Id; return true; } return false; })))
+        if (userCreatedMem != null)
         {
-            haveCreated = true;
+            if (memDBList.Any(memA => userCreatedMem.Any(memB => { if (memA == memB) { memMatchingID = memA.Id; return true; } return false; })))
+            {
+                haveCreated = true;
 
+            }
         }
+        
         // THIS ONLY HAPPENS IF THEY OWN THE CLOTHING
         // check if the current shown mems have been created by the user.
         // (we do that by getting the list of mem id, and compare it with the memid of the item that have been newly created (logged after the reload) maybe compare through the dates)
@@ -190,6 +200,7 @@ public class Scroll : MonoBehaviour
         //Move all bottons(btn) to their respective places
         foreach (GameObject btn in Btns) // make the txtObj in specific instances and not a global value
         {
+            TextMeshProUGUI txtObj;
             int btnCycle = BtnIndex % btnPos.Length;
             Vector3 targetPos = btnPos[btnCycle];
             btnPos[btnCycle] += new Vector2(0, 1200);
@@ -204,9 +215,11 @@ public class Scroll : MonoBehaviour
             //txtObj.text = $"{memDBTest[MemID].DateAdded}";    //We take the date of the memory and set the button to it (just fetch the date from the correct memory from the DB)
             txtObj.text = $"{memSortedByDate[BtnIndex].DateAdded}";
 
+
+            btn.GetComponent<BtnScript>().Indexbtn = BtnIndex; btn.GetComponent<BtnScript>().MemIDbtn = memSortedByDate[BtnIndex].Id;
             //btn.GetComponent<BtnScript>().Indexbtn = BtnIndex; btn.GetComponent<BtnScript>().MemIDbtn = MemID;         
             //btnSc.Indexbtn = BtnIndex; btnSc.MemIDbtn = MemID; //sending the ID and Index of the btn to the btn script (this is not needed bc of DB manager and MMemory)
-            btnSc.Indexbtn = BtnIndex; btnSc.MemIDbtn = memSortedByDate[BtnIndex].Id; // this could be optimized...
+            //btnSc.Indexbtn = BtnIndex; btnSc.MemIDbtn = memSortedByDate[BtnIndex].Id; // this could be optimized...
             BtnIndex++;
 
             //Output the memories to the console
@@ -216,6 +229,7 @@ public class Scroll : MonoBehaviour
 
         if (erEjer == true) // hvis det er ejeren af tøjet atm, så bliver knappen edit/add btn vist, og hvis de har redigere på det før bliver knappen ændret fra opret til rediger minde
         {
+            TextMeshProUGUI txtObj;
             MSEditAddBtn.gameObject.SetActive(true);
 
             if (haveCreated == true) //checks if any ID's matches the ones of the user's private list
@@ -224,6 +238,9 @@ public class Scroll : MonoBehaviour
                 txtObj.text = "Rediger\nMinde";
             }
         }
+        // Sets the amount of previous owners to a visable text obj on the page.
+        TextMeshProUGUI txtObjEjerCount = MSTidligereEjere.GetComponent<TextMeshProUGUI>();
+        txtObjEjerCount.text = $"{tidligereEjer}";
 
         // position of the last tree trunk! 747 is the hight that we want between the trunk and top of the content edge
         HeightDifference = (treeTrunks.LastOrDefault().GetComponent<RectTransform>().sizeDelta.y / 2) + treeTrunks.LastOrDefault().GetComponent<RectTransform>().anchoredPosition.y + 747;
@@ -312,12 +329,12 @@ public class Scroll : MonoBehaviour
         memDBTest = new List<MMemory>
         {
             // Memories for Group 001 - Cozy Blue Jacket
-             new MMemory { ArticleID = 1, DateAdded = "2024-03-01", Title = "First Time in the Jacket", Description = "We put the cozy blue jacket on you for the first time. You looked so snug and curious." } ,
-             new MMemory {  ArticleID = 1, DateAdded = "2024-03-03", Title = "Jacket at the Park", Description = "You wore the blue jacket on our walk to the park. You found a stick and refused to let go of it." } ,
+             new MMemory { ArticleID = 1, DateAdded = "2024-03-03", Title = "First Time in the Jacket", Description = "We put the cozy blue jacket on you for the first time. You looked so snug and curious." } ,
+             new MMemory { ArticleID = 1, DateAdded = "2024-03-01", Title = "Jacket at the Park", Description = "You wore the blue jacket on our walk to the park. You found a stick and refused to let go of it." } ,
              new MMemory { ArticleID = 1, DateAdded = "2024-03-05", Title = "Falling Asleep in the Jacket", Description = "After a long day, you passed out in the jacket in your stroller. We didn’t want to take it off." } ,
             // Memories for Group 002 - Tiny Red Boots
-             new MMemory { ArticleID = 2, DateAdded = "2024-03-07", Title = "Boots in the Rain", Description = "You stomped through puddles in the tiny red boots. Splashing was your new favorite thing." } ,
-             new MMemory { ArticleID = 2, DateAdded = "2024-03-08", Title = "Wearing Boots Indoors", Description = "You refused to take the red boots off, even indoors. You wore them with pajamas." } ,
+             new MMemory { ArticleID = 2, DateAdded = "2024-03-08", Title = "Boots in the Rain", Description = "You stomped through puddles in the tiny red boots. Splashing was your new favorite thing." } ,
+             new MMemory { ArticleID = 2, DateAdded = "2024-03-07", Title = "Wearing Boots Indoors", Description = "You refused to take the red boots off, even indoors. You wore them with pajamas." } ,
              new MMemory { ArticleID = 2, DateAdded = "2024-03-09", Title = "Boots on the Beach", Description = "Not quite beachwear, but you wore the boots anyway. You filled them with sand." } ,
              new MMemory { ArticleID = 2, DateAdded = "2024-03-10", Title = "Birthday Boots", Description = "Your birthday outfit wasn’t complete without the red boots. They were the star of every photo." } ,
              new MMemory { ArticleID = 2, DateAdded = "2024-03-11", Title = "Boots in the Snow", Description = "We layered socks and squeezed your feet in. You marched proudly through the snow." } ,
