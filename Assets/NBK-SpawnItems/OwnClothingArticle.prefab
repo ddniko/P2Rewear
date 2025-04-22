@@ -1227,6 +1227,9 @@ MonoBehaviour:
   sustainabilityScore: {fileID: 7768321827884262958}
   Distance: {fileID: 0}
   SellerId: {fileID: 0}
+  MindestammeObj: {fileID: 0}
+  Chat: {fileID: 0}
+  BottomBar: {fileID: 0}
   clothingImage: {fileID: 4248458123486256570}
   placeholderSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &6867375633076235933
@@ -2192,7 +2195,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7580353168315883529}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5861363072625550005}
+        m_TargetAssemblyTypeName: SetupOverlay, Assembly-CSharp
+        m_MethodName: MemStamme
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9223060268004990679
 GameObject:
   m_ObjectHideFlags: 0

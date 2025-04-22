@@ -16,6 +16,9 @@ public class SetupOverlay : MonoBehaviour
     public TextMeshProUGUI Distance;
     public TextMeshProUGUI SellerId;
 
+    public GameObject MindestammeObj;
+
+
     public GameObject Chat;
     public GameObject BottomBar;
 
@@ -111,6 +114,15 @@ public class SetupOverlay : MonoBehaviour
 
         gameObject.SetActive(false);
 
+    }
+
+    public void MemStamme()
+    {
+        //MindestammeObj.SetActive(true);
+        //StammeManager.instance.gameObject.SetActive(true);
+        StammeManager.instance.StammeStartup(open.Id);
+        //StammeManager.instance.clothingArticleID = open.Id;
+        gameObject.SetActive(false);
     }
 
     public Sprite CreateImage(byte[] imageBytes)
