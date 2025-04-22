@@ -20,13 +20,18 @@ public class BtnScript : MonoBehaviour
     private Scroll scrollSc;
     private ReloadMS reloadMSSc;
     
+    //public GameObject MSBttnOverlayManagerObject;
+    private MSBttnOverlayManager manager;
+    
     //[Header("PAGES")]
     //[SerializeField] private GameObject mindestamme_Main_PAGE;
     //[SerializeField] private GameObject mindeskov_Main_PAGE;
 
 
-
-
+    public void Start()
+    {
+        manager = FindObjectOfType<MSBttnOverlayManager>();
+    }
 
     private void OnEnable() 
     {
@@ -55,7 +60,7 @@ public class BtnScript : MonoBehaviour
         //Console.Write(mem.ToString());
 
         Debug.Log($"This is information of memory ({mem.Id}) connected to this article ({mem.ArticleID}) : \n{mem.Title} ({mem.DateAdded})\n{mem.Description}\nImage: {mem.ImageData}\n");
-
+        manager.OpenUserMemOverlay(mem);
 
         //Debug.Log($"{mem.ToString()}");
 
@@ -72,7 +77,8 @@ public class BtnScript : MonoBehaviour
 
     public void OnEditAddMemClick() // this
     {
-        
+        scrollSc = mindeStamme.GetComponentInChildren<Scroll>();
+        manager.CreateMemOverlay(DBManager.GetArticleById(scrollSc.clothingArticleID));
         // Activate edit / add mem overlay
     }
 
