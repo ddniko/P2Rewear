@@ -118,7 +118,7 @@ public class Scroll : MonoBehaviour
         
         // we sort the Outputted list by decending date (Old -> New)
         memSortedByDate = memDBList.OrderBy(tempMemory => DateTime.Parse(tempMemory.DateAdded)).ToList();
-        if (userCreatedMem != null)
+        if (userCreatedMem != null) // gør ikke noget?
         {
             if (memDBList.Any(memA => userCreatedMem.Any(memB => { if (memA == memB) { memMatchingID = memA.Id; return true; } return false; })))
             {

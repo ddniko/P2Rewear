@@ -82,12 +82,16 @@ public class StammeManager : MonoBehaviour
 
     public void AddTrunk()
     {
+        treeTrunks.Clear();
+        Btns.Clear();
         tidligereEjer = Scroll.instance.tidligereEjer;
         int ejerCount = tidligereEjer % ejerPerScroll; // the number of spialge of previous owners onto the next trunk / scroll 
         float pagescrolls = Mathf.Ceil(tidligereEjer / ejerPerScroll); // how many scrols is there needed to make to scroll to the top, we round up to a whole number because we can crop the rest later. -1 because the first page is free >:3
 
+        //Debug.Log("tidligereEjer = " + tidligereEjer + " ejerCount = " + ejerCount + " ejerPerScroll = " + ejerPerScroll + " pagescrolls = " + pagescrolls);
+
         // forloop instantiater alle obj's 
-        for (int i = 0; i < pagescrolls; i++)
+        for (int i = 0; i <= pagescrolls; i++)
         {
             GameObject Stamme = (GameObject)Instantiate(MSStammePrefab, MSScrollContent.transform, false);
 
@@ -112,6 +116,8 @@ public class StammeManager : MonoBehaviour
             Vector2 position = new Vector3(0, TVal);
             Trunk.GetComponent<RectTransform>().anchoredPosition = position;
 
+            //Debug.Log("SVal = " + SVal + " TVal = " + TVal + " TrunkIndex = " + trunkIndex + " position = " + position);
+
 
         }
 
@@ -119,13 +125,14 @@ public class StammeManager : MonoBehaviour
 
         int BtnIndex = 0;
         //Move all bottons(btn) to their respective places
+        Debug.Log(Btns.Count + " How many items in Btns " + treeTrunks.Count + " How many items in treetrunks");
         foreach (GameObject btn in Btns) // make the txtObj in specific instances and not a global value
         {
             memSortedByDate = Scroll.instance.memSortedByDate;
             TextMeshProUGUI txtObj;
             int btnCycle = BtnIndex % btnPos.Length;
+            btnPos[btnCycle] += new Vector2(0, 1200 * Mathf.Floor(BtnIndex / btnPos.Length));
             Vector3 targetPos = btnPos[btnCycle];
-            btnPos[btnCycle] += new Vector2(0, 1200);
 
             btn.GetComponent<RectTransform>().anchoredPosition = targetPos;
 
@@ -138,6 +145,8 @@ public class StammeManager : MonoBehaviour
             btn.GetComponent<BtnScript>().MemIDbtn = memSortedByDate[BtnIndex].Id;
 
             BtnIndex++;
+
+            Debug.Log("btnPos.Length = " + btnPos.Length + " btnPos[btnCycle] = " + btnPos[btnCycle] + " btnCycle = " + btnCycle + " targetPos = " + targetPos + " btnindex / btnpos length = " + Mathf.Floor(BtnIndex / btnPos.Length));
 
         }
 

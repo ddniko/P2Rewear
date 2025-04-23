@@ -118,7 +118,11 @@ public class BtnScript : MonoBehaviour
             // Reloads the MS page
         }
 
+        
 
-
+    }
+    private void OnDisable()
+    {
+        Destroy(gameObject);
     }
 }
