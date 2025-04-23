@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine.UI;
 
 
 public class UserInformation
@@ -24,7 +25,7 @@ public class UserInformation
             return instance;
         }
     }
-    public Image ProfilePic;
+    public RawImage ProfilePic;
     public MParent User;
     public List<MChild> UserChildren;
 }

@@ -13,7 +13,7 @@ public class Profil : BasePage
 
     public GameObject ViewPort;
     public GameObject ChildPrefab;
-    
+    public RawImage ri;
     public GameObject ClothingPrefab;
     public GameObject ProfileSortMarketOverlay;
     private List<MArticle> OwnClothes;
@@ -27,7 +27,7 @@ public class Profil : BasePage
         TrustScore.text = DBManager.GetParentById(UserId).ReliabilityScore.ToString();
         SustainabilityScore.text = DBManager.GetParentById(UserId).SustainabilityScore.ToString();
         Name.text = DBManager.GetParentById(UserId).Name.ToString();
-
+        ri = UserInformation.Instance.ProfilePic;
         //DBManager.Init();
         if (LogIn.LoggedIn != null)
             OwnClothes = DBManager.GetAllArticlesExceptParent(LogIn.LoggedIn.Id);
