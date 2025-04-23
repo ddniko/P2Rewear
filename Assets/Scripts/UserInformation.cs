@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Unity.VisualStudio.Editor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,7 @@ public class UserInformation
             return instance;
         }
     }
-
+    public Image ProfilePic;
     public MParent User;
     public List<MChild> UserChildren;
 }

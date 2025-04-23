@@ -13,6 +13,7 @@ public class Profil : BasePage
 
     public GameObject ViewPort;
     public GameObject ChildPrefab;
+    
     public GameObject ClothingPrefab;
     public GameObject ProfileSortMarketOverlay;
     private List<MArticle> OwnClothes;
