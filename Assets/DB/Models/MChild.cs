@@ -12,6 +12,7 @@ public class MChild
     public string Tags { get; set; } // comma separated values
     public string Age { get; set; } // Alder på barnet 
     public string Size { get; set; } // Størrelse på barnet (kan være null)
+    public byte[] Image { get; set; }
 
 }
 

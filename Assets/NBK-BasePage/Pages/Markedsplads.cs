@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.UI;
 
 public class Markedsplads : BasePage
 {
@@ -10,6 +11,7 @@ public class Markedsplads : BasePage
     public GameObject ViewPort;
 
     public GameObject ClothingPrefab;
+    public GameObject BarnSortMarketOverlay;
 
     private List<MArticle> AllClothes;
 
@@ -25,32 +27,75 @@ public class Markedsplads : BasePage
     public TextMeshProUGUI SetMaxPriceText;
     public TextMeshProUGUI maxPriceText;
 
+
     private void OnEnable()
     {
-        //  TestDataGenerator.GenerateRandomTestData();
         filter = new Filter();
+        SortScript = GetComponent<SortScrollScript>();
+        SortScript.ParentObject = ViewPort.transform;
+        SortScript.ClothingPrefab = ClothingPrefab;
+        SortScript.ChildParentObject = BarnSortMarketOverlay.transform;
+        DisplayMarketArticles();
+    }
+    public Filter CreateFilterFromChild(MChild child)
+    {
+        var filter = new Filter
+        {
+            SizeCategory = new List<string>(),
+            Category = new List<string>(), 
+            tags = new List<ClothingTags>() 
+        };
+        
+        if (!string.IsNullOrEmpty(child.Size))
+            filter.SizeCategory.Add(child.Size);
+
+        if (!string.IsNullOrEmpty(child.Tags))
+        {
+            string[] tagArray = child.Tags.Split(',');
+            foreach (var tag in tagArray)
+            {
+                if (Enum.TryParse(tag.Trim(), true, out ClothingTags parsedTag))
+                {
+                    filter.tags.Add(parsedTag);
+                }
+            }
+        }
+
+        return filter;
+    }
+    public void DisplayChildren()
+    {
+        if (SortScript.CurrentChildren.Count <= 0)
+        {
+            SortScript.CreateChildren();
+            foreach (var child in SortScript.CurrentChildren)
+            {
+                var button = child.GetComponent<Button>();
+                var childComponent = child.GetComponent<Child>();
+                MChild mChild = childComponent.GetChild;
+
+                var filter = CreateFilterFromChild(mChild);
+                childComponent.childFilter = filter;
+
+                button.onClick.AddListener(() => DisplayMarketArticles(null, filter));
+            }
+        }
+        BarnSortMarketOverlay.SetActive(true);
+    }
+    public void DisplayMarketArticles(SORTTYPE? st = null, Filter filter = null)
+    {
+        
         if (LogIn.LoggedIn != null)
             AllOtherClothes = DBManager.GetAllArticlesExceptParent(LogIn.LoggedIn.Id);
         else
             AllOtherClothes = DBManager.GetAllArticlesExceptParent(1);
 
-        SortScript = GetComponent<SortScrollScript>();
-        SortScript.ParentObject = ViewPort.transform;
-        SortScript.ClothingPrefab = ClothingPrefab;
-
         RectTransform rt = ViewPort.GetComponent<RectTransform>();
         rt.sizeDelta = new Vector2(rt.sizeDelta.x, MathF.Round(AllOtherClothes.Count / 2f + 0.4f) * 105);
 
-        SortScript.InstantiateArticles(AllOtherClothes, setMaxDistance, setMaxPrice);
+        SortScript.InstantiateArticles(AllOtherClothes, setMaxDistance, setMaxPrice, st, filter);
     }
 
-    public void SortViaChild(MChild child)
-    {
-        filter = new Filter();
-        filter.SizeCategory[0] = child.Size;
-        filter.
-
-    }
     public float SetMaxDistance(TextMeshProUGUI inputText)
     {
         setMaxDistance = float.Parse(inputText.text);

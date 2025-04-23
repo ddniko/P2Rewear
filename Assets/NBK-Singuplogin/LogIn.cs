@@ -19,6 +19,7 @@ public class LogIn : MonoBehaviour
     private void Awake()
     {
         DBManager.Init();
+        //TestDataGenerator.GenerateRandomTestData();
 
     }
 
@@ -32,6 +33,8 @@ public class LogIn : MonoBehaviour
             Bottombar.SetActive(true);
             loginPage.SetActive(false);
             //gameObject.SetActive(false);
+            UserInformation.Instance.User = loggedInParent;
+            UserInformation.Instance.UserChildren = DBManager.GetChildrenByParentId(loggedInParent.Id);
         }
     }
 }

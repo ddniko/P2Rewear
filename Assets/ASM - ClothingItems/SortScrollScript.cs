@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum SORTTYPE { PRICEASC, PRICEDESC, CONDITIONASC, CONDITIONDESC }
 public class SortScrollScript : MonoBehaviour
@@ -8,7 +9,10 @@ public class SortScrollScript : MonoBehaviour
     public List<GameObject> CurrentArticles;
     public GameObject content;
     public GameObject ClothingPrefab;
+    public GameObject ChildPrefab;
     public Transform ParentObject;
+    public Transform ChildParentObject;
+    public List<GameObject> CurrentChildren;
     [Header("ItemPositions")]
     public int maxItemsPerRow = 2;
     public float horizontalSpacing = 140f;// de her bestemmer hvor meget rum der skal være imellem dem. kunne gøres til public fields så man kunne ændre dem i inspectoren
@@ -17,6 +21,14 @@ public class SortScrollScript : MonoBehaviour
     public int currentColumn = 0;
     private Vector3 startPosition = Vector3.zero;
     public GameObject[] StartObjects;
+    [Header("ChildPositions")]
+    public float ChildHSpacing = 100;
+    public float ChildVSpacing = 100;
+    public int ChildRow = 0;
+    public int ChildColumn = 0;
+    public Vector3 ChildStartPos = Vector3.zero;
+    public GameObject[] ChildStartObjects;
+
 
 
     void Start()
@@ -37,6 +49,12 @@ public class SortScrollScript : MonoBehaviour
         verticalSpacing = Mathf.Abs(StartObjects[0].transform.localPosition.y - StartObjects[2].transform.localPosition.y);
         currentColumn = 0;
         currentRow = 0;
+        CurrentChildren = new List<GameObject>();
+        ChildStartPos = ChildStartObjects[0].transform.position;
+        ChildHSpacing = Mathf.Abs(ChildStartObjects[0].transform.localPosition.x - ChildStartObjects[1].transform.localPosition.x);
+        ChildVSpacing = Mathf.Abs(ChildStartObjects[0].transform.localPosition.y - ChildStartObjects[2].transform.localPosition.y);
+        ChildColumn = 0;
+        ChildRow = 0;
         //Mathf.abs gør at det er i positive tal, altså ikke -13, men bare 13 eks.
 
     }
@@ -59,6 +77,24 @@ public class SortScrollScript : MonoBehaviour
                 verticalSpacing = Mathf.Abs(StartObjects[0].transform.localPosition.y - StartObjects[2].transform.localPosition.y);
                 currentColumn = 0;
                 currentRow = 0;
+            }
+        }
+    }
+    public void DestroyChildren()
+    {
+        if (CurrentChildren != null)
+        {
+            for (int i = 0; i < CurrentChildren.Count; i++)
+            {
+                Destroy(CurrentChildren[i].gameObject);
+            }
+            if (ChildStartObjects != null)
+            {
+                ChildStartPos = ChildStartObjects[0].transform.localPosition;
+                ChildHSpacing = Mathf.Abs(ChildStartObjects[0].transform.localPosition.x - ChildStartObjects[1].transform.localPosition.x);
+                ChildVSpacing = Mathf.Abs(ChildStartObjects[0].transform.localPosition.y - ChildStartObjects[2].transform.localPosition.y);
+                ChildColumn = 0;
+                ChildRow = 0;
             }
         }
     }
@@ -217,7 +253,34 @@ public class SortScrollScript : MonoBehaviour
             }
         }
     }
+    public void CreateChildren()
+    {
+        DestroyChildren();
+        foreach (MChild mchild in UserInformation.Instance.UserChildren)
+        {
+            var c = Instantiate(ChildPrefab, ChildParentObject);
+            c.GetComponent<Child>().SetupChild(mchild);
+            CurrentChildren.Add(c);
+        }
+        OrderChildren();
+    }
 
+    public void OrderChildren()
+    {
+        for (int i = 0; i < UserInformation.Instance.UserChildren.Count; i++)  //index for rækken
+        {
+            CurrentChildren[i].gameObject.transform.localPosition = ChildStartPos + new Vector3(ChildColumn *ChildHSpacing + 50, -ChildRow * ChildVSpacing - 45, 0);
+
+            ChildColumn++;
+
+            // hvis den her row er fyldt, så gå et hak ned
+            if (ChildColumn >= maxItemsPerRow)
+            {
+                ChildColumn = 0;
+                ChildRow++;
+            }
+        }
+    }
 
     public void SortAndDisplayArticles(SORTTYPE? sortType = null)
     {

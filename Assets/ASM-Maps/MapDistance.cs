@@ -20,7 +20,7 @@ public class MapDistance : MonoBehaviour
     }
     
 
-    public void changeMapDistance()
+    public void ChangeMapDistance()
     {
         float newScale = slider.value * 0.0342f;
         int mapDistance = (int)slider.value;

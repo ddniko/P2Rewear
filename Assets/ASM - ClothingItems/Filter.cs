@@ -14,10 +14,6 @@ public class Filter
     public int? minCondition;
     public float? maxDistance;
     public List<ClothingTags> tags;
-
-
-
-
     public void Start()
     {
 
