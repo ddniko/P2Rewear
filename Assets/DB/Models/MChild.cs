@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-public enum GENDER { Male, Female, Other}
+public enum GENDER { Unassigned, Male, Female, Other}
 // 'MChild' klassen svarer til tabellen 'Children' i databasen
 public class MChild
 {

@@ -5,7 +5,7 @@ public enum SIZETYPE { CM, SIZE}
 public class ChildSizeSelect : MonoBehaviour
 {
     public Toggle Centimeter;
-    public Toggle Size;
+
 
 
     public SIZETYPE st;
@@ -18,9 +18,7 @@ public class ChildSizeSelect : MonoBehaviour
             if (isOn) SetSizeType(SIZETYPE.CM);
         });
 
-        Size.onValueChanged.AddListener((isOn) => {
-            if (isOn) SetSizeType(SIZETYPE.SIZE);
-        });
+
     }
 
     private void SetSizeType(SIZETYPE selected)
@@ -32,7 +30,7 @@ public class ChildSizeSelect : MonoBehaviour
 
         
         Centimeter.isOn = selected == SIZETYPE.CM;
-        Size.isOn = selected == SIZETYPE.SIZE;
+
 
 
         Debug.Log("Selected SizeType: " + st);

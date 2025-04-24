@@ -17,20 +17,17 @@ public class CreateChildmanager : MonoBehaviour
     public ChildSizeSelect CSS;
     public TagOrganizer TO;
     public TMP_InputField Centi;
-    public TMP_Dropdown SizeDrop;
     private string size;
     public CameraHandler camhand;
     public void CreateChild()
     {
-
+        if (!CheckChild())
+            return;
         if (CSS.st == SIZETYPE.CM)
         {
             size = Centi.text;
         }
-        else if (CSS.st == SIZETYPE.SIZE)
-        {
-            size = SizeDrop.value.ToString();
-        }
+
         string tags = "";
         for (int i = 0; i < TO.tagValues.Count; i++)
         {
@@ -52,22 +49,19 @@ public class CreateChildmanager : MonoBehaviour
             Tags = tags,
         };
         DBManager.AddChild(mChild);
+        gameObject.SetActive(false);
     }
-    //private bool CheckChild()
-    //{
-    //    if (Name.text.Length <= 0) { faillog.text = "Name Lacking"; return false; }
-    //    if (Size.value == 0) { faillog.text = "Size Lacking"; return false; }
-    //    if (Cat.value == 0) { faillog.text = "Value Lacking"; return false; }
-    //    if (Forsale.isOn && prizeText.text.Length <= 0) { faillog.text = "Prize Lacking"; return false; }
-    //    if (Forsale.isOn && prizeText.text.Length <= 0)
-    //    {
-    //        bool succes = float.TryParse(prizeText.text, out float value);
-    //        if (!succes)
-    //            faillog.text = "Prize Invalid"; return false;
-    //    }
-    //    faillog.text = "Article Viable";
-    //    return true;
-    //}
+    private bool CheckChild()
+    {
+        if (Name.text.Length <= 0) { Debug.Log("Name Lacking"); return false; }
+        if (int.Parse(size) == 0) { Debug.Log("Size Lacking"); return false; }
+        if (Age1.value == 0 || Age2.value ==0 || Age3.value == 0)
+            { Debug.Log("age invalid");  return false; }
+        if (cgs.gender == GENDER.Unassigned)
+            { return false; }
+        Debug.Log("Article Viable")  ;
+        return true;
+    }
     void Start()
     {
         PopulateDropDowns();

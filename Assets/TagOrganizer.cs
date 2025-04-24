@@ -45,7 +45,7 @@ public class TagOrganizer : MonoBehaviour
         startPosition = StartObjects[0].transform.position;
         horizontalSpacing = Mathf.Abs(StartObjects[1].transform.position.x - StartObjects[0].transform.position.x);
         verticalSpacing = Mathf.Abs(StartObjects[2].transform.position.y - StartObjects[0].transform.position.y);
-
+        Tags = new List<GameObject>();
         currentColumn = 0;
         currentRow = 0;
     }
