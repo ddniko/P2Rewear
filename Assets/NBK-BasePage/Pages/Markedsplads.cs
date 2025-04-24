@@ -26,7 +26,7 @@ public class Markedsplads : BasePage
 
     public TextMeshProUGUI SetMaxPriceText;
     public TextMeshProUGUI maxPriceText;
-    static string[] predefinedSizeRanges = {"50/56", "57/63", "64/70", "71/77", "78/84", "85/91", "92/98", "99/105", "106/112", "113/119", "120/128"};
+    string[] predefinedSizeRanges = {"50/56", "57/63", "64/70", "71/77", "78/84", "85/91", "92/98", "99/105", "106/112", "113/119", "120/128"};
 
 
     private void OnEnable()
@@ -109,9 +109,10 @@ public class Markedsplads : BasePage
         if (TO.tagValues.Count == 0)
             return;
         filter = new Filter();
-        filter.tags = TO.tagValues;
-        TO.ClearTags();
+        filter.tags = new List<string>();
+        filter.tags.AddRange(TO.tagValues);
         DisplayMarketArticles(null, filter);
+        TO.ClearTags();
     }
 
     public float SetMaxDistance(TextMeshProUGUI inputText)

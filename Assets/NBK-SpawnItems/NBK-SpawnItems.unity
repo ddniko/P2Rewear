@@ -17402,6 +17402,7 @@ MonoBehaviour:
   Password: {fileID: 735695616}
   Bottombar: {fileID: 5391360701010777791}
   loginPage: {fileID: 2041614167}
+  CreateTestData: 1
 --- !u!1 &1094580308
 GameObject:
   m_ObjectHideFlags: 0

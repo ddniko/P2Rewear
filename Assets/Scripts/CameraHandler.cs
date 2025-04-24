@@ -28,7 +28,7 @@ public class CameraHandler : MonoBehaviour
 
     public void OpenCam()
     {
-        string s;
+        
         TakePicture(OnPictureTaken, -1, true);
     }
     public void OnPictureTaken(string path)

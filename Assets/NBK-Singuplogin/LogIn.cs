@@ -15,11 +15,12 @@ public class LogIn : MonoBehaviour
 
     public static MParent LoggedIn;
     public static int UserId;
-
+    public bool CreateTestData;
     private void Awake()
     {
         DBManager.Init();
-        TestDataGenerator.GenerateRandomTestData(50);
+        if (CreateTestData)
+            TestDataGenerator.GenerateRandomTestData(100);
 
     }
 

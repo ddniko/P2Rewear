@@ -201,6 +201,25 @@ public static class DBManager
         tex.LoadImage(bytes);
         return tex;
     }
+    public static List<MArticle> GetArticlesPaginated(int pageNumber, int pageSize)
+    {
+        int offset = (pageNumber - 1) * pageSize;
+
+        // Query to fetch articles with pagination
+        return GetConnection().Query<MArticle>(
+            "SELECT * FROM MArticle ORDER BY Name LIMIT ? OFFSET ?",
+            pageSize, offset
+        );
+    }
+
+    // Get total pages for articles
+    public static int GetTotalPagesForArticles(int pageSize)
+    {
+        int totalArticles = GetConnection().ExecuteScalar<int>("SELECT COUNT(*) FROM MArticle");
+
+        // Calculate total pages
+        return (int)Math.Ceiling((double)totalArticles / pageSize);
+    }
 
     // Henter alle stykker tøj fra databasen
     public static List<MArticle> GetAllArticles()
