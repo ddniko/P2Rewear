@@ -122,6 +122,10 @@ public static class DBManager
         };
         GetConnection().Insert(child);  // Indsætter barnet i databasen
     }
+    public static void AddChild(MChild child)
+    {
+        GetConnection().Insert(child);
+    }
 
     // Henter et barn ud fra dens ID
     public static MChild GetChildById(int id)

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Profil : BasePage
 {
@@ -11,8 +12,10 @@ public class Profil : BasePage
     public TMP_Text Name;
 
     public GameObject ViewPort;
+    public GameObject ChildPrefab;
+    public RawImage ri;
     public GameObject ClothingPrefab;
-
+    public GameObject ProfileSortMarketOverlay;
     private List<MArticle> OwnClothes;
     private SortScrollScript SortScript;
 
@@ -24,11 +27,14 @@ public class Profil : BasePage
         TrustScore.text = DBManager.GetParentById(UserId).ReliabilityScore.ToString();
         SustainabilityScore.text = DBManager.GetParentById(UserId).SustainabilityScore.ToString();
         Name.text = DBManager.GetParentById(UserId).Name.ToString();
-
+        ri = UserInformation.Instance.ProfilePic;
         //DBManager.Init();
-        OwnClothes = DBManager.GetArticlesByParentId(UserId);
+        if (LogIn.LoggedIn != null)
+            OwnClothes = DBManager.GetAllArticlesExceptParent(LogIn.LoggedIn.Id);
+        else
+            OwnClothes = DBManager.GetAllArticlesExceptParent(1);
 
-        SortScript = new SortScrollScript();
+        SortScript = GetComponent<SortScrollScript>();
         SortScript.ParentObject = ViewPort.transform;
         SortScript.ClothingPrefab = ClothingPrefab;
 
@@ -37,7 +43,29 @@ public class Profil : BasePage
 
         SortScript.InstantiateArticles(OwnClothes);
     }
+    public void DisplayChildren()
+    {
+        if (SortScript.CurrentChildren.Count <= 0)
+        {
+            SortScript.CreateChildren();
+            foreach (var child in SortScript.CurrentChildren)
+            {
+                var button = child.GetComponent<Button>();
+                var childComponent = child.GetComponent<Child>();
+                MChild mChild = childComponent.GetChild;
 
+
+
+                button.onClick.AddListener(() => FilterByChild(mChild.Id));
+            }
+        }
+        ProfileSortMarketOverlay.SetActive(true);
+    }
+    public void FilterByChild(int i)
+    {
+        List<MArticle> articles = DBManager.GetArticlesByChildId(i);
+        SortScript.InstantiateArticles(articles);
+    }
     private void OnDisable()
     {
         SortScript.DestroyItems();

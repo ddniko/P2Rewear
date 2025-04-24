@@ -10,5 +10,6 @@ public class MParent
     public int? SustainabilityScore { get; set; } // Bæredygtighedsscore (kan være null)
     public int? ReliabilityScore { get; set; } // Pålidelighedsscore (kan være null)
     public float Distance { get; set; }
+    public byte?[] ProfilePic { get; set; }
 }
 

@@ -16,6 +16,7 @@ public class MMemory
     public string Description { get; set; } //Beskrivelse af mindet
     public byte[] ImageData { get; set; }
 
+
     public void CreateMemory(int articleID, string title, string description, byte[] imageData)
     {
         this.ArticleID = articleID;

@@ -5,7 +5,7 @@ public enum ClothingTags
 {
 
 }
-public class ChildDemands : MonoBehaviour
+public class Filter
 {
     
     public List<String> SizeCategory;
@@ -14,10 +14,6 @@ public class ChildDemands : MonoBehaviour
     public int? minCondition;
     public float? maxDistance;
     public List<ClothingTags> tags;
-
-
-
-
     public void Start()
     {
 

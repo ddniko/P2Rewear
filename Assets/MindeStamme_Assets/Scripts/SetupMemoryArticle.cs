@@ -6,6 +6,9 @@ using Image = UnityEngine.UI.Image;
 
 public class SetupMemoryArticle : MonoBehaviour
 {
+
+    public void SetupMemory(MMemory m)
+
     
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI descriptionText;
@@ -22,6 +25,7 @@ public class SetupMemoryArticle : MonoBehaviour
     }
     
     public Sprite CreateImage(byte[] imageBytes)
+
     {
 
         if (imageBytes != null && imageBytes.Length > 0)
