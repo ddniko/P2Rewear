@@ -7,7 +7,7 @@ using Image = UnityEngine.UI.Image;
 public class SetupMemoryArticle : MonoBehaviour
 {
 
-    public void SetupMemory(MMemory m)
+
 
     
     public TextMeshProUGUI titleText;
