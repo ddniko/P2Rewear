@@ -172,8 +172,7 @@ public static class DBManager
             Prize = prize,
             Description = description,
             ImageData = imageData,
-            SizeCategory = sizeCategory,  // Kategori af størrelsen (f.eks. lille, medium, stor)
-            Category = category,      // Kategori af tøj (f.eks. skjorte, bukser)
+            Size = sizeCategory,  // Kategori af størrelsen (f.eks. lille, medium, stor)
             Condition = condition,    // Tøjets tilstand (f.eks. nyt, brugt)
             LifeTime = lifeTime       // Forventet levetid (kan være null)
         };

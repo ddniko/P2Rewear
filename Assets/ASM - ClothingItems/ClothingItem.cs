@@ -82,14 +82,14 @@ public class ClothingItem : MonoBehaviour
 
     }
 
-    public void SetUpClothingItem(int primaryKey, string name, int childId, string sizeCategory, string category, float condition, int? lifeTime, float? prize, string description, byte[] imageData)
+    public void SetUpClothingItem(int primaryKey, string name, int childId, string sizeCategory, float condition, int? lifeTime, float? prize, string description, byte[] imageData)
     {
         this.primaryKey = primaryKey;
         this.childId = childId;
         this.ClothingName = name;
 
         this.sizeCategory = sizeCategory;
-        this.category = category;
+
         this.condition = condition;
         this.lifeTime = lifeTime;
         this.prize = prize;

@@ -52,7 +52,7 @@ public class DBVisualizer : MonoBehaviour
         outputText.text = $"Articles for MChild ID {childId}:\n";
         foreach (var article in articles)
         {
-            outputText.text += $"ID: {article.Id}, Category: {article.Category}, Size: {article.SizeCategory}, Condition: {article.Condition}, Lifetime: {article.LifeTime}\n";
+            outputText.text += $"ID: {article.Id}, Size: {article.Size}, Condition: {article.Condition}, Lifetime: {article.LifeTime}\n";
         }
     }
 

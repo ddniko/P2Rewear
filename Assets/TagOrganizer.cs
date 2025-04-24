@@ -30,7 +30,15 @@ public class TagOrganizer : MonoBehaviour
         tagValues.Remove(tagstring);
         OrderArticles();
     }
+    public void ClearTags()
+    {
+        for (int i = 0; i < Tags.Count; i++)
+        {
+            Destroy(Tags[i]);
+        }
+        tagValues.Clear();
 
+    }
 
     public void OnEnable()
     {

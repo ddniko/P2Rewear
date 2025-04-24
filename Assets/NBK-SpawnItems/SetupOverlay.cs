@@ -37,7 +37,7 @@ public class SetupOverlay : MonoBehaviour
         priceText.text = open.Prize.ToString();
         nameText.text = open.Name.ToString();
         describtionText.text = open.Description.ToString();
-        sizeText.text = open.SizeCategory.ToString();
+        sizeText.text = open.Size.ToString();
         //category something here
         conditionText.text = open.Condition.ToString() + "/5";
         sustainabilityScore.text = open.LifeTime.ToString();

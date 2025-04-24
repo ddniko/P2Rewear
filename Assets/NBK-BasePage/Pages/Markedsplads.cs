@@ -26,6 +26,7 @@ public class Markedsplads : BasePage
 
     public TextMeshProUGUI SetMaxPriceText;
     public TextMeshProUGUI maxPriceText;
+    string[] predefinedSizeRanges = { "50/56", "62/68", "74/80", "86/92", "98/104", "110/116", "122/128" };
 
 
     private void OnEnable()
@@ -41,22 +42,30 @@ public class Markedsplads : BasePage
     {
         var filter = new Filter
         {
-            SizeCategory = new List<string>(),
-            Category = new List<string>(), 
-            tags = new List<ClothingTags>() 
+            
+            Category = new List<string>(),
+            tags = new List<string>()
         };
-        
-        if (!string.IsNullOrEmpty(child.Size))
-            filter.SizeCategory.Add(child.Size);
+
+ if (!string.IsNullOrEmpty(child.Size) && int.TryParse(child.Size, out int numericSize))
+    {
+        var sizeRange = FindSizeRangeForValue(numericSize);
+        if (sizeRange != null)
+        {
+            filter.MinSize = sizeRange.Value.min;
+            filter.MaxSize = sizeRange.Value.max;
+        }
+    }
 
         if (!string.IsNullOrEmpty(child.Tags))
         {
             string[] tagArray = child.Tags.Split(',');
             foreach (var tag in tagArray)
             {
-                if (Enum.TryParse(tag.Trim(), true, out ClothingTags parsedTag))
+                var trimmedTag = tag.Trim();
+                if (!string.IsNullOrEmpty(trimmedTag))
                 {
-                    filter.tags.Add(parsedTag);
+                    filter.tags.Add(trimmedTag);
                 }
             }
         }
@@ -84,7 +93,7 @@ public class Markedsplads : BasePage
     }
     public void DisplayMarketArticles(SORTTYPE? st = null, Filter filter = null)
     {
-        
+
         if (LogIn.LoggedIn != null)
             AllOtherClothes = DBManager.GetAllArticlesExceptParent(LogIn.LoggedIn.Id);
         else
@@ -99,7 +108,12 @@ public class Markedsplads : BasePage
     {
         if (TO.tagValues.Count == 0)
             return;
+        filter = new Filter();
+        filter.tags = TO.tagValues;
+        TO.ClearTags();
+        DisplayMarketArticles(null, filter);
     }
+
     public float SetMaxDistance(TextMeshProUGUI inputText)
     {
         setMaxDistance = float.Parse(inputText.text);
@@ -111,7 +125,20 @@ public class Markedsplads : BasePage
         maxPriceText.text = SetMaxPriceText.text + " kr";
         setMaxPrice = float.Parse(SetMaxPriceText.text);
     }
+    private (int min, int max)? FindSizeRangeForValue(int size)
+    {
+        foreach (var range in predefinedSizeRanges)
+        {
+            var parts = range.Split('/');
+            if (parts.Length == 2 && int.TryParse(parts[0], out int min) && int.TryParse(parts[1], out int max))
+            {
+                if (size >= min && size <= max)
+                    return (min, max);
+            }
+        }
 
+        return null;
+    }
 
 
     private void OnDisable()

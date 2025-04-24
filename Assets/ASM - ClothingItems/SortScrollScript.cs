@@ -31,6 +31,7 @@ public class SortScrollScript : MonoBehaviour
 
 
 
+
     void Start()
     {
 
@@ -107,16 +108,7 @@ public class SortScrollScript : MonoBehaviour
         foreach (MArticle article in articles)
         {
             bool matches = true;
-            if (demands.SizeCategory != null && demands.SizeCategory.Count > 0)
-            {
-                if (!demands.SizeCategory.Contains(article.SizeCategory))
-                    matches = false;
-            }
-            if (demands.Category != null && demands.Category.Count > 0)
-            {
-                if (!demands.Category.Contains(article.Category))
-                    matches = false;
-            }
+
             if (demands.maxPrize != -1)
             {
                 if (!article.Prize.HasValue || article.Prize.Value > demands.maxPrize)
@@ -137,38 +129,29 @@ public class SortScrollScript : MonoBehaviour
     private bool ArticleValidByFilter(Filter demands, MArticle art)
     {
         DestroyItems();
-
-        List<MArticle> filteredArticles = new List<MArticle>();
-
-
-
         bool matches = true;
-        if (demands.SizeCategory != null && demands.SizeCategory.Count > 0)
+        if (!string.IsNullOrEmpty(art.Size))
         {
-            if (!demands.SizeCategory.Contains(art.SizeCategory))
-                matches = false;
-        }
-        if (demands.Category != null && demands.Category.Count > 0)
-        {
-            if (!demands.Category.Contains(art.Category))
-                matches = false;
-        }
-        if (demands.maxPrize != -1)
-        {
-            if (!art.Prize.HasValue || art.Prize.Value > demands.maxPrize)
-                matches = false;
-        }
-        if (demands.minCondition.HasValue)
-        {
-            if (art.Condition < demands.minCondition.Value)
-                matches = false;
-        }
-        if (matches)
-            filteredArticles.Add(art);
+            if (int.TryParse(art.Size, out int articleSize))
+            {
+                if (articleSize < demands.MinSize)
+                    matches = false;
 
-
+                if (articleSize > demands.MaxSize)
+                    matches = false;
+            }
+            if (demands.maxPrize != -1)
+            {
+                if (!art.Prize.HasValue || art.Prize.Value > demands.maxPrize)
+                    matches = false;
+            }
+            if (demands.minCondition.HasValue)
+            {
+                if (art.Condition < demands.minCondition.Value)
+                    matches = false;
+            }
+        }
         return matches;
-
     }
 
     public void InstantiateAllArticles()
@@ -191,7 +174,7 @@ public class SortScrollScript : MonoBehaviour
         CurrentArticles = new List<GameObject>();
         //praktisk talt at resette listen.
         List<MArticle> articles = art;
-        
+
         foreach (MArticle article in articles)
         {
             if (childDemands != null)
@@ -213,25 +196,25 @@ public class SortScrollScript : MonoBehaviour
     public void InstantiateArticlesParent(int parentID, SORTTYPE? sortType = null, Filter childDemands = null)
     {
         List<MArticle> parentArticles = DBManager.GetArticlesByParentId(parentID);
-        InstantiateArticles(parentArticles,null,null, sortType, childDemands);
+        InstantiateArticles(parentArticles, null, null, sortType, childDemands);
     }
     public void InstantiateArticlesOtherParent(int parentID, SORTTYPE? sortType = null, Filter childDemands = null)
     {
         List<MArticle> parentArticles = DBManager.GetAllArticlesExceptParent(LogIn.LoggedIn.Id);
-        InstantiateArticles(parentArticles, null,null,sortType, childDemands);
+        InstantiateArticles(parentArticles, null, null, sortType, childDemands);
     }
-    
+
     public void InstantiateArticlesChild(int childID, SORTTYPE? sortType = null, Filter childDemands = null)
     {
         List<MArticle> childArticles = DBManager.GetArticlesByChildId(childID);
-        InstantiateArticles(childArticles,null,null, sortType, childDemands);
+        InstantiateArticles(childArticles, null, null, sortType, childDemands);
     }
     public GameObject CreateArticle(MArticle article)
     {
         GameObject newArticle = Instantiate(ClothingPrefab, ParentObject);
 
         ClothingItem articleItem = newArticle.GetComponent<ClothingItem>();
-        articleItem.SetUpClothingItem(article.Id, article.Name, article.ChildId, article.SizeCategory, article.Category,
+        articleItem.SetUpClothingItem(article.Id, article.Name, article.ChildId, article.Size,
             article.Condition, article.LifeTime, article.Prize, article.Description, article.ImageData);
         return newArticle;
     }
@@ -269,7 +252,7 @@ public class SortScrollScript : MonoBehaviour
     {
         for (int i = 0; i < UserInformation.Instance.UserChildren.Count; i++)  //index for rækken
         {
-            CurrentChildren[i].gameObject.transform.localPosition = ChildStartPos + new Vector3(ChildColumn *ChildHSpacing + 50, -ChildRow * ChildVSpacing - 45, 0);
+            CurrentChildren[i].gameObject.transform.localPosition = ChildStartPos + new Vector3(ChildColumn * ChildHSpacing + 50, -ChildRow * ChildVSpacing - 45, 0);
 
             ChildColumn++;
 

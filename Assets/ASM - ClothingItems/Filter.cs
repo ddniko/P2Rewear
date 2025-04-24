@@ -7,13 +7,14 @@ public enum ClothingTags
 }
 public class Filter
 {
-    
-    public List<String> SizeCategory;
+
+    public int MinSize;
+    public int MaxSize;
     public List<String> Category;
     public float? maxPrize;
     public int? minCondition;
     public float? maxDistance;
-    public List<ClothingTags> tags;
+    public List<string> tags;
     public void Start()
     {
 
