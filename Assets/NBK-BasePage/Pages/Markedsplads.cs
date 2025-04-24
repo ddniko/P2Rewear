@@ -26,7 +26,7 @@ public class Markedsplads : BasePage
 
     public TextMeshProUGUI SetMaxPriceText;
     public TextMeshProUGUI maxPriceText;
-    string[] predefinedSizeRanges = { "50/56", "62/68", "74/80", "86/92", "98/104", "110/116", "122/128" };
+    static string[] predefinedSizeRanges = {"50/56", "57/63", "64/70", "71/77", "78/84", "85/91", "92/98", "99/105", "106/112", "113/119", "120/128"};
 
 
     private void OnEnable()
@@ -42,20 +42,20 @@ public class Markedsplads : BasePage
     {
         var filter = new Filter
         {
-            
+
             Category = new List<string>(),
             tags = new List<string>()
         };
 
- if (!string.IsNullOrEmpty(child.Size) && int.TryParse(child.Size, out int numericSize))
-    {
-        var sizeRange = FindSizeRangeForValue(numericSize);
-        if (sizeRange != null)
+        if (!string.IsNullOrEmpty(child.Size) && int.TryParse(child.Size, out int numericSize))
         {
-            filter.MinSize = sizeRange.Value.min;
-            filter.MaxSize = sizeRange.Value.max;
+            var sizeRange = FindSizeRangeForValue(numericSize);
+            if (sizeRange != null)
+            {
+                filter.MinSize = sizeRange.Value.min;
+                filter.MaxSize = sizeRange.Value.max;
+            }
         }
-    }
 
         if (!string.IsNullOrEmpty(child.Tags))
         {

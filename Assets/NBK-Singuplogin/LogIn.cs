@@ -19,7 +19,7 @@ public class LogIn : MonoBehaviour
     private void Awake()
     {
         DBManager.Init();
-        //TestDataGenerator.GenerateRandomTestData();
+        TestDataGenerator.GenerateRandomTestData(50);
 
     }
 
