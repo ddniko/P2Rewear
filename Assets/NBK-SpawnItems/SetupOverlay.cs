@@ -110,18 +110,13 @@ public class SetupOverlay : MonoBehaviour
     {
         ContactPageManager.AddSellerItem(open);
         ChatManager.instance.SetupChat(open);
-        //Chat.SetActive(true);
-
         gameObject.SetActive(false);
 
     }
 
     public void MemStamme()
     {
-        //MindestammeObj.SetActive(true);
-        //StammeManager.instance.gameObject.SetActive(true);
         StammeManager.instance.StammeStartup(open.Id);
-        //StammeManager.instance.clothingArticleID = open.Id;
         gameObject.SetActive(false);
     }
 

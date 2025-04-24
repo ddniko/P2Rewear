@@ -4,22 +4,6 @@ using UnityEngine.InputSystem;
 
 public class OverlayMessage : MonoBehaviour
 {
-    // start is called once before the first execution of update after the monobehaviour is created
-    //[serializefield] private canvas clothingoverlay;
-    // [serializefield] private clothingoverlay overlayscript;
-    // void start()
-    // {
-    //     clothingoverlay = gameobject.find("overlay").getcomponent<canvas>();
-    //     overlayscript = gameobject.find("overlay").getcomponent<clothingoverlay>();
-    //     // clothingoverlay.enabled = false;
-    // }
-
-
-    // public void sendmessage(clothingitem clothingitem)
-    // {
-    //     overlayscript.openoverlay(clothingitem);
-    //     clothingoverlay.gameobject.setactive(true);
-    // }
 
     public GameObject OverlayMarket;
     public GameObject OverlayProfile;
@@ -51,7 +35,6 @@ public class OverlayMessage : MonoBehaviour
     {
         MindeskovOverlay.instance.SortScript.DestroyItems();
         MindeskovOverlay.instance.mindeskovOverlay.SetActive(false);
-        //Debug.Log(gameObject.GetComponent<ClothingItem>().GetPrimaryKey() + " PrimaryKey of clothes clicked");
         StammeManager.instance.StammeStartup(gameObject.GetComponent<ClothingItem>().GetPrimaryKey());
     }
 }
