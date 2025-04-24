@@ -6,10 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6a133a33-9148-4cc7-9491-835a8dd0fa88" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.P2Rewear/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.P2Rewear/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ASM - ClothingItems/SortScrollScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM - ClothingItems/SortScrollScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ASM-Maps/MapDistance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM-Maps/MapDistance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NBK-BasePage/Pages/Markedsplads.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-BasePage/Pages/Markedsplads.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NBK-SpawnItems/NBK-SpawnItems.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-SpawnItems/NBK-SpawnItems.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DB/Models/MMemory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DB/Models/MMemory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MindeStamme_Assets/Scenes/MindeStamme_PAGE.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MindeStamme_Assets/Scenes/MindeStamme_PAGE.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MindeStamme_Assets/Scripts/BtnScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MindeStamme_Assets/Scripts/BtnScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MindeStamme_Assets/Scripts/MSBttnOverlayManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MindeStamme_Assets/Scripts/MSBttnOverlayManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MindeStamme_Assets/Scripts/MindeStamme.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MindeStamme_Assets/Scripts/MindeStamme.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MindeStamme_Assets/Scripts/SetupMemoryArticle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MindeStamme_Assets/Scripts/SetupMemoryArticle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NBK-BasePage/BasePage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-BasePage/BasePage.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,11 +23,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/ChatManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ContactButtonScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CreateMemory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OverlayScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SetupClothingArticle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SetupMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@f3fac7af1578/Runtime/TMP/TMP_FontAsset.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -35,18 +36,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.45f1\Editor\Unity.exe" />

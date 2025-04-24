@@ -2,12 +2,11 @@ using UnityEngine;
 
 public class MSBttnOverlayManager : MonoBehaviour
 {
-    
     [SerializeField] private GameObject mindestammeOverlayEditOrCreateOwnMem;
     [SerializeField] private GameObject mindestammeOverlayUserMems;
-    //[SerializeField] private GameObject mindestammePAGE;
-    [SerializeField] private GameObject mindeskovClothingArticleOverlay;
+
     private SetupMemoryArticle setup; // we set-up / format the overlays with information when the overlay is being activated
+    private CreateMemory create;
 
     public void OpenUserMemOverlay(MMemory memory) // this is the on click enter method for the memory overlay
     {
@@ -22,6 +21,12 @@ public class MSBttnOverlayManager : MonoBehaviour
     }
 
 
+    public void CreateMemOverlay(MArticle article)
+    {
+        mindestammeOverlayEditOrCreateOwnMem.SetActive(true);
+        create = mindestammeOverlayEditOrCreateOwnMem.GetComponent<CreateMemory>();
+        create.createMemory(article);
+    }
     public void OpenOwnEditOrCreateMemOverlay(MMemory memory)
     {
         mindestammeOverlayEditOrCreateOwnMem.SetActive(true);
@@ -32,17 +37,5 @@ public class MSBttnOverlayManager : MonoBehaviour
     public void CloseOwnEditOrCreateMemOverlay()
     {
         mindestammeOverlayEditOrCreateOwnMem.SetActive(false);
-    }
-
-    public void OpenMindeskovClothingArticleOverlay(MMemory memory) // this is the on click enter method for the memory overlay
-    {
-        mindeskovClothingArticleOverlay.SetActive(true);
-        setup = mindeskovClothingArticleOverlay.GetComponent<SetupMemoryArticle>();
-        setup.SetupMemory(memory);
-    }
-
-    public void CloseMindeskovClothingArticleOverlay()
-    {
-        mindestammeOverlayUserMems.SetActive(false);
     }
 }

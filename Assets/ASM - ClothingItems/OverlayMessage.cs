@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class OverlayMessage : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class OverlayMessage : MonoBehaviour
     public GameObject OverlayMarket;
     public GameObject OverlayProfile;
     public GameObject canvas;
+    public int ChildId;
 
     private ClothingItem CurrentArticle;
 
@@ -43,5 +45,13 @@ public class OverlayMessage : MonoBehaviour
         }
 
         newOverlay.GetComponent<SetupOverlay>().setupOverlay(CurrentArticle.primaryKey);
+    }
+
+    public void OpenMemoryTree()
+    {
+        MindeskovOverlay.instance.SortScript.DestroyItems();
+        MindeskovOverlay.instance.mindeskovOverlay.SetActive(false);
+        //Debug.Log(gameObject.GetComponent<ClothingItem>().GetPrimaryKey() + " PrimaryKey of clothes clicked");
+        StammeManager.instance.StammeStartup(gameObject.GetComponent<ClothingItem>().GetPrimaryKey());
     }
 }

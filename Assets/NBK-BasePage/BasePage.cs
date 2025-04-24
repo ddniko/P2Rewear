@@ -30,7 +30,8 @@ public abstract class BasePage : MonoBehaviour
         MARKEDSPLADS,
         OPRET_TØJ,
         PROFIL,
-        CHAT
+        CHAT,
+        MINDESTAMME
     }
 
     public abstract Enum MyPage();
