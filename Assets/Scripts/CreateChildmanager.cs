@@ -45,12 +45,13 @@ public class CreateChildmanager : MonoBehaviour
         MChild mChild = new MChild
         {
             Name = Name.text,
-            
+            ParentId = UserInformation.Instance.User.Id,
             Gender = cgs.gender,
             Size = size,
             Age = SelectAge(),
             Tags = tags,
         };
+        DBManager.AddChild(mChild);
     }
     //private bool CheckChild()
     //{

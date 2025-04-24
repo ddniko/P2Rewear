@@ -20,7 +20,7 @@ public class Markedsplads : BasePage
     public static List<MArticle> AllOtherClothes;
 
     private float setMaxDistance;
-
+    public TagOrganizer TO;
     private float setMaxPrice;
     private Filter filter;
 
@@ -95,7 +95,11 @@ public class Markedsplads : BasePage
 
         SortScript.InstantiateArticles(AllOtherClothes, setMaxDistance, setMaxPrice, st, filter);
     }
-
+    public void FilterByTag()
+    {
+        if (TO.tagValues.Count == 0)
+            return;
+    }
     public float SetMaxDistance(TextMeshProUGUI inputText)
     {
         setMaxDistance = float.Parse(inputText.text);

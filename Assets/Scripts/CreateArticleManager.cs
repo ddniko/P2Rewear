@@ -15,6 +15,7 @@ public class CreateArticleManager : BasePage
     public TMP_Dropdown Size;
     public TMP_Dropdown Cat;
     public TextMeshProUGUI Desc;
+    public TagOrganizer TO;
     public CameraHandler camhand;
     public DBVisualizer DBV;
     public RawImage img;
@@ -67,6 +68,17 @@ public class CreateArticleManager : BasePage
                 art.Prize = parsedPrize;
             }
         }
+        string tags = "";
+        for (int i = 0; i < TO.tagValues.Count; i++)
+        {
+            if (i == TO.tagValues.Count - 1)
+            {
+                tags += TO.tagValues[i].ToString();
+                continue;
+            }
+            tags += TO.tagValues[i].ToString() + ", ";
+        }
+        art.Tags = tags;
         art.ImageData = ConvertImageToByteArray(img);
 
         DBManager.AddArticle(art);
