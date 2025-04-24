@@ -2,11 +2,25 @@ using UnityEngine;
 
 public class MSBttnOverlayManager : MonoBehaviour
 {
-    [SerializeField] private GameObject mindestammeOverlayEditOrCreateOwnMem;
-    [SerializeField] private GameObject mindestammeOverlayUserMems;
+    public GameObject mindestammeOverlayEditOrCreateOwnMem;
+    public GameObject mindestammeOverlayUserMems;
 
     private SetupMemoryArticle setup; // we set-up / format the overlays with information when the overlay is being activated
     private CreateMemory create;
+
+    public static MSBttnOverlayManager instance;
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(instance);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
 
     public void OpenUserMemOverlay(MMemory memory) // this is the on click enter method for the memory overlay
     {
@@ -20,13 +34,6 @@ public class MSBttnOverlayManager : MonoBehaviour
         mindestammeOverlayUserMems.SetActive(false);
     }
 
-
-    public void CreateMemOverlay(MArticle article)
-    {
-        mindestammeOverlayEditOrCreateOwnMem.SetActive(true);
-        create = mindestammeOverlayEditOrCreateOwnMem.GetComponent<CreateMemory>();
-        create.createMemory(article);
-    }
     public void OpenOwnEditOrCreateMemOverlay(MMemory memory)
     {
         mindestammeOverlayEditOrCreateOwnMem.SetActive(true);

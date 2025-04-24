@@ -19,34 +19,11 @@ public class BtnScript : MonoBehaviour
 
     private Scroll scrollSc;
     private ReloadMS reloadMSSc;
-    
-    //public GameObject MSBttnOverlayManagerObject;
-    private MSBttnOverlayManager manager;
-    
-    //[Header("PAGES")]
-    //[SerializeField] private GameObject mindestamme_Main_PAGE;
-    //[SerializeField] private GameObject mindeskov_Main_PAGE;
-
-
-    public void Start()
-    {
-        manager = FindObjectOfType<MSBttnOverlayManager>();
-    }
 
     private void OnEnable() 
     {
         mindeStamme = GameObject.FindGameObjectWithTag("MindeStamme");
-        
-        //BtnUpdate(Indexbtn, MemIDbtn);
     }
-
-    //public void BtnUpdate(int index, int memID)
-    //{
-    //    Console.WriteLine($"Index of {index} and ID {memID}");
-        
-    //    //treeTrunks.LastOrDefault().transform.GetChild(0).GetComponent<Image>().fillAmount = b;
-        
-    //}
 
 
     // i have 3 fkn lists for some fkn reason.
@@ -54,32 +31,8 @@ public class BtnScript : MonoBehaviour
 
     public void OnClick() //this is an on click method that is set-up in the editor of unity.
     {
-
-        scrollSc = mindeStamme.GetComponentInChildren<Scroll>();
-        MMemory mem = scrollSc.memDBPublic[MemIDbtn];
-        //Console.Write(mem.ToString());
-
-        Debug.Log($"This is information of memory ({mem.Id}) connected to this article ({mem.ArticleID}) : \n{mem.Title} ({mem.DateAdded})\n{mem.Description}\nImage: {mem.ImageData}\n");
-        manager.OpenUserMemOverlay(mem);
-
-        //Debug.Log($"{mem.ToString()}");
-
-
-
-        //public override string ToString()
-        //{
-        //    return $" This is information of memory ({Id}) connected to this article ({ArticleID}) : \n{Title} ({DateAdded})\n{Description}\nImage: {ImageData}\n";
-        //}
-
-        // sends info to overlay that have been enabled in this method.
-
-    }
-
-    public void OnEditAddMemClick() // this
-    {
-        scrollSc = mindeStamme.GetComponentInChildren<Scroll>();
-        manager.CreateMemOverlay(DBManager.GetArticleById(scrollSc.clothingArticleID));
-        // Activate edit / add mem overlay
+        MMemory mem = Scroll.instance.memDBPublic[Indexbtn];
+        MSBttnOverlayManager.instance.OpenUserMemOverlay(mem);
     }
 
     public void OnEditAddMemSaveClick() // this is on the btn called (GEM) that saves a new mem.

@@ -126,6 +126,23 @@ public class Scroll : MonoBehaviour
 
             }
         }
+
+        if (erEjer == true) // hvis det er ejeren af tøjet atm, så bliver knappen edit/add btn vist, og hvis de har redigere på det før bliver knappen ændret fra opret til rediger minde
+        {
+            TextMeshProUGUI txtObj;
+            MSEditAddBtn.gameObject.SetActive(true);
+
+            if (haveCreated == true) //checks if any ID's matches the ones of the user's private list
+            {
+                txtObj = MSEditAddBtn.GetComponentInChildren<TextMeshProUGUI>();
+                txtObj.text = "Rediger\nMinde";
+            }
+        }
+        else
+        {
+            MSEditAddBtn.gameObject.SetActive(false);
+        }
+
         tidligereEjer = DBManager.GetMemoriesByArticle(clothingArticleID).Count;
         // THIS ONLY HAPPENS IF THEY OWN THE CLOTHING
         // check if the current shown mems have been created by the user.
@@ -136,7 +153,10 @@ public class Scroll : MonoBehaviour
 
     }
 
-    
+    public void OpenCreateOverlay()
+    {
+        MSBttnOverlayManager.instance.mindestammeOverlayEditOrCreateOwnMem.SetActive(true);
+    }
 
 
 }

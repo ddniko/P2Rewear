@@ -2,6 +2,8 @@ using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
 using System.Collections.Generic;
+using System;
+using TMPro;
 
 public class MindeskovOverlay : MonoBehaviour
 {
@@ -32,13 +34,11 @@ public class MindeskovOverlay : MonoBehaviour
         SortScript.ParentObject = ViewPort.transform;
         ClothingPrefab.GetComponent<OverlayMessage>().ChildId = child.Id;
         SortScript.ClothingPrefab = ClothingPrefab;
+        SortScript.horizontalSpacing = 120;
+
+        RectTransform rt = ViewPort.GetComponent<RectTransform>();
+        rt.sizeDelta = new Vector2(rt.sizeDelta.x, MathF.Round(childClothes.Count / 2f + 0.4f) * 105);
 
         SortScript.InstantiateArticles(childClothes);
-    }
-
-
-    private void OnDisable()
-    {
-        
     }
 }

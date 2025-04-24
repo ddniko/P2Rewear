@@ -74,6 +74,7 @@ public class StammeManager : MonoBehaviour
     public void StammeStartup(int ArticleID)
     {
         MSScrollObj.SetActive(true);
+        this.clothingArticleID = ArticleID;
         //Scroll.instance.clothingArticleID = ArticleID;
         
         Scroll.instance.StartStamme(ArticleID);
@@ -82,13 +83,15 @@ public class StammeManager : MonoBehaviour
 
     public void AddTrunk()
     {
+        foreach (GameObject trunk in treeTrunks)
+        {
+            Destroy(trunk);
+        }
         treeTrunks.Clear();
         Btns.Clear();
         tidligereEjer = Scroll.instance.tidligereEjer;
         int ejerCount = tidligereEjer % ejerPerScroll; // the number of spialge of previous owners onto the next trunk / scroll 
         float pagescrolls = Mathf.Ceil(tidligereEjer / ejerPerScroll); // how many scrols is there needed to make to scroll to the top, we round up to a whole number because we can crop the rest later. -1 because the first page is free >:3
-
-        //Debug.Log("tidligereEjer = " + tidligereEjer + " ejerCount = " + ejerCount + " ejerPerScroll = " + ejerPerScroll + " pagescrolls = " + pagescrolls);
 
         // forloop instantiater alle obj's 
         for (int i = 0; i <= pagescrolls; i++)
@@ -131,8 +134,8 @@ public class StammeManager : MonoBehaviour
             memSortedByDate = Scroll.instance.memSortedByDate;
             TextMeshProUGUI txtObj;
             int btnCycle = BtnIndex % btnPos.Length;
-            btnPos[btnCycle] += new Vector2(0, 1200 * Mathf.Floor(BtnIndex / btnPos.Length));
-            Vector3 targetPos = btnPos[btnCycle];
+            //btnPos[btnCycle] += new Vector2(0, 1200 * Mathf.Floor(BtnIndex / btnPos.Length));
+            Vector3 targetPos = btnPos[btnCycle] + new Vector2(0, 1200 * Mathf.Floor(BtnIndex / btnPos.Length)); ;
 
             btn.GetComponent<RectTransform>().anchoredPosition = targetPos;
 
@@ -146,21 +149,21 @@ public class StammeManager : MonoBehaviour
 
             BtnIndex++;
 
-            Debug.Log("btnPos.Length = " + btnPos.Length + " btnPos[btnCycle] = " + btnPos[btnCycle] + " btnCycle = " + btnCycle + " targetPos = " + targetPos + " btnindex / btnpos length = " + Mathf.Floor(BtnIndex / btnPos.Length));
+            //Debug.Log("btnPos.Length = " + btnPos.Length + " btnPos[btnCycle] = " + btnPos[btnCycle] + " btnCycle = " + btnCycle + " targetPos = " + targetPos + " btnindex / btnpos length = " + Mathf.Floor(BtnIndex / btnPos.Length));
 
         }
 
-        if (erEjer == true) // hvis det er ejeren af tøjet atm, så bliver knappen edit/add btn vist, og hvis de har redigere på det før bliver knappen ændret fra opret til rediger minde
-        {
-            TextMeshProUGUI txtObj;
-            MSEditAddBtn.gameObject.SetActive(true);
+        //if (erEjer == true) // hvis det er ejeren af tøjet atm, så bliver knappen edit/add btn vist, og hvis de har redigere på det før bliver knappen ændret fra opret til rediger minde
+        //{
+        //    TextMeshProUGUI txtObj;
+        //    MSEditAddBtn.gameObject.SetActive(true);
 
-            if (haveCreated == true) //checks if any ID's matches the ones of the user's private list
-            {
-                txtObj = MSEditAddBtn.GetComponentInChildren<TextMeshProUGUI>();
-                txtObj.text = "Rediger\nMinde";
-            }
-        }
+        //    if (haveCreated == true) //checks if any ID's matches the ones of the user's private list
+        //    {
+        //        txtObj = MSEditAddBtn.GetComponentInChildren<TextMeshProUGUI>();
+        //        txtObj.text = "Rediger\nMinde";
+        //    }
+        //}
         // Sets the amount of previous owners to a visable text obj on the page.
         TextMeshProUGUI txtObjEjerCount = MSTidligereEjere.GetComponent<TextMeshProUGUI>();
         txtObjEjerCount.text = $"{tidligereEjer}";

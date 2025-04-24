@@ -15,12 +15,9 @@ public class CreateMemory : MonoBehaviour
         cameraHandler = cameraHandlerObject.GetComponent<CameraHandler>();
     }
 
-    public void createMemory(MArticle article)
+    public void createMemory()
     {
-        
-         new MMemory().CreateMemory(article.Id, titleInput.text, descriptionInput.text, ConvertImageToByteArray(memoryImage));
-        
-         
+         new MMemory().CreateMemory(StammeManager.instance.clothingArticleID, titleInput.text, descriptionInput.text, ConvertImageToByteArray(memoryImage));
     }
 
     public void OpenCamera()
@@ -55,5 +52,10 @@ public class CreateMemory : MonoBehaviour
         }
     }
     
-    
+    public void CloseOverlay()
+    {
+        titleInput.text = " ";
+        descriptionInput.text = " ";
+        gameObject.SetActive(false);
+    }
 }
