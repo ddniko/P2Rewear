@@ -18,7 +18,7 @@ public class LogIn : MonoBehaviour
     public bool CreateTestData;
     private void Awake()
     {
-        DBManager.Init();
+        
         if (CreateTestData)
             TestDataGenerator.GenerateRandomTestData(100);
 

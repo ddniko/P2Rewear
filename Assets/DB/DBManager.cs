@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using SQLite;
 using UnityEngine;
 
@@ -239,6 +240,23 @@ public static class DBManager
         }
         return AllOtherClothes;
     }
+    public static List<MArticle> GetAllArticlesExceptParent(int parentID, int pageNumber, int pageSize)
+    {
+        List<MArticle> allClothes = GetConnection().Table<MArticle>().ToList();
+        List<MArticle> allOtherClothes = new List<MArticle>();
+
+        for (int i = 0; i < allClothes.Count; i++)
+        {
+            if (DBManager.GetParentByArticleId(allClothes[i].Id).Id != parentID)
+            {
+                allOtherClothes.Add(allClothes[i]);
+            }
+        }
+
+        int skip = (pageNumber - 1) * pageSize;
+        return allOtherClothes.Skip(skip).Take(pageSize).ToList();
+    }
+
 
 
     // Henter alle stykker tøj, der hører til et specifikt barn
