@@ -58,15 +58,19 @@ public class Markedsplads : BasePage
         SortScript.ChildParentObject = BarnSortMarketOverlay.transform;
         DisplayMarketArticles();
         OnScrollThresholdReached += HandleScrollThreshold;
+        currentArticlesPage = 1;
     }
 
     private void OnDisable()
     {
         SortScript.DestroyItems();
         OnScrollThresholdReached -= HandleScrollThreshold;
+        
     }
     private void HandleScrollThreshold()
     {
+        currentArticlesPage++;
+        
         DisplayMarketArticles(null, filter);
     }
     public Filter CreateFilterFromChild(MChild child)
