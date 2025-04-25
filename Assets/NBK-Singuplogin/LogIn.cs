@@ -31,11 +31,12 @@ public class LogIn : MonoBehaviour
         if (loggedInParent != null)
         {
             LoggedIn = loggedInParent;
-            Bottombar.SetActive(true);
+            
             loginPage.SetActive(false);
             //gameObject.SetActive(false);
             UserInformation.Instance.User = loggedInParent;
             UserInformation.Instance.UserChildren = DBManager.GetChildrenByParentId(loggedInParent.Id);
+            Bottombar.SetActive(true);
         }
     }
 }

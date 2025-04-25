@@ -52,10 +52,12 @@ public class Markedsplads : BasePage
     private void OnEnable()
     {
         filter = new Filter();
+        filter.tags = new List<string>();
         SortScript = GetComponent<SortScrollScript>();
         SortScript.ParentObject = ViewPort.transform;
         SortScript.ClothingPrefab = ClothingPrefab;
         SortScript.ChildParentObject = BarnSortMarketOverlay.transform;
+        AllOtherClothes = new List<MArticle>();
         DisplayMarketArticles();
         OnScrollThresholdReached += HandleScrollThreshold;
         currentArticlesPage = 1;
@@ -65,13 +67,20 @@ public class Markedsplads : BasePage
     {
         SortScript.DestroyItems();
         OnScrollThresholdReached -= HandleScrollThreshold;
-        
+        Canvas.ForceUpdateCanvases();
+        scrollRect.verticalNormalizedPosition = 1f;
+        Canvas.ForceUpdateCanvases();
+
     }
     private void HandleScrollThreshold()
     {
         currentArticlesPage++;
         
         DisplayMarketArticles(null, filter);
+        Canvas.ForceUpdateCanvases();
+        scrollRect.verticalNormalizedPosition = 1f;
+        Canvas.ForceUpdateCanvases();
+        scrollEventTriggered = false;
     }
     public Filter CreateFilterFromChild(MChild child)
     {
@@ -130,7 +139,7 @@ public class Markedsplads : BasePage
     {
 
         int totalPages = DBManager.GetTotalPagesForArticles(20);
-        AllOtherClothes = DBManager.GetAllArticlesExceptParent(UserInformation.Instance.User.Id, currentArticlesPage, totalPages);
+        AllOtherClothes = DBManager.GetAllArticlesExceptParent(UserInformation.Instance.User.Id, currentArticlesPage, 20);
 
         // if (LogIn.LoggedIn != null)
         //   AllOtherClothes = DBManager.GetAllArticlesExceptParent(LogIn.LoggedIn.Id);
@@ -141,7 +150,7 @@ public class Markedsplads : BasePage
         RectTransform rt = ViewPort.GetComponent<RectTransform>();
         rt.sizeDelta = new Vector2(rt.sizeDelta.x, MathF.Round(AllOtherClothes.Count / 2f + 0.4f) * 105);
 
-        SortScript.InstantiateArticles(AllOtherClothes, setMaxDistance, setMaxPrice, st, filter);
+        SortScript.InstantiateArticles(AllOtherClothes, setMaxDistance, setMaxPrice, filter);
     }
     public void FilterByTag()
     {

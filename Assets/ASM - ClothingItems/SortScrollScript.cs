@@ -190,38 +190,85 @@ public class SortScrollScript : MonoBehaviour
         OrderArticles();
     }
 
-    public void InstantiateArticles(List<MArticle> art, float? maxDistance = null, float? maxPrice = null, SORTTYPE? sortType = null, Filter childDemands = null)
+    //public void InstantiateArticles(List<MArticle> art, float? maxDistance = null, float? maxPrice = null, SORTTYPE? sortType = null, Filter childDemands = null)
+    //{
+    //    DestroyItems();
+    //    CurrentArticles = new List<GameObject>();
+    //    //praktisk talt at resette listen.
+    //    List<MArticle> articles = art;
+    //    int index = 0;
+    //    foreach (MArticle article in articles)
+    //    {
+    //        if (childDemands != null)
+    //        {
+    //            if (ArticleValidByFilter(childDemands, article))
+    //            {
+    //                if (index >= 0 && index < CurrentArticles.Count && CurrentArticles[index] != null)
+    //                    UpdateArticle(article, index);
+    //                else
+    //                    CurrentArticles.Add(CreateArticle(article));
+    //            }
+    //            else continue;
+    //        }
+    //        else
+    //        {
+    //            if (index >= 0 && index < CurrentArticles.Count && CurrentArticles[index] != null)
+    //                UpdateArticle(article, index);
+    //            else
+    //                CurrentArticles.Add(CreateArticle(article));
+
+    //        }
+    //        index++;
+    //    }
+    //    if (sortType != null)
+    //        SortAndDisplayArticles(sortType);
+    //    else
+    //        OrderArticles();
+    //}
+    public void InstantiateArticles(List<MArticle> articles, float? maxDistance = null, float? maxPrice = null, Filter childDemands = null)
     {
-        DestroyItems();
-        CurrentArticles = new List<GameObject>();
-        //praktisk talt at resette listen.
-        List<MArticle> articles = art;
-        int index = 0;
+        if (CurrentArticles == null)
+            CurrentArticles = new List<GameObject>();
+
+        startPosition = StartObjects[0].transform.position;
+        horizontalSpacing = Mathf.Abs(StartObjects[0].transform.localPosition.x - StartObjects[1].transform.localPosition.x);
+        verticalSpacing = Mathf.Abs(StartObjects[0].transform.localPosition.y - StartObjects[2].transform.localPosition.y);
+        currentColumn = 0;
+        currentRow = 0;
+
+        List<MArticle> filteredArticles = new List<MArticle>();
+
         foreach (MArticle article in articles)
         {
-            if (childDemands != null)
+            if (childDemands == null || ArticleValidByFilter(childDemands, article))
             {
-                if (ArticleValidByFilter(childDemands, article))
-                {
-                    if (index >= 0 && index < CurrentArticles.Count && CurrentArticles[index] != null)
-                        UpdateArticle(article, index);
-                    else
-                        CurrentArticles.Add(CreateArticle(article));
-                }
-                else continue;
+                filteredArticles.Add(article);
+            }
+        }
+
+        int requiredCount = filteredArticles.Count;
+
+        for (int i = 0; i < requiredCount; i++)
+        {
+            if (i < CurrentArticles.Count && CurrentArticles[i] != null)
+            {
+                UpdateArticle(filteredArticles[i], i);
             }
             else
             {
-                if (index >= 0 && index < CurrentArticles.Count && CurrentArticles[index] != null)
-                    UpdateArticle(article, index);
-                else
-                    CurrentArticles.Add(CreateArticle(article));
-
+                GameObject go = CreateArticle(filteredArticles[i]);
+                CurrentArticles.Add(go);
             }
-            index++;
         }
-        if (sortType != null)
-            SortAndDisplayArticles(sortType);
+
+        if (CurrentArticles.Count > requiredCount)
+        {
+            for (int i = requiredCount; i < CurrentArticles.Count; i++)
+            {
+                Destroy(CurrentArticles[i]);
+            }
+            CurrentArticles.RemoveRange(requiredCount, CurrentArticles.Count - requiredCount);
+        }
         else
             OrderArticles();
     }
@@ -237,18 +284,18 @@ public class SortScrollScript : MonoBehaviour
     public void InstantiateArticlesParent(int parentID, SORTTYPE? sortType = null, Filter childDemands = null)
     {
         List<MArticle> parentArticles = DBManager.GetArticlesByParentId(parentID);
-        InstantiateArticles(parentArticles, null, null, sortType, childDemands);
+        InstantiateArticles(parentArticles, null, null, childDemands);
     }
-    public void InstantiateArticlesOtherParent(int parentID, SORTTYPE? sortType = null, Filter childDemands = null)
+    public void InstantiateArticlesOtherParent(int parentID, Filter childDemands = null)
     {
         List<MArticle> parentArticles = DBManager.GetAllArticlesExceptParent(LogIn.LoggedIn.Id);
-        InstantiateArticles(parentArticles, null, null, sortType, childDemands);
+        InstantiateArticles(parentArticles, null, null, childDemands);
     }
 
-    public void InstantiateArticlesChild(int childID, SORTTYPE? sortType = null, Filter childDemands = null)
+    public void InstantiateArticlesChild(int childID, Filter childDemands = null)
     {
         List<MArticle> childArticles = DBManager.GetArticlesByChildId(childID);
-        InstantiateArticles(childArticles, null, null, sortType, childDemands);
+        InstantiateArticles(childArticles, null, null, childDemands);
     }
     public GameObject CreateArticle(MArticle article)
     {

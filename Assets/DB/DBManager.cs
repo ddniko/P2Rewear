@@ -242,21 +242,38 @@ public static class DBManager
     }
     public static List<MArticle> GetAllArticlesExceptParent(int parentID, int pageNumber, int pageSize)
     {
-        List<MArticle> allClothes = GetConnection().Table<MArticle>().ToList();
-        List<MArticle> allOtherClothes = new List<MArticle>();
+        var allOtherClothesQuery = GetConnection().Table<MArticle>()
+            .Where(article => article.ParentId != parentID) // Optimized by filtering directly in the query
+            .Skip((pageNumber - 1) * pageSize)
+            .Take(pageSize);
 
-        for (int i = 0; i < allClothes.Count; i++)
-        {
-            if (DBManager.GetParentByArticleId(allClothes[i].Id).Id != parentID)
-            {
-                allOtherClothes.Add(allClothes[i]);
-            }
-        }
-
-        int skip = (pageNumber - 1) * pageSize;
-        return allOtherClothes.Skip(skip).Take(pageSize).ToList();
+        return allOtherClothesQuery.ToList();
     }
+    //public static List<MArticle> GetAllArticlesExceptParent(int parentID, int pageNumber, int pageSize)
+    //{
+    //    List<MArticle> allClothes = GetConnection().Table<MArticle>().ToList();
+    //    List<MArticle> allOtherClothes = new List<MArticle>();
 
+    //    for (int i = 0; i < allClothes.Count; i++)
+    //    {
+    //        if (DBManager.GetParentByArticleId(allClothes[i].Id).Id != parentID)
+    //        {
+    //            allOtherClothes.Add(allClothes[i]);
+    //        }
+    //    }
+
+    //    int skip = (pageNumber - 1) * pageSize;
+    //    return allOtherClothes.Skip(skip).Take(pageSize).ToList();
+    //}
+    //public static List<MArticle> GetAllArticlesExceptParent(int parentID, int pageNumber, int pageSize)
+    //{
+    //    return GetConnection()
+    //        .Table<MArticle>()
+    //        .Where(a => a.ParentId != parentID)
+    //        .Skip((pageNumber - 1) * pageSize)
+    //        .Take(pageSize)
+    //        .ToList();
+    //}
 
 
     // Henter alle stykker tøj, der hører til et specifikt barn

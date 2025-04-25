@@ -12,7 +12,7 @@ public class MArticle
     public int Id { get; set; }
 
     public int ChildId { get; set; } // Barnets Id (refererer til MChild tabellen)
-
+    public int ParentId { get; set; }
     public string Name { get; set; }
     public string Size{ get; set; } // Kategori for størrelsen (f.eks. lille, medium, stor)
     public string Tags { get; set; } // Tags, comma separated value ideally

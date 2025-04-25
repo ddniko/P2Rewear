@@ -29,10 +29,7 @@ public class Profil : BasePage
         Name.text = DBManager.GetParentById(UserId).Name.ToString();
         ri = UserInformation.Instance.ProfilePic;
         //DBManager.Init();
-        if (LogIn.LoggedIn != null)
-            OwnClothes = DBManager.GetAllArticlesExceptParent(LogIn.LoggedIn.Id);
-        else
-            OwnClothes = DBManager.GetAllArticlesExceptParent(1);
+   OwnClothes = DBManager.GetArticlesByParentId(UserInformation.Instance.User.Id);
 
         SortScript = GetComponent<SortScrollScript>();
         SortScript.ParentObject = ViewPort.transform;

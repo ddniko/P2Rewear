@@ -56,6 +56,7 @@ public static class TestDataGenerator
                     var article = new MArticle
                     {
                         ChildId = childId,
+                        ParentId = parentId,
                         Name = $"{clothingCategories[rand.Next(clothingCategories.Length)]} {rand.Next(1000)}",
                         Size = rand.Next(range.Value.min, range.Value.max + 1).ToString(),
                         Condition = rand.Next(1, 6),
