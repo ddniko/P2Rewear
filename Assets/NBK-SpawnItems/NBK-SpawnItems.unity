@@ -37811,6 +37811,9 @@ MonoBehaviour:
   TO: {fileID: 453897265}
   SetMaxPriceText: {fileID: 687416849}
   maxPriceText: {fileID: 764225645}
+  currentArticlesPage: 1
+  scrollRect: {fileID: 401522514}
+  scrollTriggerThreshold: 0.2
 --- !u!4 &2823765817137718298
 Transform:
   m_ObjectHideFlags: 0

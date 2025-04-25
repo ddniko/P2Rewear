@@ -203,19 +203,20 @@ public class SortScrollScript : MonoBehaviour
             {
                 if (ArticleValidByFilter(childDemands, article))
                 {
-                    if (CurrentArticles[index] == null)
-                        CurrentArticles.Add(CreateArticle(article));
-                    else
+                    if (index >= 0 && index < CurrentArticles.Count && CurrentArticles[index] != null)
                         UpdateArticle(article, index);
+                    else
+                        CurrentArticles.Add(CreateArticle(article));
                 }
                 else continue;
             }
             else
             {
-                if (CurrentArticles[index] == null)
-                    CurrentArticles.Add(CreateArticle(article));
-                else
+                if (index >= 0 && index < CurrentArticles.Count && CurrentArticles[index] != null)
                     UpdateArticle(article, index);
+                else
+                    CurrentArticles.Add(CreateArticle(article));
+
             }
             index++;
         }
