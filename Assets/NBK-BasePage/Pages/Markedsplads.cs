@@ -26,8 +26,9 @@ public class Markedsplads : BasePage
 
     public TextMeshProUGUI SetMaxPriceText;
     public TextMeshProUGUI maxPriceText;
-    string[] predefinedSizeRanges = {"50/56", "57/63", "64/70", "71/77", "78/84", "85/91", "92/98", "99/105", "106/112", "113/119", "120/128"};
-
+    string[] predefinedSizeRanges = { "50/56", "57/63", "64/70", "71/77", "78/84", "85/91", "92/98", "99/105", "106/112", "113/119", "120/128" };
+    public int currentArticlesPage;
+    int articlePages;
 
     private void OnEnable()
     {
@@ -94,10 +95,14 @@ public class Markedsplads : BasePage
     public void DisplayMarketArticles(SORTTYPE? st = null, Filter filter = null)
     {
 
-        if (LogIn.LoggedIn != null)
-            AllOtherClothes = DBManager.GetAllArticlesExceptParent(LogIn.LoggedIn.Id);
-        else
-            AllOtherClothes = DBManager.GetAllArticlesExceptParent(1);
+        int totalPages = DBManager.GetTotalPagesForArticles(20);
+        AllOtherClothes = DBManager.GetAllArticlesExceptParent(UserInformation.Instance.User.Id, currentArticlesPage, totalPages);
+
+        // if (LogIn.LoggedIn != null)
+        //   AllOtherClothes = DBManager.GetAllArticlesExceptParent(LogIn.LoggedIn.Id);
+        //else
+        //  AllOtherClothes = DBManager.GetAllArticlesExceptParent(1);
+
 
         RectTransform rt = ViewPort.GetComponent<RectTransform>();
         rt.sizeDelta = new Vector2(rt.sizeDelta.x, MathF.Round(AllOtherClothes.Count / 2f + 0.4f) * 105);
