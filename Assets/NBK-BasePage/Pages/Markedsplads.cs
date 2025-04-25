@@ -27,8 +27,24 @@ public class Markedsplads : BasePage
     public TextMeshProUGUI SetMaxPriceText;
     public TextMeshProUGUI maxPriceText;
     string[] predefinedSizeRanges = {"50/56", "57/63", "64/70", "71/77", "78/84", "85/91", "92/98", "99/105", "106/112", "113/119", "120/128"};
+    private bool scrollEventTriggered;
+    public ScrollRect scrollRect;
+    public float scrollTriggerThreshold;
 
+    public event Action OnScrollThresholdReached;
 
+    void Update()
+    {
+        if (!scrollEventTriggered && scrollRect.verticalNormalizedPosition <= scrollTriggerThreshold)
+        {
+            scrollEventTriggered = true;
+            OnScrollThresholdReached?.Invoke();
+        }
+    }
+    public void ResetScrollTrigger()
+    {
+        scrollEventTriggered = false;
+    }
     private void OnEnable()
     {
         filter = new Filter();
@@ -37,6 +53,17 @@ public class Markedsplads : BasePage
         SortScript.ClothingPrefab = ClothingPrefab;
         SortScript.ChildParentObject = BarnSortMarketOverlay.transform;
         DisplayMarketArticles();
+        OnScrollThresholdReached += HandleScrollThreshold;
+    }
+
+    private void OnDisable()
+    {
+        SortScript.DestroyItems();
+        OnScrollThresholdReached -= HandleScrollThreshold;
+    }
+    private void HandleScrollThreshold()
+    {
+        DisplayMarketArticles(null, filter);
     }
     public Filter CreateFilterFromChild(MChild child)
     {
@@ -142,8 +169,5 @@ public class Markedsplads : BasePage
     }
 
 
-    private void OnDisable()
-    {
-        SortScript.DestroyItems();
-    }
+
 }

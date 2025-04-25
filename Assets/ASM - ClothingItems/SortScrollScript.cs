@@ -128,7 +128,7 @@ public class SortScrollScript : MonoBehaviour
     }
     private bool ArticleValidByFilter(Filter demands, MArticle art)
     {
-        
+
         bool matches = true;
         if (!string.IsNullOrEmpty(art.Size) && demands.MinSize != -1 && demands.MaxSize != -1)
         {
@@ -173,147 +173,165 @@ public class SortScrollScript : MonoBehaviour
         return matches;
     }
 
-        
-    
 
-public void InstantiateAllArticles()
-{
-    DestroyItems();
-    CurrentArticles = new List<GameObject>();
-    //praktisk talt at resette listen.
-    List<MArticle> articles = DBManager.GetAllArticles();
 
-    foreach (MArticle article in articles)
+
+    public void InstantiateAllArticles()
     {
-        CurrentArticles.Add(CreateArticle(article));
-    }
-    OrderArticles();
-}
+        DestroyItems();
+        CurrentArticles = new List<GameObject>();
+        //praktisk talt at resette listen.
+        List<MArticle> articles = DBManager.GetAllArticles();
 
-public void InstantiateArticles(List<MArticle> art, float? maxDistance = null, float? maxPrice = null, SORTTYPE? sortType = null, Filter childDemands = null)
-{
-    DestroyItems();
-    CurrentArticles = new List<GameObject>();
-    //praktisk talt at resette listen.
-    List<MArticle> articles = art;
-
-    foreach (MArticle article in articles)
-    {
-        if (childDemands != null)
+        foreach (MArticle article in articles)
         {
-            if (ArticleValidByFilter(childDemands, article))
-            {
-                CurrentArticles.Add(CreateArticle(article));
-            }
-            else continue;
-        }
-        else
             CurrentArticles.Add(CreateArticle(article));
-    }
-    if (sortType != null)
-        SortAndDisplayArticles(sortType);
-    else
+        }
         OrderArticles();
-}
-public void InstantiateArticlesParent(int parentID, SORTTYPE? sortType = null, Filter childDemands = null)
-{
-    List<MArticle> parentArticles = DBManager.GetArticlesByParentId(parentID);
-    InstantiateArticles(parentArticles, null, null, sortType, childDemands);
-}
-public void InstantiateArticlesOtherParent(int parentID, SORTTYPE? sortType = null, Filter childDemands = null)
-{
-    List<MArticle> parentArticles = DBManager.GetAllArticlesExceptParent(LogIn.LoggedIn.Id);
-    InstantiateArticles(parentArticles, null, null, sortType, childDemands);
-}
+    }
 
-public void InstantiateArticlesChild(int childID, SORTTYPE? sortType = null, Filter childDemands = null)
-{
-    List<MArticle> childArticles = DBManager.GetArticlesByChildId(childID);
-    InstantiateArticles(childArticles, null, null, sortType, childDemands);
-}
-public GameObject CreateArticle(MArticle article)
-{
-    GameObject newArticle = Instantiate(ClothingPrefab, ParentObject);
-
-    ClothingItem articleItem = newArticle.GetComponent<ClothingItem>();
-    articleItem.SetUpClothingItem(article.Id, article.Name, article.ChildId, article.Size,
-        article.Condition, article.LifeTime, article.Prize, article.Description, article.ImageData);
-    return newArticle;
-}
-
-
-public void OrderArticles()
-{
-    for (int i = 0; i < CurrentArticles.Count; i++)  //index for rækken
+    public void InstantiateArticles(List<MArticle> art, float? maxDistance = null, float? maxPrice = null, SORTTYPE? sortType = null, Filter childDemands = null)
     {
-        CurrentArticles[i].gameObject.transform.localPosition = startPosition + new Vector3(currentColumn * horizontalSpacing + 50, -currentRow * verticalSpacing - 45, 0);
-
-        currentColumn++;
-
-        // hvis den her row er fyldt, så gå et hak ned
-        if (currentColumn >= maxItemsPerRow)
+        DestroyItems();
+        CurrentArticles = new List<GameObject>();
+        //praktisk talt at resette listen.
+        List<MArticle> articles = art;
+        int index = 0;
+        foreach (MArticle article in articles)
         {
-            currentColumn = 0;
-            currentRow++;
+            if (childDemands != null)
+            {
+                if (ArticleValidByFilter(childDemands, article))
+                {
+                    if (CurrentArticles[index] == null)
+                        CurrentArticles.Add(CreateArticle(article));
+                    else
+                        UpdateArticle(article, index);
+                }
+                else continue;
+            }
+            else
+            {
+                if (CurrentArticles[index] == null)
+                    CurrentArticles.Add(CreateArticle(article));
+                else
+                    UpdateArticle(article, index);
+            }
+            index++;
         }
+        if (sortType != null)
+            SortAndDisplayArticles(sortType);
+        else
+            OrderArticles();
     }
-}
-public void CreateChildren()
-{
-    DestroyChildren();
-    foreach (MChild mchild in UserInformation.Instance.UserChildren)
+    public void UpdateArticle(MArticle mArt, int index)
     {
-        var c = Instantiate(ChildPrefab, ChildParentObject);
-        c.GetComponent<Child>().SetupChild(mchild);
-        CurrentChildren.Add(c);
-    }
-    OrderChildren();
-}
-
-public void OrderChildren()
-{
-    for (int i = 0; i < UserInformation.Instance.UserChildren.Count; i++)  //index for rækken
-    {
-        CurrentChildren[i].gameObject.transform.localPosition = ChildStartPos + new Vector3(ChildColumn * ChildHSpacing + 50, -ChildRow * ChildVSpacing - 45, 0);
-
-        ChildColumn++;
-
-        // hvis den her row er fyldt, så gå et hak ned
-        if (ChildColumn >= maxItemsPerRow)
+        if (mArt.Id != CurrentArticles[index].GetComponent<ClothingItem>().primaryKey)
         {
-            ChildColumn = 0;
-            ChildRow++;
-        }
-    }
-}
-
-public void SortAndDisplayArticles(SORTTYPE? sortType = null)
-{
-
-    List<GameObject> newOrder = new List<GameObject>();
-    if (sortType.HasValue)
-        switch (sortType)
-        {
-            case SORTTYPE.PRICEASC:
-                newOrder = CurrentArticles.OrderBy(a => a.GetComponent<ClothingItem>().prize ?? float.MaxValue).ToList();
-                break;
-            case SORTTYPE.PRICEDESC:
-                newOrder = CurrentArticles.OrderByDescending(a => a.GetComponent<ClothingItem>().prize ?? float.MinValue).ToList();
-                break;
-            case SORTTYPE.CONDITIONASC:
-                newOrder = CurrentArticles.OrderBy(a => a.GetComponent<ClothingItem>().condition).ToList();
-                break;
-            case SORTTYPE.CONDITIONDESC:
-                newOrder = CurrentArticles.OrderByDescending(a => a.GetComponent<ClothingItem>().condition).ToList();
-                break;
+            ClothingItem ci = CurrentArticles[index].GetComponent<ClothingItem>();
+            ci.SetUpClothingItem(mArt);
         }
 
-    DestroyItems();
-    CurrentArticles = new List<GameObject>();
-    CurrentArticles.AddRange(newOrder);
-    OrderArticles();
+    }
+    public void InstantiateArticlesParent(int parentID, SORTTYPE? sortType = null, Filter childDemands = null)
+    {
+        List<MArticle> parentArticles = DBManager.GetArticlesByParentId(parentID);
+        InstantiateArticles(parentArticles, null, null, sortType, childDemands);
+    }
+    public void InstantiateArticlesOtherParent(int parentID, SORTTYPE? sortType = null, Filter childDemands = null)
+    {
+        List<MArticle> parentArticles = DBManager.GetAllArticlesExceptParent(LogIn.LoggedIn.Id);
+        InstantiateArticles(parentArticles, null, null, sortType, childDemands);
+    }
+
+    public void InstantiateArticlesChild(int childID, SORTTYPE? sortType = null, Filter childDemands = null)
+    {
+        List<MArticle> childArticles = DBManager.GetArticlesByChildId(childID);
+        InstantiateArticles(childArticles, null, null, sortType, childDemands);
+    }
+    public GameObject CreateArticle(MArticle article)
+    {
+        GameObject newArticle = Instantiate(ClothingPrefab, ParentObject);
+
+        ClothingItem articleItem = newArticle.GetComponent<ClothingItem>();
+        articleItem.SetUpClothingItem(article.Id, article.Name, article.ChildId, article.Size,
+            article.Condition, article.LifeTime, article.Prize, article.Description, article.ImageData);
+        return newArticle;
+    }
 
 
-}
+    public void OrderArticles()
+    {
+        for (int i = 0; i < CurrentArticles.Count; i++)  //index for rækken
+        {
+            CurrentArticles[i].gameObject.transform.localPosition = startPosition + new Vector3(currentColumn * horizontalSpacing + 50, -currentRow * verticalSpacing - 45, 0);
+
+            currentColumn++;
+
+            // hvis den her row er fyldt, så gå et hak ned
+            if (currentColumn >= maxItemsPerRow)
+            {
+                currentColumn = 0;
+                currentRow++;
+            }
+        }
+    }
+    public void CreateChildren()
+    {
+        DestroyChildren();
+        foreach (MChild mchild in UserInformation.Instance.UserChildren)
+        {
+            var c = Instantiate(ChildPrefab, ChildParentObject);
+            c.GetComponent<Child>().SetupChild(mchild);
+            CurrentChildren.Add(c);
+        }
+        OrderChildren();
+    }
+
+    public void OrderChildren()
+    {
+        for (int i = 0; i < UserInformation.Instance.UserChildren.Count; i++)  //index for rækken
+        {
+            CurrentChildren[i].gameObject.transform.localPosition = ChildStartPos + new Vector3(ChildColumn * ChildHSpacing + 50, -ChildRow * ChildVSpacing - 45, 0);
+
+            ChildColumn++;
+
+            // hvis den her row er fyldt, så gå et hak ned
+            if (ChildColumn >= maxItemsPerRow)
+            {
+                ChildColumn = 0;
+                ChildRow++;
+            }
+        }
+    }
+
+    public void SortAndDisplayArticles(SORTTYPE? sortType = null)
+    {
+
+        List<GameObject> newOrder = new List<GameObject>();
+        if (sortType.HasValue)
+            switch (sortType)
+            {
+                case SORTTYPE.PRICEASC:
+                    newOrder = CurrentArticles.OrderBy(a => a.GetComponent<ClothingItem>().prize ?? float.MaxValue).ToList();
+                    break;
+                case SORTTYPE.PRICEDESC:
+                    newOrder = CurrentArticles.OrderByDescending(a => a.GetComponent<ClothingItem>().prize ?? float.MinValue).ToList();
+                    break;
+                case SORTTYPE.CONDITIONASC:
+                    newOrder = CurrentArticles.OrderBy(a => a.GetComponent<ClothingItem>().condition).ToList();
+                    break;
+                case SORTTYPE.CONDITIONDESC:
+                    newOrder = CurrentArticles.OrderByDescending(a => a.GetComponent<ClothingItem>().condition).ToList();
+                    break;
+            }
+
+        DestroyItems();
+        CurrentArticles = new List<GameObject>();
+        CurrentArticles.AddRange(newOrder);
+        OrderArticles();
+
+
+    }
 
 }

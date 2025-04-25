@@ -97,6 +97,21 @@ public class ClothingItem : MonoBehaviour
         this.imageData = imageData;
         OpenOverlay();
     }
+    public void SetUpClothingItem(MArticle art)
+    {
+        this.primaryKey = art.Id;
+        this.childId = art.ChildId;
+        this.ClothingName = art.Name;
+
+        this.sizeCategory = art.Size;
+
+        this.condition = art.Condition;
+        this.lifeTime = art.LifeTime;
+        this.prize = art.Prize;
+        this.description = art.Description;
+        this.imageData = art.ImageData;
+        OpenOverlay();
+    }
 
     public void OpenOverlay()
     {
