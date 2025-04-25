@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,9 +20,11 @@ public class Signup : MonoBehaviour
     {
         if (Password.text == Gentag.text && Password.text != "" && Brugernavn.text != "" && Email.text != "")
         {
+            
             DBManager.AddParent(Brugernavn.text, 0, 0, Password.text, Email.text, 0);
             Login.SetActive(true);
             gameObject.SetActive(false);
+
         }
         else
         {
