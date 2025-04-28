@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/MindeStamme_Assets/Scenes/DBAddClothes.unity
     guid: 9342dfdc3d1b7fd42ad2d08ea0a85941
-  - enabled: 1
+  - enabled: 0
     path: Assets/NBK-Singuplogin/NBK-Singup.unity
     guid: c6d7a579ef29066468f00e60a467205d
+  - enabled: 1
+    path: Assets/NBK-SpawnItems/NBK-SpawnItems.unity
+    guid: 7d4e9638cbd3daf45ab9828bb5411ef8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
