@@ -71,6 +71,7 @@ public class SortScrollScript : MonoBehaviour
             {
                 Destroy(CurrentArticles[i].gameObject);
             }
+            CurrentArticles.Clear();
             if (StartObjects != null)
             {
                 startPosition = StartObjects[0].transform.position;

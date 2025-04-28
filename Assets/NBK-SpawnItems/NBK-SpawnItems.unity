@@ -10805,7 +10805,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1193796013}
   m_HandleRect: {fileID: 1193796012}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.99999994
   m_Size: 0.50186944
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -18316,8 +18316,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1449876242}
   m_HandleRect: {fileID: 1449876241}
   m_Direction: 2
-  m_Value: 1.0000001
-  m_Size: 0.5018695
+  m_Value: 1
+  m_Size: 0.50186944
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -18413,7 +18413,7 @@ MonoBehaviour:
   Password: {fileID: 735695616}
   Bottombar: {fileID: 5391360701010777791}
   loginPage: {fileID: 2041614167}
-  CreateTestData: 0
+  CreateTestData: 1
 --- !u!1 &1094580308
 GameObject:
   m_ObjectHideFlags: 0
@@ -22503,6 +22503,10 @@ PrefabInstance:
       propertyPath: img
       value: 
       objectReference: {fileID: 1351100534}
+    - target: {fileID: 1182820895246965340, guid: 3523f6726d966df41a6c102ca9f43438, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 269f2cc0e8f72ba48898330bc977ab48, type: 3}
     - target: {fileID: 4772437729258759465, guid: 3523f6726d966df41a6c102ca9f43438, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -2.065
@@ -22537,7 +22541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7101058935008754685, guid: 3523f6726d966df41a6c102ca9f43438, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7521194065576292916, guid: 3523f6726d966df41a6c102ca9f43438, type: 3}
       propertyPath: m_AnchorMax.y
@@ -25840,11 +25844,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553260198}
   m_CullTransparentMesh: 1
---- !u!1 &1556663913 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7101058935008754685, guid: 3523f6726d966df41a6c102ca9f43438, type: 3}
+--- !u!114 &1556663914 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 778598030240854271, guid: 3523f6726d966df41a6c102ca9f43438, type: 3}
   m_PrefabInstance: {fileID: 1351100532}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09086c15a13b41348b717de6345ea15e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1557078095
 GameObject:
   m_ObjectHideFlags: 0
@@ -37507,10 +37517,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1556663913}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1556663914}
+        m_TargetAssemblyTypeName: BasePage, Assembly-CSharp
+        m_MethodName: ChangePage
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -38352,12 +38362,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1351100533}
   - {fileID: 3284336202514304235}
   - {fileID: 2823765817137718298}
   - {fileID: 1807309106}
   - {fileID: 1454500626}
   - {fileID: 931159973219933399}
-  - {fileID: 1351100533}
   m_Father: {fileID: 877501385}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
