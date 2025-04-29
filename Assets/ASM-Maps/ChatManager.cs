@@ -34,7 +34,7 @@ public class ChatManager : MonoBehaviour
     public GameObject buyerMessagePrefab;
     public Transform buyerMessageOrigin;
     private int ClothingPoints;
-
+    private int clothingID;
     public float offset = 0f;
     
     
@@ -85,6 +85,7 @@ public class ChatManager : MonoBehaviour
         priceText.text = clothingItem.Prize.ToString();
         sellerName.text = DBManager.GetParentByArticleId(clothingItem.Id).Name.ToString();
         ClothingPoints = clothingItem.LifeTime.Value;
+        clothingID = clothingItem.Id;
         //distanceText.text = clothingItem.distance.ToString();   Skal have distancen
     }
     
@@ -153,7 +154,10 @@ public class ChatManager : MonoBehaviour
         confirmText.text = "Begge parter har acceptereret handlen (2/2)";
         yield return new WaitForSeconds(2f);
 
-        BuyMessage.text.Replace("?", ClothingPoints.ToString());
+        BuyMessage.text = BuyMessage.text.Replace("?", ClothingPoints.ToString());
+        MArticle m = DBManager.GetArticleById(clothingID);
+        m.ParentId = UserInformation.Instance.User.Id;
+        DBManager.UpdateArticle(m);
         confirmationPanel.SetActive(true);
     }
 }
