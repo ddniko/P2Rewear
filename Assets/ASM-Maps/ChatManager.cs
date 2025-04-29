@@ -13,6 +13,7 @@ public class ChatManager : MonoBehaviour
     public TextMeshProUGUI distanceText;
     
     public GameObject confirmationPanel;
+    public TextMeshProUGUI BuyMessage;
 
     public GameObject ChatOverlay;
     
@@ -32,6 +33,7 @@ public class ChatManager : MonoBehaviour
     public Transform userMessageOrigin;
     public GameObject buyerMessagePrefab;
     public Transform buyerMessageOrigin;
+    private int ClothingPoints;
 
     public float offset = 0f;
     
@@ -82,7 +84,7 @@ public class ChatManager : MonoBehaviour
         itemName.text = clothingItem.Name.ToString();
         priceText.text = clothingItem.Prize.ToString();
         sellerName.text = DBManager.GetParentByArticleId(clothingItem.Id).Name.ToString();
-
+        ClothingPoints = clothingItem.LifeTime.Value;
         //distanceText.text = clothingItem.distance.ToString();   Skal have distancen
     }
     
@@ -150,6 +152,8 @@ public class ChatManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
         confirmText.text = "Begge parter har acceptereret handlen (2/2)";
         yield return new WaitForSeconds(2f);
+
+        BuyMessage.text.Replace("?", ClothingPoints.ToString());
         confirmationPanel.SetActive(true);
     }
 }

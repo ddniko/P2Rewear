@@ -17,7 +17,7 @@ public class CreateChildmanager : MonoBehaviour
     public ChildSizeSelect CSS;
     public TagOrganizer TO;
     public TMP_InputField Centi;
-    private string size;
+    private string size = "";
     public CameraHandler camhand;
     public void CreateChild()
     {
@@ -54,7 +54,7 @@ public class CreateChildmanager : MonoBehaviour
     private bool CheckChild()
     {
         if (Name.text.Length <= 0) { Debug.Log("Name Lacking"); return false; }
-        if (int.Parse(size) == 0) { Debug.Log("Size Lacking"); return false; }
+        if (Centi.text.Length <= 0) { Debug.Log("Size Lacking"); return false; }
         if (Age1.value == 0 || Age2.value ==0 || Age3.value == 0)
             { Debug.Log("age invalid");  return false; }
         if (cgs.gender == GENDER.Unassigned)

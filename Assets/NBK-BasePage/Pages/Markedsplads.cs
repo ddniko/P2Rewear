@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
+using System.Text.RegularExpressions;
 
 public class Markedsplads : BasePage
 {
@@ -26,7 +27,7 @@ public class Markedsplads : BasePage
 
     public TextMeshProUGUI SetMaxPriceText;
     public TextMeshProUGUI maxPriceText;
-
+    public int maxPrice;
     string[] predefinedSizeRanges = { "50/56", "57/63", "64/70", "71/77", "78/84", "85/91", "92/98", "99/105", "106/112", "113/119", "120/128" };
     public int currentArticlesPage;
     int articlePages;
@@ -163,16 +164,34 @@ public class Markedsplads : BasePage
         TO.ClearTags();
     }
 
-    public float SetMaxDistance(TextMeshProUGUI inputText)
+    public float SetMaxDistance(int i)
     {
-        setMaxDistance = float.Parse(inputText.text);
+        setMaxDistance = i;
         return setMaxDistance;
     }
-
+    public void FilterByDistance()
+    {
+        DisplayMarketArticles(null, filter);
+    }
     public void SetMaxPrice()
     {
-        maxPriceText.text = SetMaxPriceText.text + " kr";
-        setMaxPrice = float.Parse(SetMaxPriceText.text);
+        string inputText = SetMaxPriceText.text.Trim().Replace(",", ".");
+
+        // Remove all characters except digits, dot and minus sign
+        inputText = Regex.Replace(inputText, @"[^0-9\.\-]", "");
+
+        if (float.TryParse(inputText, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float price))
+        {
+            setMaxPrice = price;
+            DisplayMarketArticles(null, filter);
+            maxPriceText.text = price.ToString("0.##") + " kr"; // format nicely, max 2 decimals
+        }
+        else
+        {
+            Debug.LogWarning("Invalid input for max price: " + inputText);
+            maxPriceText.text = "0 kr";
+            setMaxPrice = 0f;
+        }
     }
     private (int min, int max)? FindSizeRangeForValue(int size)
     {

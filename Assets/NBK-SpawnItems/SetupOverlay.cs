@@ -15,7 +15,7 @@ public class SetupOverlay : MonoBehaviour
     public TextMeshProUGUI sustainabilityScore;
     public TextMeshProUGUI Distance;
     public TextMeshProUGUI SellerId;
-
+    public TextMeshProUGUI TrustScore;
     public GameObject MindestammeObj;
 
 
@@ -44,8 +44,10 @@ public class SetupOverlay : MonoBehaviour
 
         if (SellerId != null || Distance != null)
         {
-            //Distance.text = Distance.ToString(); Mangler udregning til distance
+            Distance.text = DBManager.GetParentByArticleId(open.Id).Distance.ToString("F2");
+            Distance.text += " KM";
             SellerId.text = DBManager.GetParentByArticleId(open.Id).Name.ToString();
+            TrustScore.text = DBManager.GetParentByArticleId(open.Id).ReliabilityScore.ToString();
         }
 
         Sprite itemSprite = CreateImage(open.ImageData);

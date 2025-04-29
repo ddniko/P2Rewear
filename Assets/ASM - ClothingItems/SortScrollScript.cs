@@ -241,7 +241,28 @@ public class SortScrollScript : MonoBehaviour
 
         foreach (MArticle article in articles)
         {
-            if (childDemands == null || ArticleValidByFilter(childDemands, article))
+            bool isValid = true;
+
+            if (childDemands != null && !ArticleValidByFilter(childDemands, article))
+            {
+                isValid = false;
+            }
+
+            if (maxDistance.HasValue && maxDistance != 0)
+            {
+                var parent = DBManager.GetParentById(article.ParentId);
+                if (parent == null || parent.Distance > maxDistance.Value)
+                {
+                    isValid = false;
+                }
+            }
+
+            if (maxPrice.HasValue && article.Prize > maxPrice.Value && article.Prize!= 0)
+            {
+                isValid = false;
+            }
+
+            if (isValid)
             {
                 filteredArticles.Add(article);
             }

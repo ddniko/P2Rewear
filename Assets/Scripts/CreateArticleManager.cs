@@ -12,7 +12,7 @@ public class CreateArticleManager : BasePage
     public GameObject prize;
     public TextMeshProUGUI prizeText;
     public Slider Cond;
-    public TMP_Dropdown Size;
+    public TextMeshProUGUI Size;
     public TMP_Dropdown Cat;
     public TextMeshProUGUI Desc;
     public TagOrganizer TO;
@@ -41,7 +41,7 @@ public class CreateArticleManager : BasePage
     private bool CheckArticle()
     {
         if (Name.text.Length <= 0) { Debug.Log("Name Lacking"); return false; }
-        if (Size.value == 0) { Debug.Log("Size Lacking"); return false; }
+        if (Size.text.Length == 0) { Debug.Log("Size Lacking"); return false; }
         if (Cat.value == 0) { Debug.Log("Value Lacking"); return false; }
         if (Forsale.isOn && prizeText.text.Length <= 0) { Debug.Log("Prize Lacking"); return false; }
         if (Forsale.isOn && prizeText.text.Length <= 0)
@@ -59,7 +59,7 @@ public class CreateArticleManager : BasePage
 
         art = new MArticle();
         art.Name = Name.text;
-        art.Size = Size.value.ToString();
+        art.Size = Size.text.ToString();
         if (Forsale.isOn)
         {
             float parsedPrize;
@@ -80,7 +80,7 @@ public class CreateArticleManager : BasePage
         }
         art.Tags = tags;
         art.ImageData = ConvertImageToByteArray(img);
-
+        art.ParentId = UserInformation.Instance.User.Id;
         DBManager.AddArticle(art);
         //faillog.text = $"{Application.persistentDataPath}/clothing.db";
         
