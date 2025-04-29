@@ -8,7 +8,7 @@ public class ChildButton : MonoBehaviour
     public GameObject mindeskovOverlay;
 
     //set image af child
-
+    int childId;
     private void Start()
     {
 
@@ -17,12 +17,16 @@ public class ChildButton : MonoBehaviour
         //Sprite itemSprite = CreateImage(thisChild.ImageData);
         //clothingImage.sprite = itemSprite != null ? itemSprite : placeholderSprite;
     }
-
+    public void SetupChild(MChild child)
+    {
+        gameObject.GetComponent<Image>().sprite = CreateImage(child.Image);
+        childId = child.Id;
+    }
     public void ClickChild()
     {
         mindeskovOverlay.SetActive(true);
         //mindeskovOverlay.GetComponent<MindeskovOverlay>().OpenOverlay(thisChild);
-        mindeskovOverlay.GetComponent<MindeskovOverlay>().OpenOverlay(DBManager.GetChildById(1));
+        mindeskovOverlay.GetComponent<MindeskovOverlay>().OpenOverlay(DBManager.GetChildById(childId));
 
     }
 

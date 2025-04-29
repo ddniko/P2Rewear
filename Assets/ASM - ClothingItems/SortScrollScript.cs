@@ -44,12 +44,14 @@ public class SortScrollScript : MonoBehaviour
     }
     private void OnEnable()
     {
-
-        startPosition = StartObjects[0].transform.position;
-        horizontalSpacing = Mathf.Abs(StartObjects[0].transform.localPosition.x - StartObjects[1].transform.localPosition.x);
-        verticalSpacing = Mathf.Abs(StartObjects[0].transform.localPosition.y - StartObjects[2].transform.localPosition.y);
-        currentColumn = 0;
-        currentRow = 0;
+        if (ClothingPrefab != null)
+        {
+            startPosition = StartObjects[0].transform.position;
+            horizontalSpacing = Mathf.Abs(StartObjects[0].transform.localPosition.x - StartObjects[1].transform.localPosition.x);
+            verticalSpacing = Mathf.Abs(StartObjects[0].transform.localPosition.y - StartObjects[2].transform.localPosition.y);
+            currentColumn = 0;
+            currentRow = 0;
+        }
         CurrentChildren = new List<GameObject>();
         ChildStartPos = ChildStartObjects[0].transform.position;
         ChildHSpacing = Mathf.Abs(ChildStartObjects[0].transform.localPosition.x - ChildStartObjects[1].transform.localPosition.x);
@@ -74,11 +76,15 @@ public class SortScrollScript : MonoBehaviour
             CurrentArticles.Clear();
             if (StartObjects != null)
             {
-                startPosition = StartObjects[0].transform.position;
-                horizontalSpacing = Mathf.Abs(StartObjects[0].transform.localPosition.x - StartObjects[1].transform.localPosition.x);
-                verticalSpacing = Mathf.Abs(StartObjects[0].transform.localPosition.y - StartObjects[2].transform.localPosition.y);
-                currentColumn = 0;
-                currentRow = 0;
+                if (StartObjects.Count() > 0)
+                {
+                    startPosition = StartObjects[0].transform.position;
+                    horizontalSpacing = Mathf.Abs(StartObjects[0].transform.localPosition.x - StartObjects[1].transform.localPosition.x);
+                    verticalSpacing = Mathf.Abs(StartObjects[0].transform.localPosition.y - StartObjects[2].transform.localPosition.y);
+                    currentColumn = 0;
+                    currentRow = 0;
+                }
+
             }
         }
     }
@@ -257,7 +263,7 @@ public class SortScrollScript : MonoBehaviour
                 }
             }
 
-            if (maxPrice.HasValue && article.Prize > maxPrice.Value && article.Prize!= 0)
+            if (maxPrice.HasValue && article.Prize > maxPrice.Value && article.Prize != 0)
             {
                 isValid = false;
             }
@@ -352,8 +358,16 @@ public class SortScrollScript : MonoBehaviour
         foreach (MChild mchild in UserInformation.Instance.UserChildren)
         {
             var c = Instantiate(ChildPrefab, ChildParentObject);
-            c.GetComponent<Child>().SetupChild(mchild);
-            CurrentChildren.Add(c);
+            if (c.GetComponent<Child>() != null)
+            {
+                c.GetComponent<Child>().SetupChild(mchild);
+            }
+            else
+            {
+                c.AddComponent<Child>();
+                c.GetComponent<Child>().SetupChild(mchild);
+            }
+                CurrentChildren.Add(c);
         }
         OrderChildren();
     }
