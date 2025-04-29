@@ -20,6 +20,7 @@ public class Mindeskov : BasePage
         {
             MChild mChild = child.GetComponent<Child>().GetChild;
             child.GetComponent<ChildButton>().SetupChild(mChild);
+            child.SetActive(true);
         }
     }
 }
