@@ -29,7 +29,8 @@ public class Profil : BasePage
         Name.text = DBManager.GetParentById(UserId).Name.ToString();
         ri = UserInformation.Instance.ProfilePic;
         //DBManager.Init();
-   OwnClothes = DBManager.GetArticlesByParentId(UserInformation.Instance.User.Id);
+        OwnClothes = new List<MArticle>();
+        OwnClothes = DBManager.GetArticlesWithParentIdDirectly(UserInformation.Instance.User.Id);
 
         SortScript = GetComponent<SortScrollScript>();
         SortScript.ParentObject = ViewPort.transform;

@@ -299,7 +299,11 @@ public static class DBManager
 
         return allArticles;
     }
-
+    public static List<MArticle> GetArticlesWithParentIdDirectly(int parentId)
+    {
+        var connection = GetConnection();
+        return connection.Table<MArticle>().Where(article => article.ParentId == parentId).ToList();
+    }
     // Opdaterer et stykke tøj i databasen
     public static void UpdateArticle(MArticle article)
     {
