@@ -20,9 +20,9 @@ public class Markedsplads : BasePage
 
     public static List<MArticle> AllOtherClothes;
 
-    private float setMaxDistance;
+    private float setMaxDistance = 10000f;
     public TagOrganizer TO;
-    private float setMaxPrice;
+    private float setMaxPrice = 100000f;
     private Filter filter;
 
     public TextMeshProUGUI SetMaxPriceText;
@@ -62,6 +62,7 @@ public class Markedsplads : BasePage
         DisplayMarketArticles();
         OnScrollThresholdReached += HandleScrollThreshold;
         currentArticlesPage = 1;
+        DisplayMarketArticles(null, null);
     }
 
     private void OnDisable()

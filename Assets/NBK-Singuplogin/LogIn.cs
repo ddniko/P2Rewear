@@ -18,8 +18,8 @@ public class LogIn : MonoBehaviour
     public bool CreateTestData;
     private void Awake()
     {
-        
-        if (CreateTestData)
+        DBManager.Init();
+        if (CreateTestData &&  DBManager.GetAllArticles().Count <= 5)
             TestDataGenerator.GenerateRandomTestData(100);
 
     }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -81,6 +82,18 @@ public class CreateArticleManager : BasePage
         art.Tags = tags;
         art.ImageData = ConvertImageToByteArray(img);
         art.ParentId = UserInformation.Instance.User.Id;
+        art.ChildId = UserInformation.Instance.UserChildren[0].Id;
+        //art.Prize = int.TryParse(prizeText.text);
+        Debug.Log("Article Created" + prizeText.text +"dsadsa");
+        if (float.TryParse(prizeText.text, out float prize))
+        {
+            art.Prize = prize;
+        }
+        else
+        {
+            art.Prize = 30;
+        }
+        art.Condition = Cond.value;
         DBManager.AddArticle(art);
         //faillog.text = $"{Application.persistentDataPath}/clothing.db";
         

@@ -872,7 +872,7 @@ RectTransform:
   m_GameObject: {fileID: 1401868022167631240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3672754, y: 1.3672754, z: 1.3672754}
+  m_LocalScale: {x: 1.368, y: 1.368, z: 1.368}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4536047843817690043}
@@ -1003,7 +1003,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1349180431371488363, guid: 25f84473029cedc44977dbea08e577e0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1846,7 +1846,7 @@ RectTransform:
   m_GameObject: {fileID: 4631790115355814732}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -15007.949}
-  m_LocalScale: {x: 225.11925, y: 225.11925, z: 225.11925}
+  m_LocalScale: {x: 0.99546564, y: 0.99546564, z: 0.99546564}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7170364491182765206}
@@ -1864,7 +1864,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 90044.04, y: 190090.44}
+  m_AnchoredPosition: {x: -0.064501, y: 6.3938}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7810268447145696142
@@ -1882,7 +1882,7 @@ MonoBehaviour:
   titleInput: {fileID: 4154490086883656541}
   descriptionInput: {fileID: 4433030457840937675}
   cameraHandlerObject: {fileID: 810112241727090699}
-  memoryImage: {fileID: 0}
+  memoryImage: {fileID: 4653654220841570722}
 --- !u!1 &4747578277826276360
 GameObject:
   m_ObjectHideFlags: 0
@@ -2469,8 +2469,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 412, y: 917}
+  m_AnchoredPosition: {x: -36.38, y: 18.19}
+  m_SizeDelta: {x: 532.93, y: 1140.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3641656748970184107
 CanvasRenderer:
@@ -2672,7 +2672,7 @@ RectTransform:
   m_GameObject: {fileID: 7246360662090928478}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -15007.949}
-  m_LocalScale: {x: 166.75499, y: 166.75499, z: 166.75499}
+  m_LocalScale: {x: 0.75383717, y: 0.75383717, z: 0.75383717}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6535842395045824752}
@@ -2688,7 +2688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 90044.04, y: 190090.47}
+  m_AnchoredPosition: {x: -3, y: -3}
   m_SizeDelta: {x: 445, y: 917}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6740910498219158828
@@ -2706,7 +2706,7 @@ MonoBehaviour:
   titleText: {fileID: 5984801351333450815}
   descriptionText: {fileID: 8294076594924598848}
   dateText: {fileID: 1397390166772188823}
-  image: {fileID: 0}
+  image: {fileID: 8313648643639402208}
 --- !u!1 &7491398468129884660
 GameObject:
   m_ObjectHideFlags: 0
@@ -3234,6 +3234,7 @@ GameObject:
   - component: {fileID: 8595750711477415068}
   - component: {fileID: 5914009022758023552}
   - component: {fileID: 8210960598986255175}
+  - component: {fileID: 2471805239374906684}
   m_Layer: 5
   m_Name: MindeStammeOverlay-BG (1)
   m_TagString: Untagged
@@ -3298,6 +3299,62 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2471805239374906684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8407704440327338308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 8210960598986255175}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7246360662090928478}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8461406763881678625
 GameObject:
   m_ObjectHideFlags: 0
@@ -3560,10 +3617,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4631790115355814732}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 7810268447145696142}
+        m_TargetAssemblyTypeName: CreateMemory, Assembly-CSharp
+        m_MethodName: CloseOverlay
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3582,7 +3639,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1991420608436810412, guid: c308dded8ac99674f880bb769f145459, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3151788817601180025, guid: c308dded8ac99674f880bb769f145459, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3741,9 +3798,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5435217166284258075, guid: e8d68b0f3a634284bb6eab9866b8f6ea, type: 3}
-        m_TargetAssemblyTypeName: BtnScript, Assembly-CSharp
-        m_MethodName: OnAddMemClick
+      - m_Target: {fileID: 8432241198938974628}
+        m_TargetAssemblyTypeName: Scroll, Assembly-CSharp
+        m_MethodName: OpenCreateOverlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

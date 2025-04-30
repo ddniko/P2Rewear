@@ -155,9 +155,18 @@ public class ChatManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         BuyMessage.text = BuyMessage.text.Replace("?", ClothingPoints.ToString());
-        MArticle m = DBManager.GetArticleById(clothingID);
-        m.ParentId = UserInformation.Instance.User.Id;
-        DBManager.UpdateArticle(m);
+        
         confirmationPanel.SetActive(true);
     }
+
+    public void ClothingTransfer()
+    {
+        MArticle m = DBManager.GetArticleById(clothingID);
+        m.ParentId = UserInformation.Instance.User.Id;
+        m.ChildId = DBManager.GetChildrenByParentId(UserInformation.Instance.User.Id)[0].Id;
+        DBManager.UpdateArticle(m);
+    }
+    
+    
+    
 }

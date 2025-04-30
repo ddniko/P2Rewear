@@ -28,13 +28,13 @@ public class SortScrollScript : MonoBehaviour
     public int ChildColumn = 0;
     public Vector3 ChildStartPos = Vector3.zero;
     public GameObject[] ChildStartObjects;
-
+    
 
 
 
     void Start()
     {
-
+        //InstantiateAllArticles();
     }
 
     // Update is called once per frame
@@ -92,7 +92,8 @@ public class SortScrollScript : MonoBehaviour
     {
         if (CurrentChildren != null)
         {
-            for (int i = 0; i < CurrentChildren.Count; i++)
+            int currentchildcount = CurrentChildren.Count;
+            for (int i = 0; i < currentchildcount; i++)
             {
                 Destroy(CurrentChildren[i].gameObject);
             }
@@ -416,6 +417,11 @@ public class SortScrollScript : MonoBehaviour
         OrderArticles();
 
 
+    }
+
+    public void ClearChildrenList()
+    {
+        CurrentChildren.Clear();
     }
 
 }

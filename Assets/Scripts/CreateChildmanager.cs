@@ -47,9 +47,11 @@ public class CreateChildmanager : MonoBehaviour
             Size = size,
             Age = SelectAge(),
             Tags = tags,
+            Image = ConvertImageToByteArray(img)
         };
         DBManager.AddChild(mChild);
         gameObject.SetActive(false);
+        UserInformation.Instance.UserChildren = DBManager.GetChildrenByParentId(LogIn.LoggedIn.Id);
     }
     private bool CheckChild()
     {
@@ -149,7 +151,7 @@ public class CreateChildmanager : MonoBehaviour
     {
         if (Age1.value == 0 || Age2.value == 0 || Age3.value == 0)
         {
-            Debug.LogWarning("Der mangler valg på Ages");
+            Debug.LogWarning("Der mangler valg pï¿½ Ages");
             return string.Empty;
         }
         else

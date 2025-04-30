@@ -1351,6 +1351,7 @@ MonoBehaviour:
   SellerId: {fileID: 4055389430678592807}
   TrustScore: {fileID: 7429848732186854816}
   MindestammeObj: {fileID: 0}
+  itemSprite: {fileID: 8117467217192878606}
   Chat: {fileID: 0}
   BottomBar: {fileID: 0}
   clothingImage: {fileID: 8117467217192878606}
@@ -3171,6 +3172,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8004839151044946742}
     m_Modifications:
+    - target: {fileID: 1096669854551334767, guid: 53c49a12f1595b543962419098e327ce, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096669854551334767, guid: 53c49a12f1595b543962419098e327ce, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.56
+      objectReference: {fileID: 0}
     - target: {fileID: 3609867214128207602, guid: 53c49a12f1595b543962419098e327ce, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.37

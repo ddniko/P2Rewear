@@ -1227,10 +1227,12 @@ MonoBehaviour:
   sustainabilityScore: {fileID: 7768321827884262958}
   Distance: {fileID: 0}
   SellerId: {fileID: 0}
+  TrustScore: {fileID: 0}
   MindestammeObj: {fileID: 0}
+  itemSprite: {fileID: 8696379039707520277}
   Chat: {fileID: 0}
   BottomBar: {fileID: 0}
-  clothingImage: {fileID: 4248458123486256570}
+  clothingImage: {fileID: 0}
   placeholderSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &6867375633076235933
 GameObject:
@@ -1875,7 +1877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 970079193502737312}
   - component: {fileID: 4342664277991278139}
-  - component: {fileID: 4248458123486256570}
+  - component: {fileID: 8696379039707520277}
   m_Layer: 5
   m_Name: ClothingPicture
   m_TagString: Untagged
@@ -1910,7 +1912,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7987911891244931429}
   m_CullTransparentMesh: 1
---- !u!114 &4248458123486256570
+--- !u!114 &8696379039707520277
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

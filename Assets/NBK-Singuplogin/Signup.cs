@@ -14,7 +14,7 @@ public class Signup : MonoBehaviour
 
     private void Awake()
     {
-        DBManager.Init();
+        
     }
     public void MakeAccount()
     {

@@ -945,10 +945,10 @@ RectTransform:
   - {fileID: 4204851881247579079}
   - {fileID: 7066707720360710058}
   - {fileID: 1694803170100149722}
-  - {fileID: 2497781964536508257}
   - {fileID: 6341451386967323345}
   - {fileID: 3545691712987363016}
   - {fileID: 5679982094199129208}
+  - {fileID: 2497781964536508257}
   - {fileID: 431204028969993806}
   - {fileID: 5529188864943053401}
   - {fileID: 99011160124024581}
@@ -4713,7 +4713,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.065, y: -172.96}
+  m_AnchoredPosition: {x: -2.065, y: -165}
   m_SizeDelta: {x: 315.87, y: 108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6264537959643577747
@@ -5410,7 +5410,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Reliability Score
+  m_text: "Beskrivelse af t\xF8jet"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6169,7 +6169,7 @@ MonoBehaviour:
   prize: {fileID: 9214376790355641359}
   prizeText: {fileID: 7020768449238474069}
   Cond: {fileID: 1953984982847552362}
-  Size: {fileID: 0}
+  Size: {fileID: 3617367110694904159}
   Cat: {fileID: 635198923147423529}
   Desc: {fileID: 5707565454361554021}
   TO: {fileID: 6753086456450832027}
@@ -7066,6 +7066,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: CreateArticleManager, Assembly-CSharp
         m_MethodName: CreateArticle
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7521561982932450095}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

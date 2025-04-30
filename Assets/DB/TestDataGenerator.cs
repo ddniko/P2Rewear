@@ -75,7 +75,7 @@ public static class TestDataGenerator
                         ArticleID = articleId,
                         Title = memoryTitles[rand.Next(memoryTitles.Length)],
                         DateAdded = DateTime.Now.ToString("yyyy-MM-dd"),
-                        Description = "du fik engang en klodset hånder i den her",
+                        Description = "Idag var vi ud og besøge bedstemor og bedstefair",
                         ImageData = new byte[0]
                     };
                     DBManager.AddMemory(memory);

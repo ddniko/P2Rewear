@@ -25,4 +25,10 @@ public class Child : MonoBehaviour
         else
             return null;
     }
+
+    void OnDisable()
+    {
+        Destroy(gameObject);
+        
+    }
 }
