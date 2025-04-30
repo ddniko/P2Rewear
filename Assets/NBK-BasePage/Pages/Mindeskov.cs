@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using TMPro;
-using static Unity.VisualScripting.Metadata;
+
 
 public class Mindeskov : BasePage
 {
