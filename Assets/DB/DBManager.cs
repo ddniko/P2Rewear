@@ -233,7 +233,7 @@ public static class DBManager
         List<MArticle> AllOtherClothes = new List<MArticle>();
         for (int i = 0; i < AllClothes.Count; i++)
         {
-            if (DBManager.GetParentByArticleId(AllClothes[i].Id).Id != parentID)
+            if (GetParentByArticleId(AllClothes[i].Id).Id != parentID)
             {
                 AllOtherClothes.Add(AllClothes[i]);
             }

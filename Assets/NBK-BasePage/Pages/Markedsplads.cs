@@ -37,7 +37,6 @@ public class Markedsplads : BasePage
 
     public event Action OnScrollThresholdReached;
 
-
     void Update()
     {
         if (!scrollEventTriggered && scrollRect.verticalNormalizedPosition <= scrollTriggerThreshold)
@@ -131,6 +130,7 @@ public class Markedsplads : BasePage
 
                 var filter = CreateFilterFromChild(mChild);
                 childComponent.childFilter = filter;
+                
 
                 button.onClick.AddListener(() => DisplayMarketArticles(null, filter));
             }
@@ -139,9 +139,17 @@ public class Markedsplads : BasePage
     }
     public void DisplayMarketArticles(SORTTYPE? st = null, Filter filter = null)
     {
-
+        scrollRect.verticalNormalizedPosition = 1f;
+        //if (filter != null)
+        //{
+        //    foreach (string demand in filter.tags)
+        //    {
+        //        Debug.Log("Filter is" + demand);
+        //    }
+        //}
         int totalPages = DBManager.GetTotalPagesForArticles(20);
         AllOtherClothes = DBManager.GetAllArticlesExceptParent(UserInformation.Instance.User.Id, currentArticlesPage, 20);
+        //AllOtherClothes = DBManager.GetAllArticlesExceptParent(UserInformation.Instance.User.Id);
 
         // if (LogIn.LoggedIn != null)
         //   AllOtherClothes = DBManager.GetAllArticlesExceptParent(LogIn.LoggedIn.Id);
@@ -172,7 +180,7 @@ public class Markedsplads : BasePage
     }
     public void FilterByDistance()
     {
-        DisplayMarketArticles(null, filter);
+        DisplayMarketArticles(null, filter); //mangler
     }
     public void SetMaxPrice()
     {

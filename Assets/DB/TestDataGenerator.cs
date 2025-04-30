@@ -12,7 +12,7 @@ public static class TestDataGenerator
     private static string[] childNames = { "Emma", "Oscar", "Ida", "Noah", "Freja", "Lucas", "Maja", "William", "Sofie", "Oliver" };
     private static string[] clothingCategories = { "Shirt", "Pants", "Jacket", "Dress", "Sweater" };
     private static string[] memoryTitles = { "Birthday", "School Start", "Picnic", "Winter Trip", "Visit Grandma" };
-    private static string[] tags = { "Sko", "Shirt", "Sweater", "Kjole", "Handsker", "Undertøj", "Blå", "Rød", "Lyserød", "Gul", "Grøn" };
+    private static string[] tags = { "Trøje", "T-shirt", "Hættetrøje", "Kjole", "Bukser", "Shorts", "Overtøj", "Undertøj", "strømper", "Badetøj", "Nattøj", "Overalls", "Sæt", "Sko", "Heldragt", "Tøj til babyer" };
     static string[] predefinedSizeRanges = { "50/56", "57/63", "64/70", "71/77", "78/84", "85/91", "92/98", "99/105", "106/112", "113/119", "120/128" };
     public static void GenerateRandomTestData(int TestAmount)
     {
@@ -63,7 +63,7 @@ public static class TestDataGenerator
                         LifeTime = rand.Next(1, 6),
                         Prize = (float)(rand.NextDouble() * 100),
                         Description = "Randomly generated clothing article.",
-                        Tags = $"{tags[rand.Next(tags.Length)]},{tags[rand.Next(tags.Length)]}",
+                        Tags = $"{tags[rand.Next(tags.Length)]}",
                         ImageData = new byte[0]
                     };
                     DBManager.AddArticle(article);

@@ -1229,10 +1229,10 @@ MonoBehaviour:
   SellerId: {fileID: 0}
   TrustScore: {fileID: 0}
   MindestammeObj: {fileID: 0}
-  itemSprite: {fileID: 8696379039707520277}
+  Tag: {fileID: 7242424681937427314}
   Chat: {fileID: 0}
   BottomBar: {fileID: 0}
-  clothingImage: {fileID: 0}
+  clothingImage: {fileID: 8696379039707520277}
   placeholderSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &6867375633076235933
 GameObject:
@@ -1554,8 +1554,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -565, y: -544}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -313.09827, y: -544}
+  m_SizeDelta: {x: 431.377, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8703978810043264885
 CanvasRenderer:

@@ -116,14 +116,21 @@ public class ClothingItem : MonoBehaviour
     public void OpenOverlay()
     {
         if (prize == null)
-            priceText.text = "free";
+            priceText.text = "Gratis";
         else
-            priceText.text = $"${prize:F2}";
+            priceText.text = $"{prize:F2} kr.";
         //nameText.text = this.name;
         //describtionText.text = description;
-        sizeText.text = sizeCategory;
+        sizeText.text = sizeCategory + " cm";
         conditionText.text = $"{condition:F0}/5";
-        sustainabilityScore.text = lifeTime.ToString();
+        if (lifeTime == null)
+        {
+            sustainabilityScore.text = "0";
+        }
+        else
+        {
+            sustainabilityScore.text = lifeTime.ToString();
+        }
 
 
         // Load image fra bytes stored. skal implementer en placeholder

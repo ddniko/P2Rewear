@@ -20,6 +20,7 @@ public class CreateArticleManager : BasePage
     public CameraHandler camhand;
     public DBVisualizer DBV;
     public RawImage img;
+    public TMP_InputField price;
     MArticle art;
     public TextMeshProUGUI faillog;
     public bool GenerateData;
@@ -64,35 +65,34 @@ public class CreateArticleManager : BasePage
         if (Forsale.isOn)
         {
             float parsedPrize;
-            if (float.TryParse(prizeText.text.Replace(',', '.'), System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out parsedPrize))
+            if (float.TryParse(price.text.Replace(',', '.'), System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out parsedPrize))
             {
                 art.Prize = parsedPrize;
             }
+            else Debug.Log("Parsing Failed");
         }
-        string tags = "";
-        for (int i = 0; i < TO.tagValues.Count; i++)
-        {
-            if (i == TO.tagValues.Count - 1)
-            {
-                tags += TO.tagValues[i].ToString();
-                continue;
-            }
-            tags += TO.tagValues[i].ToString() + ", ";
-        }
-        art.Tags = tags;
+
+        //string tags = "";
+        //for (int i = 0; i < TO.tagValues.Count; i++)
+        //{
+        //    if (i == TO.tagValues.Count - 1)
+        //    {
+        //        tags += TO.tagValues[i].ToString();
+        //        continue;
+        //    }
+        //    tags += TO.tagValues[i].ToString() + ", ";
+        //}
+        //art.Tags = tags;
+
+        art.Tags = Cat.options[Cat.value].text;
         art.ImageData = ConvertImageToByteArray(img);
         art.ParentId = UserInformation.Instance.User.Id;
         art.ChildId = UserInformation.Instance.UserChildren[0].Id;
-        //art.Prize = int.TryParse(prizeText.text);
-        Debug.Log("Article Created" + prizeText.text +"dsadsa");
-        if (float.TryParse(prizeText.text, out float prize))
-        {
-            art.Prize = prize;
-        }
-        else
-        {
-            art.Prize = 30;
-        }
+        art.Description = Desc.text.ToString();
+
+        
+
+
         art.Condition = Cond.value;
         DBManager.AddArticle(art);
         //faillog.text = $"{Application.persistentDataPath}/clothing.db";

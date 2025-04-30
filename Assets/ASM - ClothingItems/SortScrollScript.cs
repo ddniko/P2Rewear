@@ -143,40 +143,66 @@ public class SortScrollScript : MonoBehaviour
             if (int.TryParse(art.Size, out int articleSize))
             {
                 if (articleSize < demands.MinSize)
+                {
                     matches = false;
+                    Debug.Log("Too small");
+                }
 
                 if (articleSize > demands.MaxSize)
+                {
                     matches = false;
+                    Debug.Log("Too big");
+                }
             }
-
         }
         if (demands.maxPrize != -1)
         {
             if (!art.Prize.HasValue || art.Prize.Value > demands.maxPrize)
+            {
                 matches = false;
+                Debug.Log("price not met");
+            }
         }
         if (demands.minCondition.HasValue)
         {
             if (art.Condition < demands.minCondition.Value)
+            {
                 matches = false;
+                Debug.Log("Condition not met");
+            }
         }
         if (!string.IsNullOrEmpty(art.Tags) && demands.tags.Count > 0)
         {
-            var articleTags = new HashSet<string>(art.Tags.Split(','), StringComparer.OrdinalIgnoreCase);
-            bool allTagsMatch = true;
+            //var articleTags = new HashSet<string>(art.Tags.Split(','), StringComparer.OrdinalIgnoreCase);
+            //bool allTagsMatch = true;
 
+            //foreach (var tag in demands.tags)
+            //{
+            //    var trimmedTag = tag.Trim();
+            //    if (!articleTags.Contains(trimmedTag))
+            //    {
+            //        allTagsMatch = false;
+            //        break;
+            //    }
+            //}
+
+            //if (!allTagsMatch)
+            //    matches = false;
+            bool oneTagMatch = false;
             foreach (var tag in demands.tags)
             {
                 var trimmedTag = tag.Trim();
-                if (!articleTags.Contains(trimmedTag))
+                if (art.Tags == trimmedTag)
                 {
-                    allTagsMatch = false;
+                    oneTagMatch = true;
                     break;
                 }
             }
-
-            if (!allTagsMatch)
+            if (!oneTagMatch)
+            {
                 matches = false;
+                Debug.Log("Tags not met");
+            }
         }
         return matches;
     }

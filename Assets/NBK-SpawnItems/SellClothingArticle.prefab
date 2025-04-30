@@ -887,8 +887,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -565, y: -482}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -317.83, y: -482}
+  m_SizeDelta: {x: 427.11, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1816194409596154851
 CanvasRenderer:
@@ -1351,7 +1351,7 @@ MonoBehaviour:
   SellerId: {fileID: 4055389430678592807}
   TrustScore: {fileID: 7429848732186854816}
   MindestammeObj: {fileID: 0}
-  itemSprite: {fileID: 8117467217192878606}
+  Tag: {fileID: 1138317755760495420}
   Chat: {fileID: 0}
   BottomBar: {fileID: 0}
   clothingImage: {fileID: 8117467217192878606}

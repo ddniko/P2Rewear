@@ -17,6 +17,7 @@ public class SetupOverlay : MonoBehaviour
     public TextMeshProUGUI SellerId;
     public TextMeshProUGUI TrustScore;
     public GameObject MindestammeObj;
+    public TextMeshProUGUI Tag;
 
 
     public GameObject Chat;
@@ -40,7 +41,15 @@ public class SetupOverlay : MonoBehaviour
         sizeText.text = open.Size.ToString();
         //category something here
         conditionText.text = open.Condition.ToString() + "/5";
-        sustainabilityScore.text = open.LifeTime.ToString();
+        Tag.text = "Tag: " + open.Tags.ToString();
+        if (open.LifeTime == null)
+        {
+            sustainabilityScore.text = "0";
+        }
+        else
+        {
+            sustainabilityScore.text = open.LifeTime.ToString();
+        }
 
         if (SellerId != null || Distance != null)
         {
@@ -50,8 +59,15 @@ public class SetupOverlay : MonoBehaviour
             TrustScore.text = DBManager.GetParentByArticleId(open.Id).ReliabilityScore.ToString();
         }
 
-        Sprite itemSprite = CreateImage(open.ImageData);
-        clothingImage.sprite = itemSprite != null ? itemSprite : placeholderSprite;
+        if (DBManager.GetArticleById(id).ImageData != null)
+        {
+            clothingImage.sprite = CreateImage(DBManager.GetArticleById(id).ImageData);
+        }
+        else
+        {
+            clothingImage.sprite = placeholderSprite;
+        }
+
 
         //something to set parent profile picture down here :)
 

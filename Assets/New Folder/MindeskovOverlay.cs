@@ -30,7 +30,7 @@ public class MindeskovOverlay : MonoBehaviour
         mindeskovOverlay.SetActive(true);
         List<MArticle> childClothes = DBManager.GetArticlesByChildId(child.Id);
 
-        SortScript = new SortScrollScript();
+        //SortScript = new SortScrollScript();
         SortScript.ParentObject = ViewPort.transform;
         ClothingPrefab.GetComponent<OverlayMessage>().ChildId = child.Id;
         SortScript.ClothingPrefab = ClothingPrefab;
