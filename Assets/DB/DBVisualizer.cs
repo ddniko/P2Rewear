@@ -71,7 +71,7 @@ public class DBVisualizer : MonoBehaviour
     }
 
 
-    public void AddArticle(string name, int childId, string sizeCategory, int category, float condition, int? lifeTime, float prize, string description, byte[] imageData )
+    public void AddArticle(string name, int childId, string sizeCategory, string category, float condition, int? lifeTime, float prize, string description, byte[] imageData )
     {
         DBManager.AddArticle(name, childId, category, sizeCategory, condition, lifeTime, prize, description, imageData);
         DisplayArticles(childId);

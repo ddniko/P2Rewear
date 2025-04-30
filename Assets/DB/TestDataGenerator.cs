@@ -12,7 +12,7 @@ public static class TestDataGenerator
     private static string[] childNames = { "Emma", "Oscar", "Ida", "Noah", "Freja", "Lucas", "Maja", "William", "Sofie", "Oliver" };
     private static string[] clothingCategories = { "Shirt", "Pants", "Jacket", "Dress", "Sweater" };
     private static string[] memoryTitles = { "Birthday", "School Start", "Picnic", "Winter Trip", "Visit Grandma" };
-    private static string[] tags = { "Trøje", "T-shirts", "Hættetrøje", "Kjole", "Bukser", "Shorts", "Overtøj", "Undertøj", "strømper", "Badetøj", "Nattøj", "Overalls", "Sæt", "Sko", "Heldragt", "Tøj til babyer" };
+    private static string[] tags = { "Trøje", "T-shirt", "Hættetrøje", "Kjole", "Bukser", "Shorts", "Overtøj", "Undertøj", "strømper", "Badetøj", "Nattøj", "Overalls", "Sæt", "Sko", "Heldragt", "Tøj til babyer" };
     static string[] predefinedSizeRanges = { "50/56", "57/63", "64/70", "71/77", "78/84", "85/91", "92/98", "99/105", "106/112", "113/119", "120/128" };
     public static void GenerateRandomTestData(int TestAmount)
     {
@@ -58,7 +58,7 @@ public static class TestDataGenerator
                         ChildId = childId,
                         ParentId = parentId,
                         Name = $"{clothingCategories[rand.Next(clothingCategories.Length)]} {rand.Next(1000)}",
-                        Size = rand.Next(range.Value.min, range.Value.max + 1),
+                        Size = rand.Next(range.Value.min, range.Value.max + 1).ToString(),
                         Condition = rand.Next(1, 6),
                         LifeTime = rand.Next(1, 6),
                         Prize = (float)(rand.NextDouble() * 100),

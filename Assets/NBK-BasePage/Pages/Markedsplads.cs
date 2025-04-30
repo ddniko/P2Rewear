@@ -37,15 +37,9 @@ public class Markedsplads : BasePage
 
     public event Action OnScrollThresholdReached;
 
-    private int numericSize;
-    private int totalPages;
-    private bool displayingChild = false;
-    private bool maxprice = false;
-    private bool maxdistance = false;
-
     void Update()
     {
-        if (!scrollEventTriggered && scrollRect.verticalNormalizedPosition <= scrollTriggerThreshold && totalPages >= currentArticlesPage)
+        if (!scrollEventTriggered && scrollRect.verticalNormalizedPosition <= scrollTriggerThreshold)
         {
             scrollEventTriggered = true;
             OnScrollThresholdReached?.Invoke();
@@ -57,9 +51,6 @@ public class Markedsplads : BasePage
     }
     private void OnEnable()
     {
-        maxprice = false;
-        displayingChild = false;
-        maxdistance = false;
         filter = new Filter();
         filter.tags = new List<string>();
         SortScript = GetComponent<SortScrollScript>();
@@ -67,10 +58,10 @@ public class Markedsplads : BasePage
         SortScript.ClothingPrefab = ClothingPrefab;
         SortScript.ChildParentObject = BarnSortMarketOverlay.transform;
         AllOtherClothes = new List<MArticle>();
-        currentArticlesPage = 1;
         DisplayMarketArticles();
         OnScrollThresholdReached += HandleScrollThreshold;
-        //DisplayMarketArticles(null, null);
+        currentArticlesPage = 1;
+        DisplayMarketArticles(null, null);
     }
 
     private void OnDisable()
@@ -80,12 +71,12 @@ public class Markedsplads : BasePage
         Canvas.ForceUpdateCanvases();
         scrollRect.verticalNormalizedPosition = 1f;
         Canvas.ForceUpdateCanvases();
-        currentArticlesPage = 1;
 
     }
     private void HandleScrollThreshold()
     {
         currentArticlesPage++;
+        
         DisplayMarketArticles(null, filter);
         Canvas.ForceUpdateCanvases();
         scrollRect.verticalNormalizedPosition = 1f;
@@ -101,7 +92,7 @@ public class Markedsplads : BasePage
             tags = new List<string>()
         };
 
-        if (!string.IsNullOrEmpty(child.Size) && int.TryParse(child.Size, out numericSize))
+        if (!string.IsNullOrEmpty(child.Size) && int.TryParse(child.Size, out int numericSize))
         {
             var sizeRange = FindSizeRangeForValue(numericSize);
             if (sizeRange != null)
@@ -139,13 +130,9 @@ public class Markedsplads : BasePage
 
                 var filter = CreateFilterFromChild(mChild);
                 childComponent.childFilter = filter;
-
-                button.onClick.AddListener(() => currentArticlesPage = 1);
-                button.onClick.AddListener(() => displayingChild = true);
-                button.onClick.AddListener(() => maxprice = false);
-                button.onClick.AddListener(() => maxdistance = false);
-                button.onClick.AddListener(() => DisplayMarketArticles(null, filter));
                 
+
+                button.onClick.AddListener(() => DisplayMarketArticles(null, filter));
             }
         }
         BarnSortMarketOverlay.SetActive(true);
@@ -153,32 +140,15 @@ public class Markedsplads : BasePage
     public void DisplayMarketArticles(SORTTYPE? st = null, Filter filter = null)
     {
         scrollRect.verticalNormalizedPosition = 1f;
-
-        //AllOtherClothes = DBManager.GetAllArticlesExceptParent(UserInformation.Instance.User.Id, currentArticlesPage, 20);
-        if (displayingChild)
-        {
-            AllOtherClothes = DBManager.GetFilteredArticles(UserInformation.Instance.User.Id, filter, currentArticlesPage, 20);
-            totalPages = (int)MathF.Ceiling(AllOtherClothes.Count / 20);
-            Debug.Log("yes child");
-        }
-        else if (maxprice)
-        {
-            AllOtherClothes = DBManager.GetArticlesUnderPrice(UserInformation.Instance.User.Id, (int)setMaxPrice, currentArticlesPage, 20);
-            totalPages = DBManager.GetArticlesUnderPriceCount(UserInformation.Instance.User.Id, (int)setMaxPrice, 20);
-        }
-        else if (maxdistance)
-        {
-            AllOtherClothes = DBManager.GetArticlesUnderDistance(UserInformation.Instance.User.Id, setMaxDistance, currentArticlesPage, 20);
-            totalPages = DBManager.GetArticlesUnderDistanceCount(UserInformation.Instance.User.Id, setMaxDistance, 20);
-        }
-        else
-        {
-            totalPages = DBManager.GetTotalPagesForArticles(20);
-            AllOtherClothes = DBManager.GetAllArticlesExceptParent(UserInformation.Instance.User.Id, currentArticlesPage, 20);
-            Debug.Log("no child");
-        }
-        
-        Debug.Log("total pages = " + totalPages);
+        //if (filter != null)
+        //{
+        //    foreach (string demand in filter.tags)
+        //    {
+        //        Debug.Log("Filter is" + demand);
+        //    }
+        //}
+        int totalPages = DBManager.GetTotalPagesForArticles(20);
+        AllOtherClothes = DBManager.GetAllArticlesExceptParent(UserInformation.Instance.User.Id, currentArticlesPage, 20);
         //AllOtherClothes = DBManager.GetAllArticlesExceptParent(UserInformation.Instance.User.Id);
 
         // if (LogIn.LoggedIn != null)
@@ -191,11 +161,9 @@ public class Markedsplads : BasePage
         rt.sizeDelta = new Vector2(rt.sizeDelta.x, MathF.Round(AllOtherClothes.Count / 2f + 0.4f) * 105);
 
         SortScript.InstantiateArticles(AllOtherClothes, setMaxDistance, setMaxPrice, filter);
-        //SortScript.InstantiateArticles(AllOtherClothes, null, setMaxPrice, null);
     }
     public void FilterByTag()
     {
-        currentArticlesPage = 1;
         if (TO.tagValues.Count == 0)
             return;
         filter = new Filter();
@@ -207,21 +175,15 @@ public class Markedsplads : BasePage
 
     public float SetMaxDistance(int i)
     {
-        currentArticlesPage = 1;
         setMaxDistance = i;
         return setMaxDistance;
     }
     public void FilterByDistance()
     {
-        displayingChild = false;
-        maxdistance = false;
-        maxdistance = true;
-        currentArticlesPage = 1;
-        DisplayMarketArticles(null, filter); 
+        DisplayMarketArticles(null, filter); //mangler
     }
     public void SetMaxPrice()
     {
-        currentArticlesPage = 1;
         string inputText = SetMaxPriceText.text.Trim().Replace(",", ".");
 
         // Remove all characters except digits, dot and minus sign
@@ -229,9 +191,6 @@ public class Markedsplads : BasePage
 
         if (float.TryParse(inputText, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float price))
         {
-            displayingChild = false;
-            maxdistance = false;
-            maxprice = true;
             setMaxPrice = price;
             DisplayMarketArticles(null, filter);
             maxPriceText.text = price.ToString("0.##") + " kr"; // format nicely, max 2 decimals
@@ -242,7 +201,6 @@ public class Markedsplads : BasePage
             maxPriceText.text = "0 kr";
             setMaxPrice = 0f;
         }
-
     }
     private (int min, int max)? FindSizeRangeForValue(int size)
     {

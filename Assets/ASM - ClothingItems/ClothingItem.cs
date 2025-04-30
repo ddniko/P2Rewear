@@ -45,7 +45,7 @@ public class ClothingItem : MonoBehaviour
     public int primaryKey;
     public string ClothingName;
     public int childId;
-    public int sizeCategory;
+    public string sizeCategory;
     public string category;
     public float condition;
     public int? lifeTime;
@@ -82,7 +82,7 @@ public class ClothingItem : MonoBehaviour
 
     }
 
-    public void SetUpClothingItem(int primaryKey, string name, int childId, int sizeCategory, float condition, int? lifeTime, float? prize, string description, byte[] imageData)
+    public void SetUpClothingItem(int primaryKey, string name, int childId, string sizeCategory, float condition, int? lifeTime, float? prize, string description, byte[] imageData)
     {
         this.primaryKey = primaryKey;
         this.childId = childId;
@@ -166,7 +166,7 @@ public class ClothingItem : MonoBehaviour
         return childId;
     }
 
-    public int GetSizeCategory()
+    public string GetSizeCategory()
     {
         return sizeCategory;
     }
@@ -219,7 +219,7 @@ public class ClothingItem : MonoBehaviour
         childId = newChildId;
     }
 
-    public void SetSizeCategory(int newSizeCategory)
+    public void SetSizeCategory(string newSizeCategory)
     {
         sizeCategory = newSizeCategory;
     }

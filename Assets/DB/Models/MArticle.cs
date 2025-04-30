@@ -14,7 +14,7 @@ public class MArticle
     public int ChildId { get; set; } // Barnets Id (refererer til MChild tabellen)
     public int ParentId { get; set; }
     public string Name { get; set; }
-    public int Size{ get; set; } // Kategori for størrelsen (f.eks. lille, medium, stor)
+    public string Size{ get; set; } // Kategori for størrelsen (f.eks. lille, medium, stor)
     public string Tags { get; set; } // Tags, comma separated value ideally
     public float Condition { get; set; } // Tøjets tilstand (f.eks. nyt, brugt)
     public int? LifeTime { get; set; } // Forventet levetid for tøjet i år (kan være null)
