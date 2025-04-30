@@ -35,6 +35,7 @@ public class ClothingItem : MonoBehaviour
     public TextMeshProUGUI sizeText;
     public TextMeshProUGUI conditionText;
     public TextMeshProUGUI sustainabilityScore;
+    public TextMeshProUGUI distanceText;
 
     public string name;
     public string describtion;
@@ -52,6 +53,8 @@ public class ClothingItem : MonoBehaviour
     public float? prize;
     public string description;
     public byte[] imageData;
+    
+    public GameObject distanceObject;
 
     private enum sizeOlderChildren
     {
@@ -82,19 +85,30 @@ public class ClothingItem : MonoBehaviour
 
     }
 
-    public void SetUpClothingItem(int primaryKey, string name, int childId, string sizeCategory, float condition, int? lifeTime, float? prize, string description, byte[] imageData)
+    public void SetUpClothingItem(int primaryKey,float? distance, string name, int childId, string sizeCategory, float condition, int? lifeTime, float? prize, string description, byte[] imageData)
     {
         this.primaryKey = primaryKey;
         this.childId = childId;
         this.ClothingName = name;
-
+        this.distanceText.text = distance.ToString();
         this.sizeCategory = sizeCategory;
-
+        
         this.condition = condition;
         this.lifeTime = lifeTime;
         this.prize = prize;
         this.description = description;
         this.imageData = imageData;
+
+        if (LogIn.LoggedIn.Id == DBManager.GetParentByArticleId(primaryKey).Id)
+        {
+            Debug.Log("DEACTIVATE");
+            distanceObject.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("ACTIVATE");
+            distanceObject.SetActive(true);
+        }
         OpenOverlay();
     }
     public void SetUpClothingItem(MArticle art)

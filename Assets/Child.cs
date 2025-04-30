@@ -5,11 +5,22 @@ public class Child : MonoBehaviour
 {
     public MChild ThisChild;
     public Filter childFilter;
-    public void SetupChild(MChild child)
+    public GameObject image;
+    public void SetupChild(MChild child, bool mindestammepage)
     {
         ThisChild = child;
         if (child.Image != null)
-            GetComponent<Image>().sprite = CreateImage(child.Image);
+        {
+            if (mindestammepage)
+            {
+                GetComponent<Image>().sprite = CreateImage(child.Image);
+            }
+            else
+            {
+                image.GetComponent<Image>().sprite = CreateImage(child.Image);
+            }
+        }
+            
     }
     public MChild GetChild { get { return ThisChild; } }
     public Sprite CreateImage(byte[] imageBytes)

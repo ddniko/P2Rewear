@@ -21,8 +21,7 @@ public class MArticle
     public float? Prize {  get; set; } // prisen artiklen er sat 
     public string Description { get; set; } //Beskrivelse af tøjet
     public byte[] ImageData { get; set; }
-
-
+    
 
 }
 
