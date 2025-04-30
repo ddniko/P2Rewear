@@ -27,7 +27,7 @@ public class ContactButtonScript : MonoBehaviour
         //name.text = clothingItem.paren;
         priceText.text = clothingItem.Prize.ToString();
         //Distance
-        sizeText.text = clothingItem.Size;
+        sizeText.text = clothingItem.Size.ToString();
         scoreText.text = clothingItem.LifeTime.ToString();
         conditionText.text = clothingItem.Condition.ToString();
         //Last message

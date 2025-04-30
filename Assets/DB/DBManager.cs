@@ -164,7 +164,7 @@ public static class DBManager
     #endregion
     #region CRUD for Article (Tøj)
     // Tilføjer et nyt stykke tøj til databasen
-    public static void AddArticle(string name, int childId, string sizeCategory, string category, float condition, int? lifeTime, float prize, string description, byte[] imageData)
+    public static void AddArticle(string name, int childId, int sizeCategory, string category, float condition, int? lifeTime, float prize, string description, byte[] imageData)
     {
         var article = new MArticle
         {
@@ -240,6 +240,53 @@ public static class DBManager
         }
         return AllOtherClothes;
     }
+
+    public static List<MArticle> GetFilteredArticles(int parentID, Filter filter, int pageNumber, int pageSize)
+    {
+        List<MArticle> filteredClothes = new List<MArticle>();
+        foreach (string tag in filter.tags)
+        {
+            filteredClothes.AddRange(GetConnection().Table<MArticle>().Where(article => article.Tags == tag && article.ParentId != parentID && article.Size <= filter.MaxSize && article.Size >= filter.MinSize)
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize));
+        }
+        return filteredClothes;
+    }
+
+    public static int GetArticlesUnderPriceCount(int parentID, int maxPrice, int pageSize)
+    {
+        List<MArticle> filteredClothes = new List<MArticle>();
+        filteredClothes.AddRange(GetConnection().Table<MArticle>().Where(article => article.ParentId != parentID && article.Prize <= maxPrice));
+        return (int)MathF.Ceiling(filteredClothes.Count() / pageSize);
+    }
+
+    public static List<MArticle> GetArticlesUnderPrice(int parentID, int maxPrice, int pageNumber, int pageSize)
+    {
+        List<MArticle> filteredClothes = new List<MArticle>();
+        filteredClothes.AddRange(GetConnection().Table<MArticle>().Where(article => article.ParentId != parentID && article.Prize <= maxPrice)
+            .Skip((pageNumber - 1) * pageSize)
+            .Take(pageSize));
+
+        return filteredClothes;
+    }
+
+    public static int GetArticlesUnderDistanceCount(int parentID, float maxDistance, int pageSize)
+    {
+        List<MArticle> filteredClothes = new List<MArticle>();
+        filteredClothes.AddRange(GetConnection().Table<MArticle>().Where(article => article.ParentId != parentID && GetParentById(article.ParentId).Distance <= maxDistance));
+        return (int)MathF.Ceiling(filteredClothes.Count() / pageSize);
+    }
+
+    public static List<MArticle> GetArticlesUnderDistance(int parentID, float maxDistance, int pageNumber, int pageSize)
+    {
+        List<MArticle> filteredClothes = new List<MArticle>();
+        filteredClothes.AddRange(GetConnection().Table<MArticle>().Where(article => article.ParentId != parentID && GetParentById(article.ParentId).Distance <= maxDistance)
+            .Skip((pageNumber - 1) * pageSize)
+            .Take(pageSize));
+
+        return filteredClothes;
+    }
+
     public static List<MArticle> GetAllArticlesExceptParent(int parentID, int pageNumber, int pageSize)
     {
         var allOtherClothesQuery = GetConnection().Table<MArticle>()

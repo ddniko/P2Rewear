@@ -138,22 +138,19 @@ public class SortScrollScript : MonoBehaviour
     {
 
         bool matches = true;
-        if (!string.IsNullOrEmpty(art.Size) && demands.MinSize != -1 && demands.MaxSize != -1)
+        if (art.Size != null && demands.MinSize != -1 && demands.MaxSize != -1)
         {
-            if (int.TryParse(art.Size, out int articleSize))
-            {
-                if (articleSize < demands.MinSize)
+                if (art.Size < demands.MinSize)
                 {
                     matches = false;
                     Debug.Log("Too small");
                 }
 
-                if (articleSize > demands.MaxSize)
+                if (art.Size > demands.MaxSize)
                 {
                     matches = false;
                     Debug.Log("Too big");
                 }
-            }
         }
         if (demands.maxPrize != -1)
         {
