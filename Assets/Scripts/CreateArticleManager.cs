@@ -61,7 +61,7 @@ public class CreateArticleManager : BasePage
 
         art = new MArticle();
         art.Name = Name.text;
-        art.Size = Size.text.ToString();
+        art.Size = int.Parse(Size.text);
         if (Forsale.isOn)
         {
             float parsedPrize;
