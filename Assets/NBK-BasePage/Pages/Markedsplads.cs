@@ -121,7 +121,7 @@ public class Markedsplads : BasePage
     {
         if (SortScript.CurrentChildren.Count <= 0)
         {
-            SortScript.CreateChildren(false);
+            SortScript.CreateChildren();
             foreach (var child in SortScript.CurrentChildren)
             {
                 var button = child.GetComponent<Button>();

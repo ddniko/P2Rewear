@@ -357,7 +357,7 @@ public class SortScrollScript : MonoBehaviour
         GameObject newArticle = Instantiate(ClothingPrefab, ParentObject);
 
         ClothingItem articleItem = newArticle.GetComponent<ClothingItem>();
-        articleItem.SetUpClothingItem(article.Id, DBManager.GetParentByArticleId(article.Id).Distance ,article.Name, article.ChildId, article.Size,
+        articleItem.SetUpClothingItem(article.Id, article.Name, article.ChildId, article.Size,
             article.Condition, article.LifeTime, article.Prize, article.Description, article.ImageData);
         return newArticle;
     }
@@ -379,7 +379,7 @@ public class SortScrollScript : MonoBehaviour
             }
         }
     }
-    public void CreateChildren(bool mindestammepage)
+    public void CreateChildren()
     {
         DestroyChildren();
         foreach (MChild mchild in UserInformation.Instance.UserChildren)
@@ -387,12 +387,12 @@ public class SortScrollScript : MonoBehaviour
             var c = Instantiate(ChildPrefab, ChildParentObject);
             if (c.GetComponent<Child>() != null)
             {
-                c.GetComponent<Child>().SetupChild(mchild, mindestammepage);
+                c.GetComponent<Child>().SetupChild(mchild);
             }
             else
             {
                 c.AddComponent<Child>();
-                c.GetComponent<Child>().SetupChild(mchild, mindestammepage);
+                c.GetComponent<Child>().SetupChild(mchild);
             }
                 CurrentChildren.Add(c);
         }

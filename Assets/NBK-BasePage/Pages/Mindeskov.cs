@@ -15,7 +15,7 @@ public class Mindeskov : BasePage
     }
     public void SetupChildren()
     {
-        s.CreateChildren(true);
+        s.CreateChildren();
         foreach (var child in s.CurrentChildren)
         {
             MChild mChild = child.GetComponent<Child>().GetChild;
