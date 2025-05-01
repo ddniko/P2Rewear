@@ -58,7 +58,7 @@ public static class TestDataGenerator
                         ParentId = parentId,
                         //Name = $"{clothingCategories[rand.Next(clothingCategories.Length)]} {rand.Next(1000)}",
                         Name = $"Tøj titel",
-                        Size = rand.Next(range.Value.min, range.Value.max + 1),
+                        Size = rand.Next(range.Value.min, 200 + 1),
                         Condition = rand.Next(1, 6),
                         LifeTime = rand.Next(1, 12),
                         Prize = rand.Next(10,300),
