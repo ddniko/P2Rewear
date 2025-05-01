@@ -35,6 +35,7 @@ public class Markedsplads : BasePage
     private bool scrollEventTriggered;
     public ScrollRect scrollRect;
     public float scrollTriggerThreshold;
+    public GameObject nothingFoundObj;
 
     public event Action OnScrollThresholdReached;
 
@@ -177,6 +178,16 @@ public class Markedsplads : BasePage
             totalPages = DBManager.GetTotalPagesForArticles(20);
             AllOtherClothes = DBManager.GetAllArticlesExceptParent(UserInformation.Instance.User.Id, currentArticlesPage, 20);
             Debug.Log("no child");
+        }
+
+        if (totalPages == 0)
+        {
+            nothingFoundObj.SetActive(true);
+            
+        }
+        else
+        {
+            nothingFoundObj.SetActive(false);
         }
         
         Debug.Log("total pages = " + totalPages);

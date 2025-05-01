@@ -91,7 +91,7 @@ public class ClothingItem : MonoBehaviour
         this.ClothingName = name;
 
         this.sizeCategory = sizeCategory;
-        this.distanceText.text = distance.ToString();
+        this.distanceText.text = distance.ToString() + " km";
         this.condition = condition;
         this.lifeTime = lifeTime;
         this.prize = prize;

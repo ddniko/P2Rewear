@@ -1,8 +1,6 @@
-﻿using NUnit.Framework;
+﻿
 using System;
 using System.Collections.Generic;
-using System.Net.NetworkInformation;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public static class TestDataGenerator
@@ -13,7 +11,8 @@ public static class TestDataGenerator
     private static string[] clothingCategories = { "Shirt", "Pants", "Jacket", "Dress", "Sweater" };
     private static string[] memoryTitles = { "Birthday", "School Start", "Picnic", "Winter Trip", "Visit Grandma" };
     private static string[] tags = { "Trøje", "T-shirts", "Hættetrøje", "Kjole", "Bukser", "Shorts", "Overtøj", "Undertøj", "strømper", "Badetøj", "Nattøj", "Overalls", "Sæt", "Sko", "Heldragt", "Tøj til babyer" };
-    static string[] predefinedSizeRanges = { "50/56", "57/63", "64/70", "71/77", "78/84", "85/91", "92/98", "99/105", "106/112", "113/119", "120/128" };
+    static string[] predefinedSizeRanges = { "50/56", "57/63", "64/70", "71/77", "78/84", "85/91", "92/98", "99/105", "106/112", "113/119", "120/128", "129/1000" };
+    public static List<byte[]> images;
     public static void GenerateRandomTestData(int TestAmount)
     {
         DBManager.Init();
@@ -26,9 +25,9 @@ public static class TestDataGenerator
                 Name = parentNames[i % parentNames.Length],
                 Email = $"parent{i}@example.com",
                 Password = "test123",
-                Distance = (float)(rand.NextDouble() * 50),
-                SustainabilityScore = rand.Next(1, 11),
-                ReliabilityScore = rand.Next(1, 11)
+                Distance = rand.Next(1,500),
+                SustainabilityScore = rand.Next(1, 150),
+                ReliabilityScore = rand.Next(1, 100)
             };
             DBManager.AddParent(parent);
             int parentId = parent.Id;
@@ -42,7 +41,7 @@ public static class TestDataGenerator
                     ParentId = parentId,
                     Name = childNames[rand.Next(childNames.Length)],
                     Age = rand.Next(0, 10).ToString(),
-                    Size = rand.Next(50, 128).ToString(),
+                    Size = rand.Next(50, 200).ToString(),
                     Gender = (GENDER)rand.Next(0, 2),
                     Tags = $"{tags[rand.Next(tags.Length)]},{tags[rand.Next(tags.Length)]}"
                 };
@@ -57,14 +56,16 @@ public static class TestDataGenerator
                     {
                         ChildId = childId,
                         ParentId = parentId,
-                        Name = $"{clothingCategories[rand.Next(clothingCategories.Length)]} {rand.Next(1000)}",
+                        //Name = $"{clothingCategories[rand.Next(clothingCategories.Length)]} {rand.Next(1000)}",
+                        Name = $"Tøj titel",
                         Size = rand.Next(range.Value.min, range.Value.max + 1),
                         Condition = rand.Next(1, 6),
-                        LifeTime = rand.Next(1, 6),
-                        Prize = (float)(rand.NextDouble() * 100),
-                        Description = "Randomly generated clothing article.",
+                        LifeTime = rand.Next(1, 12),
+                        Prize = rand.Next(10,300),
+                        Description = "Dette stykke tøj har ingen beskrivelse.",
                         Tags = $"{tags[rand.Next(tags.Length)]}",
-                        ImageData = new byte[0]
+                        //ImageData = new byte[0]
+                        ImageData = images[rand.Next(images.Count)]
                     };
                     DBManager.AddArticle(article);
                     int articleId = article.Id;

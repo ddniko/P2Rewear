@@ -204,14 +204,7 @@ public class SortScrollScript : MonoBehaviour
             }
             
         }
-        if (!matches)
-        {
-            nothingFoundObj.SetActive(true);
-        }
-        else
-        {
-            nothingFoundObj.SetActive(false);
-        }
+       
         return matches;
         
     }
