@@ -47,7 +47,7 @@ public class Markedsplads : BasePage
 
     void Update()
     {
-        if (!scrollEventTriggered && scrollRect.verticalNormalizedPosition <= scrollTriggerThreshold && totalPages >= currentArticlesPage)
+        if (!scrollEventTriggered && scrollRect.verticalNormalizedPosition <= scrollTriggerThreshold && totalPages != currentArticlesPage)
         {
             scrollEventTriggered = true;
             OnScrollThresholdReached?.Invoke();
@@ -55,6 +55,9 @@ public class Markedsplads : BasePage
     }
     public void ResetScrollTrigger()
     {
+        maxprice = false;
+        displayingChild = false;
+        maxdistance = false;
         scrollEventTriggered = false;
     }
     private void OnEnable()
@@ -69,7 +72,7 @@ public class Markedsplads : BasePage
         SortScript.ClothingPrefab = ClothingPrefab;
         SortScript.ChildParentObject = BarnSortMarketOverlay.transform;
         AllOtherClothes = new List<MArticle>();
-        currentArticlesPage = 1;
+        currentArticlesPage = 0;
         DisplayMarketArticles();
         OnScrollThresholdReached += HandleScrollThreshold;
         //DisplayMarketArticles(null, null);
@@ -82,7 +85,7 @@ public class Markedsplads : BasePage
         Canvas.ForceUpdateCanvases();
         scrollRect.verticalNormalizedPosition = 1f;
         Canvas.ForceUpdateCanvases();
-        currentArticlesPage = 1;
+        currentArticlesPage = 0;
 
     }
     private void HandleScrollThreshold()
@@ -142,7 +145,7 @@ public class Markedsplads : BasePage
                 var filter = CreateFilterFromChild(mChild);
                 childComponent.childFilter = filter;
 
-                button.onClick.AddListener(() => currentArticlesPage = 1);
+                button.onClick.AddListener(() => currentArticlesPage = 0);
                 button.onClick.AddListener(() => displayingChild = true);
                 button.onClick.AddListener(() => maxprice = false);
                 button.onClick.AddListener(() => maxdistance = false);
@@ -160,8 +163,7 @@ public class Markedsplads : BasePage
         if (displayingChild)
         {
             AllOtherClothes = DBManager.GetFilteredArticles(UserInformation.Instance.User.Id, filter, currentArticlesPage, 20);
-            totalPages = (int)MathF.Ceiling(AllOtherClothes.Count / 20);
-            Debug.Log("yes child");
+            totalPages = (int)Mathf.Ceil(AllOtherClothes.Count / 20f);
         }
         else if (maxprice)
         {
@@ -177,7 +179,12 @@ public class Markedsplads : BasePage
         {
             totalPages = DBManager.GetTotalPagesForArticles(20);
             AllOtherClothes = DBManager.GetAllArticlesExceptParent(UserInformation.Instance.User.Id, currentArticlesPage, 20);
-            Debug.Log("no child");
+            Debug.Log("everything is false");
+            if (filter != null)
+            {
+                Debug.Log("Filter max price = " + filter.maxPrize);
+            }
+
         }
 
         if (totalPages == 0)
@@ -202,12 +209,13 @@ public class Markedsplads : BasePage
         RectTransform rt = ViewPort.GetComponent<RectTransform>();
         rt.sizeDelta = new Vector2(rt.sizeDelta.x, MathF.Round(AllOtherClothes.Count / 2f + 0.4f) * 105);
 
-        SortScript.InstantiateArticles(AllOtherClothes, setMaxDistance, setMaxPrice, filter);
+        //SortScript.InstantiateArticles(AllOtherClothes, setMaxDistance, setMaxPrice, filter);
         //SortScript.InstantiateArticles(AllOtherClothes, null, setMaxPrice, null);
+        SortScript.InstantiateArticles(AllOtherClothes);
     }
     public void FilterByTag()
     {
-        currentArticlesPage = 1;
+        currentArticlesPage = 0;
         if (TO.tagValues.Count == 0)
             return;
         filter = new Filter();
@@ -219,7 +227,7 @@ public class Markedsplads : BasePage
 
     public float SetMaxDistance(int i)
     {
-        currentArticlesPage = 1;
+        currentArticlesPage = 0;
         setMaxDistance = i;
         return setMaxDistance;
     }
@@ -228,12 +236,12 @@ public class Markedsplads : BasePage
         displayingChild = false;
         maxdistance = false;
         maxdistance = true;
-        currentArticlesPage = 1;
+        currentArticlesPage = 0;
         DisplayMarketArticles(null, filter); 
     }
     public void SetMaxPrice()
     {
-        currentArticlesPage = 1;
+        currentArticlesPage = 0;
         string inputText = SetMaxPriceText.text.Trim().Replace(",", ".");
 
         // Remove all characters except digits, dot and minus sign
@@ -274,19 +282,21 @@ public class Markedsplads : BasePage
 
     public void ResetFilter()
     {
+        currentArticlesPage = 0;
         maxprice = false;
         displayingChild = false;
         maxdistance = false;
         filter = new Filter();
         filter.tags = new List<string>();
-        SortScript = GetComponent<SortScrollScript>();
-        SortScript.ParentObject = ViewPort.transform;
-        SortScript.ClothingPrefab = ClothingPrefab;
-        SortScript.ChildParentObject = BarnSortMarketOverlay.transform;
-        AllOtherClothes = new List<MArticle>();
-        currentArticlesPage = 1;
-        DisplayMarketArticles();
-        OnScrollThresholdReached += HandleScrollThreshold;
+        DisplayMarketArticles(null, filter);
+        //SortScript = GetComponent<SortScrollScript>();
+        //SortScript.ParentObject = ViewPort.transform;
+        //SortScript.ClothingPrefab = ClothingPrefab;
+        //SortScript.ChildParentObject = BarnSortMarketOverlay.transform;
+        //AllOtherClothes = new List<MArticle>();
+        //currentArticlesPage = 0;
+        //DisplayMarketArticles();
+        //OnScrollThresholdReached += HandleScrollThreshold;
     }
 
 

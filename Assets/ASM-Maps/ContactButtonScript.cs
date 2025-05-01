@@ -28,7 +28,10 @@ public class ContactButtonScript : MonoBehaviour
         priceText.text = clothingItem.Prize.ToString();
         //Distance
         sizeText.text = clothingItem.Size.ToString();
-        scoreText.text = clothingItem.LifeTime.ToString();
+        if (scoreText != null)
+        {
+            scoreText.text = clothingItem.LifeTime.ToString();
+        }
         conditionText.text = clothingItem.Condition.ToString();
         //Last message
     }

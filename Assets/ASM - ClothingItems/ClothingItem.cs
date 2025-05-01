@@ -134,14 +134,18 @@ public class ClothingItem : MonoBehaviour
         //describtionText.text = description;
         sizeText.text = sizeCategory + " cm";
         conditionText.text = $"{condition:F0}/5";
-        if (lifeTime == null)
+        if (sustainabilityScore != null)
         {
-            sustainabilityScore.text = "0";
+            if (lifeTime == null)
+            {
+                sustainabilityScore.text = "0";
+            }
+            else
+            {
+                sustainabilityScore.text = lifeTime.ToString();
+            }
         }
-        else
-        {
-            sustainabilityScore.text = lifeTime.ToString();
-        }
+
 
 
         // Load image fra bytes stored. skal implementer en placeholder

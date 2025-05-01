@@ -25,7 +25,10 @@ public class Profil : BasePage
     {
         UserId = LogIn.LoggedIn.Id;
         TrustScore.text = DBManager.GetParentById(UserId).ReliabilityScore.ToString();
-        SustainabilityScore.text = DBManager.GetParentById(UserId).SustainabilityScore.ToString();
+        if (SustainabilityScore != null)
+        {
+            SustainabilityScore.text = DBManager.GetParentById(UserId).SustainabilityScore.ToString();
+        }
         Name.text = DBManager.GetParentById(UserId).Name.ToString();
         ri = UserInformation.Instance.ProfilePic;
         //DBManager.Init();
@@ -48,7 +51,11 @@ public class Profil : BasePage
             SortScript.CreateChildren(true);
             foreach (var child in SortScript.CurrentChildren)
             {
-                var button = child.GetComponent<Button>();
+                //var button = child.GetComponent<Button>();
+                //var childComponent = child.GetComponent<Child>();
+                //MChild mChild = childComponent.GetChild;
+
+                var button = child.GetComponentInChildren<Button>();
                 var childComponent = child.GetComponent<Child>();
                 MChild mChild = childComponent.GetChild;
 

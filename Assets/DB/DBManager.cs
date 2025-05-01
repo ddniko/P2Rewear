@@ -257,7 +257,7 @@ public static class DBManager
     {
         List<MArticle> filteredClothes = new List<MArticle>();
         filteredClothes.AddRange(GetConnection().Table<MArticle>().Where(article => article.ParentId != parentID && article.Prize <= maxPrice));
-        return (int)MathF.Ceiling(filteredClothes.Count() / pageSize);
+        return (int)Mathf.Ceil(filteredClothes.Count() / (float)pageSize);
     }
 
     public static List<MArticle> GetArticlesUnderPrice(int parentID, int maxPrice, int pageNumber, int pageSize)
@@ -274,7 +274,7 @@ public static class DBManager
     {
         List<MArticle> filteredClothes = new List<MArticle>();
         filteredClothes.AddRange(GetConnection().Table<MArticle>().Where(article => article.ParentId != parentID && GetParentById(article.ParentId).Distance <= maxDistance));
-        return (int)MathF.Ceiling(filteredClothes.Count() / pageSize);
+        return (int)Mathf.Ceil(filteredClothes.Count() / (float)pageSize);
     }
 
     public static List<MArticle> GetArticlesUnderDistance(int parentID, float maxDistance, int pageNumber, int pageSize)

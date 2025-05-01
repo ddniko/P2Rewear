@@ -42,13 +42,16 @@ public class SetupOverlay : MonoBehaviour
         //category something here
         conditionText.text = open.Condition.ToString() + "/5";
         Tag.text = "Tag: " + open.Tags.ToString();
-        if (open.LifeTime == null)
+        if (sustainabilityScore != null)
         {
-            sustainabilityScore.text = "0";
-        }
-        else
-        {
-            sustainabilityScore.text = open.LifeTime.ToString();
+            if (open.LifeTime == null)
+            {
+                sustainabilityScore.text = "0";
+            }
+            else
+            {
+                sustainabilityScore.text = open.LifeTime.ToString();
+            }
         }
 
         if (SellerId != null || Distance != null)
