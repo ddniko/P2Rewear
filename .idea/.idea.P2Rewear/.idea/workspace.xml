@@ -9,15 +9,27 @@
       <change beforePath="$PROJECT_DIR$/Assets/ASM - ClothingItems/ClothingItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM - ClothingItems/ClothingItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ASM - ClothingItems/ClothingItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM - ClothingItems/ClothingItem.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ASM - ClothingItems/SortScrollScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM - ClothingItems/SortScrollScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ASM-Maps/MapDistance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM-Maps/MapDistance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Child.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Child.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DB/Models/MArticle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DB/Models/MArticle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASM - GFX Assets/Cam.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM - GFX Assets/Cam.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASM - GFX Assets/Frame.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM - GFX Assets/Frame.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASM - GFX Assets/Outline.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM - GFX Assets/Outline.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASM - GFX Assets/StandardProfile.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM - GFX Assets/StandardProfile.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASM - GFX Assets/cam2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM - GFX Assets/cam2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASM - GFX Assets/guloutline.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM - GFX Assets/guloutline.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASM - GFX Assets/image.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM - GFX Assets/image.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASM-Maps/ChatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM-Maps/ChatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NBK-BasePage/Pages/GameObject.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-BasePage/Pages/GameObject.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NBK-BasePage/Pages/MarkedSortAnim.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-BasePage/Pages/MarkedSortAnim.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/NBK-BasePage/Pages/Markedsplads.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-BasePage/Pages/Markedsplads.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NBK-BasePage/Pages/Mindeskov.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-BasePage/Pages/Mindeskov.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NBK-BasePage/Pages/Profil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-BasePage/Pages/Profil.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NBK-SpawnItems/NBK-SpawnItems.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-SpawnItems/NBK-SpawnItems.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NBK-SpawnItems/SellClothingArticle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-SpawnItems/SellClothingArticle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Barn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Barn.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ChildPage 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ChildPage 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LederEfter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LederEfter.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Opret tøj.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Opret tøj.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CreateArticleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CreateArticleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +127,7 @@
       <workItem from="1745223244476" duration="75000" />
       <workItem from="1745243981148" duration="8313000" />
       <workItem from="1745999825156" duration="14590000" />
-      <workItem from="1746041583457" duration="8766000" />
+      <workItem from="1746041583457" duration="19484000" />
     </task>
     <servers />
   </component>

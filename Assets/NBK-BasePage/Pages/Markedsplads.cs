@@ -27,6 +27,7 @@ public class Markedsplads : BasePage
 
     public TextMeshProUGUI SetMaxPriceText;
     public TextMeshProUGUI maxPriceText;
+    public TextMeshProUGUI maxPriceTextMarket;
     public int maxPrice;
     string[] predefinedSizeRanges = { "50/56", "57/63", "64/70", "71/77", "78/84", "85/91", "92/98", "99/105", "106/112", "113/119", "120/128" };
     public int currentArticlesPage;
@@ -133,7 +134,7 @@ public class Markedsplads : BasePage
             SortScript.CreateChildren(false);
             foreach (var child in SortScript.CurrentChildren)
             {
-                var button = child.GetComponent<Button>();
+                var button = child.GetComponentInChildren<Button>();
                 var childComponent = child.GetComponent<Child>();
                 MChild mChild = childComponent.GetChild;
 
@@ -235,6 +236,7 @@ public class Markedsplads : BasePage
             setMaxPrice = price;
             DisplayMarketArticles(null, filter);
             maxPriceText.text = price.ToString("0.##") + " kr"; // format nicely, max 2 decimals
+            maxPriceTextMarket.text = price.ToString("0.##") + " kr";;
         }
         else
         {
@@ -259,6 +261,22 @@ public class Markedsplads : BasePage
         return null;
     }
 
+    public void ResetFilter()
+    {
+        maxprice = false;
+        displayingChild = false;
+        maxdistance = false;
+        filter = new Filter();
+        filter.tags = new List<string>();
+        SortScript = GetComponent<SortScrollScript>();
+        SortScript.ParentObject = ViewPort.transform;
+        SortScript.ClothingPrefab = ClothingPrefab;
+        SortScript.ChildParentObject = BarnSortMarketOverlay.transform;
+        AllOtherClothes = new List<MArticle>();
+        currentArticlesPage = 1;
+        DisplayMarketArticles();
+        OnScrollThresholdReached += HandleScrollThreshold;
+    }
 
 
 }

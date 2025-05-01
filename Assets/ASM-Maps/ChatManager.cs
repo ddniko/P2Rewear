@@ -69,12 +69,12 @@ public class ChatManager : MonoBehaviour
 
     public void MoveObjects()
     {
-        moveableObjects.transform.position = moveableObjects.transform.position + new Vector3(0f, 3f,0f);
+        moveableObjects.transform.position = moveableObjects.transform.position + new Vector3(0f, 2.5f,0f);
     }
 
     public void MoveObjectsBack()
     {
-        moveableObjects.transform.position = moveableObjects.transform.position + new Vector3(0f, -3f,0f);
+        moveableObjects.transform.position = moveableObjects.transform.position + new Vector3(0f, -2.5f,0f);
     }
 
     public void SetupChat(MArticle clothingItem)

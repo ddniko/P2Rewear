@@ -28,7 +28,8 @@ public class SortScrollScript : MonoBehaviour
     public int ChildColumn = 0;
     public Vector3 ChildStartPos = Vector3.zero;
     public GameObject[] ChildStartObjects;
-    
+
+    public GameObject nothingFoundObj;
 
 
 
@@ -199,9 +200,20 @@ public class SortScrollScript : MonoBehaviour
             {
                 matches = false;
                 Debug.Log("Tags not met");
+                
             }
+            
+        }
+        if (!matches)
+        {
+            nothingFoundObj.SetActive(true);
+        }
+        else
+        {
+            nothingFoundObj.SetActive(false);
         }
         return matches;
+        
     }
 
 
@@ -354,8 +366,10 @@ public class SortScrollScript : MonoBehaviour
         GameObject newArticle = Instantiate(ClothingPrefab, ParentObject);
 
         ClothingItem articleItem = newArticle.GetComponent<ClothingItem>();
-        articleItem.SetUpClothingItem(article.Id, DBManager.GetParentByArticleId(article.Id).Distance ,article.Name, article.ChildId, article.Size,
-            article.Condition, article.LifeTime, article.Prize, article.Description, article.ImageData);
+        articleItem.SetUpClothingItem(article.Id, article.Name, article.ChildId,article.Size, article.Condition, article.LifeTime, article.Prize, article.Description, article.ImageData, DBManager.GetParentByArticleId(article.Id).Distance); 
+            
+            
+            
         return newArticle;
     }
 

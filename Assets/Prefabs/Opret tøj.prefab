@@ -2783,7 +2783,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8515820950590626908, guid: 8b03e0f3f7357884da0b9a4e24afad06, type: 3}
+  m_Sprite: {fileID: 8098044953271416902, guid: 006fac8395716e543abe0cf772200774, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5673,7 +5673,7 @@ MonoBehaviour:
   prize: {fileID: 9214376790355641359}
   prizeText: {fileID: 7020768449238474069}
   Cond: {fileID: 1953984982847552362}
-  Size: {fileID: 3617367110694904159}
+  Size: {fileID: 2688736849555981361}
   Cat: {fileID: 635198923147423529}
   Desc: {fileID: 5707565454361554021}
   TO: {fileID: 0}

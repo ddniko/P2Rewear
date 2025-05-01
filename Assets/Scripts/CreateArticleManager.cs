@@ -13,7 +13,7 @@ public class CreateArticleManager : BasePage
     public GameObject prize;
     public TextMeshProUGUI prizeText;
     public Slider Cond;
-    public TextMeshProUGUI Size;
+    public TMP_InputField Size;
     public TMP_Dropdown Cat;
     public TextMeshProUGUI Desc;
     public TagOrganizer TO;
@@ -61,7 +61,14 @@ public class CreateArticleManager : BasePage
 
         art = new MArticle();
         art.Name = Name.text;
-        art.Size = int.Parse(Size.text);
+        //art.Size = int.Parse(Size.text);
+        int parsedSize;
+        if (int.TryParse(Size.text.Replace(',', '.'), System.Globalization.NumberStyles.Integer, System.Globalization.CultureInfo.InvariantCulture, out parsedSize))
+        {
+            art.Size = parsedSize;
+        }
+        else Debug.Log("Parsing Failed");
+        
         if (Forsale.isOn)
         {
             float parsedPrize;
