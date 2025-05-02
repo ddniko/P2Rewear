@@ -3661,6 +3661,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Content
       objectReference: {fileID: 0}
+    - target: {fileID: 8057735389951620247, guid: c308dded8ac99674f880bb769f145459, type: 3}
+      propertyPath: m_text
+      value: "Mindestammen er en kollektion af minder, der indeholder alle de minder
+        p\xE5 et stykke t\xF8j som dig eller andre tidligere ejere har oprettet!"
+      objectReference: {fileID: 0}
     - target: {fileID: 8391007487531742229, guid: c308dded8ac99674f880bb769f145459, type: 3}
       propertyPath: m_Pivot.x
       value: 0

@@ -25,14 +25,14 @@ public static class TestDataGenerator
                 Name = parentNames[i % parentNames.Length],
                 Email = $"parent{i}@example.com",
                 Password = "test123",
-                Distance = rand.Next(1,500),
+                Distance = rand.Next(1,10),
                 SustainabilityScore = rand.Next(1, 150),
                 ReliabilityScore = rand.Next(1, 100)
             };
             DBManager.AddParent(parent);
             int parentId = parent.Id;
 
-            int childCount = rand.Next(1, 4);
+            int childCount = rand.Next(1, 3);
             for (int j = 0; j < childCount; j++)
             {
 
@@ -48,7 +48,7 @@ public static class TestDataGenerator
                 DBManager.AddChild(child);
                 int childId = child.Id;
 
-                int articleCount = rand.Next(2, 6);
+                int articleCount = rand.Next(2, 4);
                 for (int k = 0; k < articleCount; k++)
                 {
                     var range = FindSizeRangeForValue(int.Parse(child.Size));
