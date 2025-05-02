@@ -44,7 +44,8 @@ public class CameraHandler : MonoBehaviour
 
        
 
-        rawImage.rectTransform.sizeDelta = new Vector2(228.11f, 238.87f);
+        //rawImage.rectTransform.sizeDelta = new Vector2(228.11f, 238.87f);
+        rawImage.rectTransform.ForceUpdateRectTransforms();
     }
 
     private Texture2D LoadTextureFromPath(string filePath)

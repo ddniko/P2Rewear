@@ -18,6 +18,7 @@ public class CreateMemory : MonoBehaviour
     public void createMemory()
     {
          new MMemory().CreateMemory(StammeManager.instance.clothingArticleID, titleInput.text, descriptionInput.text, ConvertImageToByteArray(memoryImage));
+        memoryImage.rectTransform.ForceUpdateRectTransforms();
     }
 
     public void OpenCamera()

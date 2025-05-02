@@ -14,13 +14,20 @@ public class SetupMemoryArticle : MonoBehaviour
     public TextMeshProUGUI dateText;
     public Image image;
     private Sprite memorySprite;
+    public Sprite placeholder;
     public void SetupMemory(MMemory memory)
     {
         titleText.text = memory.Title;
         descriptionText.text = memory.Description;
         dateText.text = memory.DateAdded;
         memorySprite = CreateImage(memory.ImageData);
-        image.sprite  = memorySprite;
+        image.sprite = memorySprite;
+
+        if (image.sprite == null)
+        {
+            image.sprite = placeholder;
+            Debug.Log("memory.Imagedata = null");
+        }
     }
     
     public Sprite CreateImage(byte[] imageBytes)
