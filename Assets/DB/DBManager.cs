@@ -287,6 +287,30 @@ public static class DBManager
         return filteredClothes;
     }
 
+    public static int GetArticlesOfTagCount(int parentID, List<string> tags, int pageSize)
+    {
+        List<MArticle> filteredClothes = new List<MArticle>();
+        foreach (string tag in tags)
+        {
+            filteredClothes.AddRange(GetConnection().Table<MArticle>().Where(article => article.ParentId != parentID && article.Tags == tag));
+        }
+
+        return (int)Mathf.Ceil(filteredClothes.Count() / (float)pageSize);
+    }
+
+    public static List<MArticle> GetArticlesOfTag(int parentID, List<string> tags, int pageNumber, int pageSize)
+    {
+        List<MArticle> filteredClothes = new List<MArticle>();
+        foreach (string tag in tags)
+        {
+            filteredClothes.AddRange(GetConnection().Table<MArticle>().Where(article => article.ParentId != parentID && article.Tags == tag)
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize));
+        }
+
+        return filteredClothes;
+    }
+
     public static List<MArticle> GetAllArticlesExceptParent(int parentID, int pageNumber, int pageSize)
     {
         var allOtherClothesQuery = GetConnection().Table<MArticle>()

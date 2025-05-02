@@ -44,6 +44,7 @@ public class Markedsplads : BasePage
     private bool displayingChild = false;
     private bool maxprice = false;
     private bool maxdistance = false;
+    private bool filterTag = false;
 
     void Update()
     {
@@ -58,6 +59,7 @@ public class Markedsplads : BasePage
         maxprice = false;
         displayingChild = false;
         maxdistance = false;
+        filterTag = false;
         scrollEventTriggered = false;
     }
     private void OnEnable()
@@ -65,6 +67,7 @@ public class Markedsplads : BasePage
         maxprice = false;
         displayingChild = false;
         maxdistance = false;
+        filterTag = false;
         filter = new Filter();
         filter.tags = new List<string>();
         SortScript = GetComponent<SortScrollScript>();
@@ -149,6 +152,7 @@ public class Markedsplads : BasePage
                 button.onClick.AddListener(() => displayingChild = true);
                 button.onClick.AddListener(() => maxprice = false);
                 button.onClick.AddListener(() => maxdistance = false);
+                button.onClick.AddListener(() => filterTag = false);
                 button.onClick.AddListener(() => DisplayMarketArticles(null, filter));
                 
             }
@@ -175,6 +179,11 @@ public class Markedsplads : BasePage
             AllOtherClothes = DBManager.GetArticlesUnderDistance(UserInformation.Instance.User.Id, setMaxDistance, currentArticlesPage, 20);
             totalPages = DBManager.GetArticlesUnderDistanceCount(UserInformation.Instance.User.Id, setMaxDistance, 20);
         }
+        else if (filterTag)
+        {
+            AllOtherClothes = DBManager.GetArticlesOfTag(UserInformation.Instance.User.Id, filter.tags, currentArticlesPage, 20);
+            totalPages = DBManager.GetArticlesOfTagCount(UserInformation.Instance.User.Id, filter.tags, 20);
+        }
         else
         {
             totalPages = DBManager.GetTotalPagesForArticles(20);
@@ -198,23 +207,19 @@ public class Markedsplads : BasePage
         }
         
         Debug.Log("total pages = " + totalPages);
-        //AllOtherClothes = DBManager.GetAllArticlesExceptParent(UserInformation.Instance.User.Id);
-
-        // if (LogIn.LoggedIn != null)
-        //   AllOtherClothes = DBManager.GetAllArticlesExceptParent(LogIn.LoggedIn.Id);
-        //else
-        //  AllOtherClothes = DBManager.GetAllArticlesExceptParent(1);
 
 
         RectTransform rt = ViewPort.GetComponent<RectTransform>();
         rt.sizeDelta = new Vector2(rt.sizeDelta.x, MathF.Round(AllOtherClothes.Count / 2f + 0.4f) * 105);
 
-        //SortScript.InstantiateArticles(AllOtherClothes, setMaxDistance, setMaxPrice, filter);
-        //SortScript.InstantiateArticles(AllOtherClothes, null, setMaxPrice, null);
         SortScript.InstantiateArticles(AllOtherClothes);
     }
     public void FilterByTag()
     {
+        displayingChild = false;
+        maxdistance = false;
+        maxprice = false;
+        filterTag = true;
         currentArticlesPage = 0;
         if (TO.tagValues.Count == 0)
             return;
@@ -234,7 +239,8 @@ public class Markedsplads : BasePage
     public void FilterByDistance()
     {
         displayingChild = false;
-        maxdistance = false;
+        maxprice = false;
+        filterTag = false;
         maxdistance = true;
         currentArticlesPage = 0;
         DisplayMarketArticles(null, filter); 
@@ -251,6 +257,7 @@ public class Markedsplads : BasePage
         {
             displayingChild = false;
             maxdistance = false;
+            filterTag = false;
             maxprice = true;
             setMaxPrice = price;
             DisplayMarketArticles(null, filter);
@@ -285,18 +292,11 @@ public class Markedsplads : BasePage
         currentArticlesPage = 0;
         maxprice = false;
         displayingChild = false;
+        filterTag = false;
         maxdistance = false;
         filter = new Filter();
         filter.tags = new List<string>();
         DisplayMarketArticles(null, filter);
-        //SortScript = GetComponent<SortScrollScript>();
-        //SortScript.ParentObject = ViewPort.transform;
-        //SortScript.ClothingPrefab = ClothingPrefab;
-        //SortScript.ChildParentObject = BarnSortMarketOverlay.transform;
-        //AllOtherClothes = new List<MArticle>();
-        //currentArticlesPage = 0;
-        //DisplayMarketArticles();
-        //OnScrollThresholdReached += HandleScrollThreshold;
     }
 
 
