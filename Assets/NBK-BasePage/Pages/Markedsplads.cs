@@ -29,7 +29,7 @@ public class Markedsplads : BasePage
     public TextMeshProUGUI maxPriceText;
     public TextMeshProUGUI maxPriceTextMarket;
     public int maxPrice;
-    string[] predefinedSizeRanges = { "50/56", "57/63", "64/70", "71/77", "78/84", "85/91", "92/98", "99/105", "106/112", "113/119", "120/128" };
+    string[] predefinedSizeRanges = { "50/56", "57/63", "64/70", "71/77", "78/84", "85/91", "92/98", "99/105", "106/112", "113/119", "120/128", "129/200" };
     public int currentArticlesPage;
     int articlePages;
     private bool scrollEventTriggered;

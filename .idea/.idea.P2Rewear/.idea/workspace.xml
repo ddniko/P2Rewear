@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a133a33-9148-4cc7-9491-835a8dd0fa88" name="Changes" comment="" />
+    <list default="true" id="6a133a33-9148-4cc7-9491-835a8dd0fa88" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.P2Rewear/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.P2Rewear/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASM - ClothingItems/ASM - Clothing assets/sweeten-family-beach-vacation.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM - ClothingItems/ASM - Clothing assets/sweeten-family-beach-vacation.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ASM-Maps/MapDistance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ASM-Maps/MapDistance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DB/TestDataGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DB/TestDataGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NBK-BasePage/Pages/Markedsplads.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NBK-BasePage/Pages/Markedsplads.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/New Android™ Profile 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/New Android™ Profile 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/New Android™ Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/New Android™ Profile.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

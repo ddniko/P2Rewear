@@ -62,7 +62,7 @@ public static class TestDataGenerator
                         Condition = rand.Next(1, 6),
                         LifeTime = rand.Next(1, 12),
                         Prize = rand.Next(10,300),
-                        Description = "I dag tog vi en tur til stranden for at bade. Solen bagte, og det var så varmt, at far næsten fik hedeslag. Så snart vi satte foden i sandet, spurtede Mathilde direkte ned til vandet – fuldt påklædt – og blev gennemblødt. Heldigvis havde vi badetøjet med, så vi kunne hurtigt skifte, mens hendes tøj tørrede i solen. Det viste sig at være held i uheld, for da vi senere spiste is, fik Mathilde spildt over det hele. Det våde tøj var altså blevet reddet i sidste øjeblik.",
+                        Description = "Dette stykke tøj har ikke nogen beskrivelse",
                         Tags = $"{tags[rand.Next(tags.Length)]}",
                         //ImageData = new byte[0]
                         ImageData = images[rand.Next(images.Count)]
@@ -76,7 +76,7 @@ public static class TestDataGenerator
                         ArticleID = articleId,
                         Title = "Varm sommerdag på stranden",
                         DateAdded = DateTime.Now.ToString("yyyy-MM-dd"),
-                        Description = "Idag var vi ud og besøge bedstemor og bedstefair",
+                        Description = "I dag tog vi en tur til stranden for at bade. Solen bagte, og det var så varmt, at far næsten fik hedeslag. Så snart vi satte foden i sandet, spurtede Mathilde direkte ned til vandet – fuldt påklædt – og blev gennemblødt. Heldigvis havde vi badetøjet med, så vi kunne hurtigt skifte, mens hendes tøj tørrede i solen. Det viste sig at være held i uheld, for da vi senere spiste is, fik Mathilde spildt over det hele. Det våde tøj var altså blevet reddet i sidste øjeblik.",
                         ImageData = new byte[0]
                     };
                     DBManager.AddMemory(memory);

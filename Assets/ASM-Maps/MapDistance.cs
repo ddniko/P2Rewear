@@ -25,7 +25,7 @@ public class MapDistance : MonoBehaviour
         float newScale = slider.value * 0.0342f;
         int mapDistance = (int)slider.value;
         gameObject.transform.localScale = new Vector3(newScale, newScale, newScale);
-        mapDistanceText.text = mapDistance + " meter";
+        mapDistanceText.text = mapDistance + " km";
         markedsplads.SetMaxDistance(mapDistance);
     }
 }
