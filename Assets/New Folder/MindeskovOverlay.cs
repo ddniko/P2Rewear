@@ -32,9 +32,9 @@ public class MindeskovOverlay : MonoBehaviour
 
         //SortScript = new SortScrollScript();
         SortScript.ParentObject = ViewPort.transform;
-        ClothingPrefab.GetComponent<OverlayMessage>().ChildId = child.Id;
+        //ClothingPrefab.GetComponent<OverlayMessage>().ChildId = child.Id;
         SortScript.ClothingPrefab = ClothingPrefab;
-        SortScript.horizontalSpacing = 120;
+        //SortScript.horizontalSpacing = 120;
 
         RectTransform rt = ViewPort.GetComponent<RectTransform>();
         rt.sizeDelta = new Vector2(rt.sizeDelta.x, MathF.Round(childClothes.Count / 2f + 0.4f) * 105);
