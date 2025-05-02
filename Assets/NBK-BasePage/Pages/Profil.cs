@@ -48,7 +48,7 @@ public class Profil : BasePage
     {
         if (SortScript.CurrentChildren.Count <= 0)
         {
-            SortScript.CreateChildren(true);
+            SortScript.CreateChildren(false);
             foreach (var child in SortScript.CurrentChildren)
             {
                 //var button = child.GetComponent<Button>();
